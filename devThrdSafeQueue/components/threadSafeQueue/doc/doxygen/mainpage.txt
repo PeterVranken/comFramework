@@ -1,0 +1,29 @@
+/*! @mainpage Software Documentation for comFramework - Thread-safe queue
+
+@section secIntro Introduction
+
+comFramework - Thread-safe queue - A generic queue implementation for multithreading and multi-core environemnts
+
+This doxygen help documents the API of a generic implementation of a
+thread-safe queue. Filling and reading the queue may be done from
+different threads. It doesn't matter whether these threads have same or
+different priorities and whether they are running on the same or on
+different cores. The implementation is lock-free. It makes use of atomic
+read and write and memory barriers but no mutexes or atomic read-modify
+write operations are required.
+
+The queue has been developed in order to replace the thread-safe queue,
+which has been integrated in the comFramework CAN interface until revision
+1.2. The elder implementation imposed the requirements, that the code is
+running on a strictly prioritized operating system and that the data
+producer has a higher thread priority than the consumer. Although this
+holds for far the most CAN environments is it not easily granted in a
+multi-threaded application running on a general purpose operating system
+like Windows or Linux and it is not given in most (all?) embedded
+multi-core environments. Using the new queue comFramework can become
+multi-core capable.
+
+For everything else, please refer to the <a
+href="https://sourceforge.net/p/comframe/wiki/Home/">comFramework Wiki pages</a>.
+
+*/

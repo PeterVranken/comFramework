@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#thread-safe-queue-as-linked-list"><span class="toc-section-number">1</span> Thread safe queue as linked list</a><ul>
+<li><a href="#data"><span class="toc-section-number">1.1</span> Data</a></li>
+<li><a href="#initialization"><span class="toc-section-number">1.2</span> Initialization</a></li>
+<li><a href="#producer"><span class="toc-section-number">1.3</span> Producer</a></li>
+<li><a href="#consumer"><span class="toc-section-number">1.4</span> Consumer</a></li>
+<li><a href="#in-short-condensed"><span class="toc-section-number">1.5</span> In short, condensed</a><ul>
+<li><a href="#producer-1"><span class="toc-section-number">1.5.1</span> Producer</a></li>
+<li><a href="#consumer-1"><span class="toc-section-number">1.5.2</span> Consumer</a></li>
+</ul></li>
+<li><a href="#principle-of-operation"><span class="toc-section-number">1.6</span> Principle of operation</a></li>
+</ul></li>
+<li><a href="#implementation-using-ring-buffer"><span class="toc-section-number">2</span> Implementation using ring buffer</a><ul>
+<li><a href="#initialization-1"><span class="toc-section-number">2.1</span> Initialization</a></li>
+<li><a href="#producer-2"><span class="toc-section-number">2.2</span> Producer</a></li>
+<li><a href="#consumer-2"><span class="toc-section-number">2.3</span> Consumer</a></li>
+</ul></li>
+</ul>
+</nav>
+<p><strong>A thread-safe Queue Implementation</strong></p>
+<h1 id="thread-safe-queue-as-linked-list"><span class="header-section-number">1</span> Thread safe queue as linked list</h1>
+<h2 id="data"><span class="header-section-number">1.1</span> Data</h2>
+<ul>
+<li>Head, Tail: Pointers to first and last produced list elements, owned by producer</li>
+<li>Read: Pointer to one list element, owned by consumer</li>
+<li>isData: Owned by consumer. Set true by peek function if new data has been received. Set false after having this data consumed with read function.</li>
+</ul>
+<h2 id="initialization"><span class="header-section-number">1.2</span> Initialization</h2>
+<pre><code>Head = Tail = Read = new Element
+Head-&gt;n = NULL
+isData = false</code></pre>
+<h2 id="producer"><span class="header-section-number">1.3</span> Producer</h2>
+<p>The producer code is shown without an API to the queue, filling the new queue element with data is part of the pseudo code:</p>
+<pre><code>tmp = new Element
+fill tmp, tmp-&gt;n = NULL
+Tail-&gt;n = tmp
+Tail = tmp
+copyRead = Read
+while Head != copyRead
+    tmp = Head-&gt;n
+    free Head
+    Head = tmp
+end</code></pre>
+<h2 id="consumer"><span class="header-section-number">1.4</span> Consumer</h2>
+<p>The consumer code is split into two APIs, the client code will first peek for new data and use the read function only if new data is available. It’s straightforward to combine these two functions to a single non blocking read function, which may return an error if no new data is available.</p>
+<p>Consumer, API isDataAvailable:</p>
+<pre><code>if !isData
+    isData = Read-&gt;n != NULL
+    if isData
+        Read = Read-&gt;n
+    end
+end
+return isData</code></pre>
+<p>Consumer, API getData:</p>
+<pre><code>assert isDataAvailable() // stricter, therefore better: assert isData
+y = Read-&gt;...
+isData = false</code></pre>
+<h2 id="in-short-condensed"><span class="header-section-number">1.5</span> In short, condensed</h2>
+<h3 id="producer-1"><span class="header-section-number">1.5.1</span> Producer</h3>
+<pre><code>Tail-&gt;n = new Element
+Tail = Tail-&gt;n
+while Head != Read
+    free Head
+    Head = Head-&gt;n
+end</code></pre>
+<h3 id="consumer-1"><span class="header-section-number">1.5.2</span> Consumer</h3>
+<pre><code>if Read-&gt;n != NULL
+    Read = Read-&gt;n
+    y = Read-&gt;...
+else
+    y = NULL
+end</code></pre>
+<h2 id="principle-of-operation"><span class="header-section-number">1.6</span> Principle of operation</h2>
+<p>The basic principle of operation is to first do the data operation and then signal the completion of this operation to the other end by a single, atomic operation. This operation is setting a pointer to a new value:</p>
+<ul>
+<li>The producer updates the link pointer of the last elements in order to let it point to the new data - after this data element has been prepared</li>
+<li>The consumer moves his read pointer to the next queue element after having the data consumed</li>
+</ul>
+<p>These pointers implicitly have the meaning of flags indicating new or consumed data. Both stakeholders read the flag value of the other one but they won’t ever write on it, e.g. to acknowledge the information. Therefore no complex atomic read-modify-write operations are required.</p>
+<p>The implementation without read-modify-write is achieved by one additional list element. Usually a list implementation will begin with an empty list and all pointers are set to NULL. When the first element is produced then the producer would have to update the read pointer of the consumer to indicate the new element to him. Here, processing starts with a dummy element, which is initializes as if it were an already consumed element at run-time. At run-time the read pointer always remains on the last recently consumed element and this element is the minimum list contents. The list is never empty and the read and write pointers will never be set to NULL or changed from NULL.</p>
+<p>The concept of first producing/consuming the data and only then notifying the other stakeholder requires strict execution order of these two elements. Any real implementation will need to consider memory barriers between the two steps.</p>
+<h1 id="implementation-using-ring-buffer"><span class="header-section-number">2</span> Implementation using ring buffer</h1>
+<p>The same concept can be implemented using a ring buffer and indexes instead of pointers. A new concept is introduced. The ringbuffer implies the idea of reusing the always same data buffers for the queue elements after while. The length of the ring is limited and the degree of filling becomes essential. Such a queue can be full, the producer can fail.</p>
+<p>The degree of filling can be easily implemented by the producer; as for the linked list solution he does both, entering new elements and removing those, which are surely consumed. A race condition free update of a counter of the available elements is straightforwardly implemented.</p>
+<h2 id="initialization-1"><span class="header-section-number">2.1</span> Initialization</h2>
+<pre><code>H = T = R = 0
+noFree = sizeof(ringbuffer)-1</code></pre>
+<h2 id="producer-2"><span class="header-section-number">2.2</span> Producer</h2>
+<p>The producer code is shown without an API to the queue, filling the next queue element with data is part of the pseudo code:</p>
+<pre><code>while H != R
+    ++H
+    ++noFree
+end
+if noFree
+    --noFree
+    newT = T+1 // Meant cyclically
+    fill element newT
+    T = newT
+end</code></pre>
+<h2 id="consumer-2"><span class="header-section-number">2.3</span> Consumer</h2>
+<p>The consumer code is offers an API, which peeks for new data. If there is such new data it returns the reference to the ringbuffer element with the new data. The client code owns this element until the consumer API is invoked the next time and when it indicates the next new data. With other words, received data is never explicitly returned or freed. This is done implicitly by receiving the next data. One element of the ringbuffer is thus permanently owned by the consumer.</p>
+<p>Consumer:</p>
+<pre><code>if R != T
+    ++R // Meant cyclically
+    return R
+else
+    return -1
+end</code></pre>
+</body>
+</html>

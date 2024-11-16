@@ -1,0 +1,1917 @@
+Archive member included because of file (symbol)
+
+bin/atmega2560/core/core.a(wiring.o)
+                              bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o (millis)
+bin/atmega2560/core/core.a(wiring_digital.o)
+                              bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o (pinMode)
+bin/atmega2560/core/core.a(HardwareSerial.o)
+                              bin/atmega2560/PRODUCTION/obj/stdout.o (Serial)
+bin/atmega2560/core/core.a(new.o)
+                              bin/atmega2560/core/core.a(HardwareSerial.o) (__cxa_pure_virtual)
+bin/atmega2560/core/core.a(Print.o)
+                              bin/atmega2560/PRODUCTION/obj/dpy_display.o (Print::write(unsigned char const*, unsigned int))
+bin/atmega2560/core/core.a(LiquidCrystal.o)
+                              bin/atmega2560/PRODUCTION/obj/dpy_display.o (LiquidCrystal::write(unsigned char))
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o)
+                              bin/atmega2560/core/core.a(Print.o) (__subsf3)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o) (__addsf3x)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+                              bin/atmega2560/core/core.a(Print.o) (__ltsf2)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3.o)
+                              bin/atmega2560/core/core.a(Print.o) (__divsf3)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3.o) (__divsf3x)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+                              bin/atmega2560/core/core.a(Print.o) (__fixsfsi)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+                              bin/atmega2560/core/core.a(Print.o) (__fixunssfsi)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+                              bin/atmega2560/core/core.a(Print.o) (__floatunsisf)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o) (__fp_cmp)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o) (__fp_inf)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o) (__fp_nan)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o) (__fp_pscA)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o) (__fp_pscB)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_round.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o) (__fp_round)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o) (__fp_split3)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o) (__fp_zero)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(gesf2.o)
+                              bin/atmega2560/core/core.a(Print.o) (__gtsf2)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                              bin/atmega2560/core/core.a(Print.o) (__mulsf3)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3.o) (__mulsf3x)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(unordsf2.o)
+                              bin/atmega2560/core/core.a(Print.o) (__unordsf2)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_mulsi3.o)
+                              bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o (__mulsi3)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodhi4.o)
+                              bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o (__udivmodhi4)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodhi4.o)
+                              bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o (__divmodhi4)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodsi4.o)
+                              bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o (__udivmodsi4)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_exit.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o (exit)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_clear_bss.o)
+                              bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o (__do_clear_bss)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+                              bin/atmega2560/PRODUCTION/obj/dpy_display.o (__do_global_ctors)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_tablejump.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o) (__tablejump__)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+                              bin/atmega2560/core/core.a(new.o) (malloc)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+                              bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o (rand)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memcpy.o)
+                              bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o (memcpy)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memset.o)
+                              bin/atmega2560/PRODUCTION/obj/dpy_display.o (memset)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(fputc.o)
+                              bin/atmega2560/PRODUCTION/obj/stdout.o (fputc)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(iob.o)
+                              bin/atmega2560/PRODUCTION/obj/stdout.o (__iob)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+                              bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o (printf)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(puts.o)
+                              bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o (puts)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                              bin/atmega2560/PRODUCTION/obj/dpy_display.o (sprintf)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o) (vfprintf)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o) (strnlen_P)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o) (strnlen)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(ultoa_invert.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o) (__ultoa_invert)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodsi4.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o) (__divmodsi4)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_prologue.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o) (__prologue_saves__)
+c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_epilogue.o)
+                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o) (__epilogue_restores__)
+
+Allocating common symbols
+Common symbol       size              file
+
+__brkval            0x2               c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+_tmpVarAsmToC_u16   0x2               bin/atmega2560/PRODUCTION/obj/rtos.o
+_tmpVarCToAsm_u16   0x2               bin/atmega2560/PRODUCTION/obj/rtos.o
+__flp               0x2               c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+__iob               0x6               c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(iob.o)
+
+Discarded input sections
+
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ .text          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .data          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .bss           0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .text          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/main.o
+ .data          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/main.o
+ .bss           0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/main.o
+ .text          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .data          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .bss           0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .text          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .data          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .bss           0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .text          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .data          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .bss           0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .text          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss           0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text.consumerM
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text.consumerH
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text.producerM
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text.producerH
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .bss           0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .text._ZN13dpy_display_t12printCpuLoadEh
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .text._ZN13dpy_display_t13printNoErrorsEi
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .text._ZN13dpy_display_t13printNoCyclesEm
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .text._ZN13dpy_display_t15printBackgroundEv
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .text._ZN13dpy_display_tC1Ev
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .text._ZN13dpy_display_tC2Ev
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .text          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .data          0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .bss           0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .text.tsq_getNoQueuedElements
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .text.tsq_getMaximumQueueUsage
+                0x00000000        0x0 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .text          0x00000000        0x0 bin/atmega2560/core/core.a(wiring.o)
+ .data          0x00000000        0x0 bin/atmega2560/core/core.a(wiring.o)
+ .bss           0x00000000        0x0 bin/atmega2560/core/core.a(wiring.o)
+ .text.micros   0x00000000        0x0 bin/atmega2560/core/core.a(wiring.o)
+ .text          0x00000000        0x0 bin/atmega2560/core/core.a(wiring_digital.o)
+ .data          0x00000000        0x0 bin/atmega2560/core/core.a(wiring_digital.o)
+ .bss           0x00000000        0x0 bin/atmega2560/core/core.a(wiring_digital.o)
+ .text.digitalRead
+                0x00000000        0x0 bin/atmega2560/core/core.a(wiring_digital.o)
+ .text          0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .data          0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .bss           0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._Z11serialEventv
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._Z12serialEvent1v
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._Z12serialEvent2v
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._Z12serialEvent3v
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._Z14serialEventRunv
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerialC2EP11ring_bufferS1_PVhS3_S3_S3_S3_S3_hhhhh
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerialC1EP11ring_bufferS1_PVhS3_S3_S3_S3_S3_hhhhh
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerial5beginEmh
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerial3endEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerialcvbEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .rodata._ZTV6Stream
+                0x00000000        0x0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text          0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .data          0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .bss           0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .text.__cxa_guard_acquire
+                0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .text.__cxa_guard_release
+                0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .text.__cxa_guard_abort
+                0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .text.__cxa_pure_virtual
+                0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .text._ZdaPv   0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .text._ZdlPv   0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .text._Znaj    0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .text._Znwj    0x00000000        0x0 bin/atmega2560/core/core.a(new.o)
+ .text          0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .data          0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .bss           0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printEPK19__FlashStringHelper
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printERK6String
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printEc
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printERK9Printable
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEPK19__FlashStringHelper
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnERK6String
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEc
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnERK9Printable
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print11printNumberEmh
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printEmi
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEmi
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printEji
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEji
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printEhi
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEhi
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printEli
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEli
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printEii
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEii
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print10printFloatEdh
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print5printEdi
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEdi
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text._ZN5Print7printlnEPKc
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .rodata._ZTV5Print
+                0x00000000        0x0 bin/atmega2560/core/core.a(Print.o)
+ .text          0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .data          0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .bss           0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal10createCharEhPh
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal12noAutoscrollEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal10autoscrollEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal11rightToLeftEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal11leftToRightEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal18scrollDisplayRightEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal17scrollDisplayLeftEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal5blinkEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal6cursorEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal9noDisplayEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystal4homeEv
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystalC1Ehhhhhh
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystalC1Ehhhhhhh
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystalC2Ehhhhhhh
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystalC1Ehhhhhhhhhh
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystalC2Ehhhhhhhhhh
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystalC1Ehhhhhhhhhhh
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text._ZN13LiquidCrystalC2Ehhhhhhhhhhh
+                0x00000000        0x0 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_round.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_round.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_round.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_round.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(gesf2.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(gesf2.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(gesf2.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(gesf2.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(unordsf2.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(unordsf2.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(unordsf2.o)
+ .text.fplib    0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(unordsf2.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_mulsi3.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_mulsi3.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_mulsi3.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodhi4.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodhi4.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodhi4.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodhi4.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodhi4.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodhi4.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodsi4.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodsi4.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodsi4.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+ .text.libgcc   0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_tablejump.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_tablejump.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_tablejump.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+ COMMON         0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memcpy.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memcpy.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memset.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memset.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(fputc.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(fputc.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(iob.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(iob.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(iob.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(puts.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(puts.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(ultoa_invert.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(ultoa_invert.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodsi4.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodsi4.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodsi4.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_prologue.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_prologue.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_prologue.o)
+ .text          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_epilogue.o)
+ .data          0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_epilogue.o)
+ .bss           0x00000000        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_epilogue.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00100000         xr
+data             0x00800200         0x0000fe00         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800200
+LOAD c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+START GROUP
+LOAD bin/atmega2560/core/core.a
+LOAD bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+LOAD bin/atmega2560/PRODUCTION/obj/main.o
+LOAD bin/atmega2560/PRODUCTION/obj/rtos.o
+LOAD bin/atmega2560/PRODUCTION/obj/stdout.o
+LOAD bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+LOAD bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+LOAD bin/atmega2560/PRODUCTION/obj/dpy_display.o
+LOAD bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+END GROUP
+LOAD c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a
+LOAD c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a
+LOAD c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a
+LOAD c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x3e1c
+ *(.vectors)
+ .vectors       0x00000000       0xe4 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.rtuinos
+                0x000000e4       0xfb bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x000000e4                rtos_rtuinosStartupMsg
+ .progmem.data  0x000001df      0x120 bin/atmega2560/core/core.a(wiring_digital.o)
+                0x000001df                port_to_mode_PGM
+                0x0000022d                digital_pin_to_port_PGM
+                0x00000273                digital_pin_to_bit_mask_PGM
+                0x000001f9                port_to_output_PGM
+                0x00000213                port_to_input_PGM
+                0x000002b9                digital_pin_to_timer_PGM
+                0x00000300                . = ALIGN (0x2)
+ *fill*         0x000002ff        0x1 00
+                0x00000300                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000300        0x0 linker stubs
+ *(.trampolines*)
+                0x00000300                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000300                __ctors_start = .
+ *(.ctors)
+ .ctors         0x00000300        0x2 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .ctors         0x00000302        0x2 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00000304                __ctors_end = .
+                0x00000304                __dtors_start = .
+ *(.dtors)
+                0x00000304                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000304        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x00000304                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000304       0x10 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000314       0x1c c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x00000314                __do_copy_data
+ .init4         0x00000330       0x10 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_clear_bss.o)
+                0x00000330                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ .init6         0x00000340       0x16 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+                0x00000340                __do_global_ctors
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000356        0x6 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ *(.init9)
+ *(.text)
+ .text          0x0000035c        0x2 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x0000035c                __vector_38
+                0x0000035c                __vector_22
+                0x0000035c                __vector_28
+                0x0000035c                __vector_1
+                0x0000035c                __vector_32
+                0x0000035c                __vector_34
+                0x0000035c                __vector_24
+                0x0000035c                __vector_12
+                0x0000035c                __vector_46
+                0x0000035c                __bad_interrupt
+                0x0000035c                __vector_6
+                0x0000035c                __vector_31
+                0x0000035c                __vector_35
+                0x0000035c                __vector_39
+                0x0000035c                __vector_3
+                0x0000035c                __vector_30
+                0x0000035c                __vector_45
+                0x0000035c                __vector_11
+                0x0000035c                __vector_13
+                0x0000035c                __vector_17
+                0x0000035c                __vector_19
+                0x0000035c                __vector_56
+                0x0000035c                __vector_7
+                0x0000035c                __vector_49
+                0x0000035c                __vector_41
+                0x0000035c                __vector_43
+                0x0000035c                __vector_27
+                0x0000035c                __vector_5
+                0x0000035c                __vector_33
+                0x0000035c                __vector_47
+                0x0000035c                __vector_4
+                0x0000035c                __vector_44
+                0x0000035c                __vector_9
+                0x0000035c                __vector_2
+                0x0000035c                __vector_21
+                0x0000035c                __vector_29
+                0x0000035c                __vector_40
+                0x0000035c                __vector_8
+                0x0000035c                __vector_48
+                0x0000035c                __vector_14
+                0x0000035c                __vector_53
+                0x0000035c                __vector_10
+                0x0000035c                __vector_50
+                0x0000035c                __vector_16
+                0x0000035c                __vector_18
+                0x0000035c                __vector_20
+                0x0000035c                __vector_42
+ .text          0x0000035e       0xba c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+                0x000003fa                rand_r
+                0x000003fc                rand
+                0x00000402                srand
+ .text          0x00000418       0x12 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memcpy.o)
+                0x00000418                memcpy
+ .text          0x0000042a        0xe c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memset.o)
+                0x0000042a                memset
+ .text          0x00000438       0x58 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(fputc.o)
+                0x00000438                fputc
+ .text          0x00000490       0x28 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+                0x00000490                printf
+ .text          0x000004b8       0x6a c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(puts.o)
+                0x000004b8                puts
+ .text          0x00000522       0x46 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                0x00000522                sprintf
+ .text          0x00000568      0x3a0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+                0x00000568                vfprintf
+ .text          0x00000908       0x16 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
+                0x00000908                strnlen_P
+ .text          0x0000091e       0x16 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen.o)
+                0x0000091e                strnlen
+ .text          0x00000934       0xbc c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(ultoa_invert.o)
+                0x00000934                __ultoa_invert
+                0x000009f0                . = ALIGN (0x2)
+ *(.text.*)
+ .text.gsl_getSystemLoad
+                0x000009f0       0xba bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+                0x000009f0                gsl_getSystemLoad
+ .text.main     0x00000aaa        0xc bin/atmega2560/PRODUCTION/obj/main.o
+                0x00000aaa                main
+ .text.rtos_enableIRQTimerTic
+                0x00000ab6        0xc bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x00000ab6                rtos_enableIRQTimerTic
+ .text.onTimerTic
+                0x00000ac2      0x1da bin/atmega2560/PRODUCTION/obj/rtos.o
+ .text.__vector_15
+                0x00000c9c       0xfe bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x00000c9c                __vector_15
+ .text.sendEvent
+                0x00000d9a      0x142 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .text.rtos_sendEvent
+                0x00000edc       0xfe bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x00000edc                rtos_sendEvent
+ .text.waitForEvent
+                0x00000fda      0x12e bin/atmega2560/PRODUCTION/obj/rtos.o
+ .text.rtos_waitForEvent
+                0x00001108       0xf8 bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x00001108                rtos_waitForEvent
+ .text.rtos_getTaskOverrunCounter
+                0x00001200       0x58 bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x00001200                rtos_getTaskOverrunCounter
+ .text.rtos_getStackReserve
+                0x00001258       0x46 bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x00001258                rtos_getStackReserve
+ .text.rtos_initializeTask
+                0x0000129e       0x84 bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x0000129e                rtos_initializeTask
+ .text.rtos_initRTOS
+                0x00001322       0xf6 bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x00001322                rtos_initRTOS
+ .text.puts_progmem
+                0x00001418       0x44 bin/atmega2560/PRODUCTION/obj/stdout.o
+                0x00001418                puts_progmem
+ .text.init_stdout
+                0x0000145c       0x3e bin/atmega2560/PRODUCTION/obj/stdout.o
+                0x0000145c                init_stdout
+ .text._ZL14serial_putcharcP6__file
+                0x0000149a       0x36 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .text.crc_checksumSAEJ1850_8Bit
+                0x000014d0       0x3a bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+                0x000014d0                crc_checksumSAEJ1850_8Bit
+ .text.loop     0x0000150a      0x524 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x0000150a                loop
+ .text.setup    0x00001a2e       0xd4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x00001a2e                setup
+ .text.taskDisplayL
+                0x00001b02       0x50 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text.taskRelayL
+                0x00001b52      0x134 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text.taskConsumerM
+                0x00001c86      0x100 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text.taskConsumerH
+                0x00001d86      0x100 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text.taskProducerH
+                0x00001e86      0x1c8 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text.taskProducerM
+                0x0000204e      0x1ce bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .text._ZN13dpy_display_t13printGreetingEv
+                0x0000221c      0x434 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                0x0000221c                dpy_display_t::printGreeting()
+ .text.dpy_printGreeting
+                0x00002650        0x6 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                0x00002650                dpy_printGreeting
+ .text.dpy_printNoErrors
+                0x00002656       0x82 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                0x00002656                dpy_printNoErrors
+ .text.dpy_printNoCycles
+                0x000026d8       0x9e bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                0x000026d8                dpy_printNoCycles
+ .text.dpy_printCpuLoad
+                0x00002776       0x86 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                0x00002776                dpy_printCpuLoad
+ .text._GLOBAL__I_dpy_display
+                0x000027fc       0x58 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .text.dpy_printBackground
+                0x00002854       0x90 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                0x00002854                dpy_printBackground
+ .text.tsq_getSizeOfQueue
+                0x000028e4       0x40 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                0x000028e4                tsq_getSizeOfQueue
+ .text.tsq_createQueue
+                0x00002924       0x5a bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                0x00002924                tsq_createQueue
+ .text.tsq_allocTailElement
+                0x0000297e       0x82 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                0x0000297e                tsq_allocTailElement
+ .text.tsq_readFromHead
+                0x00002a00       0x54 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                0x00002a00                tsq_readFromHead
+ .text.tsq_postTailElement
+                0x00002a54       0x84 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                0x00002a54                tsq_postTailElement
+ .text.tsq_writeToTail
+                0x00002ad8       0xe0 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                0x00002ad8                tsq_writeToTail
+ .text.__vector_23
+                0x00002bb8       0x90 bin/atmega2560/core/core.a(wiring.o)
+                0x00002bb8                __vector_23
+ .text.millis   0x00002c48       0x1c bin/atmega2560/core/core.a(wiring.o)
+                0x00002c48                millis
+ .text.delay    0x00002c64       0xb2 bin/atmega2560/core/core.a(wiring.o)
+                0x00002c64                delay
+ .text.delayMicroseconds
+                0x00002d16       0x14 bin/atmega2560/core/core.a(wiring.o)
+                0x00002d16                delayMicroseconds
+ .text.init     0x00002d2a       0xc4 bin/atmega2560/core/core.a(wiring.o)
+                0x00002d2a                init
+ .text.pinMode  0x00002dee       0x7e bin/atmega2560/core/core.a(wiring_digital.o)
+                0x00002dee                pinMode
+ .text._ZL10turnOffPWMh
+                0x00002e6c       0xe8 bin/atmega2560/core/core.a(wiring_digital.o)
+ .text.digitalWrite
+                0x00002f54       0x64 bin/atmega2560/core/core.a(wiring_digital.o)
+                0x00002f54                digitalWrite
+ .text.__vector_25
+                0x00002fb8       0x7e bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00002fb8                __vector_25
+ .text.__vector_36
+                0x00003036       0x7e bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00003036                __vector_36
+ .text.__vector_51
+                0x000030b4       0x7e bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x000030b4                __vector_51
+ .text.__vector_54
+                0x00003132       0x7e bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00003132                __vector_54
+ .text.__vector_26
+                0x000031b0       0x7e bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x000031b0                __vector_26
+ .text.__vector_37
+                0x0000322e       0x7e bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x0000322e                __vector_37
+ .text.__vector_52
+                0x000032ac       0x7e bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x000032ac                __vector_52
+ .text.__vector_55
+                0x0000332a       0x7e bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x0000332a                __vector_55
+ .text._ZN14HardwareSerial5beginEm
+                0x000033a8      0x10c bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x000033a8                HardwareSerial::begin(unsigned long)
+ .text._ZN14HardwareSerial9availableEv
+                0x000034b4       0x24 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x000034b4                HardwareSerial::available()
+ .text._ZN14HardwareSerial4peekEv
+                0x000034d8       0x40 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x000034d8                HardwareSerial::peek()
+ .text._ZN14HardwareSerial4readEv
+                0x00003518       0x52 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00003518                HardwareSerial::read()
+ .text._ZN14HardwareSerial5flushEv
+                0x0000356a       0x20 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x0000356a                HardwareSerial::flush()
+ .text._ZN14HardwareSerial5writeEh
+                0x0000358a       0x80 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x0000358a                HardwareSerial::write(unsigned char)
+ .text._GLOBAL__I_rx_buffer
+                0x0000360a      0x26c bin/atmega2560/core/core.a(HardwareSerial.o)
+ .text._ZN5Print5writeEPKhj
+                0x00003876       0x54 bin/atmega2560/core/core.a(Print.o)
+                0x00003876                Print::write(unsigned char const*, unsigned int)
+ .text._ZN5Print5writeEPKc
+                0x000038ca       0x38 bin/atmega2560/core/core.a(Print.o)
+                0x000038ca                Print::write(char const*)
+ .text._ZN5Print5printEPKc
+                0x00003902        0x4 bin/atmega2560/core/core.a(Print.o)
+                0x00003902                Print::print(char const*)
+ .text._ZN13LiquidCrystal11pulseEnableEv
+                0x00003906       0x36 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003906                LiquidCrystal::pulseEnable()
+ .text._ZN13LiquidCrystal10write8bitsEh
+                0x0000393c       0x66 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x0000393c                LiquidCrystal::write8bits(unsigned char)
+ .text._ZN13LiquidCrystal10write4bitsEh
+                0x000039a2       0x66 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x000039a2                LiquidCrystal::write4bits(unsigned char)
+ .text._ZN13LiquidCrystal4sendEhh
+                0x00003a08       0x48 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003a08                LiquidCrystal::send(unsigned char, unsigned char)
+ .text._ZN13LiquidCrystal5writeEh
+                0x00003a50        0xa bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003a50                LiquidCrystal::write(unsigned char)
+ .text._ZN13LiquidCrystal7commandEh
+                0x00003a5a        0x4 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003a5a                LiquidCrystal::command(unsigned char)
+ .text._ZN13LiquidCrystal7noBlinkEv
+                0x00003a5e        0xc bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003a5e                LiquidCrystal::noBlink()
+ .text._ZN13LiquidCrystal8noCursorEv
+                0x00003a6a        0xc bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003a6a                LiquidCrystal::noCursor()
+ .text._ZN13LiquidCrystal7displayEv
+                0x00003a76       0x10 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003a76                LiquidCrystal::display()
+ .text._ZN13LiquidCrystal9setCursorEhh
+                0x00003a86       0x5c bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003a86                LiquidCrystal::setCursor(unsigned char, unsigned char)
+ .text._ZN13LiquidCrystal5clearEv
+                0x00003ae2        0xa bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003ae2                LiquidCrystal::clear()
+ .text._ZN13LiquidCrystal5beginEhhh
+                0x00003aec       0xb6 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003aec                LiquidCrystal::begin(unsigned char, unsigned char, unsigned char)
+ .text._ZN13LiquidCrystal4initEhhhhhhhhhhhh
+                0x00003ba2       0x86 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003ba2                LiquidCrystal::init(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
+ .text._ZN13LiquidCrystalC2Ehhhhhh
+                0x00003c28       0x70 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00003c28                LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
+ .text.libgcc   0x00003c98       0x3e c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_mulsi3.o)
+                0x00003c98                __mulsi3
+ .text.libgcc   0x00003cd6       0x28 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodhi4.o)
+                0x00003cd6                __udivmodhi4
+ .text.libgcc   0x00003cfe       0x26 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodhi4.o)
+                0x00003cfe                __divmodhi4
+                0x00003cfe                _div
+ .text.libgcc   0x00003d24       0x44 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodsi4.o)
+                0x00003d24                __udivmodsi4
+ .text.libgcc   0x00003d68        0xc c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_tablejump.o)
+                0x00003d6c                __tablejump__
+                0x00003d68                __tablejump2__
+ .text.libgcc   0x00003d74       0x36 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodsi4.o)
+                0x00003d74                __divmodsi4
+ .text.libgcc   0x00003daa       0x38 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_prologue.o)
+                0x00003daa                __prologue_saves__
+ .text.libgcc   0x00003de2       0x36 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_epilogue.o)
+                0x00003de2                __epilogue_restores__
+                0x00003e18                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00003e18        0x0 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_exit.o)
+                0x00003e18                exit
+                0x00003e18                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00003e18        0x4 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00003e1c                _etext = .
+
+.data           0x00800200      0x326 load address 0x00003e1c
+                0x00800200                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800200      0x18a bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .data          0x0080038a       0x4b bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .data          0x008003d5        0x4 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+ *(.data*)
+ .data._time    0x008003d9        0x1 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .data._pActiveTask
+                0x008003da        0x2 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .data._cpuLoad
+                0x008003dc        0x1 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008003dc                _cpuLoad
+ .data._noDataErrors
+                0x008003dd        0x1 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008003dd                _noDataErrors
+ .data.cntErrInjection.2058
+                0x008003de        0x2 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .data.telegramHasSent.2053
+                0x008003e0        0x1 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .data.t.2052   0x008003e1        0xd bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .data.cntErrInjection.2005
+                0x008003ee        0x2 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .data.telegramHasSent.2000
+                0x008003f0        0x1 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .data.t.1999   0x008003f1        0xd bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ *(.rodata)
+ *(.rodata*)
+ .rodata._dataTableSAEJ1850
+                0x008003fe      0x100 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .rodata._ZTV13dpy_display_t
+                0x008004fe        0x8 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                0x008004fe                vtable for dpy_display_t
+ .rodata._ZTV14HardwareSerial
+                0x00800506       0x10 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800506                vtable for HardwareSerial
+ .rodata._ZTV13LiquidCrystal
+                0x00800516        0x8 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00800516                vtable for LiquidCrystal
+ .rodata._ZZN13LiquidCrystal9setCursorEhhE3C.4
+                0x0080051e        0x8 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ *(.gnu.linkonce.d*)
+                0x00800526                . = ALIGN (0x2)
+                0x00800526                _edata = .
+                0x00800526                PROVIDE (__data_end, .)
+
+.bss            0x00800526      0xac5
+                0x00800526                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss._pSuspendedTask
+                0x00800526        0x2 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .bss._taskAry  0x00800528       0x85 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .bss._pDueTaskAryAry
+                0x008005ad        0xc bin/atmega2560/PRODUCTION/obj/rtos.o
+ .bss._noDueTasksAry
+                0x008005b9        0x3 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .bss._pSuspendedTaskAry
+                0x008005bc        0xc bin/atmega2560/PRODUCTION/obj/rtos.o
+ .bss._noSuspendedTasks
+                0x008005c8        0x1 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .bss._ZZ11init_stdoutE8myStdout
+                0x008005c9        0xe bin/atmega2560/PRODUCTION/obj/stdout.o
+ .bss._cntProducerH
+                0x008005d7        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005d7                _cntProducerH
+ .bss._cntConsumerH
+                0x008005db        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005db                _cntConsumerH
+ .bss._cntProducerM
+                0x008005df        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005df                _cntProducerM
+ .bss._cntConsumerM
+                0x008005e3        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005e3                _cntConsumerM
+ .bss._cntRelayL
+                0x008005e7        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005e7                _cntRelayL
+ .bss._noWrittenElementsQueueH2L
+                0x008005eb        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005eb                _noWrittenElementsQueueH2L
+ .bss._noEventsQueueH2LFull
+                0x008005ef        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005ef                _noEventsQueueH2LFull
+ .bss._noReadElementsQueueL2H
+                0x008005f3        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005f3                _noReadElementsQueueL2H
+ .bss._noEventsQueueL2HFull
+                0x008005f7        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005f7                _noEventsQueueL2HFull
+ .bss._noWrittenElementsQueueM2M
+                0x008005fb        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005fb                _noWrittenElementsQueueM2M
+ .bss._noEventsQueueM2MFull
+                0x008005ff        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x008005ff                _noEventsQueueM2MFull
+ .bss._noReadElementsQueueM2M
+                0x00800603        0x4 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                0x00800603                _noReadElementsQueueM2M
+ .bss.stackTaskDisplay_.2222
+                0x00800607      0x12c bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss.stackTaskConsumerM_.2221
+                0x00800733      0x12c bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss.stackTaskProducerM_.2220
+                0x0080085f      0x12c bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss.stackTaskConsumerH_.2219
+                0x0080098b      0x12c bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss.stackTaskRelayL_.2218
+                0x00800ab7      0x12c bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss.stackTaskProducerH_.2217
+                0x00800be3      0x12c bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss._pQueueM2M
+                0x00800d0f        0x2 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss._pQueueL2H
+                0x00800d11        0x2 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss._pQueueH2L
+                0x00800d13        0x2 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss.pTOut.2023
+                0x00800d15        0x2 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss.sqcRef.2076
+                0x00800d17        0x2 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss.sqcRef.2035
+                0x00800d19        0x2 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .bss.dpy_display
+                0x00800d1b       0x15 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                0x00800d1b                dpy_display
+ .bss.timer0_overflow_count
+                0x00800d30        0x4 bin/atmega2560/core/core.a(wiring.o)
+                0x00800d30                timer0_overflow_count
+ .bss.timer0_millis
+                0x00800d34        0x4 bin/atmega2560/core/core.a(wiring.o)
+                0x00800d34                timer0_millis
+ .bss._ZL12timer0_fract
+                0x00800d38        0x1 bin/atmega2560/core/core.a(wiring.o)
+ .bss.rx_buffer
+                0x00800d39       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800d39                rx_buffer
+ .bss.tx_buffer
+                0x00800d7d       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800d7d                tx_buffer
+ .bss.rx_buffer1
+                0x00800dc1       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800dc1                rx_buffer1
+ .bss.tx_buffer1
+                0x00800e05       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800e05                tx_buffer1
+ .bss.rx_buffer2
+                0x00800e49       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800e49                rx_buffer2
+ .bss.tx_buffer2
+                0x00800e8d       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800e8d                tx_buffer2
+ .bss.rx_buffer3
+                0x00800ed1       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800ed1                rx_buffer3
+ .bss.tx_buffer3
+                0x00800f15       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800f15                tx_buffer3
+ .bss.Serial    0x00800f59       0x22 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800f59                Serial
+ .bss.Serial1   0x00800f7b       0x22 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800f7b                Serial1
+ .bss.Serial2   0x00800f9d       0x22 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800f9d                Serial2
+ .bss.Serial3   0x00800fbf       0x22 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00800fbf                Serial3
+ *(COMMON)
+ COMMON         0x00800fe1        0x4 bin/atmega2560/PRODUCTION/obj/rtos.o
+                0x00800fe1                _tmpVarAsmToC_u16
+                0x00800fe3                _tmpVarCToAsm_u16
+ COMMON         0x00800fe5        0x6 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(iob.o)
+                0x00800fe5                __iob
+                0x00800feb                PROVIDE (__bss_end, .)
+                0x00003e1c                __data_load_start = LOADADDR (.data)
+                0x00004142                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800feb        0x0
+                0x00800feb                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800feb                PROVIDE (__noinit_end, .)
+                0x00800feb                _end = .
+                0x00800feb                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x610
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .debug_aranges
+                0x00000020       0x20 bin/atmega2560/PRODUCTION/obj/main.o
+ .debug_aranges
+                0x00000040       0x70 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .debug_aranges
+                0x000000b0       0x30 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .debug_aranges
+                0x000000e0       0x20 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .debug_aranges
+                0x00000100       0x78 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .debug_aranges
+                0x00000178       0x80 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .debug_aranges
+                0x000001f8       0x58 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .debug_aranges
+                0x00000250       0x48 bin/atmega2560/core/core.a(wiring.o)
+ .debug_aranges
+                0x00000298       0x38 bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_aranges
+                0x000002d0       0xe0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_aranges
+                0x000003b0       0x58 bin/atmega2560/core/core.a(new.o)
+ .debug_aranges
+                0x00000408       0xf0 bin/atmega2560/core/core.a(Print.o)
+ .debug_aranges
+                0x000004f8      0x118 bin/atmega2560/core/core.a(LiquidCrystal.o)
+
+.debug_pubnames
+                0x00000000     0x1047
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x28 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .debug_pubnames
+                0x00000028       0x1b bin/atmega2560/PRODUCTION/obj/main.o
+ .debug_pubnames
+                0x00000043      0x10f bin/atmega2560/PRODUCTION/obj/rtos.o
+ .debug_pubnames
+                0x00000152       0x33 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .debug_pubnames
+                0x00000185       0x30 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .debug_pubnames
+                0x000001b5      0x197 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .debug_pubnames
+                0x0000034c      0x179 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .debug_pubnames
+                0x000004c5       0xd0 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .debug_pubnames
+                0x00000595       0x8d bin/atmega2560/core/core.a(wiring.o)
+ .debug_pubnames
+                0x00000622       0xda bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_pubnames
+                0x000006fc      0x2c5 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_pubnames
+                0x000009c1       0xbf bin/atmega2560/core/core.a(new.o)
+ .debug_pubnames
+                0x00000a80      0x200 bin/atmega2560/core/core.a(Print.o)
+ .debug_pubnames
+                0x00000c80      0x3c7 bin/atmega2560/core/core.a(LiquidCrystal.o)
+
+.debug_info     0x00000000     0x834c
+ *(.debug_info)
+ .debug_info    0x00000000      0x1e0 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .debug_info    0x000001e0      0x18d bin/atmega2560/PRODUCTION/obj/main.o
+ .debug_info    0x0000036d      0xa18 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .debug_info    0x00000d85      0x3e6 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .debug_info    0x0000116b      0x129 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .debug_info    0x00001294      0xa20 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .debug_info    0x00001cb4      0x74c bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .debug_info    0x00002400      0x4b7 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .debug_info    0x000028b7      0x369 bin/atmega2560/core/core.a(wiring.o)
+ .debug_info    0x00002c20      0x5d8 bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_info    0x000031f8     0x20cc bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_info    0x000052c4      0x195 bin/atmega2560/core/core.a(new.o)
+ .debug_info    0x00005459     0x1d63 bin/atmega2560/core/core.a(Print.o)
+ .debug_info    0x000071bc     0x1190 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000     0x1acf
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x8f bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .debug_abbrev  0x0000008f       0x7e bin/atmega2560/PRODUCTION/obj/main.o
+ .debug_abbrev  0x0000010d      0x281 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .debug_abbrev  0x0000038e      0x20e bin/atmega2560/PRODUCTION/obj/stdout.o
+ .debug_abbrev  0x0000059c       0xe1 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .debug_abbrev  0x0000067d      0x282 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .debug_abbrev  0x000008ff      0x284 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .debug_abbrev  0x00000b83      0x159 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .debug_abbrev  0x00000cdc      0x16c bin/atmega2560/core/core.a(wiring.o)
+ .debug_abbrev  0x00000e48      0x161 bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_abbrev  0x00000fa9      0x497 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_abbrev  0x00001440       0xf7 bin/atmega2560/core/core.a(new.o)
+ .debug_abbrev  0x00001537      0x323 bin/atmega2560/core/core.a(Print.o)
+ .debug_abbrev  0x0000185a      0x275 bin/atmega2560/core/core.a(LiquidCrystal.o)
+
+.debug_line     0x00000000     0x49ae
+ *(.debug_line)
+ .debug_line    0x00000000      0x189 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .debug_line    0x00000189      0x125 bin/atmega2560/PRODUCTION/obj/main.o
+ .debug_line    0x000002ae      0x890 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .debug_line    0x00000b3e      0x279 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .debug_line    0x00000db7       0xeb bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .debug_line    0x00000ea2      0xa34 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .debug_line    0x000018d6      0x765 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .debug_line    0x0000203b      0x3c2 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .debug_line    0x000023fd      0x3f8 bin/atmega2560/core/core.a(wiring.o)
+ .debug_line    0x000027f5      0x348 bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_line    0x00002b3d      0xb53 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_line    0x00003690      0x1e0 bin/atmega2560/core/core.a(new.o)
+ .debug_line    0x00003870      0x79b bin/atmega2560/core/core.a(Print.o)
+ .debug_line    0x0000400b      0x9a3 bin/atmega2560/core/core.a(LiquidCrystal.o)
+
+.debug_frame    0x00000000      0xa60
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x20 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .debug_frame   0x00000020       0x20 bin/atmega2560/PRODUCTION/obj/main.o
+ .debug_frame   0x00000040       0xc0 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .debug_frame   0x00000100       0x40 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .debug_frame   0x00000140       0x20 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .debug_frame   0x00000160       0xd0 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .debug_frame   0x00000230       0xe0 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .debug_frame   0x00000310       0x90 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .debug_frame   0x000003a0       0x70 bin/atmega2560/core/core.a(wiring.o)
+ .debug_frame   0x00000410       0x50 bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_frame   0x00000460      0x1a0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_frame   0x00000600       0x90 bin/atmega2560/core/core.a(new.o)
+ .debug_frame   0x00000690      0x1c0 bin/atmega2560/core/core.a(Print.o)
+ .debug_frame   0x00000850      0x210 bin/atmega2560/core/core.a(LiquidCrystal.o)
+
+.debug_str      0x00000000     0x2730
+ *(.debug_str)
+ .debug_str     0x00000000      0x114 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+                                0x14d (size before relaxing)
+ .debug_str     0x00000114       0x16 bin/atmega2560/PRODUCTION/obj/main.o
+                                0x10c (size before relaxing)
+ .debug_str     0x0000012a      0x36f bin/atmega2560/PRODUCTION/obj/rtos.o
+                                0x490 (size before relaxing)
+ .debug_str     0x00000499       0xe9 bin/atmega2560/PRODUCTION/obj/stdout.o
+                                0x1f9 (size before relaxing)
+ .debug_str     0x00000582       0x5d bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+                                0x14e (size before relaxing)
+ .debug_str     0x000005df      0x300 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                                0x52a (size before relaxing)
+ .debug_str     0x000008df      0x260 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                                0x3fb (size before relaxing)
+ .debug_str     0x00000b3f      0x1ed bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                                0x301 (size before relaxing)
+ .debug_str     0x00000d2c       0xb5 bin/atmega2560/core/core.a(wiring.o)
+                                0x163 (size before relaxing)
+ .debug_str     0x00000de1      0x108 bin/atmega2560/core/core.a(wiring_digital.o)
+                                0x1ce (size before relaxing)
+ .debug_str     0x00000ee9      0xeb5 bin/atmega2560/core/core.a(HardwareSerial.o)
+                               0x1085 (size before relaxing)
+ .debug_str     0x00001d9e       0xf4 bin/atmega2560/core/core.a(new.o)
+                                0x132 (size before relaxing)
+ .debug_str     0x00001e92      0x3df bin/atmega2560/core/core.a(Print.o)
+                                0xd50 (size before relaxing)
+ .debug_str     0x00002271      0x4bf bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                0x5bc (size before relaxing)
+
+.debug_loc      0x00000000     0x3846
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x121 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .debug_loc     0x00000121      0x6b6 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .debug_loc     0x000007d7      0x103 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .debug_loc     0x000008da       0x68 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .debug_loc     0x00000942      0x2da bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .debug_loc     0x00000c1c      0x1ea bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .debug_loc     0x00000e06      0x378 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .debug_loc     0x0000117e      0x16d bin/atmega2560/core/core.a(wiring.o)
+ .debug_loc     0x000012eb      0x27a bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_loc     0x00001565      0x53f bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_loc     0x00001aa4       0xb0 bin/atmega2560/core/core.a(new.o)
+ .debug_loc     0x00001b54      0xd68 bin/atmega2560/core/core.a(Print.o)
+ .debug_loc     0x000028bc      0xf8a bin/atmega2560/core/core.a(LiquidCrystal.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(bin/atmega2560/PRODUCTION/RTuinOS_testOfThreadSafeQueue.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000      0x960
+ .debug_ranges  0x00000000       0x18 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+ .debug_ranges  0x00000018       0x18 bin/atmega2560/PRODUCTION/obj/main.o
+ .debug_ranges  0x00000030      0x188 bin/atmega2560/PRODUCTION/obj/rtos.o
+ .debug_ranges  0x000001b8       0x48 bin/atmega2560/PRODUCTION/obj/stdout.o
+ .debug_ranges  0x00000200       0x18 bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+ .debug_ranges  0x00000218      0x1f0 bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+ .debug_ranges  0x00000408       0x78 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+ .debug_ranges  0x00000480      0x150 bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+ .debug_ranges  0x000005d0       0x40 bin/atmega2560/core/core.a(wiring.o)
+ .debug_ranges  0x00000610       0x30 bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_ranges  0x00000640       0xd8 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_ranges  0x00000718       0x50 bin/atmega2560/core/core.a(new.o)
+ .debug_ranges  0x00000768       0xe8 bin/atmega2560/core/core.a(Print.o)
+ .debug_ranges  0x00000850      0x110 bin/atmega2560/core/core.a(LiquidCrystal.o)
+
+Cross Reference Table
+
+Symbol                                            File
+HardwareSerial::HardwareSerial(ring_buffer*, ring_buffer*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(HardwareSerial.o)
+HardwareSerial::HardwareSerial(ring_buffer*, ring_buffer*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char volatile*, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(HardwareSerial.o)
+HardwareSerial::available()                       bin/atmega2560/core/core.a(HardwareSerial.o)
+HardwareSerial::begin(unsigned long)              bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  bin/atmega2560/PRODUCTION/obj/stdout.o
+HardwareSerial::begin(unsigned long, unsigned char) bin/atmega2560/core/core.a(HardwareSerial.o)
+HardwareSerial::end()                             bin/atmega2560/core/core.a(HardwareSerial.o)
+HardwareSerial::flush()                           bin/atmega2560/core/core.a(HardwareSerial.o)
+HardwareSerial::operator bool()                   bin/atmega2560/core/core.a(HardwareSerial.o)
+HardwareSerial::peek()                            bin/atmega2560/core/core.a(HardwareSerial.o)
+HardwareSerial::read()                            bin/atmega2560/core/core.a(HardwareSerial.o)
+HardwareSerial::write(unsigned char)              bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  bin/atmega2560/PRODUCTION/obj/stdout.o
+LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::autoscroll()                       bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::begin(unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+LiquidCrystal::blink()                            bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::clear()                            bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::command(unsigned char)             bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::createChar(unsigned char, unsigned char*) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::cursor()                           bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::display()                          bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::home()                             bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::init(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::leftToRight()                      bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::noAutoscroll()                     bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::noBlink()                          bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+LiquidCrystal::noCursor()                         bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+LiquidCrystal::noDisplay()                        bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::pulseEnable()                      bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::rightToLeft()                      bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::scrollDisplayLeft()                bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::scrollDisplayRight()               bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::send(unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::setCursor(unsigned char, unsigned char) bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+LiquidCrystal::write(unsigned char)               bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+LiquidCrystal::write4bits(unsigned char)          bin/atmega2560/core/core.a(LiquidCrystal.o)
+LiquidCrystal::write8bits(unsigned char)          bin/atmega2560/core/core.a(LiquidCrystal.o)
+Print::print(Printable const&)                    bin/atmega2560/core/core.a(Print.o)
+Print::print(String const&)                       bin/atmega2560/core/core.a(Print.o)
+Print::print(__FlashStringHelper const*)          bin/atmega2560/core/core.a(Print.o)
+Print::print(char const*)                         bin/atmega2560/core/core.a(Print.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+Print::print(char)                                bin/atmega2560/core/core.a(Print.o)
+Print::print(double, int)                         bin/atmega2560/core/core.a(Print.o)
+Print::print(int, int)                            bin/atmega2560/core/core.a(Print.o)
+Print::print(long, int)                           bin/atmega2560/core/core.a(Print.o)
+Print::print(unsigned char, int)                  bin/atmega2560/core/core.a(Print.o)
+Print::print(unsigned int, int)                   bin/atmega2560/core/core.a(Print.o)
+Print::print(unsigned long, int)                  bin/atmega2560/core/core.a(Print.o)
+Print::printFloat(double, unsigned char)          bin/atmega2560/core/core.a(Print.o)
+Print::printNumber(unsigned long, unsigned char)  bin/atmega2560/core/core.a(Print.o)
+Print::println()                                  bin/atmega2560/core/core.a(Print.o)
+Print::println(Printable const&)                  bin/atmega2560/core/core.a(Print.o)
+Print::println(String const&)                     bin/atmega2560/core/core.a(Print.o)
+Print::println(__FlashStringHelper const*)        bin/atmega2560/core/core.a(Print.o)
+Print::println(char const*)                       bin/atmega2560/core/core.a(Print.o)
+Print::println(char)                              bin/atmega2560/core/core.a(Print.o)
+Print::println(double, int)                       bin/atmega2560/core/core.a(Print.o)
+Print::println(int, int)                          bin/atmega2560/core/core.a(Print.o)
+Print::println(long, int)                         bin/atmega2560/core/core.a(Print.o)
+Print::println(unsigned char, int)                bin/atmega2560/core/core.a(Print.o)
+Print::println(unsigned int, int)                 bin/atmega2560/core/core.a(Print.o)
+Print::println(unsigned long, int)                bin/atmega2560/core/core.a(Print.o)
+Print::write(char const*)                         bin/atmega2560/core/core.a(Print.o)
+Print::write(unsigned char const*, unsigned int)  bin/atmega2560/core/core.a(Print.o)
+                                                  bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+Serial                                            bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  bin/atmega2560/PRODUCTION/obj/stdout.o
+Serial1                                           bin/atmega2560/core/core.a(HardwareSerial.o)
+Serial2                                           bin/atmega2560/core/core.a(HardwareSerial.o)
+Serial3                                           bin/atmega2560/core/core.a(HardwareSerial.o)
+__addsf3                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__addsf3x                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o)
+__bad_interrupt                                   c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__brkval                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+__bss_end                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_clear_bss.o)
+__bss_start                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_clear_bss.o)
+__cmpsf2                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+__ctors_end                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+__ctors_start                                     c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+__cxa_guard_abort                                 bin/atmega2560/core/core.a(new.o)
+__cxa_guard_acquire                               bin/atmega2560/core/core.a(new.o)
+__cxa_guard_release                               bin/atmega2560/core/core.a(new.o)
+__cxa_pure_virtual                                bin/atmega2560/core/core.a(new.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+                                                  bin/atmega2560/core/core.a(HardwareSerial.o)
+__data_end                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__data_load_start                                 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__data_start                                      c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__divmodhi4                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodhi4.o)
+                                                  bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+__divmodsi4                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodsi4.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+__divsf3                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__divsf3_pse                                      c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+__divsf3x                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3.o)
+__do_clear_bss                                    c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_clear_bss.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(puts.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(iob.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(fputc.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+                                                  bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+                                                  bin/atmega2560/core/core.a(new.o)
+                                                  bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  bin/atmega2560/core/core.a(wiring_digital.o)
+                                                  bin/atmega2560/core/core.a(wiring.o)
+                                                  bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+                                                  bin/atmega2560/PRODUCTION/obj/stdout.o
+                                                  bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  bin/atmega2560/PRODUCTION/obj/main.o
+                                                  bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+__do_copy_data                                    c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(puts.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(iob.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(fputc.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+                                                  bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+                                                  bin/atmega2560/core/core.a(new.o)
+                                                  bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  bin/atmega2560/core/core.a(wiring_digital.o)
+                                                  bin/atmega2560/core/core.a(wiring.o)
+                                                  bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+                                                  bin/atmega2560/PRODUCTION/obj/stdout.o
+                                                  bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  bin/atmega2560/PRODUCTION/obj/main.o
+                                                  bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+__do_global_ctors                                 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+                                                  bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+__epilogue_restores__                             c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_epilogue.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+__eqsf2                                           c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+__fixsfsi                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__fixunssfsi                                      c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__floatsisf                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__floatunsisf                                     c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__flp                                             c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+__fp_cmp                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(unordsf2.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(gesf2.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+__fp_inf                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+__fp_nan                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+__fp_pscA                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+__fp_pscB                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+__fp_round                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_round.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o)
+__fp_split3                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+__fp_splitA                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+__fp_szero                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+__fp_zero                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+__gesf2                                           c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(gesf2.o)
+__gtsf2                                           c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(gesf2.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__heap_end                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+__heap_start                                      c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+__init                                            c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__iob                                             c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(puts.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(iob.o)
+                                                  bin/atmega2560/PRODUCTION/obj/stdout.o
+__lesf2                                           c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__ltsf2                                           c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__malloc_heap_end                                 c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+__malloc_heap_start                               c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+__malloc_margin                                   c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+__mulsf3                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__mulsf3_pse                                      c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+__mulsf3x                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+__mulsi3                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_mulsi3.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+                                                  bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+__nesf2                                           c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+__prologue_saves__                                c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_prologue.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+__stack                                           c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__subsf3                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(addsf3.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__tablejump2__                                    c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_tablejump.o)
+__tablejump__                                     c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_tablejump.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_ctors.o)
+__udivmodhi4                                      c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodhi4.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodhi4.o)
+                                                  bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+__udivmodsi4                                      c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_udivmodsi4.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodsi4.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+                                                  bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+__ultoa_invert                                    c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(ultoa_invert.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+__unordsf2                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libm.a(unordsf2.o)
+                                                  bin/atmega2560/core/core.a(Print.o)
+__vector_1                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_10                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_11                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_12                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_13                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_14                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_15                                       bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_16                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_17                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_18                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_19                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_2                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_20                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_21                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_22                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_23                                       bin/atmega2560/core/core.a(wiring.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_24                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_25                                       bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_26                                       bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_27                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_28                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_29                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_3                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_30                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_31                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_32                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_33                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_34                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_35                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_36                                       bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_37                                       bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_38                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_39                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_4                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_40                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_41                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_42                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_43                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_44                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_45                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_46                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_47                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_48                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_49                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_5                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_50                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_51                                       bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_52                                       bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_53                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_54                                       bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_55                                       bin/atmega2560/core/core.a(HardwareSerial.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_56                                       c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_6                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_7                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_8                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_9                                        c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vector_default                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+__vectors                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+_cntConsumerH                                     bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_cntConsumerM                                     bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_cntProducerH                                     bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_cntProducerM                                     bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_cntRelayL                                        bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_cpuLoad                                          bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_div                                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_divmodhi4.o)
+_exit                                             c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_exit.o)
+_noDataErrors                                     bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_noEventsQueueH2LFull                             bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_noEventsQueueL2HFull                             bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_noEventsQueueM2MFull                             bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_noReadElementsQueueL2H                           bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_noReadElementsQueueM2M                           bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_noWrittenElementsQueueH2L                        bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_noWrittenElementsQueueM2M                        bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+_tmpVarAsmToC_u16                                 bin/atmega2560/PRODUCTION/obj/rtos.o
+_tmpVarCToAsm_u16                                 bin/atmega2560/PRODUCTION/obj/rtos.o
+consumerH                                         bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+consumerM                                         bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+crc_checksumSAEJ1850_8Bit                         bin/atmega2560/PRODUCTION/obj/crc_checksum.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+delay                                             bin/atmega2560/core/core.a(wiring.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+delayMicroseconds                                 bin/atmega2560/core/core.a(wiring.o)
+                                                  bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+digitalRead                                       bin/atmega2560/core/core.a(wiring_digital.o)
+digitalWrite                                      bin/atmega2560/core/core.a(wiring_digital.o)
+                                                  bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+digital_pin_to_bit_mask_PGM                       bin/atmega2560/core/core.a(wiring_digital.o)
+digital_pin_to_port_PGM                           bin/atmega2560/core/core.a(wiring_digital.o)
+digital_pin_to_timer_PGM                          bin/atmega2560/core/core.a(wiring_digital.o)
+dpy_display                                       bin/atmega2560/PRODUCTION/obj/dpy_display.o
+dpy_display_t::dpy_display_t()                    bin/atmega2560/PRODUCTION/obj/dpy_display.o
+dpy_display_t::dpy_display_t()                    bin/atmega2560/PRODUCTION/obj/dpy_display.o
+dpy_display_t::printBackground()                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+dpy_display_t::printCpuLoad(unsigned char)        bin/atmega2560/PRODUCTION/obj/dpy_display.o
+dpy_display_t::printGreeting()                    bin/atmega2560/PRODUCTION/obj/dpy_display.o
+dpy_display_t::printNoCycles(unsigned long)       bin/atmega2560/PRODUCTION/obj/dpy_display.o
+dpy_display_t::printNoErrors(int)                 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+dpy_printBackground                               bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+dpy_printCpuLoad                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+dpy_printGreeting                                 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+dpy_printNoCycles                                 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+dpy_printNoErrors                                 bin/atmega2560/PRODUCTION/obj/dpy_display.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+exit                                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6\libgcc.a(_exit.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+fputc                                             c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(fputc.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+                                                  bin/atmega2560/PRODUCTION/obj/stdout.o
+free                                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+                                                  bin/atmega2560/core/core.a(new.o)
+gsl_getSystemLoad                                 bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+init                                              bin/atmega2560/core/core.a(wiring.o)
+                                                  bin/atmega2560/PRODUCTION/obj/main.o
+init_stdout                                       bin/atmega2560/PRODUCTION/obj/stdout.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+loop                                              bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/rtos.o
+main                                              bin/atmega2560/PRODUCTION/obj/main.o
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+malloc                                            c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(malloc.o)
+                                                  bin/atmega2560/core/core.a(new.o)
+memcpy                                            c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memcpy.o)
+                                                  bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+memset                                            c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(memset.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+micros                                            bin/atmega2560/core/core.a(wiring.o)
+millis                                            bin/atmega2560/core/core.a(wiring.o)
+                                                  bin/atmega2560/PRODUCTION/obj/gsl_systemLoad.o
+operator delete(void*)                            bin/atmega2560/core/core.a(new.o)
+operator delete[](void*)                          bin/atmega2560/core/core.a(new.o)
+operator new(unsigned int)                        bin/atmega2560/core/core.a(new.o)
+operator new[](unsigned int)                      bin/atmega2560/core/core.a(new.o)
+pinMode                                           bin/atmega2560/core/core.a(wiring_digital.o)
+                                                  bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+port_to_input_PGM                                 bin/atmega2560/core/core.a(wiring_digital.o)
+port_to_mode_PGM                                  bin/atmega2560/core/core.a(wiring_digital.o)
+port_to_output_PGM                                bin/atmega2560/core/core.a(wiring_digital.o)
+printf                                            c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+producerH                                         bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+producerM                                         bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+puts                                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(puts.o)
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+puts_progmem                                      bin/atmega2560/PRODUCTION/obj/stdout.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+rand                                              c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+rand_r                                            c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+rtos_enableIRQTimerTic                            bin/atmega2560/PRODUCTION/obj/rtos.o
+rtos_getStackReserve                              bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+rtos_getTaskOverrunCounter                        bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+rtos_initRTOS                                     bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  bin/atmega2560/PRODUCTION/obj/main.o
+rtos_initializeTask                               bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+rtos_rtuinosStartupMsg                            bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+rtos_sendEvent                                    bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+rtos_waitForEvent                                 bin/atmega2560/PRODUCTION/obj/rtos.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+rx_buffer                                         bin/atmega2560/core/core.a(HardwareSerial.o)
+rx_buffer1                                        bin/atmega2560/core/core.a(HardwareSerial.o)
+rx_buffer2                                        bin/atmega2560/core/core.a(HardwareSerial.o)
+rx_buffer3                                        bin/atmega2560/core/core.a(HardwareSerial.o)
+serialEvent()                                     bin/atmega2560/core/core.a(HardwareSerial.o)
+serialEvent1()                                    bin/atmega2560/core/core.a(HardwareSerial.o)
+serialEvent2()                                    bin/atmega2560/core/core.a(HardwareSerial.o)
+serialEvent3()                                    bin/atmega2560/core/core.a(HardwareSerial.o)
+serialEventRun()                                  bin/atmega2560/core/core.a(HardwareSerial.o)
+setup                                             bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/rtos.o
+sprintf                                           c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                                                  bin/atmega2560/PRODUCTION/obj/dpy_display.o
+srand                                             c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(rand.o)
+strnlen                                           c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+strnlen_P                                         c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+timer0_millis                                     bin/atmega2560/core/core.a(wiring.o)
+timer0_overflow_count                             bin/atmega2560/core/core.a(wiring.o)
+tsq_allocTailElement                              bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+tsq_createQueue                                   bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+tsq_getMaximumQueueUsage                          bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+tsq_getNoQueuedElements                           bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+tsq_getSizeOfQueue                                bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+tsq_postTailElement                               bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+tsq_readFromHead                                  bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+tsq_writeToTail                                   bin/atmega2560/PRODUCTION/obj/tsq_threadSafeQueue.o
+                                                  bin/atmega2560/PRODUCTION/obj/ttq_testOfThreadSafeQueue.o
+tx_buffer                                         bin/atmega2560/core/core.a(HardwareSerial.o)
+tx_buffer1                                        bin/atmega2560/core/core.a(HardwareSerial.o)
+tx_buffer2                                        bin/atmega2560/core/core.a(HardwareSerial.o)
+tx_buffer3                                        bin/atmega2560/core/core.a(HardwareSerial.o)
+vfprintf                                          c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(vfprintf_std.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                                                  c:/programfiles/arduino-1.0.6/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6\libc.a(printf.o)
+vtable for HardwareSerial                         bin/atmega2560/core/core.a(HardwareSerial.o)
+vtable for LiquidCrystal                          bin/atmega2560/core/core.a(LiquidCrystal.o)
+vtable for Print                                  bin/atmega2560/core/core.a(Print.o)
+vtable for Stream                                 bin/atmega2560/core/core.a(HardwareSerial.o)
+vtable for dpy_display_t                          bin/atmega2560/PRODUCTION/obj/dpy_display.o
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:   16706 bytes (6.4% Full)
+(.text + .data + .bootloader)
+
+Data:       3563 bytes (43.5% Full)
+(.data + .bss + .noinit)
+
+
