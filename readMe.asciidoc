@@ -2,7 +2,7 @@
 
 This folder contains the import of folder
 https://svn.code.sf.net/p/comframe/code/canInterface/branches/generateRandomDbc[^],
-revision 278, May 15th, 2018, 21:28:20, from the original Sourceforge
+revision 278, May 15th, 2018, 21:28:20, from the original SourceForge
 repository, which had been used before this GitHub repository.
 
 The folder contains a simple GNU Octave tool to generate DBC files with
