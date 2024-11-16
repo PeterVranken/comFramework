@@ -231,7 +231,7 @@ application that can translate the information found in one or more
 Excel workbooks into manifold textual representations. excelExporter is
 a general purpose text rendering application for Excel spreadsheets.</p>
 <p>excelExporter is the auxiliary code generator from the <a
-href="https://sourceforge.net/p/comframe/wiki/Home/">comFramework</a>
+href="https://github.com/PeterVranken/comFramework/tree/main/">comFramework</a>
 project. However, the use of excelExporter is in no way restricted to
 the context of CAN interface generation in embedded, automotive software
 development. Because of its generality we decided to publish it as
@@ -357,7 +357,7 @@ Excel input and application configuration is given in the Wiki page
 mentioned before.</p>
 <p>Another source of knowledge about the data model and how to access
 its elements is the investigation of the sample templates: <a
-href="https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/samples/">excelExporter/samples/…/*.stg</a>.</p>
+href="https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/">excelExporter/samples/…/*.stg</a>.</p>
 <h3 data-number="1.2.3" id="the-stringtemplate-v4-templates"><span
 class="header-section-number">1.2.3</span> The StringTemplate V4
 templates</h3>
@@ -367,14 +367,14 @@ passed to the StringTemplate V4 template engine and this engine is fully
 documented. Please refer to <a href="http://www.stringtemplate.org/"
 class="uri">http://www.stringtemplate.org/</a> or find a printable
 version of the documentation as <a
-href="https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/ST4-270115-0836-52.pdf"
-class="uri">https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/ST4-270115-0836-52.pdf</a>.</p>
+href="https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf"
+class="uri">https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf</a>.</p>
 <p>Please note, as a matter of experience, you will have to read the
 StringTemplate V4 documentation entirely before you can start to
 successfully develop your first useful template. StringTemplate V4 is
 powerful and convenient but not self-explaining.</p>
 <p>Studying the samples <a
-href="https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/samples/">excelExporter/samples/…/*.stg</a>
+href="https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/">excelExporter/samples/…/*.stg</a>
 is another important source of information.</p>
 <h3 data-number="1.2.4" id="the-wiki-pages"><span
 class="header-section-number">1.2.4</span> The Wiki pages</h3>
@@ -398,19 +398,26 @@ the comFramework project</a></li>
 </ul>
 <h2 data-number="1.3" id="installation"><span
 class="header-section-number">1.3</span> Installation</h2>
-<p>excelExporter is a Java 8 application. The installation is as simple
+<p>excelExporter is a Java 18 application. The installation is as simple
 as unpacking an archive and optionally setting an environment variable.
 It is described in detail in the file <a
-href="https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/installation.txt">installation.txt</a>.</p>
+href="https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/installation.txt">installation.txt</a>.</p>
 <h2 data-number="1.4" id="whats-new"><span
 class="header-section-number">1.4</span> What’s new</h2>
 <h3 data-number="1.4.1" id="release-1.2"><span
 class="header-section-number">1.4.1</span> Release 1.2</h3>
-<p>Update of data model: The support of string comparison operations has
-been adopted from codeGenerator. &lt;info.str&gt; is a new attribute,
-which offers some comparison operations, including matching to regular
-expressions. Text fields of the data model (e.g., cell contents) can be
-compared with one another or with expected contents.</p>
+<p>Update of data model:</p>
+<ul>
+<li>The cell representation now offers a JSON and widely C/C++
+compatible text representation, so that string objects of these contexts
+can be created.</li>
+<li>Update of data model: The support of string comparison operations
+has been adopted from codeGenerator. &lt;info.str&gt; is a new
+attribute, which offers some comparison operations, including matching
+to regular expressions. Text fields of the data model (e.g., cell
+contents) can be compared with one another or with expected
+contents.</li>
+</ul>
 <h3 data-number="1.4.2" id="release-1.1"><span
 class="header-section-number">1.4.2</span> Release 1.1</h3>
 <p>Update of data model: The cell object now contains the field “is”,

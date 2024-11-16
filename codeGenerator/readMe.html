@@ -346,8 +346,8 @@ StringTemplate V4 template engine and this engine is fully documented.
 Please refer to <a href="http://www.stringtemplate.org/"
 class="uri">http://www.stringtemplate.org/</a> or find a printable
 version of the documentation as <a
-href="https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/doc/ST4-270115-0836-52.pdf"
-class="uri">https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/doc/ST4-270115-0836-52.pdf</a>.</p>
+href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/ST4-270115-0836-52.pdf"
+class="uri">https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/ST4-270115-0836-52.pdf</a>.</p>
 <p>Please note, as a matter of experience, you will have to read the
 StringTemplate V4 documentation entirely before you can start to
 successfully develop your first useful template. StringTemplate V4 is
@@ -407,15 +407,15 @@ class="header-section-number">1.3</span> Installation</h2>
 <p>The code generator is a Java 18 application. The installation is as
 simple as unpacking an archive and setting an environment variable. It
 is described in detail in the file <a
-href="https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/doc/installation.txt">installation.txt</a>.</p>
+href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/installation.txt">installation.txt</a>.</p>
 <h2 data-number="1.4" id="whats-new"><span
 class="header-section-number">1.4</span> What’s new</h2>
 <h3 data-number="1.4.1" id="release-1.12.0"><span
 class="header-section-number">1.4.1</span> Release 1.12.0</h3>
 <p>The data model has been extended with string comparison operations
-and a related new sample has been added. Text fields of the data model
-can be compared with one another or with expected contents or they can
-be matched to a regular expression.</p>
+and a related new sample has been added (stringCompare). Text fields of
+the data model can be compared with one another or with expected
+contents or they can be matched to a regular expression.</p>
 <p>The template library for iterations has been extended. The filter
 conditions, <em>which</em> messages or <em>which</em> signals, etc., to
 iterate are now external to the new, additional iterations templates.
@@ -424,6 +424,8 @@ particular objects to visit.</p>
 <p>With these changes, it becomes much easier and straightforward to
 implement specific iterations, e.g., all frames having a signal named
 <code>.*CRC.*</code> for the generation of checksum validation code.</p>
+<p>The template library has been extended. The new library file
+loops.stg offers standard for- and while-loops.</p>
 <p>The MathWorks Embedded Coder samples have been migrated to MATLAB
 2021b.</p>
 <p>The special file names <code>stdout</code> and <code>stderr</code>
@@ -615,7 +617,7 @@ and opens some new structural possibilities</li>
 </ul>
 <p>A new sample, <em>scratchPad</em>, demonstrates the capabilities and
 the usage of the new scratch pad. Please have a look at the <a
-href="https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/samples/scratchPad/output/demoScratchPad.txt">generated
+href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/scratchPad/output/demoScratchPad.txt">generated
 output</a> to get a first impression.</p>
 <h3 data-number="1.4.12" id="release-1.5"><span
 class="header-section-number">1.4.12</span> Release 1.5</h3>
@@ -648,15 +650,15 @@ its revision designation because of the high impact of this issue: Most
 people will use the sample templates as starting point for their
 application and would suffer from the inherited bug in the template.</p>
 <p>The bug was located and is fixed in the template <a
-href="https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/samples/raceTechnology/templates/lib/codeGenC.stg"
-title="SVN repository">codeGenC.stg</a>.</p>
+href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/codeGenC.stg"
+title="GitHub repository">codeGenC.stg</a>.</p>
 <p>However, the complete set of templates should be exchanged for
 consistency reasons. The introduction of the support template <a
-href="https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/samples/raceTechnology/templates/lib/iterations.stg"
-title="SVN repository">iterations.stg</a> had established the attribute
-name <em>signal</em> for signals. Earlier templates used to refer to
-<em>s</em> to address to the signal in scope. This has now been aligned
-and all templates use the attribute name <em>signal</em>.</p>
+href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/iterations.stg"
+title="GitHub repository">iterations.stg</a> had established the
+attribute name <em>signal</em> for signals. Earlier templates used to
+refer to <em>s</em> to address to the signal in scope. This has now been
+aligned and all templates use the attribute name <em>signal</em>.</p>
 <h3 data-number="1.4.15" id="release-1.2"><span
 class="header-section-number">1.4.15</span> Release 1.2</h3>
 <p>An unpleasant bug fix: The code itself was alright but there were two
@@ -705,7 +707,7 @@ class="header-section-number">1.5</span> The comFramework project</h2>
 <p>The code generator is only a part of the comFramework projects, which
 embeds the code generator into the concept of a highly reusable,
 flexibly integratable CAN interface. comFramework can be found at <a
-href="https://sourceforge.net/projects/comframe/"
-class="uri">https://sourceforge.net/projects/comframe/</a>.</p>
+href="https://github.com/PeterVranken/comFramework/tree/main/"
+class="uri">https://github.com/PeterVranken/comFramework/tree/main/</a>.</p>
 </body>
 </html>

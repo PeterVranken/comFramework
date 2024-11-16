@@ -105,7 +105,7 @@ The technique of rendering the information held in a Cluster and an Info
 object is well documented. The two objects are passed to the
 StringTemplate V4 template engine and this engine is fully documented.
 Please refer to <http://www.stringtemplate.org/> or find a printable version
-of the documentation as <https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/doc/ST4-270115-0836-52.pdf>.
+of the documentation as <https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/ST4-270115-0836-52.pdf>.
 
 Please note, as a matter of experience, you will have to read the
 StringTemplate V4 documentation entirely before you can start to
@@ -137,7 +137,7 @@ today, Sep 2023, we have the following discussions in the Wiki pages:
 
 The code generator is a Java 18 application. The installation is as simple as
 unpacking an archive and setting an environment variable. It is described
-in detail in the file [installation.txt](https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/doc/installation.txt).
+in detail in the file [installation.txt](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/installation.txt).
 
 ## What's new ##
 
@@ -369,7 +369,7 @@ info, has two new elements:
     and opens some new structural possibilities
 
 A new sample, *scratchPad*, demonstrates the capabilities and the usage of
-the new scratch pad. Please have a look at the [generated output](https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/samples/scratchPad/output/demoScratchPad.txt) to get a
+the new scratch pad. Please have a look at the [generated output](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/scratchPad/output/demoScratchPad.txt) to get a
 first impression.
 
 ### Release 1.5 ###
@@ -405,11 +405,11 @@ its revision designation because of the high impact of this issue: Most
 people will use the sample templates as starting point for their
 application and would suffer from the inherited bug in the template.
 
-The bug was located and is fixed in the template [codeGenC.stg](https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/samples/raceTechnology/templates/lib/codeGenC.stg "SVN
+The bug was located and is fixed in the template [codeGenC.stg](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/codeGenC.stg "GitHub
 repository").
 
 However, the complete set of templates should be exchanged for consistency
-reasons. The introduction of the support template [iterations.stg](https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/samples/raceTechnology/templates/lib/iterations.stg "SVN repository") had
+reasons. The introduction of the support template [iterations.stg](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/iterations.stg "GitHub repository") had
 established the attribute name *signal* for signals. Earlier templates
 used to refer to *s* to address to the signal in scope. This has now been
 aligned and all templates use the attribute name *signal*.
@@ -470,4 +470,4 @@ state of samples and documentation.
 The code generator is only a part of the comFramework projects, which
 embeds the code generator into the concept of a highly reusable, flexibly
 integratable CAN interface. comFramework can be found at
-<https://sourceforge.net/projects/comframe/>.
+<https://github.com/PeterVranken/comFramework/tree/main/>.

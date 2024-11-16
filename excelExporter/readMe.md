@@ -7,7 +7,7 @@ application that can translate the information found in one or more Excel
 workbooks into manifold textual representations. excelExporter is a
 general purpose text rendering application for Excel spreadsheets.
 
-excelExporter is the auxiliary code generator from the [comFramework](https://sourceforge.net/p/comframe/wiki/Home/)
+excelExporter is the auxiliary code generator from the [comFramework](https://github.com/PeterVranken/comFramework/tree/main/)
 project. However, the use of excelExporter is in no way restricted to the
 context of CAN interface generation in embedded, automotive software
 development. Because of its generality we decided to publish it as
@@ -134,7 +134,7 @@ before.
 
 Another source of knowledge about the data model and how to access its
 elements is the investigation of the sample templates:
-[excelExporter/samples/.../*.stg](https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/samples/).
+[excelExporter/samples/.../*.stg](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/).
 
 ### The StringTemplate V4 templates ###
 
@@ -142,14 +142,14 @@ The technique of rendering the information held in a *Cluster* and an *Info*
 object is well documented. The two objects are passed to the
 StringTemplate V4 template engine and this engine is fully documented.
 Please refer to <http://www.stringtemplate.org/> or find a printable version
-of the documentation as <https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/ST4-270115-0836-52.pdf>.
+of the documentation as <https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf>.
 
 Please note, as a matter of experience, you will have to read the
 StringTemplate V4 documentation entirely before you can start to
 successfully develop your first useful template. StringTemplate V4 is
 powerful and convenient but not self-explaining.
 
-Studying the samples [excelExporter/samples/.../*.stg](https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/samples/)
+Studying the samples [excelExporter/samples/.../*.stg](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/)
 is another important source of information.
 
 ### The Wiki pages ###
@@ -167,10 +167,10 @@ today, February 2023, we have the following discussions in the Wiki pages:
 
 ## Installation ##
 
-excelExporter is a Java 8 application. The installation is as simple as
+excelExporter is a Java 18 application. The installation is as simple as
 unpacking an archive and optionally setting an environment variable. It is
 described in detail in the file
-[installation.txt](https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/installation.txt).
+[installation.txt](https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/installation.txt).
 
 
 ## What's new ##
