@@ -1,5 +1,5 @@
 The UML diagrams in this folder have been created and are maintained using
-UMLet. The applied version is UMLet version 14.1.1 2016-01-14.
+UMLet. The applied version is UMLet version 15.1 2021-05-06.
 
 See http://www.umlet.com/ for a download.
 
