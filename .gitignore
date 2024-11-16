@@ -1,0 +1,83 @@
+# RCS files
+**/.git/**
+**/.svn/**
+**/.cvs/**
+
+# Compiler/Linker artifacts
+**/obj/**
+*.o
+*.obj
+*.d
+*.lst
+*.map
+*.elf
+*.hex
+*.s19
+
+# Local, machine dependent configuration files
+**/setEnv.ps1
+#**/open-project.el
+
+# Eclipse workspace data
+**/.metadata
+**/.jxbrowser.userdata
+**/.tempFiles
+**/dvt
+**/RemoteSystemsTempFiles
+
+# Backup files
+**/*.bak
+**/*.renamed
+**/*.obsolete
+**/*.~
+**/*~
+*.asv
+*.m~
+*.autosave
+*.slx.r*
+*.mdl.r*
+
+# Global/gtags
+GPATH
+GRTAGS
+GTAGS
+
+# Common log files
+**/log/**
+*.log
+
+# Compiled MEX files
+*.mex*
+
+# Packaged app and toolbox files
+*.mlappinstall
+*.mltbx
+
+# Deployable archives
+*.ctf
+
+# Generated helpsearch folders
+helpsearch*/
+
+# Code generation folders
+slprj/
+sccprj/
+codegen/
+
+# Cache files
+*.slxc
+*.dmr
+
+# Unused artifacts from Embedded Coder
+**/tmwinternal/**
+buildInfo.mat
+compileInfo.mat
+codeInfo.mat
+**/*_ert_rtw/*.mk
+**/*_ert_rtw/*.rsp
+**/*_ert_rtw/*.tmw
+**/*_ert_rtw/*.bat
+**/*_ert_rtw/ert_main.c
+
+# Cloud based storage dotfile
+.MATLABDriveTag
