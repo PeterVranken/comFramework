@@ -1,0 +1,139 @@
+//
+// dbc.stg
+//
+// This is a template group file for StringTemplate V4, see www.stringtemplate.org.
+//
+// The file generates a CAN network database (*.dbc) file.
+//
+// Copyright (C) 2015-2017 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+//
+// This program is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by the
+// Free Software Foundation, either version 3 of the License, or any later
+// version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+// FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+// for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+delimiters "<", ">"
+
+dbcFile(dbc) ::= <<
+VERSION "<dbc.name>, created by Octave and generateRandomDbc.m on <dbc.date>"
+
+NS_ : 
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+
+BS_:
+
+BU_: <ecu()>
+
+<dbc.frameAry:renderFrame()><\\>
+<! Render the comments of frames and signals of frames !>
+<dbc.frameAry:renderComments()><\\>
+<! Static attribute definition parts !>
+BA_DEF_ "Author" STRING;
+BA_DEF_ BO_ "frameSendMode" ENUM  "regular","event","mixed";
+BA_DEF_ BO_ "sendPeriod" INT 5 10000;
+BA_DEF_ BO_ "crcStartValue" INT 1 255;
+BA_DEF_ BO_ "eventMinDistance" INT 5 10000;
+BA_DEF_ SG_ "initialValue" FLOAT -1e38 1e38;
+BA_DEF_DEF_ "Author" "http://sourceforge.net/projects/comframe/";
+BA_DEF_DEF_ "frameSendMode" "regular";
+BA_DEF_DEF_ "sendPeriod" 10;
+BA_DEF_DEF_ "crcStartValue" 1;
+BA_DEF_DEF_ "eventMinDistance" 10;
+BA_DEF_DEF_ "initialValue" 0.0;
+<! Dynamic attribute definition parts, individual values !>
+<dbc.frameAry:renderAttribs()>
+>>
+
+// The network node's name, which the DBC file is made for.
+ecu() ::= "<dbc.ecu>"
+
+// Render a frame with its signals.
+renderFrame(frame) ::= <<
+BO_ <frame.id> <frame.name>: <frame.size> <\\>
+<if(frame.isReceived)>Vector__XXX<else><ecu()><endif>
+  <frame.signalAry:renderSignal()>
+
+>>
+
+// Render a signal.
+renderSignal(signal) ::= <<
+SG_ <signal.name> : <signal.startBit>|<signal.length>@<\\>
+<if(signal.isMotorola)>0<else>1<endif><if(signal.isSigned)>-<else>+<endif> <\\>
+(<signal.factor>,<signal.offset>) [<signal.min>|<signal.max>] "<signal.unit>" <\\>
+<if(frame.isReceived)><ecu()><else>Vector__XXX<endif><\n>
+>>
+
+
+// Render frame and signal comments - if any.
+renderComments(frame) ::= <<
+<if(frame.comment)><\\>
+CM_ BO_ <frame.id> "<frame.comment>";
+<endif>
+<frame.signalAry:renderSignalComment()>
+>>
+
+renderSignalComment(signal) ::= <<
+<if(signal.comment)><\\>
+CM_ SG_ <frame.id> <signal.name> "<signal.comment>";
+<endif>
+>>
+
+
+// Render attributes of frames and signals.
+
+// Enumeration SendType: Mapping from enumeration value name to numeric value.
+frameSendType ::= 
+  [ "regular": "0"
+  , "event": "1"
+  , "mixed": "2"
+  , default: {<info.error.(["Bad send type ",frame.sendType," used in row ",frame.iRow])>}
+  ]
+
+renderAttribs(frame) ::= <<
+<if(frame.sendType)><\\>
+BA_ "frameSendMode" BO_ <frame.id> <frameSendType.(frame.sendType)>;
+<endif>
+<if(frame.sendTime)><\\>
+BA_ "sendPeriod" BO_ <frame.id> <frame.sendTime>;
+<endif>
+<if(frame.minDistance)><\\>
+BA_ "eventMinDistance" BO_ <frame.id> <frame.minDistance>;
+<endif>
+<if(frame.crcStartValue)><\\>
+BA_ "crcStartValue" BO_ <frame.id> <frame.crcStartValue>;
+<endif>
+<frame.signalAry:renderSignalAttribs()>
+>>
+
+renderSignalAttribs(signal) ::= <<
+<if(signal.initialValue)><\\>
+BA_ "initialValue" SG_ <frame.id> <signal.name> <signal.initialValue>;
+<endif>
+>>

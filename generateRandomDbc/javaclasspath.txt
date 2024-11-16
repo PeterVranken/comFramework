@@ -1,0 +1,6 @@
+% See
+% https://www.gnu.org/software/octave/doc/v4.0.1/How-to-make-Java-classes-available_003f.html
+% for details about setting the Ocatve class path.
+private\lib-ST4\ST-4.0.8.jar
+private\templates
+.
