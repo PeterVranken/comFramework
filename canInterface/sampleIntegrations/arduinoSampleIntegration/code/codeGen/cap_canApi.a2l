@@ -1,0 +1,734 @@
+/*
+ * CAN cluster arduinoSampleIntegration
+ *
+ * This file has been created with comFramework - codeGenerator version 1.12.1,
+ * see http://sourceforge.net/projects/comframe/
+ *
+ * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ *
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+ * for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/begin PROJECT TysonBMS ""
+  /begin MODULE CAN ""
+    /* Declaration of variable PT_1024_codeGenerationError_badKindOfSymbol */
+    /begin MEASUREMENT PT_1024_codeGenerationError_badKindOfSymbol
+      "Transmission status of frame StateEcu01 (1024, 0x400) on bus PT"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0 /* LowerLimit */
+      64 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol" 0
+    /end MEASUREMENT
+
+
+
+    /* Declaration of variable PT_1024_checksum */
+    /begin MEASUREMENT PT_1024_checksum
+      "Message related checksum. The sum is defined such that the arithmetic sum of all message bytes (including the check sum itself) and the start value yields 0xff"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      255.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1024_speedOfRotation */
+    /begin MEASUREMENT PT_1024_speedOfRotation
+      "Speed of rotation of the engine"
+      UWORD
+      CONV[PT_1024_speedOfRotation] /* Conversion: see next section */
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      6500.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.speedOfRotation@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.speedOfRotation" 0
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CONV[PT_1024_speedOfRotation]
+      "Linear mapping, used for variable PT_1024_speedOfRotation"
+      RAT_FUNC
+      "%10" /* Format */
+      "rpm"
+      COEFFS 0 -1 0.0 0 0 -0.1
+    /end COMPU_METHOD
+
+
+    /* Declaration of variable PT_1024_sequenceCounter */
+    /begin MEASUREMENT PT_1024_sequenceCounter
+      "Sequence counter of message origin. Each update of the message contents results in a cylically increased counter value. The counter wraps around after 14"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      14.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter" 0
+    /end MEASUREMENT
+
+
+
+    /* Declaration of variable PT_1040_codeGenerationError_badKindOfSymbol */
+    /begin MEASUREMENT PT_1040_codeGenerationError_badKindOfSymbol
+      "Transmission status of frame StateEcu02 (1040, 0x410) on bus PT"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0 /* LowerLimit */
+      64 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol" 0
+    /end MEASUREMENT
+
+
+
+    /* Declaration of variable PT_1040_checksum */
+    /begin MEASUREMENT PT_1040_checksum
+      "Message related checksum. The sum is defined such that the arithmetic sum of all message bytes (including the check sum itself) and the start value yields 0xff"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      255.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1040_sequenceCounter */
+    /begin MEASUREMENT PT_1040_sequenceCounter
+      "Sequence counter of message origin. Each update of the message contents results in a cylically decreased counter value. The counter wraps around from 1 to 15"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      15.0 /* LowerLimit */
+      1.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1040_torque */
+    /begin MEASUREMENT PT_1040_torque
+      "Current engine torque as estimated by the ECU"
+      SWORD
+      CONV[PT_1040_torque] /* Conversion: see next section */
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      -500.0 /* LowerLimit */
+      500.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.torque@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.torque" 0
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CONV[PT_1040_torque]
+      "Linear mapping, used for variable PT_1040_torque"
+      RAT_FUNC
+      "%10" /* Format */
+      "Nm"
+      COEFFS 0 -1 0.0 0 0 -0.5
+    /end COMPU_METHOD
+
+
+
+    /* Declaration of variable PT_2032_codeGenerationError_badKindOfSymbol */
+    /begin MEASUREMENT PT_2032_codeGenerationError_badKindOfSymbol
+      "Transmission status of frame UserLimits (2032, 0x7F0) on bus PT"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0 /* LowerLimit */
+      64 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol" 0
+    /end MEASUREMENT
+
+
+
+    /* Declaration of variable PT_2032_sequenceCounter */
+    /begin MEASUREMENT PT_2032_sequenceCounter
+      "Sequence counter of message origin. Each update of the message contents results in a cylically increased counter value. The counter wraps around from 14 to 1"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      1.0 /* LowerLimit */
+      14.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_2032_minSpeedOfRotation */
+    /begin MEASUREMENT PT_2032_minSpeedOfRotation
+      "User set minimum for speeed of rotation. A CAN frame with according status bit is broadcasted by the supervising instance if the speed falls below this limit"
+      UWORD
+      CONV[PT_2032_minSpeedOfRotation] /* Conversion: see next section */
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      6500.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.minSpeedOfRotation@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.minSpeedOfRotation" 0
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CONV[PT_2032_minSpeedOfRotation]
+      "Linear mapping, used for variable PT_2032_minSpeedOfRotation"
+      RAT_FUNC
+      "%10" /* Format */
+      "rpm"
+      COEFFS 0 -1 0.0 0 0 -1.6
+    /end COMPU_METHOD
+
+
+    /* Declaration of variable PT_2032_maxSpeedOfRotation */
+    /begin MEASUREMENT PT_2032_maxSpeedOfRotation
+      "User set maximum for speeed of rotation. A CAN frame with according status bit is broadcasted by the supervising instance if the limit is exceeded"
+      UWORD
+      CONV[PT_2032_maxSpeedOfRotation] /* Conversion: see next section */
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      6500.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.maxSpeedOfRotation@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.maxSpeedOfRotation" 0
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CONV[PT_2032_maxSpeedOfRotation]
+      "Linear mapping, used for variable PT_2032_maxSpeedOfRotation"
+      RAT_FUNC
+      "%10" /* Format */
+      "rpm"
+      COEFFS 0 -1 0.0 0 0 -1.6
+    /end COMPU_METHOD
+
+
+    /* Declaration of variable PT_2032_checksum */
+    /begin MEASUREMENT PT_2032_checksum
+      "Message related checksum. The sum is defined such that the arithmetic sum of all message bytes (including the check sum itself) and the start value yields 0xff"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      255.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_2032_minPower */
+    /begin MEASUREMENT PT_2032_minPower
+      "User set minimum for the engine power. A CAN frame with according status bit is broadcasted by the supervising instance if the power falls below this limit"
+      UWORD
+      CONV[PT_2032_minPower] /* Conversion: see next section */
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      -10.0 /* LowerLimit */
+      240.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.minPower@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.minPower" 0
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CONV[PT_2032_minPower]
+      "Linear mapping, used for variable PT_2032_minPower"
+      RAT_FUNC
+      "%10" /* Format */
+      "KW"
+      COEFFS 0 -1 -10.0 0 0 -0.5
+    /end COMPU_METHOD
+
+
+    /* Declaration of variable PT_2032_maxPower */
+    /begin MEASUREMENT PT_2032_maxPower
+      "User set maximum for the engine power. A CAN frame with according status bit is broadcasted by the supervising instance if the limit is exceeded"
+      UWORD
+      CONV[PT_2032_maxPower] /* Conversion: see next section */
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      -10.0 /* LowerLimit */
+      240.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.maxPower@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.maxPower" 0
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CONV[PT_2032_maxPower]
+      "Linear mapping, used for variable PT_2032_maxPower"
+      RAT_FUNC
+      "%10" /* Format */
+      "KW"
+      COEFFS 0 -1 -10.0 0 0 -0.5
+    /end COMPU_METHOD
+
+
+
+    /* Declaration of variable PT_1536_codeGenerationError_badKindOfSymbol */
+    /begin MEASUREMENT PT_1536_codeGenerationError_badKindOfSymbol
+      "Transmission status of frame InfoPowerDisplay (1536, 0x600) on bus PT"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0 /* LowerLimit */
+      32 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol" 0
+    /end MEASUREMENT
+
+
+
+    /* Declaration of variable PT_1536_checksum */
+    /begin MEASUREMENT PT_1536_checksum
+      "Message related checksum. The sum is defined such that the arithmetic sum of all message bytes (including the check sum itself) and the start value yields 0xff"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      255.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1536_sequenceCounter */
+    /begin MEASUREMENT PT_1536_sequenceCounter
+      "Sequence counter of message origin. Each update of the message contents results in a cylically increased counter value. The counter wraps around after 14"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      14.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1536_power */
+    /begin MEASUREMENT PT_1536_power
+      "The computed, current output power of the engine The computed, current output power of the engine"
+      UWORD
+      CONV[PT_1536_power] /* Conversion: see next section */
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      -500000.0 /* LowerLimit */
+      500000.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.power@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.power" 0
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD CONV[PT_1536_power]
+      "Linear mapping, used for variable PT_1536_power"
+      RAT_FUNC
+      "%10" /* Format */
+      "W"
+      COEFFS 0 -1 -500000.0 0 0 -32.0
+    /end COMPU_METHOD
+
+
+    /* Declaration of variable PT_1536_state */
+    /begin MEASUREMENT PT_1536_state
+      "The status of the power computation. If the input information is invalid or suspicious or if there is an overflow in the computation then the computed power is unreliable. This status information will indicate whether the power information is reliabale or not and why not"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      2.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.state@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.state" 0
+    /end MEASUREMENT
+
+
+
+    /* Declaration of variable PT_1537_codeGenerationError_badKindOfSymbol */
+    /begin MEASUREMENT PT_1537_codeGenerationError_badKindOfSymbol
+      "Transmission status of frame StatusPowerDisplay (1537, 0x601) on bus PT"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0 /* LowerLimit */
+      32 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol" 0
+    /end MEASUREMENT
+
+
+
+    /* Declaration of variable PT_1537_noDlcErrors */
+    /begin MEASUREMENT PT_1537_noDlcErrors
+      "Number of recognized DLC errors in CAN input"
+      UWORD
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      2047.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.noDlcErrors@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.noDlcErrors" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1537_noCheckSumErrors */
+    /begin MEASUREMENT PT_1537_noCheckSumErrors
+      "Number of recognized checksum errors in CAN input"
+      UWORD
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      2047.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.noCheckSumErrors@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.noCheckSumErrors" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1537_noSqcErrors */
+    /begin MEASUREMENT PT_1537_noSqcErrors
+      "Number of recognized sequence errors in CAN input"
+      UWORD
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      2047.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.noSqcErrors@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.noSqcErrors" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1537_sequenceCounter */
+    /begin MEASUREMENT PT_1537_sequenceCounter
+      "Sequence counter of message. The counter is incremented prior to sending the frame. The counter wraps around from 126 to 1. 0 and 127 are invalid values"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      1.0 /* LowerLimit */
+      126.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1537_checksum */
+    /begin MEASUREMENT PT_1537_checksum
+      "Message related checksum. The sum is defined such that the arithmetic sum of all message bytes (including the check sum itself) and the start value yields 0xff"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      255.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.checksum" 0
+    /end MEASUREMENT
+
+
+
+    /* Declaration of variable PT_1538_codeGenerationError_badKindOfSymbol */
+    /begin MEASUREMENT PT_1538_codeGenerationError_badKindOfSymbol
+      "Transmission status of frame LimitsPowerDisplay (1538, 0x602) on bus PT"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0 /* LowerLimit */
+      32 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol" 0
+    /end MEASUREMENT
+
+
+
+    /* Declaration of variable PT_1538_sequenceCounter */
+    /begin MEASUREMENT PT_1538_sequenceCounter
+      "Sequence counter of message origin. Each update of the message contents results in a cylically decreased counter value. The counter wraps around from 1 to 6"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      6.0 /* LowerLimit */
+      1.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.sequenceCounter" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1538_belowMinSpeedOfRotation */
+    /begin MEASUREMENT PT_1538_belowMinSpeedOfRotation
+      "Boolean: True if and only if the speed of rotation is currently below the user set minimum"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      1.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.belowMinSpeedOfRotation@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.belowMinSpeedOfRotation" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1538_aboveMaxSpeedOfRotation */
+    /begin MEASUREMENT PT_1538_aboveMaxSpeedOfRotation
+      "Boolean: True if and only if the speed of rotation is currently above the user set maximum"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      1.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.aboveMaxSpeedOfRotation@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.aboveMaxSpeedOfRotation" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1538_belowMinPower */
+    /begin MEASUREMENT PT_1538_belowMinPower
+      "Boolean: True if and only if the engine power is currently below the user set minimum"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      1.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.belowMinPower@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.belowMinPower" 0
+    /end MEASUREMENT
+
+
+    /* Declaration of variable PT_1538_aboveMaxPower */
+    /begin MEASUREMENT PT_1538_aboveMaxPower
+      "Boolean: True if and only if the engine power is currently above the user set maximum"
+      UBYTE
+      CONV_IDENTICAL
+      0 /* Resolution */
+      0 /* Possible variation from exact value in percent */
+      0.0 /* LowerLimit */
+      1.0 /* UpperLimit */
+      ECU_ADDRESS 0x0000 /* @ECU_Address@codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.aboveMaxPower@ */
+      SYMBOL_LINK "codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.codeGenerationError_badKindOfSymbol.aboveMaxPower" 0
+    /end MEASUREMENT
+
+
+
+
+    /begin COMPU_METHOD CONV_IDENTICAL
+      "Identity, real-world value is same as binary value"
+      IDENTICAL
+      "%10" /* Format */
+      ""
+    /end COMPU_METHOD
+
+    /begin GROUP Bus_PT_Rx
+      "All inbound CAN messages of CAN bus PT"
+      ROOT
+      /begin SUB_GROUP
+        Msg_PT_StateEcu01_1024_0x400
+        Msg_PT_StateEcu02_1040_0x410
+        Msg_PT_UserLimits_2032_0x7F0
+
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP Bus_PT_Tx
+      "All outbound CAN messages of CAN bus PT"
+      ROOT
+      /begin SUB_GROUP
+        Msg_PT_InfoPowerDisplay_1536_0x600
+        Msg_PT_StatusPowerDisplay_1537_0x601
+        Msg_PT_LimitsPowerDisplay_1538_0x602
+
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+      /end REF_MEASUREMENT
+    /end GROUP
+
+    /begin GROUP
+      Msg_PT_StateEcu01_1024_0x400
+      "Message StateEcu01 (1024, 0x400, inbound)"
+      /begin SUB_GROUP
+        Signals_PT_StateEcu01_1024_0x400
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        PT_1024_codeGenerationError_badKindOfSymbol
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Msg_PT_StateEcu02_1040_0x410
+      "Message StateEcu02 (1040, 0x410, inbound)"
+      /begin SUB_GROUP
+        Signals_PT_StateEcu02_1040_0x410
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        PT_1040_codeGenerationError_badKindOfSymbol
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Msg_PT_UserLimits_2032_0x7F0
+      "Message UserLimits (2032, 0x7F0, inbound)"
+      /begin SUB_GROUP
+        Signals_PT_UserLimits_2032_0x7F0
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        PT_2032_codeGenerationError_badKindOfSymbol
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Msg_PT_InfoPowerDisplay_1536_0x600
+      "Message InfoPowerDisplay (1536, 0x600, outbound)"
+      /begin SUB_GROUP
+        Signals_PT_InfoPowerDisplay_1536_0x600
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        PT_1536_codeGenerationError_badKindOfSymbol
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Msg_PT_StatusPowerDisplay_1537_0x601
+      "Message StatusPowerDisplay (1537, 0x601, outbound)"
+      /begin SUB_GROUP
+        Signals_PT_StatusPowerDisplay_1537_0x601
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        PT_1537_codeGenerationError_badKindOfSymbol
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Msg_PT_LimitsPowerDisplay_1538_0x602
+      "Message LimitsPowerDisplay (1538, 0x602, outbound)"
+      /begin SUB_GROUP
+        Signals_PT_LimitsPowerDisplay_1538_0x602
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        PT_1538_codeGenerationError_badKindOfSymbol
+      /end REF_MEASUREMENT
+    /end GROUP
+
+    /begin GROUP
+      Signals_PT_StateEcu01_1024_0x400
+      "Signals of message StateEcu01 (1024, 0x400, inbound)"
+      /begin REF_MEASUREMENT
+        PT_1024_checksum PT_1024_speedOfRotation PT_1024_sequenceCounter
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Signals_PT_StateEcu02_1040_0x410
+      "Signals of message StateEcu02 (1040, 0x410, inbound)"
+      /begin REF_MEASUREMENT
+        PT_1040_checksum PT_1040_sequenceCounter PT_1040_torque
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Signals_PT_UserLimits_2032_0x7F0
+      "Signals of message UserLimits (2032, 0x7F0, inbound)"
+      /begin REF_MEASUREMENT
+        PT_2032_sequenceCounter PT_2032_minSpeedOfRotation PT_2032_maxSpeedOfRotation 
+        PT_2032_checksum PT_2032_minPower PT_2032_maxPower
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Signals_PT_InfoPowerDisplay_1536_0x600
+      "Signals of message InfoPowerDisplay (1536, 0x600, outbound)"
+      /begin REF_MEASUREMENT
+        PT_1536_checksum PT_1536_sequenceCounter PT_1536_power PT_1536_state
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Signals_PT_StatusPowerDisplay_1537_0x601
+      "Signals of message StatusPowerDisplay (1537, 0x601, outbound)"
+      /begin REF_MEASUREMENT
+        PT_1537_noDlcErrors PT_1537_noCheckSumErrors PT_1537_noSqcErrors PT_1537_sequenceCounter 
+        PT_1537_checksum
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP
+      Signals_PT_LimitsPowerDisplay_1538_0x602
+      "Signals of message LimitsPowerDisplay (1538, 0x602, outbound)"
+      /begin REF_MEASUREMENT
+        PT_1538_sequenceCounter PT_1538_belowMinSpeedOfRotation PT_1538_aboveMaxSpeedOfRotation 
+        PT_1538_belowMinPower PT_1538_aboveMaxPower
+      /end REF_MEASUREMENT
+    /end GROUP
+
+
+    /begin GROUP AllCANSignals_arduinoSampleIntegration
+      "All CAN signals of cluster arduinoSampleIntegration"
+      ROOT
+      /begin SUB_GROUP
+        Signals_Rx Signals_Tx
+      /end SUB_GROUP
+    /end GROUP
+    /begin GROUP Signals_Rx
+      "All inbound CAN signals of cluster arduinoSampleIntegration"
+      /begin REF_MEASUREMENT
+        PT_1024_codeGenerationError_badKindOfSymbol
+        PT_1024_checksum
+        PT_1024_speedOfRotation
+        PT_1024_sequenceCounter
+        PT_1040_codeGenerationError_badKindOfSymbol
+        PT_1040_checksum
+        PT_1040_sequenceCounter
+        PT_1040_torque
+        PT_2032_codeGenerationError_badKindOfSymbol
+        PT_2032_sequenceCounter
+        PT_2032_minSpeedOfRotation
+        PT_2032_maxSpeedOfRotation
+        PT_2032_checksum
+        PT_2032_minPower
+        PT_2032_maxPower
+
+      /end REF_MEASUREMENT
+    /end GROUP
+    /begin GROUP Signals_Tx
+      "All outbound CAN signals of cluster arduinoSampleIntegration"
+      /begin REF_MEASUREMENT
+        PT_1536_codeGenerationError_badKindOfSymbol
+        PT_1536_checksum
+        PT_1536_sequenceCounter
+        PT_1536_power
+        PT_1536_state
+        PT_1537_codeGenerationError_badKindOfSymbol
+        PT_1537_noDlcErrors
+        PT_1537_noCheckSumErrors
+        PT_1537_noSqcErrors
+        PT_1537_sequenceCounter
+        PT_1537_checksum
+        PT_1538_codeGenerationError_badKindOfSymbol
+        PT_1538_sequenceCounter
+        PT_1538_belowMinSpeedOfRotation
+        PT_1538_aboveMaxSpeedOfRotation
+        PT_1538_belowMinPower
+        PT_1538_aboveMaxPower
+
+      /end REF_MEASUREMENT
+    /end GROUP
+  /end MODULE
+/end PROJECT

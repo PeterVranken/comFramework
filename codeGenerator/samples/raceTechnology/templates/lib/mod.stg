@@ -1,0 +1,202 @@
+//
+// mod.stg
+// This is a template group file for StringTemplate V4, see www.stringtemplate.org.
+//
+// The templates in this file model the frame of different generated output file
+// types, e.g. of a C source code file.
+//   Caution: A prerequiste of these templates is that the general information
+// is available under the default template attribute name "info".
+//
+// Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+//
+// This program is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by the
+// Free Software Foundation, either version 3 of the License, or any later
+// version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+// FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+// for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+delimiters "<", ">"
+
+import "templateErr.stg"
+
+// The module name mnemonic is used over and over during code generation and therefore we
+// provide a short alias. This template returns it as prefix for global symbols, i.e.
+// including the separating underscore.
+mnm() ::= "<info.output.mnm>_"
+MNM() ::= <<
+<info.output.mnm; format="upper">_
+>>
+
+// Helper: Check if a template requires the runtime of at least a certain version. If the
+// runtime is of lower version than required, then an error is raised and code generation
+// is aborted.
+//   This template doesn't emit anything into the generated output.
+//   Attribute neededVersion:
+// The mimimum version of the code generator, which is required to properly process the
+// current template. The attribute relates to the data model's version major.minor and it
+// is an integer number in the format of <info.versionDataModel>: major*1000 + minor.
+//   Attribute templateName:
+// The designation of the checked template, which is used in the emitted error message.
+// Should be some text indicating the template name and /or the ST4 template group file.
+isAtLeastVersionDataModel(neededVersion, templateName) ::= <<
+<info.calc.({tmp_set_<info.versionDataModel>})><\\>
+<if(info.calc.({tmp_isL_<neededVersion>}))><\\>
+<error({<templateName>: This template is designed for data model revision <neededVersion> but run with data model revision <info.versionDataModel>})><\\>
+<endif>
+>>
+
+// The frame of a C implementation file.
+//   desc: Short description, there's no line wrap to handle long text.
+modC(desc) ::= <<
+/**
+ * @file <info.output.name>
+ * <desc>
+ *
+ * This file has been created with <info.application> version <info.version>,
+ * see http://sourceforge.net/projects/comframe/
+ *
+<@copyright>
+ * Copyright (C) 2015-<info.year> Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ *
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+ * for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see \<http://www.gnu.org/licenses/>.
+<@end>
+ */
+
+<if(!info.output.mnm)>
+/* To avoid this error, the generated file name needs to match the pattern \<mnm>_\<nameStem>.c */
+#error Module name mnemonic is not set but needed for shaping a unique name space
+
+<endif>
+<isAtLeastVersionDataModel("1010", "lib/mod.stg")><\\>
+/*
+ * Include files
+ */
+
+#include "<info.output.rawName>.h"
+
+<@includes()><\\>
+
+/*
+ * Defines
+ */
+ 
+<@defines()> 
+
+/*
+ * Local type definitions
+ */
+ 
+<@typedefs()> 
+
+/*
+ * Local prototypes
+ */
+ 
+<@prototypes()> 
+ 
+/*
+ * Data definitions
+ */
+ 
+<@data()> 
+ 
+/*
+ * Function implementation
+ */
+
+>>
+
+
+
+
+// The frame of a C header file.
+//   desc: Short description, there's no line wrap to handle long text.
+modH(desc) ::= <<
+#ifndef <info.output.rawName; format="upper">_DEFINED
+#define <info.output.rawName; format="upper">_DEFINED
+/**
+ * @file <info.output.name>
+ * <desc>
+ *
+ * This file has been created with <info.application> version <info.version>,
+ * see http://sourceforge.net/projects/comframe/
+ *
+<@copyright>
+ * Copyright (C) 2015-<info.year> Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ *
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+ * for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see \<http://www.gnu.org/licenses/>.
+<@end>
+ */
+
+<if(!info.output.mnm)>
+/* To avoid this error, the generated file name needs to match the pattern \<mnm>_\<nameStem>.c */
+#error Module name mnemonic is not set but needed for shaping a unique name space
+
+<endif>
+/*
+ * Include files
+ */
+
+<@includes()><\\>
+
+
+/*
+ * Defines
+ */
+ 
+<@defines()> 
+
+/*
+ * Type definitions
+ */
+ 
+<@typedefs()> 
+
+/*
+ * Data declarations
+ */
+ 
+<@data()> 
+ 
+/*
+ * Function declarations
+ */
+ 
+<@prototypes()>
+
+/*
+ * Inline function definitions
+ */
+ 
+<@inlines()>
+#endif // !defined(<info.output.rawName; format="upper">_DEFINED)<\n>
+>>

@@ -1,0 +1,42 @@
+
+cmp, abc == abc: true, true, true, true
+cmp, abc == Abc: false, false, false, false
+
+cmpI, abc == abc: true, true, true, true
+cmpI, abc == Abc: true, true, true, true
+
+Set Delimiter to whitespace, \s+
+
+cmp: abc == abc: true, true, true, true
+cmpI: abc == ABC: true, true, true, true
+
+Set Delimiter back to default, ==|#: 
+
+
+Text matches expectation!
+
+Text matches expectation!
+
+str.cmpRegExp is case sensitive!
+
+Text matches expectation!
+
+Text matches expectation!
+Now we use the regular expression <reFltrSig()>, .*validity.*, to find all signals of
+particular meaning:
+0) rt_SB_INS_Vel_Body_Axes_mux, 215: Validity_INS_Vel_Forwards (normal)
+1) rt_SB_INS_Vel_Body_Axes_mux, 215: Validity_INS_Vel_Sideways (normal)
+2) RT_SB_INS_Vel_Body_Axes, 9312034: Validity_INS_Vel_Forwards (normal)
+3) RT_SB_INS_Vel_Body_Axes, 9312034: Validity_INS_Vel_Sideways (normal)
+4) RT_SB_Trig_Initial_Condition, 9242146: Validity_Initial_Speed (normal)
+5) RT_SB_Trig_Initial_Condition, 9242146: Validity_Initial_Heading (normal)
+6) RT_DL1MK3_Speed, 8392740: Validity_Speed (normal)
+7) RT_DL1MK3_GPS_Time, 9175332: Validity_GPS_Time (normal)
+8) RT_DL1MK3_GPS_Time, 9175332: Validity_GPS_Week (normal)
+
+
+Similarly, here is the list of inbound signals dealing with either GPS or vehicle speed:
+0) RT_DL1MK3_Speed, 8392740: Validity_Speed (normal)
+1) RT_DL1MK3_Speed, 8392740: Accuracy_Speed (normal)
+2) RT_DL1MK3_Speed, 8392740: Speed (normal)
+

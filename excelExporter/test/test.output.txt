@@ -1,0 +1,95 @@
+Cluster test contains 1 workbooks:
+  MyWSSample DBC (test.xlsx)
+    This is worksheet MyWS
+    Sheet.name_: MyWS
+    group 1: ECU_SPEED group 2: ECU_TQ 
+    Container: MyWS=MyWS
+    Row 6:
+    Property 1: Bus=ACAN, pos: (6,1), type: text
+    Property 2: BaudRate=$f4240, pos: (6,2), type: integer
+    Property 3: Comment=ACAN is a high speed CAN bus with double the clock rate than PCAN, pos: (6,10), type: text
+
+    Container: ECU_SPEED=ECU_SPEED
+    Row 7:
+    Property 1: Bus=PCAN, pos: (7,1), type: text
+    Property 2: Message=ECU_SPEED, pos: (7,3), type: text
+    Property 3: ID=$4d2, pos: (7,4), type: integer
+    Property 4: SendType=regular, pos: (7,5), type: text
+    Property 5: SendTime=0.010, pos: (7,6), type: real
+    Property 6: Comment=Send from ECU to power display, pos: (7,10), type: text
+    Row 9:
+    Property 1: Bus=PCAN, pos: (9,1), type: text
+    Property 2: Message=ECU_SPEED, pos: (9,3), type: text
+    Property 3: Signal=SQC, pos: (9,7), type: text
+    Property 4: Factor=$1, pos: (9,8), type: integer
+    Property 5: Comment=Sequence counter, pos: (9,10), type: text
+
+    Container: ECU_TQ=ECU_TQ
+    Row 11:
+    Property 1: Bus=ACAN, pos: (11,1), type: text
+    Property 2: Message=ECU_TQ, pos: (11,3), type: text
+    Property 3: ID=3E8, pos: (11,4), type: text
+    Property 4: SendType=regular, pos: (11,5), type: text
+    Property 5: SendTime=0.025, pos: (11,6), type: real
+    Property 6: Comment=Send from ECU to power display, pos: (11,10), type: text
+    Row 12:
+    Property 1: Bus=ACAN, pos: (12,1), type: text
+    Property 2: Message=ECU_TQ, pos: (12,3), type: text
+    Property 3: Signal=checksum, pos: (12,7), type: text
+    Property 4: Factor=$1, pos: (12,8), type: integer
+    Property 5: Comment=CRC8 checksum, pos: (12,10), type: text
+    Row 13:
+    Property 1: Bus=ACAN, pos: (13,1), type: text
+    Property 2: Message=ECU_TQ, pos: (13,3), type: text
+    Property 3: Signal=SQC, pos: (13,7), type: text
+    Property 4: Factor=$1, pos: (13,8), type: integer
+    Property 5: Comment=Sequence counter, pos: (13,10), type: text
+
+    This is worksheet Sample_DBC
+    Sheet.name_: Sample_DBC
+    group 1: ECU_SPEED group 2: ECU_TQ 
+    Container: Sample_DBC=Sample_DBC
+    Row 6:
+    Property 1: Bus=ACAN, pos: (6,1), type: text
+    Property 2: BaudRate=$f4240, pos: (6,2), type: integer
+    Property 3: Comment=ACAN is a high speed CAN bus with double the clock rate than PCAN, pos: (6,10), type: text
+
+    Container: ECU_SPEED=ECU_SPEED
+    Row 7:
+    Property 1: Bus=PCAN, pos: (7,1), type: text
+    Property 2: Message=ECU_SPEED, pos: (7,3), type: text
+    Property 3: ID=$4d2, pos: (7,4), type: integer
+    Property 4: SendType=regular, pos: (7,5), type: text
+    Property 5: SendTime=0.010, pos: (7,6), type: real
+    Property 6: Comment=Send from ECU to power display, pos: (7,10), type: text
+    Row 9:
+    Property 1: Bus=PCAN, pos: (9,1), type: text
+    Property 2: Message=ECU_SPEED, pos: (9,3), type: text
+    Property 3: Signal=SQC, pos: (9,7), type: text
+    Property 4: Factor=$1, pos: (9,8), type: integer
+    Property 5: Comment=Sequence counter, pos: (9,10), type: text
+
+    Container: ECU_TQ=ECU_TQ
+    Row 11:
+    Property 1: Bus=ACAN, pos: (11,1), type: text
+    Property 2: Message=ECU_TQ, pos: (11,3), type: text
+    Property 3: ID=3E8, pos: (11,4), type: text
+    Property 4: SendType=regular, pos: (11,5), type: text
+    Property 5: SendTime=0.025, pos: (11,6), type: real
+    Property 6: Comment=Send from ECU to power display, pos: (11,10), type: text
+    Row 12:
+    Property 1: Bus=ACAN, pos: (12,1), type: text
+    Property 2: Message=ECU_TQ, pos: (12,3), type: text
+    Property 3: Signal=checksum, pos: (12,7), type: text
+    Property 4: Factor=$1, pos: (12,8), type: integer
+    Property 5: Comment=CRC8 checksum, pos: (12,10), type: text
+    Row 13:
+    Property 1: Bus=ACAN, pos: (13,1), type: text
+    Property 2: Message=ECU_TQ, pos: (13,3), type: text
+    Property 3: Signal=SQC, pos: (13,7), type: text
+    Property 4: Factor=$1, pos: (13,8), type: integer
+    Property 5: Comment=Sequence counter, pos: (13,10), type: text
+
+
+
+Updated at: 06.09.2018 22:17:29

@@ -1,0 +1,369 @@
+<project name="comFramework"
+         default="jar"
+         basedir=".."
+>
+  <!-- TODO Properly organize all paths and class paths:
+       file://C:\ProgramFiles\Apache\apache-ant-1.9.4\manual\index.html -->
+  
+  <!-- Note, if Java 18 or higher is used then at ANT 10.14 or higher is required. Till
+       ANT 10.13, the deprecated SecurityManager is used, which is eventually no longer
+       supported by Java 18. See https://downloads.apache.org/ant/ (Visited Jan 11, 2024). -->
+
+  <description>
+Build file to generate Java sources from the antlr4 grammars, compile all Java sources,
+execute the tests or create a jar library.
+  </description>
+  <echo message="Starting build of comFramework code generator"/>
+  
+  <!-- Provide access to the environment, write e.g. ${env.X} to access variable X. -->
+  <property environment="env"/>
+  
+  <!-- set global properties for this build -->
+  <property name="version" value="1.12"/>
+  <property name="trunkCodeGenerator" location="."/>
+  <property name="src" location="src"/>
+  <property name="srcDM" location="${src}/codeGenerator/DataModelListener"/>
+  <property name="lib" location="dist"/>
+  <property name="doc" location="doc"/>
+  <property name="build" location="bin"/>
+  <property name="dist" location="dist"/>
+
+  <!-- Set the classpath for this build -->
+  <path id="classpath">
+    <pathelement location="${build}"/>
+    
+    <!-- ANTLR contains StringTemplate but not always with the latest release. This has to
+         be double-checked for each new release of ANTLR. In order to benefit from the
+         maintenance of ST, we need to place that jar in front of ANTLR in case ST is more
+         recent. As of writing, June 2022, ANTLR is up-to-date with respect to ST, ANTLR
+         4.10.1 contains ST 4.3.3. -->
+<!-- antlr-4.10.1-complete.jar seems to contain ST 4.3.3
+    <pathelement location="${lib}/ST-4.3.3.jar"/>
+-->
+    <pathelement location="${lib}/antlr-4.12.0-complete.jar"/>
+    <pathelement location="${lib}/log4j-1.2.11.jar"/>
+<!--
+    <pathelement location="${lib}/log4j-api-2.1.jar"/>
+    <pathelement location="${lib}/log4j-core-2.1.jar"/>
+-->
+  </path>
+  
+  <!-- Preparatory steps of any target -->
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create a "unique" tag for temporary file names -->
+    <tstamp>
+      <format property="timeTag" pattern="yyMMddHHmmssSSS"/>
+    </tstamp>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+    <!-- Check the dependencies of the different source and class files. -->
+    <!--<depend srcdir="${src}" destdir="${build}"/>-->
+  </target>
+
+  <!-- Generate version information in the main file -->
+  <target name="updateAppVersionFromSVN">
+    <exec executable="SubWCRev.exe" dir="${trunkCodeGenerator}">
+      <arg value="."/>
+      <arg value="${src}/codeGenerator/main/SvnRevision.java.template"/>
+      <arg value="${src}/codeGenerator/main/SvnRevision.java"/>
+      <arg value="-f"/>
+    </exec>
+  </target>
+  
+  <!-- Generate javadocs for complete source code into ${doc} -->
+  <target name="doc"
+          depends="init,updateAppVersionFromSVN"
+          description="Generate Javadoc documentation for complete software source code"
+  >
+    <javadoc packagenames="*"
+             sourcepath="${src}"
+             destdir="${doc}/javadoc"
+             access="private"
+    >
+      <arg line="-tag todo:cmf:TODO: -tag remark:cmf:Remark:"/>
+      <classpath refid="classpath"/>
+    </javadoc>
+  </target>
+
+  <!-- Show the API documentation of all Java source files -->
+  <target name="javadoc"
+          depends="doc"
+          description="Update and open the Javadoc of the project"
+  >
+    <!-- See http://ant.apache.org/manual/using.html#arg -->
+    <exec executable="cmd.exe" dir=".">
+      <arg value="/c"/>
+      <arg value="${doc}/javadoc/index.html"/>
+    </exec>
+  </target>
+ 
+  <!-- Generate javadocs for the data model only -->
+  <target name="docDataModel"
+          depends="init"
+          description="Generate Javadoc documentation for the data model only"
+  >
+    <javadoc sourcefiles="${srcDM}/package-info.java,${srcDM}/Info.java,${srcDM}/FileExt.java,${srcDM}/Cluster.java,${srcDM}/FrameRef.java,${srcDM}/Bus.java,${srcDM}/Node.java,${srcDM}/Frame.java,${srcDM}/Pdu.java,${srcDM}/Signal.java,${srcDM}/NetObject.java,${srcDM}/AttributeDef.java,${srcDM}/Attribute.java"
+             destdir="${doc}/dataModel"
+             windowtitle="Data Model of codeGenerator for StringTemplate V4 templates"
+             doctitle="Data Model of codeGenerator for StringTemplate V4 templates"
+             author="Peter Vranken (Peter_Vranken@Yahoo.de)"
+access="private"
+        >
+      <arg value="-tag"/> <arg value="todo:cmf:TODO:"/>
+      <arg value="-tag"/> <arg value="remark:cmf:Remark:"/>
+      <arg value="-notimestamp"/>
+      <classpath refid="classpath"/>
+    </javadoc>
+  </target>
+
+  <!-- Generate Java code from the DBC grammar -->
+  <target name="antlr4"
+          depends="init"
+          description="Run antlr4 to compile dbc grammar"
+  >
+<!-- With Java 18, the ANT task to start a Java class fails with message:
+     "java.lang.UnsupportedOperationException: The Security Manager is deprecated and will
+     be removed in a future release" The reason for that has not been identified but using
+     the task to run an external command still works well. We call Java as an external
+     process and run the ANTLR code generator that way. -->
+<!--     
+    <java classname="org.antlr.v4.Tool">
+       <arg value="-visitor"/>
+       <arg value="-package"/>
+       <arg value="codeGenerator.dbcParser"/>
+       <arg value="-o"/>
+       <arg value="${src}/codeGenerator/dbcParser"/>
+       <arg value="${src}/codeGenerator/dbcParser/Dbc.g4"/>
+       <classpath refid="classpath"/>
+    </java>
+-->
+    <exec executable="java.exe" dir=".">
+      <arg value="-cp"/> <arg value="dist/antlr-4.12.0-complete.jar"/>
+      <arg value="-ea"/>
+      <arg value="org.antlr.v4.Tool"/>
+      <arg value="-visitor"/>
+      <arg value="-package"/> <arg value="codeGenerator.dbcParser"/>
+      <arg value="-o"/> <arg value="${src}/codeGenerator/dbcParser"/>
+      <arg value="${src}/codeGenerator/dbcParser/Dbc.g4"/>
+    </exec>
+  </target>
+  
+  <!-- Compile the java source files -->
+  <target name="compile"
+          depends="init,updateAppVersionFromSVN"
+          description="Compile all Java sources belonging to the application codeGenerator."
+  >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <!-- See http://ant.apache.org/manual/Tasks/javac.html -->
+    <!-- debuglevel="lines,vars,source" -->
+    <javac sourcepath=""
+           srcdir="${src}"
+           destdir="${build}"
+           listfiles="no"
+           includeantruntime="false"
+           debug="true"
+    >
+      <include name="cmdLineParser/*.java"/>
+      <include name="codeGenerator/*/*.java"/>
+      <classpath refid="classpath"/>
+      <compilerarg value="-Xlint:unchecked"/>
+    </javac>
+  </target>
+
+  <!-- Create a jar from the successfully compiled sources -->
+  <target name="jar"
+          depends="compile"
+          description="Generate a JAR file from all class files. This JAR actually is the core of the distribution of the application codeGenerator."
+  >
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}"/>
+    
+    <!-- Copy required template files into the build directory -->
+    <copy todir="${build}">
+      <fileset dir="${src}">
+        <include name="**/*.stg"/>
+      </fileset>
+    </copy>
+    
+    <!-- Package codeGenerator.* to jar file -->
+    <jar jarfile="${dist}/comFrameworkCodeGenerator-${version}.jar"
+         basedir="${build}"
+    >
+      <manifest>
+        <attribute name="Built-By" value="ant"/>
+        <section name="common">
+          <attribute name="Title" value="COM Framework - Code Generator"/>
+          <attribute name="Version" value="${version}"/>
+          <attribute name="Vendor" value="Peter Vranken, Peter_Vranken@Yahoo.de"/>
+        </section>
+        <attribute name="Main-Class" value="codeGenerator.main.CodeGenerator"/>
+      </manifest>
+      <include name="cmdLineParser/*.class"/>
+      <include name="codeGenerator/*/*.class"/>
+      <include name="codeGenerator/*/*.stg"/>
+    </jar>
+  </target>
+  
+  <!-- Create a zip file for distribution of the code generator -->
+  <target name="distribution"
+          depends="clean,init,jar,docDataModel"
+          description="Create the ZIP archive for the distribution of the binaries"
+  >
+    <!-- Remove possibly existing archive - shall be renewed -->
+    <delete verbose="true" file="${dist}/comFramework-codeGenerator.zip"/>
+    
+    <!-- Generate version information - assuming that an SVN commit has been done prior to
+         building the archive -->
+    <echo message="Running SubWCRev.exe to generate file version.txt"/>
+    <exec executable="SubWCRev.exe" dir="${dist}">
+      <arg value="${trunkCodeGenerator}"/>
+      <arg value="verTemplate.txt"/>
+      <arg value="version.txt"/>
+      <arg value="-f"/>
+    </exec>
+    <copy file="${dist}/LICENSE-comFrameworkCodeGenerator.txt" tofile="tmp-${timeTag}/comFramework/lgpl.txt"/>
+    <copy file="${dist}/version.txt" tofile="tmp-${timeTag}/comFramework/version.txt"/>
+    <copy file="${doc}/readMe.forSetupRoot.html" tofile="tmp-${timeTag}/comFramework/readMe.html"/>
+    <copy file="readMe.md" tofile="tmp-${timeTag}/comFramework/codeGenerator/readMe.md"/>
+    <copy file="readMe.html" tofile="tmp-${timeTag}/comFramework/codeGenerator/readMe.html"/>
+     
+    <!-- Run the samples, update the outputs and copy them into the zipped folder -->
+    <echo message="Running sample raceTechnology"/>
+    <exec executable="cmd.exe" dir="samples/raceTechnology">
+      <arg value="/c"/>
+      <!-- line is the blank separated command line. -->
+      <arg line="generateCode.cmd -v WARN"/>
+    </exec>
+    <echo message="Running sample AUTOSAR"/>
+    <exec executable="cmd.exe" dir="samples/AUTOSAR">
+      <arg value="/c"/>
+      <!-- line is the blank separated command line. -->
+      <arg line="generateCode.cmd -v WARN"/>
+    </exec>
+    <echo message="Running sample iterations with -v WARN"/>
+    <exec executable="cmd.exe" dir="samples/iterations">
+      <arg value="/c"/>
+      <!-- line is the blank separated command line. -->
+      <arg line="runDemoIterations.cmd -v WARN"/>
+    </exec>
+    <echo message="Running sample iterations"/>
+    <exec executable="cmd.exe" dir="samples/iterations">
+      <arg value="/c"/>
+      <!-- line is the blank separated command line. -->
+      <arg line="runTestIterations.cmd"/>
+    </exec>
+    <echo message="Running sample mapCanIdToFrameIdx"/>
+    <exec executable="cmd.exe" dir="samples/mapCanIdToFrameIdx">
+      <arg value="/c"/>
+      <!-- line is the blank separated command line. -->
+      <arg line="generateCode.cmd"/>
+    </exec>
+    <echo message="Running sample scratchPad"/>
+    <exec executable="cmd.exe" dir="samples/scratchPad">
+      <arg value="/c"/>
+      <!-- line is the blank separated command line. -->
+      <arg line="runDemoScratchPad.cmd -v WARN"/>
+    </exec>
+    <exec executable="cmd.exe" dir="samples/stringCompare">
+      <arg value="/c"/>
+      <!-- line is the blank separated command line. -->
+      <arg line="runDemoStringCompare.cmd -v WARN"/>
+    </exec>
+    <echo message="Running sample EmbeddedCoderAPIWithBusStruct"/>
+    <exec executable="cmd.exe" dir="samples/EmbeddedCoderAPIWithBusStruct">
+      <arg value="/c"/>
+      <!-- line is the blank separated command line. -->
+      <arg line="generateCode.cmd -v WARN"/>
+    </exec>
+    <echo message="Compiling artifacts of sample EmbeddedCoderAPIWithBusStruct"/>
+    <exec executable="cmd.exe" dir="samples/EmbeddedCoderAPIWithBusStruct/compileIt">
+      <arg value="/c"/>
+      <!-- line is the blank separated command line. -->
+      <arg line="mingw32-make run -v WARN"/>
+    </exec>
+
+    <echo message="Copying artifacts of runs of samples"/>
+    <copy todir="tmp-${timeTag}/comFramework/codeGenerator/samples">
+      <fileset dir="samples">
+        <include name="**/generateCode.cmd"/>
+        <include name="**/compileWithGcc.cmd"/>
+        <include name="scratchPad/runDemoScratchPad.cmd"/>
+        <include name="iterations/runDemoIterations.cmd"/>
+        <include name="iterations/runTestIterations.cmd"/>
+        <include name="**/readMe.txt"/>
+        <include name="**/dataModelForStringTemplateV4.html"/>
+        <include name="AUTOSAR/output/cif_swcCanInterface.arxml"/>
+        <include name="**/output/**/codeGenerationReport.*"/>
+        <include name="**/output/**/overview.csv"/>
+        <include name="**/output/**/*.txt"/>
+        <include name="**/output/**/*.c"/>
+        <include name="**/output/**/*.h"/>
+        <include name="**/output/**/*.a2l"/>
+        <include name="**/output/**/*.m"/>
+        <include name="**/output/**/*.xml"/>
+        <include name="mapCanIdToFrameIdx/**/*.cmd"/>
+        <include name="**/*.stg"/>
+        <exclude name="**/newStringTemplateGroupFile.stg"/>
+        <include name="**/CAN_RT*.*"/>
+        <include name="dbcFiles/sampleCanBus.dbc"/>
+        <include name="dbcFiles/duplicatedCanIDs.dbc"/>
+        <exclude name="**/*.bak"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/pwr_computeEnginePower.slx"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/**/*.c"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/**/*.h"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/**/*.a2l"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/output/*.m"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/compileIt/GNUmakefile"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/compileIt/gdb.ps1"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/compileIt/EmbeddedCoderAPIWithBusStruct.exe"/>
+      </fileset>
+    </copy>
+      
+    <copy todir="tmp-${timeTag}/comFramework/codeGenerator/dist">
+      <fileset dir="${dist}">
+        <include name="version.txt"/>
+        <include name="comFrameworkCodeGenerator-${version}.jar"/>
+<!--        <include name="ST-4.3.1.jar"/> -->
+        <include name="antlr-4.12.0-complete.jar"/>
+        <include name="log4j-1.2.11.jar"/>
+        <include name="LICENSE*.txt"/>
+        <include name="codeGenerator.cmd"/>
+        <include name="codeGenerator.ico"/>
+        <include name="testInstallation.cmd"/>
+        <exclude name="**/*.bak"/>
+      </fileset>
+    </copy>
+    <copy todir="tmp-${timeTag}/comFramework/codeGenerator/doc">
+      <fileset dir="${doc}">
+        <include name="dataModel/"/>
+        <include name="*@Internet.html"/>
+        <include name="ST4-270115-0836-52.pdf"/>
+        <include name="dataModelForStringTemplateV4.html"/>
+        <include name="installation.txt"/>
+        <include name="installation.html"/>
+        <include name="codeGenerator.cmd"/>
+        <include name="testInstallation.cmd"/>
+        <exclude name="ANTLR4-310115-1459-60.pdf"/>
+        <exclude name="**/*.bak"/>
+      </fileset>
+    </copy>
+    
+    <zip destfile="${dist}/comFramework-codeGenerator.zip"
+         comment="comFramework - codeGenerator, version ${version}"
+         basedir="tmp-${timeTag}"
+         includes="comFramework/"
+    />
+    <delete verbose="false" dir="tmp-${timeTag}"/>
+  </target> <!-- distribution -->
+  
+  <!-- Delete all build products in order to enforce a later rebuild -->
+  <target name="clean" description="Remove all built files: class and jar files, the zip archives.">
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete verbose="false" dir="${build}"/>
+    <delete verbose="true" file="${dist}/comFrameworkCodeGenerator-${version}.jar"/>
+    <delete verbose="true" file="${dist}/comFramework-codeGenerator.zip"/>
+  </target>
+
+</project>

@@ -1,0 +1,92 @@
+//
+// loops.stg
+// This is a template group file for StringTemplate V4, see www.stringtemplate.org.
+//
+// The templates collected in this library file implement a kind of for and while loops,
+// which are useful for repeated expansion of one and the same template.
+//   Note, there are some restrictions. StringTemplate V4 doesn't offer loops and the only
+// known way to implement loops is by recursive call of a template. Such a recursion means
+// in turn a recursion of the Java implementation of the template engine. Consequently, the
+// number of possible loop iterations is limited by the number of recursions in the Java
+// implementation until the stack of the JVM overflows. By experience, this limits the
+// number of loop cycles to about 5000 for a stack size of 10 MByte of the JVM. Moreover,
+// using recursion for looping is slow. The basically very fast template engine is
+// noticeably slowed down when using these templates.
+//   You need to include just this file to benefit from all loop templates.
+//
+// Copyright (C) 2023-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+//
+// This program is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by the
+// Free Software Foundation, either version 3 of the License, or any later
+// version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+// FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+// for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+delimiters "<", ">"
+
+import "lib/isTrue.stg"
+
+// A standard for-loop. A template T is expanded a number of times, controlled by a counter
+// variable in the info.calc object. The variable is iterated from a start value (incl.)
+// till a stop value (excl.). Template T can query the calc object for the current value of
+// the counter variable.
+//   The normal use case will be specifying arguments var and T as string literal
+// attributes. Arguments from
+// and to will be either string literals of integer numbers or otherwise expand to integer
+// numbers.
+//   var is the name of the counter variable. As all objects in the calc object are global
+// will nested for-loops require different counter variable. See documentation of calc for
+// restrictions on variable names.
+//   from and to are start and stop value. These attributes need to expand to valid integer
+// number representations. See documentation of calc for details.
+//   T is a template, which is expanded to-from times. It receives the current value of the
+// counter variable as only argument. (I.e., all other required attributes need to be in
+// scope.) However, T can still find the counter variable in the calc object, e.g., for
+// doing some numeric evaluation/calculation on it.
+//   Note, loops can be implemented by recursion only. This limits the possible number of
+// iterations drastically and has an impact on runtime performance. As a matter of
+// experience, the standard JVM allows up to 500 recursions, i.e, if to-from exceeds about
+// 500 then the Java application will abort with an out-of-memory exception. Launching the
+// JVM with command line option -Xss will move the limit but the fundamental problem
+// remains. For example, -Xss10M would allow about 5000 iterations, but the execution time
+// of the Java application will already increase noticeably.
+for(var,from,to,T) ::= <<
+<info.calc.({<var>_set_<from>})><\\>
+<for_1()>
+>>
+for_1() ::= "<if(info.calc.({<var>_isL_<to>}))><(T)(info.calc.({<var>_get}))><info.calc.({<var>_add_1})><for_1()><endif>"
+
+// Two forms of a standard while-loop. A template T is expanded a number of times, until a
+// condition becomes false. The condition can be formulated in two ways:
+//   Template while has a template C to check the condition. C is a template, which expands
+// either to "true" or "1" or to "false" or "0". (Actually, it may expand to everything,
+// which is properly understood by library template isTrue.) If C expands to "true" then
+// the other template T is expanded. Otherwise the loop terminates.
+//   Template whileVar uses the scratchpad to formulate the condition. Attribute var names
+// a variable in the scratchpad, which is checked. If it has a value other than 0 then the
+// template T is expanded. Otherwise the loop terminates. If whileVar is applied, then it
+// is expected that template T will manipulate the scratchpad variable. An infinite loop
+// would otherwise result.
+//   Note, loops can be implemented by recursion only. This limits the possible number of
+// iterations drastically and has an impact on runtime performance. As a matter of
+// experience, the standard JVM allows up to 500 recursions, i.e, if to-from exceeds about
+// 500 then the Java application will abort with an out-of-memory exception. Launching the
+// JVM with command line option -Xss will move the limit but the fundamental problem
+// remains. For example, -Xss10M would allow about 5000 iterations, but the execution time
+// of the Java application will already increase noticeably.
+//   Note, intermediate template whileTrampolin is needed as ST4 doesn't allow the
+// construct of indirect template expansion with an empty argument list (see <(expr)()> in
+// ST4-270115-0836-52.pdf, section "StringTemplate cheat sheet", p.13), if the construct is
+// not used in the root level of an attribute expression. Error in ST4?
+while(C,T) ::= <<
+<if(isTrue.(whileTrampolin()))><(T)()><while(C,T)><endif>
+>>
+whileTrampolin() ::= "<(C)()>"
+whileVar(var,T) ::= "<if(info.calc.({<var>_isNE}))><(T)()><whileVar(var,T)><endif>"

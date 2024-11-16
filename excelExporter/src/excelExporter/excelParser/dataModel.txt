@@ -1,0 +1,22 @@
+Parameters and resulting data model:
+
+- XLS File:1..n
+  - sheet:0..n  sheet adresses a work sheet by name. Index based access is not supported
+                Not stating a sheet means to select all of them. The order
+                of work sheets is retained; an array will be appropriate
+                in the data model. Specific ordering seems not to be a
+                requirement here
+    - idx line column titles  Optional. If not given then the column
+                              titles need to be set in sub-section colum
+                              for all coulumns
+    - first data line
+    - last data line
+    - column:0..n  No column specification can be useful for most simple
+                   applications. POI will find the rectangular area, which
+                   is modeled as number of homogenous rows
+      - title:0..1  Override column title read from designated line.
+                    Mandatory, if no such line exists
+      - grouping  Boolean: This is a grouping column. The priority is
+                  implicit, in the order of column declarations
+      - sort order  The elements of the group can be sorted
+                    lexicographical, numerical or in order of appearance

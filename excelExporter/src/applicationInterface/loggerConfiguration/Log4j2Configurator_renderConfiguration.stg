@@ -1,0 +1,31 @@
+delimiters "{", "}"
+
+log4j2Configuration(config) ::= <<
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="console" target="SYSTEM_OUT">
+      <!-- The console output should not use the user specified message pattern. The
+           command line option -p only relates to the log file.
+             See http://logging.apache.org/log4j/2.x/manual/layouts.html#PatternLayout. -->
+      <PatternLayout pattern="%6r %-5p - %msg%n" />
+    </Console>
+{if(config.logFileName)}
+    <File name="logFile" fileName="{config.logFileName}">
+      <PatternLayout>
+        <pattern>{config.logPattern}</pattern>
+      </PatternLayout>
+    </File>
+{endif}
+  </Appenders>
+  <Loggers>
+    <Root level="{config.logLevel}">
+      <AppenderRef ref="console"/>
+{if(config.logFileName)}
+      <AppenderRef ref="logFile"/>
+{endif}
+    </Root>
+<!--    <logger name="my.specific.class" level="TRACE"/> -->
+  </Loggers>
+</Configuration>{\n}
+>>

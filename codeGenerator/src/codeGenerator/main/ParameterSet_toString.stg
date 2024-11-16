@@ -1,0 +1,87 @@
+//
+// ParameterSet_toString.stg
+// This is a template group file for StringTemplate V4, see www.stringtemplate.org.
+//
+// The templates in this file are used by codeGenerator.main.ParameterSet.toString(). The
+// contents of the parameter data structure are rendered with help of the StringTemplate V4
+// library. The text formatted by the templates is printed to the application log when
+// echoing of parameters is desired.
+//
+// Copyright (C) 2015-2016 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+//
+// This program is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by the
+// Free Software Foundation, either version 3 of the License, or any later
+// version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+// FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+// for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+delimiters "<", ">"
+
+parameterSet(p) ::= <<
+cluster-name:                     <p.clusterName>
+node-name:                        <p.nodeName>
+string-template-verbose:          <p.stringTemplateVerbose>
+Bus specifications:
+<p.busDescriptionAry:{b|<busDescriptionTitle(i,b)>}><\\>
+Generated files:
+<p.templateOutputPairAry:{o|<outputTitle(i,o)>}>
+>>
+
+
+busDescriptionTitle(idx,b) ::= <<
+<idx>) Bus <b.name>:
+  <busDescription(b)>
+>>
+
+pair(p) ::= "<p.first><if(p.second)>:<p.second><endif>"
+
+busDescription(b) ::= <<
+bus-name:                       <b.name>
+node-name:                      <b.me>
+network-file-name:              <b.networkFileName>
+invert-transmission-direction:  <b.invertTransmissionDirection>
+include-frame-id:               <b.inclFrameIdAry:{p|<pair(p)>}; wrap="\n                                ", separator=", ">
+re-include-frame-name:          <b.reInclFrameName>
+exclude-frame-id:               <b.exclFrameIdAry:{p|<pair(p)>}; wrap="\n                                ", separator=", ">
+re-exclude-frame-name:          <b.reExclFrameName>
+user-option:                    <b.optionMap:{name|<name>=<b.optionMap.(name)>}; wrap="\n                                ", separator=", ">
+Special signal requests:
+<b.specialSignalMap:{signal|<signalRequest(i,b.specialSignalMap.(signal))>}>
+>>
+
+
+signalRequest(idx,req) ::= <<
+<idx>) Signal <req.name> by <\\>
+<if(req.reSpecialSignal)>regular expression <req.reSpecialSignal>
+<else>name
+<endif>
+>>
+
+
+outputTitle(idx,o) ::= <<
+<idx>) Output file <o.outputFileName>:
+  <output(o)>
+>>
+
+output(o) ::= <<
+template-file-name:             <o.templateFileName>
+template-name:                  <o.templateName>
+template-arg-name-cluster:      <o.templateArgNameCluster>
+template-arg-name-info:         <o.templateArgNameInfo>
+template-wrap-column:           <wrapColumn.(o.templateWrapCol)>
+output-file-name:               <o.outputFileName>
+user-option:                    <o.optionMap:{name|<name>=<o.optionMap.(name)>}; wrap="\n                                ", separator=", "><\n>
+>>
+
+wrapColumn ::=
+[
+    "-1": "(no line wrap)",
+    default: key
+]

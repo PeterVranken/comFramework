@@ -1,0 +1,61 @@
+/**
+ * @file SvnRevision.java.template
+ * 
+ *
+ * Copyright (C) 2016-2023 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ *
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+ * for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+/* Interface of class SvnRevision.java
+ *   SvnRevision.java
+ */
+
+package excelExporter.main;
+
+/**
+ * Provide the SVN revision of the code generator.
+ *   @author Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ */
+
+public class SvnRevision
+{
+    /** The global logger object for all progress and error reporting. */
+    //private static final Logger _logger = LogManager.getLogger(SvnRevision.java.class);
+
+    /**
+     * A new instance of SvnRevision.java is created. This class only
+     * provides static mothods and the constructor is not accessible.
+     */
+    private SvnRevision()
+    {
+    } /* End of SvnRevision.SvnRevision. */
+
+    /**
+     * Get the SVN revision number of the code generator project.
+     *   @return
+     * Get the revision number.
+     */
+    static public int getProjectRevision()
+    {
+        return $WCREV$;
+    }
+
+} /* End of class SvnRevision definition. */
+
+
+
+
+
+
+

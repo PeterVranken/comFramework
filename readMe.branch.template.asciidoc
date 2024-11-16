@@ -1,0 +1,15 @@
+= About this Branch
+
+This folder contains the import of folder
+https://svn.code.sf.net/p/comframe/code/canInterface/branches/generateRandomDbc[^],
+revision 278, May 15th, 2018, 21:28:20, from the original SourceForge
+repository, which had been used before this GitHub repository.
+
+The folder contains a simple GNU Octave tool to generate DBC files with
+random contents. The tools has been applied to produce test data for the
+true comFramework tools.
+
+This is the copy of an SVN branch. This is not a development branch in the
+sense of Git! Branches in SVN and Git have different concepts. This is not
+a branch, which must ever be merged into main! It is just the container
+for some different but closely related stuff.

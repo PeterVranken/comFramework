@@ -1,0 +1,126 @@
+parameterSet(p) ::= <<
+use-standard-log4j2-configuration:  <p.useStdLog4j2Config>
+log-level:                          <p.logLevel>
+log-file:                           <if(p.logFileName)><p.logFileName><else>(no log file)<endif>
+log4j2-pattern:                     <p.log4j2Pattern>
+cluster-name:                       <p.clusterName>
+string-template-verbose:            <p.stringTemplateVerbose>
+<if(p.workbookAry)><\\>
+sort-order-of-workbooks:            <p.sortOrderWorkbooks>
+sort-order-of-worksheets:           <p.sortOrderWorksheets>
+default-worksheet-group:            <if(p.defaultWorksheetGroup)><p.defaultWorksheetGroup><else>(No default group for worksheets)<endif>
+Workbooks:
+<p.workbookAry:{b|<workbookTitle(i,b)>}><\\>
+<endif>
+<if(p.worksheetTemplateAry)><\\>
+Worksheet templates:
+<p.worksheetTemplateAry:{t|<worksheetTemplateTitle(i,t)>}><\\>
+<endif>
+Generated files:
+<p.templateOutputPairAry:{o|<outputTitle(i,o)>}>
+>>
+
+
+workbookTitle(idx,b) ::= <<
+<idx>) Workbook <b>:
+  <workbookDescription(b)>
+>>
+
+workbookDescription(b) ::= <<
+input-file-name:                  <b.fileName>
+workbook-name:                    <if(b.name)><b.name><else>(Derived from file name)<endif>
+worksheet-names-are-identifiers:  <b.worksheetNamesAreIdentifiers>
+<if(b.worksheetRefAry)>
+Worksheet selection:
+<b.worksheetRefAry:{ref|<worksheetRefTitle(i,ref)>}><endif>
+<if(b.optionMap)><\\>
+user-option:                      <b.optionMap:{name|<name>=<b.optionMap.(name)>}; wrap="\n                                  ", separator=", "><\n><endif>
+>>
+
+worksheetRefTitle(idx,ref) ::= <<
+<idx>) Worksheet <ref>:
+  <worksheetRef(ref)>
+>>
+
+worksheetRef(ref) ::= <<
+worksheet-name:                 <if(ref.name)><ref.name><else>(Derived from tab)<endif>
+<if(ref.reTabName)>
+worksheet-by-tab:               <ref.reTabName>
+<else><\\>
+worksheet-by-index:             <ref.index>
+<endif>
+applied-worksheet-template:     <if(ref.worksheetTemplateName)><ref.worksheetTemplateName><else>(Worksheet template is associated by rules)<endif><\n>
+>>
+
+pair(p) ::= "<p.first><if(p.second)>:<p.second><endif>"
+
+worksheetTemplateTitle(idx,t) ::= <<
+<idx>) Worksheet template <t>:
+  <worksheetTemplate(t)>
+>>
+
+worksheetTemplate(t) ::= <<
+worksheet-template-name:          <if(t.name)><t.name><else>(anonymous)<endif>
+<if(t.reTabName)>
+association-by-tab:               <t.reTabName>
+<else>
+association-by-index:             <t.index>
+<endif>
+column-titles-are-identifiers:    <if(t.columnTitlesAreIdentifiers)>Identifier<else>Unmodified Excel input<endif>
+group:                            <if(t.worksheetGroup)><t.worksheetGroup><else>(not assigned to a global group)<endif>
+index-title-row:                  <idxTitleRow.(t.idxTitleRow)>
+include-range-of-rows:            <if(t.inclRowIdxAry)><t.inclRowIdxAry:{p|<pair(p)>}; wrap="\n                                  ", separator=", "><else>All<endif>
+exclude-range-of-rows:            <if(t.exclRowIdxAry)><t.exclRowIdxAry:{p|<pair(p)>}; wrap="\n                                  ", separator=", "><else>None<endif>
+include-range-of-columns:         <if(t.inclColIdxAry)><t.inclColIdxAry:{p|<pair(p)>}; wrap="\n                                  ", separator=", "><else>All<endif>
+exclude-range-of-columns:         <if(t.exclColIdxAry)><t.exclColIdxAry:{p|<pair(p)>}; wrap="\n                                  ", separator=", "><else>None<endif>
+<if(t.columnDescAry)><\\>
+Column descriptions:
+<t.columnDescAry:{attribs|<columnDescTitle(i,attribs)>}><endif>
+>>
+
+idxTitleRow ::=
+[
+    "0": "(first non-empty row)",
+    "-1": "(no title line, generic titles will be used)",
+    default: key
+]
+
+columnDescTitle(idx,attribs) ::= <<
+<idx>) Column attributes <attribs>
+  <columnDesc(attribs)>
+>>
+
+columnDesc(a) ::= <<
+column-name:                    <if(a.name)><a.name><else>(Derived from cell in title row)<endif>
+<if(a.reTitle)><\\>
+column-title:                   <a.reTitle>
+<else><\\>
+column-index:                   <a.index>
+<endif>
+is-grouping-column:             <if(a.isGroupingColumn)>Grouping column<else>Ordinary property column<endif>
+sort-order-of-column:           <a.sortOrder>
+sort-priority-of-column:        <if(a.isGroupingColumn)>(Not applicable)<else><a.sortPriority><endif><\n>
+>>
+
+
+outputTitle(idx,o) ::= <<
+<idx>) Output file <o.outputFileName>:
+  <output(o)>
+>>
+
+output(o) ::= <<
+template-file-name:               <o.templateFileName>
+template-name:                    <o.templateName>
+template-arg-name-cluster:        <o.templateArgNameCluster>
+template-arg-name-info:           <o.templateArgNameInfo>
+template-wrap-column:             <wrapColumn.(o.templateWrapCol)>
+output-file-name:                 <o.outputFileName>
+<if(o.optionMap)><\\>
+user-option:                      <o.optionMap:{name|<name>=<o.optionMap.(name)>}; wrap="\n                                  ", separator=", "><\n><endif>
+>>
+
+wrapColumn ::=
+[
+    "-1": "(no line wrap)",
+    default: key
+]

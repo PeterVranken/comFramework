@@ -1,0 +1,70 @@
+//
+// iterations.stg
+// This is a template group file for StringTemplate V4, see www.stringtemplate.org.
+//
+// The templates collected in this library file support the evaluation of Boolean
+// conditions by sub-templates.
+//
+// Copyright (C) 2021-2023 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+//
+// This program is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by the
+// Free Software Foundation, either version 3 of the License, or any later
+// version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+// FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+// for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+delimiters "<", ">"
+
+// This is a helper to avoid the repeated use of lengthy template expressions. Template
+// expressions often have the form that a (deeply nested) element of the data structure
+// yields a Boolean result and an <if()> expression is applied to decide code generation
+// based on the expression's Boolean value.
+//   A sub-template returns its result as a string. If we try to put the Boolean
+// expression in a sub-template, like myBoolExpr() ::= "<lengthyExpression>", then the
+// <if()> expression in the calling template fails: <if(myBoolExpr())> will always become
+// true, for the same reason why <if("false")> will always be true; "false" is a string,
+// not a null and not a Boolean false.
+//   Dictionaries are an exception. While they normally agree in returning strings do they
+// yet allow to return Boolean constants. If we use a dictionary to translate the strings
+// of the Boolean values into Boolean values then an <if()> expression continues to work
+// well; <if(isTrue.(myBoolExpr()))> does, what it is expected to do.
+//   Note, the interpretation of the empty string as a Boolean false is required since many
+// if not most Boolean queries return null rather than false, which is rendered as empty
+// string.
+isTrue ::= [ "true": true
+           , "false": false
+           , "TRUE": true
+           , "FALSE": false
+           , "True": true
+           , "False": false
+           , "t": true
+           , "f": false
+           , "nil": false
+           , "null": false
+           , "1": true
+           , "0": false
+           , "": false
+           , default: {<info.error.("isTrue got invalid argument. Check your template code")>}
+           ]
+isFalse ::= [ "true": false
+            , "false": true
+            , "TRUE": false
+            , "FALSE": true
+            , "True": false
+            , "False": true
+            , "t": false
+            , "f": true
+            , "nil": true
+            , "null": true
+            , "1": false
+            , "0": true
+            , "": true
+            , default: {<info.error.("isFalse got invalid argument. Check your template code")>}
+            ]

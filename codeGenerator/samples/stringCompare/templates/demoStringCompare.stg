@@ -1,0 +1,115 @@
+//
+// demoStringCompare.stg
+// This is a template group file for StringTemplate V4, see www.stringtemplate.org.
+//
+// Test and demonstrate the string compare capabilities provided to the template expansion
+// process.
+//
+// Copyright (C) 2023 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+//
+// This program is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by the
+// Free Software Foundation, either version 3 of the License, or any later
+// version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT
+// ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+// FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+// for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+delimiters "<", ">"
+
+import "lib/isTrue.stg"
+import "lib/iterationsEx.stg"
+
+// Soemwhre in our ST4 template group files, we will have template expressions that return
+// some text we want to check by string operations ...
+someText() ::= "TextTextText and even more text"
+
+// A regular expression to pick some specific filters.
+reFltrSig() ::= ".*validity.*"
+
+
+demoStringCompare(cluster,info) ::= <<
+<info.info.(["This is demoStringCompare, an ST4 sample template demonstrating",
+             " the string comparison feature provided to te template expansion",
+             " process"]
+           )
+>
+
+cmp, abc == abc: <info.str.cmp.("abc == abc")>, <info.str.cmp.("abc==abc")>, <info.str.cmp.("  abc == abc  ")>, <info.str.cmp.("abc # abc")>
+cmp, abc == Abc: <info.str.cmp.("abc == Abc")>, <info.str.cmp.("abc==Abc")>, <info.str.cmp.("  abc == Abc  ")>, <info.str.cmp.("abc # Abc")>
+
+cmpI, abc == abc: <info.str.cmpI.("abc == abc")>, <info.str.cmpI.("abc==abc")>, <info.str.cmpI.("  abc == abc  ")>, <info.str.cmpI.("abc # abc")>
+cmpI, abc == Abc: <info.str.cmpI.("abc == Abc")>, <info.str.cmpI.("abc==Abc")>, <info.str.cmpI.("  abc == Abc  ")>, <info.str.cmpI.("abc # Abc")>
+
+Set Delimiter to whitespace, \s+<info.str.setArgumentDelimiter.("\\s+")>
+
+cmp: abc == abc: <info.str.cmp.("abc abc")>, <info.str.cmp.("abc\tabc")>, <info.str.cmp.("abc  abc  ")>, <info.str.cmp.("abc \t abc")>
+cmpI: abc == ABC: <info.str.cmpI.("abc ABC")>, <info.str.cmpI.("abc\tABC")>, <info.str.cmpI.("abc  ABC  ")>, <info.str.cmpI.("abc \t ABC")>
+
+Set Delimiter back to default, ==|#: <info.str.setArgumentDelimiter.("==|#")>
+
+<if(info.str.cmp.({TextTextText and even more text # <someText()>}))>
+Text matches expectation!
+<else>
+Text doesn't match expectation!
+<endif>
+<if(info.str.cmpRegExp.({<someText()> == .*text.*}))>
+Text matches expectation!
+<else>
+Text doesn't match expectation!
+<endif>
+<if(!info.str.cmpRegExp.({<someText()> == .*teXt.*}))>
+str.cmpRegExp is case sensitive!
+<else>
+str.cmpRegExp is not case sensitive!
+<endif>
+<if(info.str.cmpRegExpI.({<someText()> == .*teXt.*}))>
+Text matches expectation!
+<else>
+Text doesn't match expectation!
+<endif>
+<if(info.str.cmpRegExpI.({<someText()> == .*teXt.* even.*}))>
+Text matches expectation!
+<else>
+Text doesn't match expectation!
+<endif>
+
+Now we use the regular expression \<reFltrSig()>, <reFltrSig()>, to find all signals of
+particular meaning:
+<iterateSignalsOfCluster(cluster=cluster,mux="all",dir="all",T="fltrSignal")>
+
+Similarly, here is the list of inbound signals dealing with either GPS or vehicle speed:
+<iterateSignalsOfClusterEx(cluster,"processSignalGPSOrSpeed")>
+
+>>
+
+// Template telling what to do with all matching signals
+fltrSignal(signal, kind) ::= <<
+<if(info.str.cmpRegExpI.([signal.name,"==",reFltrSig()]))><\\>
+<info.calc.idxSig>) <frame.name>, <frame.id>: <signal.name> (<kind>)
+<endif>
+>>
+
+// Template telling what to do with all inbound GPS or speed signals. See, how the complex
+// filter condition is delegated to another template.
+processSignalGPSOrSpeed(signal, kind) ::= <<
+<if(isTrue.(fltrSignalGPSOrSpeed(signal)))><\\>
+<info.calc.idxSigGPS>) <frame.name>, <frame.id>: <signal.name> (<kind>)
+<endif>
+>>
+
+// Aplying isTrue.(), we can put complex, lengthy match conditions in a dedicated
+// sub-template. Here, as an example, we have a search for all signals, which deal with
+// either GPS or vehicle speed.
+fltrSignalGPSOrSpeed(signal) ::= <<
+<if(signal.isReceived
+    && (info.str.cmpRegExpI.([signal.name,"==.*GPS.*"])
+        ||  info.str.cmpRegExpI.([signal.name,"==.*speed.*"])
+       )
+   )>true<else>false<endif>
+>>

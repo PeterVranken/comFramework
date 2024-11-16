@@ -1,0 +1,23 @@
+Data of run "Authors in lexical order then number of pages":
+1) Excel line: 19, ID: 16, Title: "Das Totenhaus", Author: Dostojewski, Fjodor Michailowitsch, Genre: Erzählung, 135 Pages
+2) Excel line: 18, ID: 15, Title: "Der Spieler", Author: Dostojewski, Fjodor Michailowitsch, Genre: Novelle, 167 Pages
+3) Excel line: 16, ID: 13, Title: "Schuld und Sühne", Author: Dostojewski, Fjodor Michailowitsch, Genre: Roman, 678 Pages
+4) Excel line: 17, ID: 14, Title: "Die Dämonen", Author: Dostojewski, Fjodor Michailowitsch, Genre: Roman, 1000 Pages
+5) Excel line: 15, ID: 12, Title: "Die Brüder Karamasow", Author: Dostojewski, Fjodor Michailowitsch, Genre: Roman, 1025 Pages
+6) Excel line: 25, ID: 22, Title: "Wallenstein", Author: Mann, Golo, Genre: Geschichte, 1100 Pages
+7) Excel line: 21, ID: 18, Title: "Mephisto", Author: Mann, Klaus, Genre: Roman, 340 Pages
+8) Excel line: 23, ID: 20, Title: "Der Vulkan", Author: Mann, Klaus, Genre: Roman, 424 Pages
+9) Excel line: 20, ID: 17, Title: "Herr und Hund", Author: Mann, Thomas, Genre: Novelle, 89 Pages
+10) Excel line: 22, ID: 19, Title: "Die Buddenbrooks", Author: Mann, Thomas, Genre: Roman, 678 Pages
+11) Excel line: 24, ID: 21, Title: "Der Zauberberg", Author: Mann, Thomas, Genre: Roman, 1025 Pages
+12) Excel line: 14, ID: 11, Title: "Verletzlich", Author: Marklund, Liza, Genre: Thriller, 352 Pages
+13) Excel line: 13, ID: 10, Title: "Jagd", Author: Marklund, Liza, Genre: Thriller, 384 Pages
+14) Excel line: 7, ID: 4, Title: "Olympisches Feuer", Author: Marklund, Liza, Genre: Thriller, 400 Pages
+15) Excel line: 12, ID: 9, Title: "Weißer Tod", Author: Marklund, Liza, Genre: Thriller, 400 Pages
+16) Excel line: 4, ID: 1, Title: "Studio 6", Author: Marklund, Liza, Genre: Thriller, 416 Pages
+17) Excel line: 6, ID: 3, Title: "Prime Time", Author: Marklund, Liza, Genre: Thriller, 416 Pages
+18) Excel line: 5, ID: 2, Title: "Paradies", Author: Marklund, Liza, Genre: Thriller, 432 Pages
+19) Excel line: 8, ID: 5, Title: "Der Rote Wolf", Author: Marklund, Liza, Genre: Thriller, 448 Pages
+20) Excel line: 9, ID: 6, Title: "Nobels Testament", Author: Marklund, Liza, Genre: Thriller, 448 Pages
+21) Excel line: 10, ID: 7, Title: "Lebenslänglich", Author: Marklund, Liza, Genre: Thriller, 496 Pages
+22) Excel line: 11, ID: 8, Title: "Kalter Süden", Author: Marklund, Liza, Genre: Thriller, 517 Pages
