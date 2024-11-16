@@ -1,5 +1,7 @@
+= About this Branch
+
 This folder contains the import of folder
-https://svn.code.sf.net/p/comframe/code/canInterface/branches/generateRandomDbc,
+https://svn.code.sf.net/p/comframe/code/canInterface/branches/generateRandomDbc[^],
 revision 278, May 15th, 2018, 21:28:20, from the original Sourceforge
 repository, which had been used before this GitHub repository.
 
