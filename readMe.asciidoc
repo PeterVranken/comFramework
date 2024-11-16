@@ -1,0 +1,17 @@
+= About this Branch
+
+This folder contains the import of folder
+https://svn.code.sf.net/p/comframe/code/canInterface/branches/rtosEmulation[^],
+revision 279, May 20th, 2018, 12:25:34, from the original SourceForge
+repository, which had been used before this GitHub repository.
+
+The folder contains the emulation of an embedded RTOS as Windows process.
+The typical timer-controlled tasks of such an RTOS are implemented by
+POSIX threads. The Windows application requires a MinGW GCC port, which
+supports the pthreads library. The emulation is required for a realistic
+test of the CAN interface in a dummy Windows application.
+
+This is the copy of an SVN branch. This is not a development branch in the
+sense of Git! Branches in SVN and Git have different concepts. This is not
+a branch, which must ever be merged into main! It is just the container
+for some different but closely related stuff.

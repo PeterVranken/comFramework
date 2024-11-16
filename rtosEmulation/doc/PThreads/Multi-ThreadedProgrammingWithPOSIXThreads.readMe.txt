@@ -1,0 +1,1 @@
+http://www.0x04.net/doc/posix/Multi-Threaded%20Programming%20with%20POSIX%20Threads%20-%20Linux%20Systems%20Programming.pdf, May 9, 2016
