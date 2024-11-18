@@ -62,18 +62,18 @@
   </target>
   
   <!-- Generate version information in the main file -->
-  <target name="updateAppVersionFromSVN">
-    <exec executable="SubWCRev.exe" dir="${trunkExcelExporter}">
+  <target name="updateAppVersionFromGit">
+    <exec executable="GitWCRev.exe" dir="${trunkExcelExporter}">
       <arg value="."/>
-      <arg value="${src}/excelExporter/main/SvnRevision.java.template"/>
-      <arg value="${src}/excelExporter/main/SvnRevision.java"/>
-      <arg value="-f"/>
+      <arg value="${src}/excelExporter/main/GitRevision.java.template"/>
+      <arg value="${src}/excelExporter/main/GitRevision.java"/>
+      <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
     </exec>
   </target>
   
   <!-- Generate javadocs for complete source code into ${doc} -->
   <target name="doc"
-          depends="init,updateAppVersionFromSVN"
+          depends="init,updateAppVersionFromGit"
           description="Generate Javadoc documentation for complete software source code"
   >
     <javadoc packagenames="*"
@@ -122,7 +122,7 @@
 
   <!-- Compile the java source files -->
   <target name="compile"
-          depends="init,updateAppVersionFromSVN"
+          depends="init,updateAppVersionFromGit"
           description="Compile all Java sources belonging to the application excelExporter."
   >
     <!-- Compile the java code from ${src} into ${build} -->
@@ -201,13 +201,13 @@
     <delete verbose="true" file="${dist}/comFramework-excelExporter.zip"/>
     <delete verbose="true" file="${dist}/excelExporter.zip"/>
     
-    <!-- Generate version information - assuming that a SVN commit has been done prior to
+    <!-- Generate version information - assuming that a Git commit has been done prior to
          building the archive. -->
-    <exec executable="SubWCRev.exe" dir="${dist}">
+    <exec executable="GitWCRev.exe" dir="${dist}">
       <arg value="${trunkExcelExporter}"/>
       <arg value="verTemplate.txt"/>
       <arg value="version.txt"/>
-      <arg value="-f"/>
+      <arg value="-q"/>
     </exec>
     <copy file="${dist}/version.txt" tofile="tmp-${timeTag}/comFramework/version.txt"/>
     <copy file="${dist}/LICENSE-excelExporter.txt" tofile="tmp-${timeTag}/comFramework/lgpl.txt"/>
