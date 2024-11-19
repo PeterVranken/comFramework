@@ -132,6 +132,15 @@ the <a href="script.html"><code>&lt;script&gt;</code></a> task.</p>
     </td>
     <td>No</td>
   </tr>
+  <tr>
+    <td>setbeans</td>
+    <td>This attribute controls whether to set variables for all properties, references and targets
+      in the running script. If this attribute is <q>false</q>, only the <code>project</code> and
+      <code>self</code> variables are set. If this attribute is <q>true</q> all the variables are
+      set. <em>Since Ant 1.10.13</em>
+    </td>
+    <td>No; default <q>false</q> for backward compatibility</td>
+  </tr>
 </table>
 
 <h3>Parameters specified as nested elements</h3>
@@ -146,6 +155,11 @@ the <a href="script.html"><code>&lt;script&gt;</code></a> task.</p>
     <td>name</td>
     <td>the name of the attribute</td>
     <td>Yes</td>
+  </tr>
+  <tr>
+    <td>default</td>
+    <td>the default value of the attribute <em>Since Ant 1.10.13</em></td>
+    <td>No</td>
   </tr>
 </table>
 

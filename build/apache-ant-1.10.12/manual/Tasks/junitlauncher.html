@@ -354,7 +354,7 @@
                 If no value is specified for this attribute and the listener implements
                 the <code>org.apache.tools.ant.taskdefs.optional.junitlauncher.TestResultFormatter</code>
                 then the file name will be defaulted to and will be of the
-                form <code>TEST-<i>testname</i>.<i>formatter-specific-extension</i></code>
+                form <code>TEST-<i>testname</i>.<i>extension</i></code>
                 (ex: <samp>TEST-org.myapp.SomeTest.xml</samp> for the <q>legacy-xml</q> type
                 formatter)
             </p>
@@ -365,6 +365,13 @@
             </p>
         </td>
         <td>No</td>
+    </tr>
+    <tr>
+        <td>extension</td>
+        <td>Extension to append to the output filename.
+            <p><em>Since Ant 1.10.13</em></p>
+        </td>
+        <td>No; defaults to <q>xml</q> for the <q>legacy-xml</q> formatter and to <q>txt</q> for the rest</td>
     </tr>
     <tr>
         <td>outputDir</td>
@@ -406,10 +413,10 @@
     <tr>
         <td>useLegacyReportingName</td>
         <td>Set to true, if the test identifiers reported by this listener should use legacy (JUnit4
-            style) names. Else set to false. Defaults to true.
+            style) names. Else set to false.
             <p><em>Since Ant 1.10.10</em></p>
         </td>
-        <td>No</td>
+        <td>No; defaults to <q>true</q></td>
     </tr>
 </table>
 
@@ -624,6 +631,30 @@ the new JVM instance that will be created to launch the tests.
             JVM, is expected to contain the Ant runtime jars</td>
         <td>No. Value defaults to <code>true</code>.</td>
     </tr>
+    <tr>
+        <td>java</td>
+        <td>The command used to launch the forked <code>java</code> process. This attribute can be set
+        to point to a different installation of Java than the one that is currently being used to
+        run the Ant build
+            <p><em>Since Ant 1.10.14</em></p>
+        </td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>forkMode</td>
+        <td>Controls how many JVMs are launched for the forked tests. Allowed values are:
+            <ul class="inlinelist">
+                <li><code>perTestClass</code> - This mode launches each test class in a
+                    separately forked JVM. Each of these JVMs will be forked sequentially
+                    one at a time, as and when each test class execution completes.
+                    If any <code>timeout</code> value is specified, then that timeout applies to
+                    the time that all tests use together, not to an individual test.
+                </li>
+            </ul>
+            <p><em>Since Ant 1.10.14</em></p>
+        </td>
+        <td>No; defaults to launching all test classes in one single forked JVM.</td>
+    </tr>
 </table>
 
 The <code>fork</code> element allows the following nested elements:
@@ -635,7 +666,7 @@ The <code>fork</code> element allows the following nested elements:
 </p>
     <pre>
     &lt;fork ...&gt;
-      &lt;jvmarg value="-Djava.compiler=NONE"/&gt;
+      &lt;jvmarg value="-Dfoo=bar"/&gt;
       ...
     &lt;/fork&gt;
     </pre>

@@ -346,6 +346,21 @@ connection.</p>
       the <var>serverLanguageCode</var> attribute.<br/><em>Since Ant 1.7</em></td>
     <td>No</td>
   </tr>
+  <tr>
+    <td>useFtps</td>
+    <td>Whether to use ftps instead of ftp. Boolean, defaults
+      to <var>false</var>.<br/>
+      <em>Since Ant 1.10.13</em></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>useSecureDataChannel</td>
+    <td>Whether to use a secure data channel when ftps is enabled. Boolean, which when
+      set to <var>true</var>, will execute a "PROT P" command to enable the secure data
+      channel. Defaults to <var>false</var> and the value is ignored when ftps is not enabled.<br/>
+      <em>Since Ant 1.10.15</em></td>
+    <td>No</td>
+  </tr>
 </table>
 <h3>Note about <var>remotedir</var> attribute</h3>
 <table>
