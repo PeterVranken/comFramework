@@ -2,10 +2,9 @@
          default="jar"
          basedir=".."
 >
-  <!-- TODO Properly organize all paths and class paths:
-       file://C:\ProgramFiles\Apache\apache-ant-1.9.4\manual\index.html
-  -->
-  
+  <!-- Note, if Java 18 or higher is used then ANT 1.10.14 or higher is required. Till
+       ANT 1.10.13, the deprecated SecurityManager is used, which is eventually no longer
+       supported by Java 18. See https://downloads.apache.org/ant/ (Visited Jan 11, 2024). -->
   <description>Compile all Java sources, execute the tests or create a jar library.
   </description>
   
@@ -207,7 +206,7 @@
       <arg value="${trunkExcelExporter}"/>
       <arg value="verTemplate.txt"/>
       <arg value="version.txt"/>
-      <arg value="-q"/>
+      <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
     </exec>
     <copy file="${dist}/version.txt" tofile="tmp-${timeTag}/comFramework/version.txt"/>
     <copy file="${dist}/LICENSE-excelExporter.txt" tofile="tmp-${timeTag}/comFramework/lgpl.txt"/>

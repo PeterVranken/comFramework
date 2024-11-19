@@ -1,7 +1,7 @@
 # Build Java application excelExporter
 #   See the TODO tags first. Some paths need to be set first.
 
-$env:ANT_HOME = "$PSScriptRoot\apache-ant-1.10.12"
+$env:ANT_HOME = "$PSScriptRoot\apache-ant-1.10.15"
 $env:GITWCREV_HOME = "$PSScriptRoot\GitWCRev"
 
 # TODO Configure the path to the Java JDK to use. A Java JDK is not element of this Git

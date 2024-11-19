@@ -2,11 +2,8 @@
          default="jar"
          basedir=".."
 >
-  <!-- TODO Properly organize all paths and class paths:
-       file://C:\ProgramFiles\Apache\apache-ant-1.9.4\manual\index.html -->
-  
-  <!-- Note, if Java 18 or higher is used then at ANT 10.14 or higher is required. Till
-       ANT 10.13, the deprecated SecurityManager is used, which is eventually no longer
+  <!-- Note, if Java 18 or higher is used then ANT 1.10.14 or higher is required. Till
+       ANT 1.10.13, the deprecated SecurityManager is used, which is eventually no longer
        supported by Java 18. See https://downloads.apache.org/ant/ (Visited Jan 11, 2024). -->
 
   <description>
@@ -63,18 +60,18 @@ execute the tests or create a jar library.
   </target>
 
   <!-- Generate version information in the main file -->
-  <target name="updateAppVersionFromSVN">
-    <exec executable="SubWCRev.exe" dir="${trunkCodeGenerator}">
+  <target name="updateAppVersionFromGit">
+    <exec executable="GitWCRev.exe" dir="${trunkCodeGenerator}">
       <arg value="."/>
-      <arg value="${src}/codeGenerator/main/SvnRevision.java.template"/>
-      <arg value="${src}/codeGenerator/main/SvnRevision.java"/>
-      <arg value="-f"/>
+      <arg value="${src}/codeGenerator/main/GitRevision.java.template"/>
+      <arg value="${src}/codeGenerator/main/GitRevision.java"/>
+      <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
     </exec>
   </target>
   
   <!-- Generate javadocs for complete source code into ${doc} -->
   <target name="doc"
-          depends="init,updateAppVersionFromSVN"
+          depends="init,updateAppVersionFromGit"
           description="Generate Javadoc documentation for complete software source code"
   >
     <javadoc packagenames="*"
@@ -128,7 +125,6 @@ access="private"
      be removed in a future release" The reason for that has not been identified but using
      the task to run an external command still works well. We call Java as an external
      process and run the ANTLR code generator that way. -->
-<!--     
     <java classname="org.antlr.v4.Tool">
        <arg value="-visitor"/>
        <arg value="-package"/>
@@ -138,7 +134,7 @@ access="private"
        <arg value="${src}/codeGenerator/dbcParser/Dbc.g4"/>
        <classpath refid="classpath"/>
     </java>
--->
+<!--     
     <exec executable="java.exe" dir=".">
       <arg value="-cp"/> <arg value="dist/antlr-4.12.0-complete.jar"/>
       <arg value="-ea"/>
@@ -148,11 +144,12 @@ access="private"
       <arg value="-o"/> <arg value="${src}/codeGenerator/dbcParser"/>
       <arg value="${src}/codeGenerator/dbcParser/Dbc.g4"/>
     </exec>
+-->
   </target>
   
   <!-- Compile the java source files -->
   <target name="compile"
-          depends="init,updateAppVersionFromSVN"
+          depends="init,updateAppVersionFromGit"
           description="Compile all Java sources belonging to the application codeGenerator."
   >
     <!-- Compile the java code from ${src} into ${build} -->
@@ -214,14 +211,14 @@ access="private"
     <!-- Remove possibly existing archive - shall be renewed -->
     <delete verbose="true" file="${dist}/comFramework-codeGenerator.zip"/>
     
-    <!-- Generate version information - assuming that an SVN commit has been done prior to
+    <!-- Generate version information - assuming that an Git commit has been done prior to
          building the archive -->
-    <echo message="Running SubWCRev.exe to generate file version.txt"/>
-    <exec executable="SubWCRev.exe" dir="${dist}">
+    <echo message="Running GitWCRev.exe to generate file version.txt"/>
+    <exec executable="GitWCRev.exe" dir="${dist}">
       <arg value="${trunkCodeGenerator}"/>
       <arg value="verTemplate.txt"/>
       <arg value="version.txt"/>
-      <arg value="-f"/>
+      <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
     </exec>
     <copy file="${dist}/LICENSE-comFrameworkCodeGenerator.txt" tofile="tmp-${timeTag}/comFramework/lgpl.txt"/>
     <copy file="${dist}/version.txt" tofile="tmp-${timeTag}/comFramework/version.txt"/>
