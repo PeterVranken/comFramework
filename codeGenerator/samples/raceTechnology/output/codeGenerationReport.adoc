@@ -1,9 +1,17 @@
 = Code Generation Report for CAN Network raceCar
 :Author:    comFramework - codeGenerator version 1.12.1 (http://sourceforge.net/projects/comframe/)
-:toc:
-:toclevels: 4
-:xrefstyle: short
+:toc:               left
+:toclevels: 		4
+:xrefstyle: 		short
 :numbered:
+:pdf-style:         fev
+:title-page:
+:icons:             font
+:caution-caption:   :fire:
+:important-caption: :exclamation:
+:note-caption:      :paperclip:
+:tip-caption:       :bulb:
+:warning-caption:   :warning:
 
 == General
 * Operating system: `Windows_NT`
@@ -1032,10 +1040,11 @@
  ** sendPeriod: 1000
 
 
-* SendMode: Data change driven
+* SendMode: Data change driven, regular if there are no changes
+ ** Period: 1000 ms
  ** Minimum distance in time: 50 ms
  ** Filtered special signals:
-  * checksum: CRC
+  *** checksum: CRC
 * 2 Signals (plus 0 multiplexed signal sets):
 [frame="none",width="90%",options="header"]
 |=======
@@ -2828,8 +2837,7 @@
  ** sendPeriod: 500
 
 
-* SendMode: Data change driven, regular if there are no changes
- ** Period: 500 ms
+* SendMode: Data change driven
  ** Minimum distance in time: 10 ms
 * 1 Signals (plus 0 multiplexed signal sets):
 [frame="none",width="90%",options="header"]
@@ -3472,7 +3480,7 @@
 * SendMode: Regular
  ** Period: 10 ms
  ** Filtered special signals:
-  * alivCtr: SQC
+  *** alivCtr: SQC
 * 8 Signals (plus 0 multiplexed signal sets):
 [frame="none",width="90%",options="header"]
 |=======
@@ -3520,7 +3528,8 @@
  ** sendPeriod: 10 (default)
 
 
-* SendMode: Data change driven
+* SendMode: Data change driven, regular if there are no changes
+ ** Period: 10 ms
  ** Minimum distance in time: 10 ms
 * 2 Signals (plus 0 multiplexed signal sets):
 [frame="none",width="90%",options="header"]

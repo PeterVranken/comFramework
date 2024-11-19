@@ -436,14 +436,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>Code Generation Report for CAN Network raceCar</h1>
 <div class="details">
 <span id="author" class="author">comFramework - codeGenerator version 1.12.1 (http://sourceforge.net/projects/comframe/)</span><br>
 </div>
-<div id="toc" class="toc">
+<div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_general">1. General</a></li>
@@ -6499,20 +6500,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>SendMode: Data change driven</p>
+<p>SendMode: Data change driven, regular if there are no changes</p>
 <div class="ulist">
 <ul>
+<li>
+<p>Period: 1000 ms</p>
+</li>
 <li>
 <p>Minimum distance in time: 50 ms</p>
 </li>
 <li>
 <p>Filtered special signals:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>checksum: CRC</p>
 </li>
 </ul>
 </div>
 </li>
-<li>
-<p>checksum: CRC</p>
+</ul>
+</div>
 </li>
 <li>
 <p>2 Signals (plus 0 multiplexed signal sets):</p>
@@ -15910,12 +15918,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>SendMode: Data change driven, regular if there are no changes</p>
+<p>SendMode: Data change driven</p>
 <div class="ulist">
 <ul>
-<li>
-<p>Period: 500 ms</p>
-</li>
 <li>
 <p>Minimum distance in time: 10 ms</p>
 </li>
@@ -19217,12 +19222,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>Filtered special signals:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>alivCtr: SQC</p>
 </li>
 </ul>
 </div>
 </li>
-<li>
-<p>alivCtr: SQC</p>
+</ul>
+</div>
 </li>
 <li>
 <p>8 Signals (plus 0 multiplexed signal sets):</p>
@@ -19574,9 +19583,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>SendMode: Data change driven</p>
+<p>SendMode: Data change driven, regular if there are no changes</p>
 <div class="ulist">
 <ul>
+<li>
+<p>Period: 10 ms</p>
+</li>
 <li>
 <p>Minimum distance in time: 10 ms</p>
 </li>
@@ -27638,7 +27650,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-11-09 22:05:28 +0100
+Last updated 2024-11-19 17:52:20 +0100
 </div>
 </div>
 </body>

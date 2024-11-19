@@ -7,7 +7,7 @@
 // easily be translated into PDF, HTML and others by Asciidoctor, which is an easily
 // available Open Source tool (https://asciidoctor.org/).
 //
-// Copyright (C) 2015-2018 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+// Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 //
 // This program is free software: you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License as published by the
@@ -27,10 +27,18 @@ import "lib/typeMap.stg"
 asciidocReport(cluster, info) ::= <<
 = Code Generation Report for CAN Network <cluster.name>
 :Author:    <info.application> version <info.version> (http://sourceforge.net/projects/comframe/)
-:toc:
+:toc:               left
 :toclevels: 4
 :xrefstyle: short
 :numbered:
+:pdf-style:         fev
+:title-page:
+:icons:             font
+:caution-caption:   :fire:
+:important-caption: :exclamation:
+:note-caption:      :paperclip:
+:tip-caption:       :bulb:
+:warning-caption:   :warning:
 
 == General
 * Operating system: `<info.envVarOS>`
@@ -126,15 +134,15 @@ renderPdu(pdu, sm) ::= <<
 <if(sm.is.regular)><\\>
 * SendMode: Regular
  ** Period: <pdu.attribMap.sendPeriod> ms
-<elseif(sm.is.event)><\\>
+<elseif(sm.is.mixed)><\\>
 * SendMode: Data change driven, regular if there are no changes
  ** Period: <pdu.attribMap.sendPeriod> ms
  ** Minimum distance in time: <pdu.attribMap.eventMinDistance> ms
-<elseif(sm.is.mixed)><\\>
+<elseif(sm.is.event)><\\>
 * SendMode: Data change driven
  ** Minimum distance in time: <pdu.attribMap.eventMinDistance> ms
 <else><\\>
-* Unknown transmission mode! Please, double-check your code generator configuration!
+* Unknown transmission mode <sm>! Please, double-check your code generator configuration!
 <endif>
 <if(pdu.specialSignalMap)> ** Filtered special signals:
   <pdu.specialSignalMap:{name|<renderSpecialSignal(name,pdu.specialSignalMap.(name))>}><\\>
@@ -150,7 +158,7 @@ renderPdu(pdu, sm) ::= <<
 >>
 
 renderSpecialSignal(name, signal) ::= <<
-* <name>: <signal.name><\n>
+*** <name>: <signal.name><\n>
 >>
 
 renderMuxSignalSet(mxss) ::= <<
