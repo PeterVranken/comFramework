@@ -24,10 +24,10 @@
  * one-time made code and such code should not be developed and maintained through a
  * template. Write this code directly as plain C file.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.0,
+ * This file has been created with comFramework - codeGenerator version 1.12.2,
  * see http://sourceforge.net/projects/comframe/
  *
- * Copyright (C) 2015-2023 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the

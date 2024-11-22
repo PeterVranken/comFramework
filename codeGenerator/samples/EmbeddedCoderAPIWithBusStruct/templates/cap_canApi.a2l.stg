@@ -167,7 +167,7 @@ renderVar(name, expr, description, type, gain, offset, isVoidScaling, unit, min,
   "Linear mapping, used for variable <name>"
   RAT_FUNC
   "%10" /* Format */
-    "<unit>" /* Unit */
+  "<unit>" /* Unit */
   COEFFS 0 -1 <offset> 0 0 -<gain>
 /end COMPU_METHOD
 
