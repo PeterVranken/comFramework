@@ -428,7 +428,7 @@ _Static_assert( EDE_COMMON_MACHINE_ALIGNMENT == 1u
  *   @param tiPhase
  * For periodic timers only, the first due time may differ from the repeated triggers; use
  * case is control of a phase shift. The timer becomes due the first time at \a ti + \a
- * tiPhase ticks from now. Range for this sum is 1.., silently limited. If \tiPhase would
+ * tiPhase ticks from now. Range for this sum is 1.., silently limited. If \a tiPhase would
  * shift the first trigger to a value less than one dispatcher tick then the first due time
  * will be the next dispatcher tick.\n
  *   The parameter is ignored for single-shot timers. 0 should be passed in.
@@ -1472,14 +1472,14 @@ ede_handleTimer_t ede_createPeriodicTimer( const ede_callbackContext_t * const p
  *   @param tiPhase
  * For periodic timers only, the first due time may differ from the repeated triggers; use
  * case is control of a phase shift. The timer becomes due the first time at \a tiPeriod +
- * \a tiPhase ticks from now. Range for this sum is 1.., silently limited. If \tiPhase
+ * \a tiPhase ticks from now. Range for this sum is 1.., silently limited. If \a tiPhase
  * would shift the first trigger to a value less than one dispatcher tick then the first
  * due time will be the next dispatcher tick.
  *   @param callback
  * Please refer to \a tiPeriod.
  *   @param refUserContextData
  * The user specified context information, which is stored with the timer and which will be
- * brought back into its callback at due time. In the timer's callback, use \a
+ * brought back into its callback at due time. In the timer's callback, use
  * ede_getEventData() to retrieve the value passed in here. The data type of the user
  * specified context data is \a uintptr_t; if you pass in a pointer to some data then
  * ede_getEventData() will only return the pointer - not the data it points to.\n
