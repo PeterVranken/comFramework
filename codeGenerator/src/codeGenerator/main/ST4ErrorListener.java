@@ -114,7 +114,8 @@ public class ST4ErrorListener implements STErrorListener
      * The reported errors from ST4 are ugly in that they contain a lot of information,
      * which is irrelevant in our application context. We try to remove the unwanted
      * information and filter the relevant parts.
-     *   @param The error message to be filtered.
+     *   @param msg
+     * The error message to be filtered.
      */
     private static String filterST4ErrMsg(String msg)
     {

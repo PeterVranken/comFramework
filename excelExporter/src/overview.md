@@ -42,12 +42,13 @@ described by this Javadoc.
 This Javadoc describes the data model in terms of field and method
 descriptions. The concept of the data model, an overview with UML diagrams
 and an explanation with examples how to access it from StringTemplate V4
-templates can be found online in the Wiki page <a
-href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/"
+templates can be found online in the Wiki page
+<a href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/"
 target="_blank" title="SourceForge Wiki">The Data Model</a> of the
 excelExporter project.
 
 An overview on the documentation available for the application
-excelExporter can be found online at <a
-href="https://sourceforge.net/p/excelexporter/wiki/Home/" target="_blank"
+excelExporter can be found online at
+<a href="https://sourceforge.net/p/excelexporter/wiki/Home/"
+target="_blank"
 title="Sourceforge Wiki">SourceForge</a>.

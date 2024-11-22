@@ -1,0 +1,153 @@
+<!-- Package comFramework for distribution
+
+     Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+
+     This program is free software: you can redistribute it and/or modify it
+     under the terms of the GNU Lesser General Public License as published by the
+     Free Software Foundation, either version 3 of the License, or any later
+     version.
+
+     This program is distributed in the hope that it will be useful, but WITHOUT
+     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+     FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+     for more details.
+
+     You should have received a copy of the GNU Lesser General Public License
+     along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<project name="comFramework"
+         default="zip"
+         basedir=".."
+>
+  <description>
+ Pack all published files into the archive, which is available for download.
+  </description>
+
+  <!-- Provide access to the environment, write e.g. ${env.X} to access variable X. -->
+  <property environment="env"/>
+
+  <!-- set global properties for this build -->
+  <property name="version" value="2.1"/>
+
+  <!-- Preparatory steps of any target -->
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create a "unique" tag for temporary file names -->
+    <tstamp>
+      <format property="timeTag" pattern="yyMMddHHmmssSSS"/>
+    </tstamp>
+    <property name="tmpDir" location="dist/tmpComFramework-${timeTag}"/>
+    <!-- Create the build directory structure used by this build script -->
+    <mkdir dir="dist"/>
+  </target>
+
+  <!-- Build the distribution of code generator and excelExporter -->
+  <target name="zipDependents"
+          description="Run all sub-ordinated ANT builds, which this build depends on"
+  >
+    <ant antfile="build/zipCodeGenerator.xml"
+         inheritAll="false"
+         useNativeBasedir="true"
+         target="zip"
+    />
+    <ant antfile="build/zipExcelExporter.xml"
+         inheritAll="false"
+         useNativeBasedir="true"
+         target="zip"
+    />
+  </target>
+
+  <!-- Create a zip file for distribution of comFramework -->
+  <target name="zip"
+          description="Create the ZIP archive for the distribution of comFramework"
+          depends="init,zipDependents"
+  >
+    <!-- Copy the distributables of the code generators, not the source tree -->
+    <unzip src="codeGenerator/dist/codeGenerator.zip"
+           dest="${tmpDir}/comFramework"
+    />
+    <unzip src="excelExporter/dist/excelExporter.zip"
+           dest="${tmpDir}/comFramework"
+    />
+    
+    <!-- Generate version information - assuming that a Git commit has been done prior to
+         building the archive. -->
+    <exec executable="GitWCRev.exe" dir="build/GitWCRev">
+      <arg value="."/>
+      <arg value="../../doc/verTemplate.txt"/>
+      <arg value="${tmpDir}/comFramework/version.txt"/>
+      <arg value="-q"/>
+    </exec>
+<!--
+    <exec executable="cmd.exe" dir="doc/wiki">
+      <! line is the blank separated command line. >
+      <arg line="/c updateGitRefs.cmd"/>
+    </exec>
+-->
+    <copy file="lgpl.txt" tofile="${tmpDir}/comFramework/lgpl.txt"/>
+    <copy file="doc/comFramework@Internet.html" tofile="${tmpDir}/comFramework/comFramework@Internet.html"/>
+    <copy file="doc/wiki/readMe.md" tofile="${tmpDir}/comFramework/readMe.md"/>
+    <copy file="doc/wiki/readMe.html" tofile="${tmpDir}/comFramework/readMe.html"/>
+
+    <copy todir="${tmpDir}/comFramework/canInterface">
+      <fileset dir="canInterface">
+        <include name="**/*"/>
+        <exclude name="**/bin/**/*"/>
+        <exclude name="**/*.el"/>
+      </fileset>
+    </copy>
+<!--
+    <exec executable="doxygen"
+          dir="${tmpDir}/comFramework/canInterface/doc/doxygen"
+    >
+      <arg line=""/>
+    </exec>
+-->
+    <delete verbose="false" dir="${tmpDir}/comFramework/canInterface/sampleIntegrations/winSampleIntegration/bin"/>
+    <delete verbose="false" dir="${tmpDir}/comFramework/canInterface/sampleIntegrations/winTest"/>
+    <copy todir="${tmpDir}/comFramework/canInterface/sampleIntegrations/arduinoSampleIntegration/bin">
+      <fileset dir="canInterface/sampleIntegrations/arduinoSampleIntegration/bin">
+        <include name="**/RTuinOS_arduinoSampleIntegration.*"/>
+        <include name="**/upload.cmd"/>
+      </fileset>
+    </copy>
+    <copy todir="${tmpDir}/comFramework/canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder/bin">
+      <fileset dir="canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder/bin">
+        <include name="**/RTuinOS_arduinoSampleIntegrationEC.*"/>
+        <include name="**/upload.cmd"/>
+      </fileset>
+    </copy>
+    <copy todir="${tmpDir}/comFramework/canInterface/sampleIntegrations/winSampleIntegration/bin/win/DEBUG">
+      <fileset dir="canInterface/sampleIntegrations/winSampleIntegration/bin/win/DEBUG">
+        <include name="*.exe"/>
+        <include name="*.map"/>
+      </fileset>
+    </copy>
+    <copy todir="${tmpDir}/comFramework/canInterface/sampleIntegrations/winTestMT/bin/win/DEBUG">
+      <fileset dir="canInterface/sampleIntegrations/winTestMT/bin/win/DEBUG">
+        <include name="*.exe"/>
+        <include name="*.dll"/>
+        <include name="*.map"/>
+      </fileset>
+    </copy>
+    <delete verbose="false" file="${tmpDir}/comFramework/canInterface/sampleIntegrations/arduinoSampleIntegration/code/codeGen/makeTag_generateCode"/>
+    <delete verbose="false" file="${tmpDir}/comFramework/canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder/code/codeGen/makeTag_generateCode"/>
+    <delete verbose="false" file="${tmpDir}/comFramework/canInterface/sampleIntegrations/winSampleIntegration/code/codeGen/makeTag_generateCode"/>
+    <delete verbose="false" file="${tmpDir}/comFramework/canInterface/sampleIntegrations/winTestMT/code/canApi/makeTag_generateCode"/>
+    
+    <copy file="doc/wiki/installation.md" todir="${tmpDir}/comFramework/doc"/>
+    <copy file="doc/wiki/installation.html" todir="${tmpDir}/comFramework/doc"/>
+    
+    <delete verbose="true" file="dist/comFramework.zip"/>
+    <zip destfile="dist/comFramework.zip"
+         comment="comFramework, version ${version}"
+         basedir="${tmpDir}"
+         includes="comFramework/"
+    />
+    <delete verbose="false" dir="${tmpDir}"/>
+
+  </target> <!-- zip -->
+
+</project>

@@ -1,0 +1,136 @@
+<!-- Package comFramework's code generator for distribution
+
+     Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+
+     This program is free software: you can redistribute it and/or modify it
+     under the terms of the GNU Lesser General Public License as published by the
+     Free Software Foundation, either version 3 of the License, or any later
+     version.
+
+     This program is distributed in the hope that it will be useful, but WITHOUT
+     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+     FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+     for more details.
+
+     You should have received a copy of the GNU Lesser General Public License
+     along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<project name="comFramework"
+         default="zip"
+         basedir="../codeGenerator"
+>
+  <!-- Note, if Java 18 or higher is used then ANT 1.10.14 or higher is required. Till
+       ANT 1.10.13, the deprecated SecurityManager is used, which is eventually no longer
+       supported by Java 18. See https://downloads.apache.org/ant/ (Visited Jan 11, 2024). -->
+
+  <description>
+ Pack all published files of the code generator into an archive, which is
+ available for download.
+  </description>
+  <echo message="Starting packaging of comFramework's code generator"/>
+  
+  <!-- Provide access to the environment, write e.g. ${env.X} to access variable X. -->
+  <property environment="env"/>
+  
+  <!-- Set global properties for this build -->
+
+  <!-- Preparatory steps of any target -->
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create a "unique" tag for temporary file names -->
+    <tstamp>
+      <format property="timeTag" pattern="yyMMddHHmmssSSS"/>
+    </tstamp>
+  </target>
+
+  <!-- Create a zip file for distribution of the code generator -->
+  <target name="zip"
+          depends="init"
+          description="Create the ZIP archive for the distribution of the binaries"
+  >
+    <copy file="dist/LICENSE-comFrameworkCodeGenerator.txt" tofile="tmp-${timeTag}/codeGenerator/lgpl.txt"/>
+    <copy file="dist/version.txt" tofile="tmp-${timeTag}/version-codeGenerator.txt"/>
+    <copy file="readMe.md" tofile="tmp-${timeTag}/codeGenerator/readMe.md"/>
+    <copy file="readMe.html" tofile="tmp-${timeTag}/codeGenerator/readMe.html"/>
+    <echo message="Copying artifacts of samples"/>
+    <copy todir="tmp-${timeTag}/codeGenerator/samples">
+      <fileset dir="samples">
+        <include name="**/generateCode.cmd"/>
+        <include name="**/compileWithGcc.cmd"/>
+        <include name="scratchPad/runDemoScratchPad.cmd"/>
+        <include name="iterations/runDemoIterations.cmd"/>
+        <include name="iterations/runTestIterations.cmd"/>
+        <include name="**/readMe.txt"/>
+        <include name="**/dataModelForStringTemplateV4.html"/>
+        <include name="AUTOSAR/output/cif_swcCanInterface.arxml"/>
+        <include name="**/output/**/codeGenerationReport.*"/>
+        <include name="**/output/**/overview.csv"/>
+        <include name="**/output/**/*.txt"/>
+        <include name="**/output/**/*.c"/>
+        <include name="**/output/**/*.h"/>
+        <include name="**/output/**/*.a2l"/>
+        <include name="**/output/**/*.m"/>
+        <include name="**/output/**/*.xml"/>
+        <include name="mapCanIdToFrameIdx/**/*.cmd"/>
+        <include name="**/*.stg"/>
+        <exclude name="**/newStringTemplateGroupFile.stg"/>
+        <include name="**/CAN_RT*.*"/>
+        <include name="dbcFiles/sampleCanBus.dbc"/>
+        <include name="dbcFiles/duplicatedCanIDs.dbc"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/pwr_computeEnginePower.slx"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/**/*.c"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/**/*.h"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/**/*.a2l"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/output/*.m"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/compileIt/GNUmakefile"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/compileIt/gdb.ps1"/>
+        <include name="EmbeddedCoderAPIWithBusStruct/compileIt/EmbeddedCoderAPIWithBusStruct.exe"/>
+        <exclude name="**/*.log"/>
+        <exclude name="**/*.bak"/>
+        <exclude name="**/*.~"/>
+        <exclude name="**/*.el"/>
+      </fileset>
+    </copy>
+      
+    <copy todir="tmp-${timeTag}/codeGenerator/dist">
+      <fileset dir="dist">
+        <include name="version.txt"/>
+        <include name="comFrameworkCodeGenerator-*.jar"/>
+<!--        <include name="ST-4.3.1.jar"/> -->
+        <include name="antlr-4.12.0-complete.jar"/>
+        <include name="log4j-1.2.11.jar"/>
+        <include name="LICENSE*.txt"/>
+        <include name="codeGenerator.cmd"/>
+        <include name="codeGenerator.ico"/>
+        <include name="testInstallation.cmd"/>
+        <exclude name="**/*.bak"/>
+        <exclude name="**/*.~"/>
+      </fileset>
+    </copy>
+    <copy todir="tmp-${timeTag}/codeGenerator/doc">
+      <fileset dir="doc">
+        <include name="dataModel/"/>
+        <include name="*@Internet.html"/>
+        <include name="ST4-270115-0836-52.pdf"/>
+        <include name="dataModelForStringTemplateV4.html"/>
+        <include name="installation.txt"/>
+        <include name="installation.html"/>
+        <include name="codeGenerator.cmd"/>
+        <include name="testInstallation.cmd"/>
+        <exclude name="ANTLR4-310115-1459-60.pdf"/>
+        <exclude name="**/*.bak"/>
+        <exclude name="**/*.~"/>
+      </fileset>
+    </copy>
+    
+    <delete verbose="true" file="dist/codeGenerator.zip"/>
+    <zip destfile="dist/codeGenerator.zip"
+         comment="comFramework - codeGenerator"
+         basedir="tmp-${timeTag}"
+    />
+    <delete verbose="false" dir="tmp-${timeTag}"/>
+
+  </target> <!-- zip -->
+</project>

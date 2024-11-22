@@ -28,8 +28,8 @@ asciidocReport(cluster, info) ::= <<
 = Code Generation Report for CAN Network <cluster.name>
 :Author:    <info.application> version <info.version> (http://sourceforge.net/projects/comframe/)
 :toc:               left
-:toclevels: 4
-:xrefstyle: short
+:toclevels:         4
+:xrefstyle:         short
 :numbered:
 :pdf-style:         fev
 :title-page:

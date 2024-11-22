@@ -13,6 +13,7 @@
   
   <!-- set global properties for this build -->
   <property name="version" value="1.2"/>
+  <property name="javaReleaseForJars" value="8"/>
   <property name="trunkExcelExporter" location="."/>
   <property name="src" location="src"/>
   <property name="srcDM" location="${src}/excelExporter/excelParser/dataModel"/>
@@ -126,7 +127,9 @@
   >
     <!-- Compile the java code from ${src} into ${build} -->
     <!-- See http://ant.apache.org/manual/Tasks/javac.html -->
-    <javac sourcepath=""
+    <!-- See https://en.wikipedia.org/wiki/Java_class_file#General_layout for Java releases -->
+    <javac release="${javaReleaseForJars}"
+           sourcepath=""
            srcdir="${src}"
            destdir="${build}"
            listfiles="no"

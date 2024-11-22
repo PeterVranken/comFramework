@@ -820,8 +820,9 @@ public class ParameterSet
 
     /**
      * Parsing state/context special signal request.
-     *   @throws A CmdLineParser.InvalidArgException exception with contained error
-     * message is thrown in case of failures.
+     *   @throws CmdLineParser.InvalidArgException
+     * A CmdLineParser.InvalidArgException exception with contained error message is thrown
+     * in case of failures.
      *   @return The function returns the next token from the stream of command line
      * arguments. (It needs to read it from the stream as look-ahead for parsing of
      * optional context elements.)
@@ -891,7 +892,7 @@ public class ParameterSet
 
 
     /**
-     * Call the method LinkedHashMap.clone() on a LinkedHashMap<String,Object> without
+     * Call the method LinkedHashMap.clone() on a LinkedHashMap&lt;String,Object&gt; without
      * getting compiler warnings because of unsafe type casts.
      *   @return
      * Get the cloned map (shallow copy).

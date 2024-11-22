@@ -17,6 +17,7 @@ execute the tests or create a jar library.
   
   <!-- set global properties for this build -->
   <property name="version" value="1.12"/>
+  <property name="javaReleaseForJars" value="8"/>
   <property name="trunkCodeGenerator" location="."/>
   <property name="src" location="src"/>
   <property name="srcDM" location="${src}/codeGenerator/DataModelListener"/>
@@ -106,7 +107,7 @@ execute the tests or create a jar library.
              windowtitle="Data Model of codeGenerator for StringTemplate V4 templates"
              doctitle="Data Model of codeGenerator for StringTemplate V4 templates"
              author="Peter Vranken (Peter_Vranken@Yahoo.de)"
-access="private"
+             access="private"
         >
       <arg value="-tag"/> <arg value="todo:cmf:TODO:"/>
       <arg value="-tag"/> <arg value="remark:cmf:Remark:"/>
@@ -154,8 +155,10 @@ access="private"
   >
     <!-- Compile the java code from ${src} into ${build} -->
     <!-- See http://ant.apache.org/manual/Tasks/javac.html -->
+    <!-- See https://en.wikipedia.org/wiki/Java_class_file#General_layout for Java releases -->
     <!-- debuglevel="lines,vars,source" -->
-    <javac sourcepath=""
+    <javac release="${javaReleaseForJars}"
+           sourcepath=""
            srcdir="${src}"
            destdir="${build}"
            listfiles="no"

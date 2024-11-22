@@ -1,18 +1,167 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>overview</title>
   <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-  </style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -20,25 +169,54 @@
 <body>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#excelexporter---rendering-excel-spreadsheets-as-text"><span class="toc-section-number">1</span> excelExporter - Rendering Excel Spreadsheets as Text</a></li>
+<li><a href="#excelexporter---rendering-excel-spreadsheets-as-text" id="toc-excelexporter---rendering-excel-spreadsheets-as-text"><span class="toc-section-number">1</span> excelExporter - Rendering Excel
+Spreadsheets as Text</a></li>
 </ul>
 </nav>
-<h1 id="excelexporter---rendering-excel-spreadsheets-as-text"><span class="header-section-number">1</span> excelExporter - Rendering Excel Spreadsheets as Text</h1>
-<p>This Javadoc describes the data model of excelExporter, an application that can translate the information found in one or more Excel workbooks into manifold textual representations. excelExporter is a general purpose text rendering application for Excel spreadsheets.</p>
-<p>The principal aim of the tool is supporting automation tasks in software development environments. In the context of the <a href="https://sourceforge.net/p/comframe/wiki/Home/">comFramework project</a>, to which it belongs, this targets the handling of data dictionaries and interfaces but excelExporter is by design independent from this intended purpose and will be useful for various other automation tasks.</p>
+<h1 data-number="1" id="excelexporter---rendering-excel-spreadsheets-as-text"><span class="header-section-number">1</span> excelExporter - Rendering Excel
+Spreadsheets as Text</h1>
+<p>This Javadoc describes the data model of excelExporter, an
+application that can translate the information found in one or more
+Excel workbooks into manifold textual representations. excelExporter is
+a general purpose text rendering application for Excel spreadsheets.</p>
+<p>The principal aim of the tool is supporting automation tasks in
+software development environments. In the context of the <a href="https://sourceforge.net/p/comframe/wiki/Home/" title="comFramework@SourceForge">comFramework project</a>, to which it
+belongs, this targets the handling of data dictionaries and interfaces
+but excelExporter is by design independent from this intended purpose
+and will be useful for various other automation tasks.</p>
 <p>You can render the information in the Excel input for example as:</p>
 <ul>
 <li>HTML or LaTeX for reporting and documentation</li>
 <li>Various XML formats for interfacing with other applications</li>
 <li>C/C++ or any other textual programming languages</li>
 </ul>
-<p>Rendering Excel files basically is a two step process. First you specify a set of Excel input files. All of these are parsed and merged to one large data structure, ofter referred to as <em>data model</em>. Input files of same or of different format are supported. (“Format” refers to the structure of the Excel files with respect to contained sheets and columns.)</p>
-<p>Secondary, you define a list of the output files to be generated. The specification of each output file is associated with the specification of a <a href="http://www.StringTemplate.org/" target="_blank">StringTemplate V4</a> template file. The template controls the output generation; different templates yield different output from the input. The template specifies how to embed pieces of information taken from the data model into literal text. In order to successfully design your templates you need to have a detailed understanding of the structure of the data model.</p>
-<p>The data model is a Java object with fields and methods. Many fields are nested collections and data sub-structures. The “pieces of information”, which can be placed into the output, are the values of the public fields and the return values of the public methods and all of these are well described by this Javadoc.</p>
-<p>This Javadoc describes the data model in terms of field and method descriptions. The concept of the data model, an overview with UML diagrams and an explanation with examples how to access it from StringTemplate V4 templates can be found online in the Wiki page <a
-href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/"
-target="_blank">The Data Model</a> of the excelExporter project.</p>
-<p>An overview on the documentation available for the application excelExporter can be found online at <a
-href="https://sourceforge.net/p/excelexporter/wiki/Home/" target="_blank">SourceForge</a>.</p>
+<p>Rendering Excel files basically is a two step process. First you
+specify a set of Excel input files. All of these are parsed and merged
+to one large data structure, ofter referred to as <em>data model</em>.
+Input files of same or of different format are supported. (“Format”
+refers to the structure of the Excel files with respect to contained
+sheets and columns.)</p>
+<p>Secondary, you define a list of the output files to be generated. The
+specification of each output file is associated with the specification
+of a <a href="http://www.StringTemplate.org/" target="_blank" title="StringTemplate V4">StringTemplate V4</a> template file. The
+template controls the output generation; different templates yield
+different output from the input. The template specifies how to embed
+pieces of information taken from the data model into literal text. In
+order to successfully design your templates you need to have a detailed
+understanding of the structure of the data model.</p>
+<p>The data model is a Java object with fields and methods. Many fields
+are nested collections and data sub-structures. The “pieces of
+information”, which can be placed into the output, are the values of the
+public fields and the return values of the public methods and all of
+these are well described by this Javadoc.</p>
+<p>This Javadoc describes the data model in terms of field and method
+descriptions. The concept of the data model, an overview with UML
+diagrams and an explanation with examples how to access it from
+StringTemplate V4 templates can be found online in the Wiki page
+<a href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/" target="_blank" title="SourceForge Wiki">The Data Model</a> of the
+excelExporter project.</p>
+<p>An overview on the documentation available for the application
+excelExporter can be found online at
+<a href="https://sourceforge.net/p/excelexporter/wiki/Home/" target="_blank" title="Sourceforge Wiki">SourceForge</a>.</p>
 </body>
 </html>
