@@ -56,7 +56,7 @@ public class ExcelExporter
     public static final String _applicationName = "excelExporter";
 
     /** Version designation as four numeric parts. */
-    private static int[] _versionAry = {1, 2, 2, GitRevision.getProjectRevision()};
+    private static int[] _versionAry = {1, 2, 3, GitRevision.getProjectRevision()};
 
     /** The first three parts of the version of the tool, which relate to functional
         changes of the application.

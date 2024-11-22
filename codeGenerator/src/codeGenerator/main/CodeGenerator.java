@@ -53,7 +53,7 @@ public class CodeGenerator
     public static final String _applicationName = "comFramework - codeGenerator";
 
     /** The parts of the version designation: major, minor, fix, build. */
-    private static int[] _versionAry = {1, 12, 1, GitRevision.getProjectRevision()};
+    private static int[] _versionAry = {1, 12, 2, GitRevision.getProjectRevision()};
 
     /** The first three parts of the version of the tool, which relate to functional
         changes of the application.
