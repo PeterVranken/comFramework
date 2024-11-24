@@ -34,8 +34,11 @@ import java.util.*;
  *   <b>Remark:</b> This class has been copied from
  * http://stackoverflow.com/questions/5303539/didnt-java-once-have-a-pair-class as of
  * 6.3.2015
+ *   @param <F>
+ * The data type of the first element of the pair.
+ *   @param <S>
+ * The data type of the second element of the pair.
  */
-
 public class Pair<F, S>
 {
     public final F first;
@@ -43,9 +46,10 @@ public class Pair<F, S>
 
     /**
      * Constructor for a Pair.
-     *
-     * @param first the first object in the Pair
-     * @param second the second object in the pair
+     *   @param first
+     * The first object in the pair.
+     *   @param second 
+     * The second object in the pair.
      */
     public Pair(F first, S second) {
         this.first = first;

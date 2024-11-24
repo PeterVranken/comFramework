@@ -625,7 +625,7 @@ public class CodeGenerator
      *   @param argAry
      * The command line.
      */
-    public static void main(String[] argAry) throws Exception
+    public static void main(String[] argAry)
     {
         /* Printing the applied version of ANTLR and StringTemplate is useful but unsafe.
            By experiment, it turned out that the printed values do not depend on the

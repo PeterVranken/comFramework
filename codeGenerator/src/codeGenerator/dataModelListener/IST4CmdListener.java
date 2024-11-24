@@ -27,12 +27,12 @@ package codeGenerator.dataModelListener;
 
 /**
  * The interface of a command listener, which can connect to a StringTemplate V4 command
- * interpreter.<p>
- *   Parameter: TContext<p>
+ * interpreter.
+ *   @param <TContext>
  * This is the type of the context object, which is passed to the command interpreter at
  * creation time and which it passes for reference to the connected listener, when doing a
- * command interpretation.<p>
- *   Parameter: TCmdResult<p>
+ * command interpretation.
+ *   @param <TCmdResult>
  * The type of the data object, which is returned by the listener and which is passed on to
  * the template engine as result of the interpreted comand. It needs to be a class, which
  * is supported by the template engine.
