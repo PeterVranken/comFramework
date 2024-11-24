@@ -144,7 +144,13 @@ public class DataModelListener extends DbcBaseListener
         /** The Boolean distinction between 11 and 29 Bit CAN IDs. */
         boolean isExtId_;
 
-        /** Constructor for a new CAN ID object. */
+        /**
+         * Constructor for a new CAN ID object.
+         *   @param canId 
+         * CAN ID as a number.
+         *   @param isExtId
+         * The Boolean distiction between 11 Bit standard and 29 Bit extended CAN IDs.
+         */
         public CanId(int canId, boolean isExtId)
         {
             id_ = canId;
@@ -211,10 +217,13 @@ public class DataModelListener extends DbcBaseListener
         /**
          * Long form of textual representation of CAN ID: Decmal plus hexadecimal
          * representation.
+         *   @return
+         * Get the CAN ID as text.
          */
         public String toStringLong()
-            { return toString() + " (0x" + Integer.toHexString(id_) + ")"; }
-
+        { 
+            return toString() + " (0x" + Integer.toHexString(id_) + (isExtId_? "x": "") + ")";
+        }
     } /* End class CanId */
 
 
@@ -2739,6 +2748,8 @@ public class DataModelListener extends DbcBaseListener
      * given kind have got an actual value of the incomplete attribute.<p>
      *   This method double checks the presence of actual values for a given attribute. It
      * must be called only after parsing has completed.
+     *   @param attribDef
+     * The attribute definition from the data model. Result of parsing so far.
      */
     private void checkForActualAttribValues(AttributeDef attribDef)
     {
