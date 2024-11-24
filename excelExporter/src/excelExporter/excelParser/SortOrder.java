@@ -199,6 +199,8 @@ public class SortOrder
     /**
      * This is an extension of the Java class {@link java.util.Comparator}, which provides
      * access to the sort order, which is implemented by the comparator object.
+     *   @param <T>
+     * The class of the compared objects.
      */
     public interface Comparator<T> extends java.util.Comparator<T>
     {

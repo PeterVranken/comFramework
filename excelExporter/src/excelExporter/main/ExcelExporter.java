@@ -76,8 +76,8 @@ public class ExcelExporter
     
     /** The version of the data model, which is input to the templates. The integer number
         is composed as M*1000+m if M.m.f is the version designation of the tool when the data
-        model was changed the last time.\n
-          @note Any change made here needs to be done identically in the data model, file
+        model was changed the last time.
+          @remark Any change made here needs to be done identically in the data model, file
         Info.java, field Info.versionDataModel. */
     public static final int _versionDataModel = 1002;
 

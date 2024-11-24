@@ -53,12 +53,12 @@ import excelExporter.excelParser.ErrorCounter;
  * command interpretation.<p>
  *   The listener is an interface only and the idea is that a data container in the
  * StringTemplate V4 data model implements this interface. Its implementation of the
- * listener can interpret the commands such that they operate on its data contents.<p>
- *   Parameter TContext:<p>
+ * listener can interpret the commands such that they operate on its data contents.
+ *   @param <TContext>
  * This is the type of the context object, which is passed to the command interpreter at
  * creation time and which it passes for reference to the connected listener, when doing a
- * command interpretation.<p>
- *   Parameter TCmdResult:<p>
+ * command interpretation.
+ *   @param <TCmdResult>
  * The type of the data object, which is returned to the template engine as result of the
  * interpreted command. It needs to be a class, which is supported by the template engine.
  */

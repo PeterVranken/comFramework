@@ -107,6 +107,8 @@ public class StrCmdListener implements IST4CmdListener< /* TContext */ Integer
     /**
      * Implementation of operation modes cmpRegExp(I): String matching against a regular
      * expression.
+     *   @return
+     * Get true if the string matches the regular expression.
      *   @param string
      * The string, which is checked if it matches to the regular expression.
      *   @param regExp

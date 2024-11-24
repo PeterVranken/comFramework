@@ -119,6 +119,8 @@ import excelExporter.excelParser.*;
  * related enumeration and each named value will be documented with a short explanation of
  * the pseudo-field it relates to. See e.g. {@link Cluster.PseudoFieldName} or {@link
  * ObjectMap.PseudoFieldName}.
+ *   @param <T>
+ * The class of the objects stored in the container. See field itemMap for details.
  */
 public class ObjectMap<T> extends AbstractMap<Object,Object>
 {

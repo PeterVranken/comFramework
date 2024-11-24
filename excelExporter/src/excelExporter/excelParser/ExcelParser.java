@@ -217,6 +217,10 @@ public class ExcelParser
      * Basic string operation: Make some text compatible with the JSON format as defined
      * for String objects. In fact, the non-printable characters are replaced by escape
      * sequences.
+     *   @return
+     * Get the JSON compatible text representation.
+     *   @param anyText
+     * The input text to be escaped for use in JSON.
      */
     private static String jsonStringify(String anyText)
     {

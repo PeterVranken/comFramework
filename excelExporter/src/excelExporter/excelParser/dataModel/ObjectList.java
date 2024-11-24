@@ -35,6 +35,8 @@ import excelExporter.excelParser.ErrorCounter;
 /**
  * A list of objects in the data model. Applied to the storage of row objects and groups of
  * such in containers and of the containers themselves.
+ *   @param <T>
+ * The class of the objects in the list or container.
  */
 
 public class ObjectList<T> extends ArrayList<T>

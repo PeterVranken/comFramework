@@ -2,7 +2,7 @@
  * @file Pair.java
  * A helper class: A pair of objects.
  *
- * Copyright (C) 2015-2022 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the
@@ -30,8 +30,11 @@ package excelExporter.main;
  *   <b>Remark:</b> This class has been copied from
  * http://stackoverflow.com/questions/5303539/didnt-java-once-have-a-pair-class as of
  * 6.3.2015
+ *   @param <F>
+ * The data type of the first element of the pair.
+ *   @param <S>
+ * The data type of the second element of the pair.
  */
-
 public class Pair<F, S>
 {
     /** The first element of the pair. */
@@ -42,9 +45,10 @@ public class Pair<F, S>
 
     /**
      * Constructor for a Pair.
-     *
-     * @param first the first object in the Pair
-     * @param second the second object in the pair
+     *   @param first
+     * The first object in the pair.
+     *   @param second 
+     * The second object in the pair.
      */
     public Pair(F first, S second) {
         this.first = first;
@@ -55,8 +59,8 @@ public class Pair<F, S>
      * Checks the two objects for equality by delegating to their respective
      * {@link Object#equals(Object)} methods.
      *
-     * @param o the {@link Pair} to which this one is to be checked for equality
-     * @return true if the underlying objects of the Pair are both considered
+     * @param o The {@link Pair} to which this one is to be checked for equality.
+     * @return Get true if the underlying objects of the pair are both considered
      *         equal
      */
     @Override
@@ -82,9 +86,9 @@ public class Pair<F, S>
      * Convenience method for creating an appropriately typed pair.
      * @param <A> Type of the first object in the Pair.
      * @param <B> Type of the second object in the Pair.
-     * @param a the first object in the Pair
-     * @param b the second object in the pair
-     * @return a Pair that is templatized with the types of a and b
+     * @param a The first object in the pair.
+     * @param b The second object in the pair.
+     * @return Get a pair that is templatized with the types of a and b.
      */
     public static <A, B> Pair <A, B> create(A a, B b) {
         return new Pair<A, B>(a, b);
