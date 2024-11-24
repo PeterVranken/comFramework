@@ -2,7 +2,7 @@
  * @file Pair.java
  * A helper class: A pair of objects.
  *
- * Copyright (C) 2015 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the
@@ -23,10 +23,6 @@
 
 package codeGenerator.main;
 
-import java.util.*;
-
-
-
 /**
  * Container to ease passing around a tuple of two objects. This object provides a sensible
  * implementation of equals(), returning true if equals() is true on each of the contained
@@ -41,7 +37,10 @@ import java.util.*;
  */
 public class Pair<F, S>
 {
+    /** The first element of the pair. */
     public final F first;
+    
+    /** The second element of the pair. */
     public final S second;
 
     /**
@@ -60,8 +59,8 @@ public class Pair<F, S>
      * Checks the two objects for equality by delegating to their respective
      * {@link Object#equals(Object)} methods.
      *
-     * @param o the {@link Pair} to which this one is to be checked for equality
-     * @return true if the underlying objects of the Pair are both considered
+     * @param o The {@link Pair} to which this one is to be checked for equality.
+     * @return Get true if the underlying objects of the pair are both considered
      *         equal
      */
     @Override
@@ -85,9 +84,11 @@ public class Pair<F, S>
 
     /**
      * Convenience method for creating an appropriately typed pair.
-     * @param a the first object in the Pair
-     * @param b the second object in the pair
-     * @return a Pair that is templatized with the types of a and b
+     * @param <A> Type of the first object in the Pair.
+     * @param <B> Type of the second object in the Pair.
+     * @param a The first object in the pair.
+     * @param b The second object in the pair.
+     * @return Get a pair that is templatized with the types of a and b.
      */
     public static <A, B> Pair <A, B> create(A a, B b) {
         return new Pair<A, B>(a, b);
