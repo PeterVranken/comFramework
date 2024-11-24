@@ -1972,8 +1972,13 @@ public class ParameterSet
 
 
     /** The internal states of the argument parsing algorithm. */
-    private enum ParseState { global, workbook, worksheetRef, worksheetTemplate
-                            , columnAttributes, output, terminated
+    private enum ParseState { /** Outside a command line context */           global           
+                            , /** Command line context workbook */            workbook         
+                            , /** Command line context worksheet reference */ worksheetRef     
+                            , /** Command line context worksheet template*/   worksheetTemplate
+                            , /** Command line context column attributes */   columnAttributes 
+                            , /** Command line context output file */         output           
+                            , /** Parsing of command line done */             terminated       
                             };
 
     /**
