@@ -18,31 +18,26 @@ execute the tests or create a jar library.
   <!-- set global properties for this build -->
   <property name="version" value="1.12"/>
   <property name="javaReleaseForJars" value="8"/>
-  <property name="trunkCodeGenerator" location="."/>
-  <property name="src" location="src"/>
-  <property name="srcDM" location="${src}/codeGenerator/DataModelListener"/>
-  <property name="lib" location="dist"/>
+  <property name="srcDM" location="src/codeGenerator/DataModelListener"/>
   <property name="doc" location="doc"/>
-  <property name="build" location="bin"/>
-  <property name="dist" location="dist"/>
 
   <!-- Set the classpath for this build -->
   <path id="classpath">
-    <pathelement location="${build}"/>
+    <pathelement location="bin"/>
     
     <!-- ANTLR contains StringTemplate but not always with the latest release. This has to
          be double-checked for each new release of ANTLR. In order to benefit from the
          maintenance of ST, we need to place that jar in front of ANTLR in case ST is more
          recent. As of writing, June 2022, ANTLR is up-to-date with respect to ST, ANTLR
          4.10.1 contains ST 4.3.3. -->
-<!-- antlr-4.10.1-complete.jar seems to contain ST 4.3.3
-    <pathelement location="${lib}/ST-4.3.3.jar"/>
+<!-- antlr-4.10.1-complete.jar contains ST 4.3.3
+    <pathelement location="dist/ST-4.3.3.jar"/>
 -->
-    <pathelement location="${lib}/antlr-4.12.0-complete.jar"/>
-    <pathelement location="${lib}/log4j-1.2.11.jar"/>
+    <pathelement location="dist/antlr-4.12.0-complete.jar"/>
+    <pathelement location="dist/log4j-1.2.11.jar"/>
 <!--
-    <pathelement location="${lib}/log4j-api-2.1.jar"/>
-    <pathelement location="${lib}/log4j-core-2.1.jar"/>
+    <pathelement location="dist/log4j-api-2.1.jar"/>
+    <pathelement location="dist/log4j-core-2.1.jar"/>
 -->
   </path>
   
@@ -55,19 +50,28 @@ execute the tests or create a jar library.
       <format property="timeTag" pattern="yyMMddHHmmssSSS"/>
     </tstamp>
     <!-- Create the build directory structure used by compile -->
-    <mkdir dir="${build}"/>
+    <mkdir dir="bin"/>
     <!-- Check the dependencies of the different source and class files. -->
-    <!--<depend srcdir="${src}" destdir="${build}"/>-->
+    <!--<depend srcdir="src" destdir="bin"/>-->
   </target>
 
   <!-- Generate version information in the main file -->
   <target name="updateAppVersionFromGit">
-    <exec executable="GitWCRev.exe" dir="${trunkCodeGenerator}">
+    <echo message="Running GitWCRev.exe to generate file GitRevision.java"/>
+    <exec executable="GitWCRev.exe" dir=".">
       <arg value="."/>
-      <arg value="${src}/codeGenerator/main/GitRevision.java.template"/>
-      <arg value="${src}/codeGenerator/main/GitRevision.java"/>
+      <arg value="src/codeGenerator/main/GitRevision.java.template"/>
+      <arg value="src/codeGenerator/main/GitRevision.java"/>
       <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
     </exec>
+    <echo message="Running GitWCRev.exe to generate file version.txt"/>
+    <exec executable="GitWCRev.exe" dir="dist">
+      <arg value=".."/>
+      <arg value="verTemplate.txt"/>
+      <arg value="version.txt"/>
+      <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
+    </exec>
+
   </target>
   
   <!-- Generate javadocs for complete source code into ${doc} -->
@@ -76,7 +80,7 @@ execute the tests or create a jar library.
           description="Generate Javadoc documentation for complete software source code"
   >
     <javadoc packagenames="*"
-             sourcepath="${src}"
+             sourcepath="src"
              destdir="${doc}/javadoc"
              access="private"
     >
@@ -121,20 +125,20 @@ execute the tests or create a jar library.
           depends="init"
           description="Run antlr4 to compile dbc grammar"
   >
-<!-- With Java 18, the ANT task to start a Java class fails with message:
-     "java.lang.UnsupportedOperationException: The Security Manager is deprecated and will
-     be removed in a future release" The reason for that has not been identified but using
-     the task to run an external command still works well. We call Java as an external
-     process and run the ANTLR code generator that way. -->
     <java classname="org.antlr.v4.Tool">
        <arg value="-visitor"/>
        <arg value="-package"/>
        <arg value="codeGenerator.dbcParser"/>
        <arg value="-o"/>
-       <arg value="${src}/codeGenerator/dbcParser"/>
-       <arg value="${src}/codeGenerator/dbcParser/Dbc.g4"/>
+       <arg value="src/codeGenerator/dbcParser"/>
+       <arg value="src/codeGenerator/dbcParser/Dbc.g4"/>
        <classpath refid="classpath"/>
     </java>
+<!-- With Java 18 and Ant 1.10.13 or less, the ANT task to start a Java class fails with
+     message: "java.lang.UnsupportedOperationException: The Security Manager is deprecated
+     and will be removed in a future release" Alternatively using the Ant task to run an
+     external command still works well. We can call Java as an external process and run the
+     ANTLR code generator that way. -->
 <!--     
     <exec executable="java.exe" dir=".">
       <arg value="-cp"/> <arg value="dist/antlr-4.12.0-complete.jar"/>
@@ -142,8 +146,8 @@ execute the tests or create a jar library.
       <arg value="org.antlr.v4.Tool"/>
       <arg value="-visitor"/>
       <arg value="-package"/> <arg value="codeGenerator.dbcParser"/>
-      <arg value="-o"/> <arg value="${src}/codeGenerator/dbcParser"/>
-      <arg value="${src}/codeGenerator/dbcParser/Dbc.g4"/>
+      <arg value="-o"/> <arg value="src/codeGenerator/dbcParser"/>
+      <arg value="src/codeGenerator/dbcParser/Dbc.g4"/>
     </exec>
 -->
   </target>
@@ -153,14 +157,14 @@ execute the tests or create a jar library.
           depends="init,updateAppVersionFromGit"
           description="Compile all Java sources belonging to the application codeGenerator."
   >
-    <!-- Compile the java code from ${src} into ${build} -->
+    <!-- Compile the java code from src into bin -->
     <!-- See http://ant.apache.org/manual/Tasks/javac.html -->
     <!-- See https://en.wikipedia.org/wiki/Java_class_file#General_layout for Java releases -->
     <!-- debuglevel="lines,vars,source" -->
     <javac release="${javaReleaseForJars}"
            sourcepath=""
-           srcdir="${src}"
-           destdir="${build}"
+           srcdir="src"
+           destdir="bin"
            listfiles="no"
            includeantruntime="false"
            debug="true"
@@ -178,18 +182,18 @@ execute the tests or create a jar library.
           description="Generate a JAR file from all class files. This JAR actually is the core of the distribution of the application codeGenerator."
   >
     <!-- Create the distribution directory -->
-    <mkdir dir="${dist}"/>
+    <mkdir dir="dist"/>
     
     <!-- Copy required template files into the build directory -->
-    <copy todir="${build}">
-      <fileset dir="${src}">
+    <copy todir="bin">
+      <fileset dir="src">
         <include name="**/*.stg"/>
       </fileset>
     </copy>
     
     <!-- Package codeGenerator.* to jar file -->
-    <jar jarfile="${dist}/comFrameworkCodeGenerator-${version}.jar"
-         basedir="${build}"
+    <jar jarfile="dist/comFrameworkCodeGenerator-${version}.jar"
+         basedir="bin"
     >
       <manifest>
         <attribute name="Built-By" value="ant"/>
@@ -206,30 +210,11 @@ execute the tests or create a jar library.
     </jar>
   </target>
   
-  <!-- Create a zip file for distribution of the code generator -->
-  <target name="distribution"
-          depends="clean,init,jar,docDataModel"
-          description="Create the ZIP archive for the distribution of the binaries"
+  <!-- Run the samples, update their output folders. -->
+  <target name="runSamples"
+          depends="init,jar"
+          description="Make a build of code generator application and run all samples"
   >
-    <!-- Remove possibly existing archive - shall be renewed -->
-    <delete verbose="true" file="${dist}/comFramework-codeGenerator.zip"/>
-    
-    <!-- Generate version information - assuming that an Git commit has been done prior to
-         building the archive -->
-    <echo message="Running GitWCRev.exe to generate file version.txt"/>
-    <exec executable="GitWCRev.exe" dir="${dist}">
-      <arg value="${trunkCodeGenerator}"/>
-      <arg value="verTemplate.txt"/>
-      <arg value="version.txt"/>
-      <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
-    </exec>
-    <copy file="${dist}/LICENSE-comFrameworkCodeGenerator.txt" tofile="tmp-${timeTag}/comFramework/lgpl.txt"/>
-    <copy file="${dist}/version.txt" tofile="tmp-${timeTag}/comFramework/version.txt"/>
-    <copy file="${doc}/readMe.forSetupRoot.html" tofile="tmp-${timeTag}/comFramework/readMe.html"/>
-    <copy file="readMe.md" tofile="tmp-${timeTag}/comFramework/codeGenerator/readMe.md"/>
-    <copy file="readMe.html" tofile="tmp-${timeTag}/comFramework/codeGenerator/readMe.html"/>
-     
-    <!-- Run the samples, update the outputs and copy them into the zipped folder -->
     <echo message="Running sample raceTechnology"/>
     <exec executable="cmd.exe" dir="samples/raceTechnology">
       <arg value="/c"/>
@@ -281,89 +266,21 @@ execute the tests or create a jar library.
     <exec executable="cmd.exe" dir="samples/EmbeddedCoderAPIWithBusStruct/compileIt">
       <arg value="/c"/>
       <!-- line is the blank separated command line. -->
-      <arg line="mingw32-make run -v WARN"/>
+      <arg line="mingw32-make run"/>
     </exec>
-
-    <echo message="Copying artifacts of runs of samples"/>
-    <copy todir="tmp-${timeTag}/comFramework/codeGenerator/samples">
-      <fileset dir="samples">
-        <include name="**/generateCode.cmd"/>
-        <include name="**/compileWithGcc.cmd"/>
-        <include name="scratchPad/runDemoScratchPad.cmd"/>
-        <include name="iterations/runDemoIterations.cmd"/>
-        <include name="iterations/runTestIterations.cmd"/>
-        <include name="**/readMe.txt"/>
-        <include name="**/dataModelForStringTemplateV4.html"/>
-        <include name="AUTOSAR/output/cif_swcCanInterface.arxml"/>
-        <include name="**/output/**/codeGenerationReport.*"/>
-        <include name="**/output/**/overview.csv"/>
-        <include name="**/output/**/*.txt"/>
-        <include name="**/output/**/*.c"/>
-        <include name="**/output/**/*.h"/>
-        <include name="**/output/**/*.a2l"/>
-        <include name="**/output/**/*.m"/>
-        <include name="**/output/**/*.xml"/>
-        <include name="mapCanIdToFrameIdx/**/*.cmd"/>
-        <include name="**/*.stg"/>
-        <exclude name="**/newStringTemplateGroupFile.stg"/>
-        <include name="**/CAN_RT*.*"/>
-        <include name="dbcFiles/sampleCanBus.dbc"/>
-        <include name="dbcFiles/duplicatedCanIDs.dbc"/>
-        <exclude name="**/*.bak"/>
-        <include name="EmbeddedCoderAPIWithBusStruct/pwr_computeEnginePower.slx"/>
-        <include name="EmbeddedCoderAPIWithBusStruct/**/*.c"/>
-        <include name="EmbeddedCoderAPIWithBusStruct/**/*.h"/>
-        <include name="EmbeddedCoderAPIWithBusStruct/**/*.a2l"/>
-        <include name="EmbeddedCoderAPIWithBusStruct/output/*.m"/>
-        <include name="EmbeddedCoderAPIWithBusStruct/compileIt/GNUmakefile"/>
-        <include name="EmbeddedCoderAPIWithBusStruct/compileIt/gdb.ps1"/>
-        <include name="EmbeddedCoderAPIWithBusStruct/compileIt/EmbeddedCoderAPIWithBusStruct.exe"/>
-      </fileset>
-    </copy>
-      
-    <copy todir="tmp-${timeTag}/comFramework/codeGenerator/dist">
-      <fileset dir="${dist}">
-        <include name="version.txt"/>
-        <include name="comFrameworkCodeGenerator-${version}.jar"/>
-<!--        <include name="ST-4.3.1.jar"/> -->
-        <include name="antlr-4.12.0-complete.jar"/>
-        <include name="log4j-1.2.11.jar"/>
-        <include name="LICENSE*.txt"/>
-        <include name="codeGenerator.cmd"/>
-        <include name="codeGenerator.ico"/>
-        <include name="testInstallation.cmd"/>
-        <exclude name="**/*.bak"/>
-      </fileset>
-    </copy>
-    <copy todir="tmp-${timeTag}/comFramework/codeGenerator/doc">
-      <fileset dir="${doc}">
-        <include name="dataModel/"/>
-        <include name="*@Internet.html"/>
-        <include name="ST4-270115-0836-52.pdf"/>
-        <include name="dataModelForStringTemplateV4.html"/>
-        <include name="installation.txt"/>
-        <include name="installation.html"/>
-        <include name="codeGenerator.cmd"/>
-        <include name="testInstallation.cmd"/>
-        <exclude name="ANTLR4-310115-1459-60.pdf"/>
-        <exclude name="**/*.bak"/>
-      </fileset>
-    </copy>
-    
-    <zip destfile="${dist}/comFramework-codeGenerator.zip"
-         comment="comFramework - codeGenerator, version ${version}"
-         basedir="tmp-${timeTag}"
-         includes="comFramework/"
-    />
-    <delete verbose="false" dir="tmp-${timeTag}"/>
-  </target> <!-- distribution -->
+  </target> <!-- runSamples -->
   
+  <!-- Make a clean build of application and Javadoc and run all samples. -->
+  <target name="all"
+          depends="clean, init, jar, doc, docDataModel, runSamples"
+          description="Make a clean build of application and Javadoc and run all samples"
+  />
+
   <!-- Delete all build products in order to enforce a later rebuild -->
   <target name="clean" description="Remove all built files: class and jar files, the zip archives.">
-    <!-- Delete the ${build} and ${dist} directory trees -->
-    <delete verbose="false" dir="${build}"/>
-    <delete verbose="true" file="${dist}/comFrameworkCodeGenerator-${version}.jar"/>
-    <delete verbose="true" file="${dist}/comFramework-codeGenerator.zip"/>
+    <!-- Delete the bin and dist directory trees -->
+    <delete verbose="false" dir="bin"/>
+    <delete verbose="true" file="dist/comFrameworkCodeGenerator-${version}.jar"/>
   </target>
 
 </project>
