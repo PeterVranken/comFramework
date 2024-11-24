@@ -1,30 +1,45 @@
-<project name="excelExporter"
+<!-- Build comFramework's excelExporter
+
+     Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+
+     This program is free software: you can redistribute it and/or modify it
+     under the terms of the GNU Lesser General Public License as published by the
+     Free Software Foundation, either version 3 of the License, or any later
+     version.
+
+     This program is distributed in the hope that it will be useful, but WITHOUT
+     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+     FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+     for more details.
+
+     You should have received a copy of the GNU Lesser General Public License
+     along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<project name="comFramework"
          default="jar"
          basedir=".."
 >
   <!-- Note, if Java 18 or higher is used then ANT 1.10.14 or higher is required. Till
        ANT 1.10.13, the deprecated SecurityManager is used, which is eventually no longer
        supported by Java 18. See https://downloads.apache.org/ant/ (Visited Jan 11, 2024). -->
-  <description>Compile all Java sources, execute the tests or create a jar library.
+  <description>
+ Compile all Java sources of excelExporter, execute the tests or create a jar library.
   </description>
-  
+  <echo message="Starting build of comFramework's excelExporter"/>
+
   <!-- Provide access to the environment, write e.g. ${env.X} to access variable X. -->
   <property environment="env"/>
-  
-  <!-- set global properties for this build -->
+
+  <!-- Set global properties for this build. -->
   <property name="version" value="1.2"/>
   <property name="javaReleaseForJars" value="8"/>
-  <property name="trunkExcelExporter" location="."/>
-  <property name="src" location="src"/>
-  <property name="srcDM" location="${src}/excelExporter/excelParser/dataModel"/>
-  <property name="lib" location="dist"/>
+  <property name="srcDM" location="src/excelExporter/excelParser/dataModel"/>
   <property name="doc" location="doc"/>
-  <property name="build" location="bin"/>
-  <property name="dist" location="dist"/>
 
-  <!-- Set the classpath for this build -->
+  <!-- Set the classpath for this build. -->
   <path id="classpath">
-    <pathelement location="${build}"/>
+    <pathelement location="bin"/>
     <!-- With ST 4.0.8 we could simply include all jars. After replacing ST by ST-4.3.1.jar
          we see the problem that the implementation of the ST jar now depends on the ANTLR
          jar. This introduces the new complexity that the ANTLR jar in turn contains a
@@ -34,20 +49,20 @@
          the right order. ST needs to come before ANTLR - and not only here but in the
          runtime launch script, too. -->
 <!--
-    <fileset dir="${lib}">
+    <fileset dir="dist">
       <include name="*.jar"/>
     </fileset>
  -->
-    <pathelement location="${lib}/ST-4.3.3.jar"/>
-    <pathelement location="${lib}/antlr-4.10.1-complete.jar"/>
-    <pathelement location="${lib}/log4j-api-2.4.jar"/>
-    <pathelement location="${lib}/log4j-core-2.4.jar"/>
-    <pathelement location="${lib}/poi-3.13-20150929.jar"/>
-    <pathelement location="${lib}/poi-ooxml-3.13-20150929.jar"/>
-    <pathelement location="${lib}/poi-ooxml-schemas-3.13-20150929.jar"/>
+    <pathelement location="dist/ST-4.3.3.jar"/>
+    <pathelement location="dist/antlr-4.10.1-complete.jar"/>
+    <pathelement location="dist/log4j-api-2.4.jar"/>
+    <pathelement location="dist/log4j-core-2.4.jar"/>
+    <pathelement location="dist/poi-3.13-20150929.jar"/>
+    <pathelement location="dist/poi-ooxml-3.13-20150929.jar"/>
+    <pathelement location="dist/poi-ooxml-schemas-3.13-20150929.jar"/>
   </path>
-  
-  <!-- Preparatory steps of any target -->
+
+  <!-- Preparatory steps of any target. -->
   <target name="init">
     <!-- Create the time stamp -->
     <tstamp/>
@@ -56,28 +71,35 @@
       <format property="timeTag" pattern="yyMMddHHmmssSSS"/>
     </tstamp>
     <!-- Create the build directory structure used by compile -->
-    <mkdir dir="${build}"/>
+    <mkdir dir="bin"/>
     <!-- Check the dependencies of the different source and class files. -->
-    <!--<depend srcdir="${src}" destdir="${build}"/>-->
+    <!--<depend srcdir="src" destdir="bin"/>-->
   </target>
-  
-  <!-- Generate version information in the main file -->
+
+  <!-- Generate version information in the main file. -->
   <target name="updateAppVersionFromGit">
-    <exec executable="GitWCRev.exe" dir="${trunkExcelExporter}">
+    <exec executable="GitWCRev.exe" dir=".">
       <arg value="."/>
-      <arg value="${src}/excelExporter/main/GitRevision.java.template"/>
-      <arg value="${src}/excelExporter/main/GitRevision.java"/>
+      <arg value="src/excelExporter/main/GitRevision.java.template"/>
+      <arg value="src/excelExporter/main/GitRevision.java"/>
+      <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
+    </exec>
+    <echo message="Running GitWCRev.exe to generate file version.txt"/>
+    <exec executable="GitWCRev.exe" dir="dist">
+      <arg value=".."/>
+      <arg value="verTemplate.txt"/>
+      <arg value="version.txt"/>
       <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
     </exec>
   </target>
-  
+
   <!-- Generate javadocs for complete source code into ${doc} -->
   <target name="doc"
           depends="init,updateAppVersionFromGit"
           description="Generate Javadoc documentation for complete software source code"
   >
     <javadoc packagenames="*"
-             sourcepath="${src}"
+             sourcepath="src"
              destdir="${doc}/javadoc"
              access="private"
     >
@@ -97,13 +119,13 @@
       <arg value="${doc}/javadoc/index.html"/>
     </exec>
   </target>
- 
+
   <!-- Generate javadocs for the data model only -->
   <target name="docDataModel"
           depends="init"
           description="Generate Javadoc documentation for the data model only"
   >
-    <javadoc sourcefiles="${srcDM}/package-info.java,${srcDM}/Info.java,${srcDM}/FileExt.java,${srcDM}/Cluster.java,${srcDM}/CellObject.java,${srcDM}/ExcelWorkbook.java,${srcDM}/ExcelWorksheet.java,${srcDM}/RowObject.java,${srcDM}/RowObjectContainer.java,${srcDM}/ObjectList.java,${srcDM}/Identifier.java,${srcDM}/ObjectMap.java,${src}/excelExporter/excelParser/SortOrder.java"
+    <javadoc sourcefiles="${srcDM}/package-info.java,${srcDM}/Info.java,${srcDM}/FileExt.java,${srcDM}/Cluster.java,${srcDM}/CellObject.java,${srcDM}/ExcelWorkbook.java,${srcDM}/ExcelWorksheet.java,${srcDM}/RowObject.java,${srcDM}/RowObjectContainer.java,${srcDM}/ObjectList.java,${srcDM}/Identifier.java,${srcDM}/ObjectMap.java,src/excelExporter/excelParser/SortOrder.java"
              destdir="${doc}/dataModel"
              windowtitle="Data Model of excelExporter for StringTemplate V4 templates"
              doctitle="Data Model of excelExporter for StringTemplate V4 templates"
@@ -115,27 +137,27 @@
       <arg value="-notimestamp"/>
       <arg value="-public"/>
       <arg value="-overview"/>
-      <arg value="${src}/overview.html"/>
+      <arg value="src/overview.html"/>
       <classpath refid="classpath"/>
     </javadoc>
   </target>
 
-  <!-- Compile the java source files -->
+  <!-- Compile the Java source files. -->
   <target name="compile"
           depends="init,updateAppVersionFromGit"
-          description="Compile all Java sources belonging to the application excelExporter."
+          description="Compile all Java sources belonging to application excelExporter."
   >
-    <!-- Compile the java code from ${src} into ${build} -->
+    <!-- Compile the java code from src into bin -->
     <!-- See http://ant.apache.org/manual/Tasks/javac.html -->
     <!-- See https://en.wikipedia.org/wiki/Java_class_file#General_layout for Java releases -->
+    <!-- debuglevel="lines,vars,source" -->
     <javac release="${javaReleaseForJars}"
            sourcepath=""
-           srcdir="${src}"
-           destdir="${build}"
+           srcdir="src"
+           destdir="bin"
            listfiles="no"
            includeantruntime="false"
            debug="true"
-           debuglevel="lines,vars,source"
     >
       <include name="applicationInterface/cmdLineParser/*.java"/>
       <include name="applicationInterface/loggerConfiguration/*.java"/>
@@ -147,29 +169,29 @@
     </javac>
   </target>
 
-  <!-- Create a jar from the successfully compiled sources -->
+  <!-- Create a jar from the successfully compiled sources. -->
   <target name="jar"
           depends="compile"
-          description="Generate a JAR file from all class files. This JAR actually is the core of the distribution of the application excelExporter."
+          description="Generate a Jar file from all class files. This JAR actually is the core of the distribution of application excelExporter."
   >
-    <!-- Create the distribution directory -->
-    <mkdir dir="${dist}"/>
-    
-    <!-- Copy required template files into the build directory -->
-    <copy todir="${build}">
-      <fileset dir="${src}">
+    <!-- Create the distribution directory. -->
+    <mkdir dir="dist"/>
+
+    <!-- Copy required template files into the build directory. -->
+    <copy todir="bin">
+      <fileset dir="src">
         <include name="**/*.stg"/>
       </fileset>
     </copy>
-    
-    <!-- Package excelExporter.* to jar file -->
-    <jar jarfile="${dist}/excelExporter-${version}.jar"
-         basedir="${build}"
+
+    <!-- Package excelExporter.* to jar file. -->
+    <jar jarfile="dist/excelExporter-${version}.jar"
+         basedir="bin"
     >
       <manifest>
         <attribute name="Built-By" value="ant"/>
         <section name="common">
-          <attribute name="Title" value="COM Framework - Excel Exporter"/>
+          <attribute name="Title" value="comFramework - Excel Exporter"/>
           <attribute name="Version" value="${version}"/>
           <attribute name="Vendor" value="Peter Vranken, Peter_Vranken@Yahoo.de"/>
         </section>
@@ -181,43 +203,12 @@
       <include name="excelExporter/**/*.stg"/>
     </jar>
   </target>
-  
-  <target name="run"
-          depends="jar"
-          description="Start a simple test run of the application"
+
+  <!-- Run the samples, update their output folders. -->
+  <target name="runSamples"
+          depends="init,jar"
+          description="Make a build of application excelExporter and start a simple test run of the application"
   >
-    <!-- See http://ant.apache.org/manual/using.html#arg -->
-    <exec executable="cmd.exe" dir="test">
-      <arg value="/c"/>
-      <!-- line is the blank separated command line. -->
-      <arg line="${dist}\excelExporter.cmd -v debug -l excelExporter.log -i test.xlsx --open-worksheet-selection --applied-worksheet-template TMPL --worksheet-by-tab .*DBC.* -b TEST --open-worksheet-selection --worksheet-by-index 2 --worksheet-name myWS -o test.output.txt -t test.stg -tn test -tc workbook -st -stn TMPL -atb .*DBC.* -ai 23 -g groupCAN -rt 1 -inc 3:13 -icc 1:8 --open-column-attribute --column-name colName --is-grouping-column --column-title ^.*DBC.*$ --open-column-attribute --column-name col2 --is-grouping-column --column-index 3"/>
-    </exec>
-  </target>
- 
-  <!-- Create a zip file for distribution of excelExporter -->
-  <target name="distribution"
-          depends="clean,init,jar,docDataModel"
-          description="Create the ZIP archive for the distribution of the binaries"
-  >
-    <!-- Remove possibly existing archive - shall be renewed -->
-    <delete verbose="true" file="${dist}/comFramework-excelExporter.zip"/>
-    <delete verbose="true" file="${dist}/excelExporter.zip"/>
-    
-    <!-- Generate version information - assuming that a Git commit has been done prior to
-         building the archive. -->
-    <exec executable="GitWCRev.exe" dir="${dist}">
-      <arg value="${trunkExcelExporter}"/>
-      <arg value="verTemplate.txt"/>
-      <arg value="version.txt"/>
-      <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
-    </exec>
-    <copy file="${dist}/version.txt" tofile="tmp-${timeTag}/comFramework/version.txt"/>
-    <copy file="${dist}/LICENSE-excelExporter.txt" tofile="tmp-${timeTag}/comFramework/lgpl.txt"/>
-    <copy file="${doc}/readMe.forSetupRoot.html" tofile="tmp-${timeTag}/comFramework/readMe.html"/>
-    <copy file="readMe.md" tofile="tmp-${timeTag}/comFramework/excelExporter/readMe.md"/>
-    <copy file="readMe.html" tofile="tmp-${timeTag}/comFramework/excelExporter/readMe.html"/>
-     
-    <!-- Run the samples, update the outputs and copy them into the zipped folder -->
     <exec executable="cmd.exe" dir="samples/columnWise">
       <arg value="/c"/>
       <!-- line is the blank separated command line. -->
@@ -263,79 +254,19 @@
       <!-- line is the blank separated command line. -->
       <arg line="runXls2dbc.cmd -v WARN"/>
     </exec>
-
-    <copy todir="tmp-${timeTag}/comFramework/excelExporter/samples">
-      <fileset dir="samples">
-        <include name="**/*"/>
-        <exclude name="**/*.bak"/>
-        <exclude name="**/*.log"/>
-        <exclude name="**/*.~"/>
-      </fileset>
-    </copy>
-      
-    <copy todir="tmp-${timeTag}/comFramework/excelExporter/dist">
-      <fileset dir="${dist}">
-        <include name="version.txt"/>
-        <include name="excelExporter-${version}.jar"/>
-        <include name="ST-4.3.1.jar"/>
-        <include name="antlr-4.10.1-complete.jar"/>
-        <include name="log4j-*2.4.jar"/>
-        <include name="poi-*-20150929.jar"/>
-        <include name="xmlbeans-2.6.0.jar"/>
-        <include name="LICENSE*.txt"/>
-        <include name="excelExporter.cmd"/>
-        <include name="excelExporter.ico"/>
-        <!-- <include name="testInstallation.cmd"/> -->
-        <exclude name="**/*.bak"/>
-      </fileset>
-    </copy>
-    <copy todir="tmp-${timeTag}/comFramework/excelExporter/doc">
-      <fileset dir="${doc}">
-        <include name="readMe.md"/>
-        <include name="readMe.html"/>
-        <include name="ST4-270115-0836-52.pdf"/>
-        <include name="dataModel/"/>
-        <include name="*@Internet.html"/>
-        <include name="dataModelForStringTemplateV4.html"/>
-        <include name="installation.txt"/>
-        <include name="installation.html"/>
-        <include name="excelExporter.cmd"/>
-        <include name="testInstallation.cmd"/>
-        <exclude name="**/*.bak"/>
-      </fileset>
-    </copy>
-    
-    <zip destfile="${dist}/comFramework-excelExporter.zip"
-         comment="excelExporter, version ${version}"
-         basedir="tmp-${timeTag}"
-         includes="comFramework/"
-    />
-    
-    <!-- Copy some files (also) into the root of the self-contained excelExporter binaries
-         archive -->
-    <copy file="${dist}/LICENSE-excelExporter.txt" tofile="tmp-${timeTag}/comFramework/excelExporter/lgpl.txt"/>
-    <copy file="${dist}/version.txt" tofile="tmp-${timeTag}/comFramework/excelExporter/version.txt"/>
-    <copy todir="tmp-${timeTag}/comFramework/excelExporter">
-      <fileset dir="${doc}">
-        <include name="readMe.md"/>
-        <include name="readMe.html"/>
-      </fileset>
-    </copy>
-    <zip destfile="${dist}/excelExporter.zip"
-         comment="excelExporter, version ${version}"
-         basedir="tmp-${timeTag}/comFramework"
-         includes="excelExporter/"
-    />
-    <delete verbose="false" dir="tmp-${timeTag}"/>
   </target> <!-- distribution -->
-  
-  <!-- Delete all build products in order to enforce a later rebuild -->
+
+  <!-- Make a clean build of application and Javadoc and run all samples. -->
+  <target name="all"
+          depends="clean, init, jar, doc, docDataModel, runSamples"
+          description="Make a clean build of application and Javadoc and run all samples"
+  />
+
+  <!-- Delete all build products in order to enforce a later rebuild. -->
   <target name="clean" description="Remove all built files: class and jar files, the zip archives.">
-    <!-- Delete the ${build} and ${dist} directory trees -->
-    <delete verbose="false" dir="${build}"/>
-    <delete verbose="true" file="${dist}/excelExporter-${version}.jar"/>
-    <delete verbose="true" file="${dist}/comFramework-excelExporter.zip"/>
-    <delete verbose="true" file="${dist}/excelExporter.zip"/>
+    <!-- Delete the bin and dist directory trees -->
+    <delete verbose="false" dir="bin"/>
+    <delete verbose="true" file="dist/excelExporter-${version}.jar"/>
   </target>
 
 </project>

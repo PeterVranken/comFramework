@@ -1,3 +1,21 @@
+<!-- Build comFramework's code generator
+
+     Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+
+     This program is free software: you can redistribute it and/or modify it
+     under the terms of the GNU Lesser General Public License as published by the
+     Free Software Foundation, either version 3 of the License, or any later
+     version.
+
+     This program is distributed in the hope that it will be useful, but WITHOUT
+     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+     FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+     for more details.
+
+     You should have received a copy of the GNU Lesser General Public License
+     along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <project name="comFramework"
          default="jar"
          basedir=".."
@@ -7,24 +25,24 @@
        supported by Java 18. See https://downloads.apache.org/ant/ (Visited Jan 11, 2024). -->
 
   <description>
-Build file to generate Java sources from the antlr4 grammars, compile all Java sources,
-execute the tests or create a jar library.
+Build file to generate Java sources from the antlr4 grammars, compile all Java sources of
+the code generator, execute the tests or create a jar library.
   </description>
-  <echo message="Starting build of comFramework code generator"/>
-  
+  <echo message="Starting build of comFramework's code generator"/>
+
   <!-- Provide access to the environment, write e.g. ${env.X} to access variable X. -->
   <property environment="env"/>
-  
-  <!-- set global properties for this build -->
+
+  <!-- Set global properties for this build. -->
   <property name="version" value="1.12"/>
   <property name="javaReleaseForJars" value="8"/>
   <property name="srcDM" location="src/codeGenerator/DataModelListener"/>
   <property name="doc" location="doc"/>
 
-  <!-- Set the classpath for this build -->
+  <!-- Set the classpath for this build. -->
   <path id="classpath">
     <pathelement location="bin"/>
-    
+
     <!-- ANTLR contains StringTemplate but not always with the latest release. This has to
          be double-checked for each new release of ANTLR. In order to benefit from the
          maintenance of ST, we need to place that jar in front of ANTLR in case ST is more
@@ -40,8 +58,8 @@ execute the tests or create a jar library.
     <pathelement location="dist/log4j-core-2.1.jar"/>
 -->
   </path>
-  
-  <!-- Preparatory steps of any target -->
+
+  <!-- Preparatory steps of any target. -->
   <target name="init">
     <!-- Create the time stamp -->
     <tstamp/>
@@ -55,7 +73,7 @@ execute the tests or create a jar library.
     <!--<depend srcdir="src" destdir="bin"/>-->
   </target>
 
-  <!-- Generate version information in the main file -->
+  <!-- Generate version information in the main file. -->
   <target name="updateAppVersionFromGit">
     <echo message="Running GitWCRev.exe to generate file GitRevision.java"/>
     <exec executable="GitWCRev.exe" dir=".">
@@ -71,9 +89,8 @@ execute the tests or create a jar library.
       <arg value="version.txt"/>
       <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
     </exec>
-
   </target>
-  
+
   <!-- Generate javadocs for complete source code into ${doc} -->
   <target name="doc"
           depends="init,updateAppVersionFromGit"
@@ -100,7 +117,7 @@ execute the tests or create a jar library.
       <arg value="${doc}/javadoc/index.html"/>
     </exec>
   </target>
- 
+
   <!-- Generate javadocs for the data model only -->
   <target name="docDataModel"
           depends="init"
@@ -113,6 +130,7 @@ execute the tests or create a jar library.
              author="Peter Vranken (Peter_Vranken@Yahoo.de)"
              access="private"
         >
+      <!-- See http://stackoverflow.com/questions/18063880/executing-the-eclipse-generate-javadoc-from-the-command-line -->
       <arg value="-tag"/> <arg value="todo:cmf:TODO:"/>
       <arg value="-tag"/> <arg value="remark:cmf:Remark:"/>
       <arg value="-notimestamp"/>
@@ -120,7 +138,7 @@ execute the tests or create a jar library.
     </javadoc>
   </target>
 
-  <!-- Generate Java code from the DBC grammar -->
+  <!-- Generate Java code from the DBC grammar. -->
   <target name="antlr4"
           depends="init"
           description="Run antlr4 to compile dbc grammar"
@@ -139,7 +157,7 @@ execute the tests or create a jar library.
      and will be removed in a future release" Alternatively using the Ant task to run an
      external command still works well. We can call Java as an external process and run the
      ANTLR code generator that way. -->
-<!--     
+<!--
     <exec executable="java.exe" dir=".">
       <arg value="-cp"/> <arg value="dist/antlr-4.12.0-complete.jar"/>
       <arg value="-ea"/>
@@ -151,11 +169,11 @@ execute the tests or create a jar library.
     </exec>
 -->
   </target>
-  
-  <!-- Compile the java source files -->
+
+  <!-- Compile the Java source files. -->
   <target name="compile"
           depends="init,updateAppVersionFromGit"
-          description="Compile all Java sources belonging to the application codeGenerator."
+          description="Compile all Java sources belonging to application codeGenerator."
   >
     <!-- Compile the java code from src into bin -->
     <!-- See http://ant.apache.org/manual/Tasks/javac.html -->
@@ -176,29 +194,29 @@ execute the tests or create a jar library.
     </javac>
   </target>
 
-  <!-- Create a jar from the successfully compiled sources -->
+  <!-- Create a jar from the successfully compiled sources. -->
   <target name="jar"
           depends="compile"
-          description="Generate a JAR file from all class files. This JAR actually is the core of the distribution of the application codeGenerator."
+          description="Generate a Jar file from all class files. This JAR actually is the core of the distribution of application codeGenerator."
   >
-    <!-- Create the distribution directory -->
+    <!-- Create the distribution directory. -->
     <mkdir dir="dist"/>
-    
-    <!-- Copy required template files into the build directory -->
+
+    <!-- Copy required template files into the build directory. -->
     <copy todir="bin">
       <fileset dir="src">
         <include name="**/*.stg"/>
       </fileset>
     </copy>
-    
-    <!-- Package codeGenerator.* to jar file -->
+
+    <!-- Package codeGenerator.* to jar file. -->
     <jar jarfile="dist/comFrameworkCodeGenerator-${version}.jar"
          basedir="bin"
     >
       <manifest>
         <attribute name="Built-By" value="ant"/>
         <section name="common">
-          <attribute name="Title" value="COM Framework - Code Generator"/>
+          <attribute name="Title" value="comFramework - Code Generator"/>
           <attribute name="Version" value="${version}"/>
           <attribute name="Vendor" value="Peter Vranken, Peter_Vranken@Yahoo.de"/>
         </section>
@@ -209,7 +227,7 @@ execute the tests or create a jar library.
       <include name="codeGenerator/*/*.stg"/>
     </jar>
   </target>
-  
+
   <!-- Run the samples, update their output folders. -->
   <target name="runSamples"
           depends="init,jar"
@@ -269,14 +287,14 @@ execute the tests or create a jar library.
       <arg line="mingw32-make run"/>
     </exec>
   </target> <!-- runSamples -->
-  
+
   <!-- Make a clean build of application and Javadoc and run all samples. -->
   <target name="all"
           depends="clean, init, jar, doc, docDataModel, runSamples"
           description="Make a clean build of application and Javadoc and run all samples"
   />
 
-  <!-- Delete all build products in order to enforce a later rebuild -->
+  <!-- Delete all build products in order to enforce a later rebuild. -->
   <target name="clean" description="Remove all built files: class and jar files, the zip archives.">
     <!-- Delete the bin and dist directory trees -->
     <delete verbose="false" dir="bin"/>

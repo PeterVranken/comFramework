@@ -2,7 +2,7 @@
 #   See the TODO tags in sub-ordinated file setEnv.ps1 first. Some paths need to be
 # initially set.
 
-# Prepare the environment for the run of this scripr.
+# Prepare the environment for the run of this script.
 ."$PSScriptRoot\setEnv.ps1"
 
 $path = $env:PATH
