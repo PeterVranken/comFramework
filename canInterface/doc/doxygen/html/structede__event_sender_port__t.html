@@ -117,7 +117,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Allocate buffer space for the event to post. The process of sending an event means to first allocate a buffer, then fill it and finally submit it. Sending several events leads to an alternating use of this method and <a class="el" href="structede__event_sender_port__t.html#a8325442dc8cf2bc97aa3957f36878008">submitBuffer()</a>. The implementation is not obliged to support more complex use cases, in particular, it doesn't need to implement the allocation of several buffers before submission of the first one. It may assume strictly alternating use of both methods and therefore reuse one and the same buffer space for all cycles. </p><dl class="section return"><dt>Returns</dt><dd>The returned pointer points to some memory space, capable of holding an event with <em>sizeOfPayload</em> Bytes of payload, i.e. at least (sizeof(ede_externalEvent_t) + <em>sizeOfPayload</em>) Byte of space.<br  />
+<p >Allocate buffer space for the event to post. The process of sending an event means to first allocate a buffer, then fill it and finally submit it. Sending several events leads to an alternating use of this method and <a class="el" href="structede__event_sender_port__t.html#a8325442dc8cf2bc97aa3957f36878008">submitBuffer()</a>. The implementation is not obliged to support more complex use cases, in particular, it doesn't need to implement the allocation of several buffers before submission of the first one. It may assume strictly alternating use of both methods and therefore reuse one and the same buffer space for all cycles. </p><dl class="section return"><dt>Returns</dt><dd>The returned pointer points to some memory space, capable of holding an event with <em>sizeOfPayload</em> Bytes of payload, i.e., at least (sizeof(ede_externalEvent_t) + <em>sizeOfPayload</em>) Byte of space.<br  />
  The buffer is reserved to the caller until the subsequent use of the other method <a class="el" href="structede__event_sender_port__t.html#a8325442dc8cf2bc97aa3957f36878008">submitBuffer()</a>. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -192,7 +192,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structede__event_sender_port__t.html">ede_eventSenderPort_t</a></li>
-    <li class="footer">Generated on Tue Oct 4 2022 15:29:09 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Mon Nov 25 2024 21:39:40 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

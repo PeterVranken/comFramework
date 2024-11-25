@@ -1,0 +1,120 @@
+<!-- Ant script for running the code generation in the CAN interface sample integrations
+     and for compiling the sample integrations. (Sample integrations are prototypical
+     Windows and Arduino applications, which demonstrate the use of the CAN interface.)
+       Note, this build script is not self-contained. Some external compilation tools are
+     required. If they are not on the Windows search path then the targets in this Ant file
+     will fail. For making the Doxygen documentation of the CAN interface implementation, we
+     need this external tool:
+     
+     - doxygen
+     
+     These external tools are required to run the samples:
+     
+     - MinGW32-make 3.82 or higher
+     - MinGW's GCC. The build has been tested using
+       mingw-w64-x86_64-8.1.0-posix-seh-rt_v6-rev0
+     - A set of UNIX-style command line tools like cp, mv, echo. The build has been tested
+       with the commands, which are part of the Git installation - if you cloned this
+       project then you should already have these tools on your machine.
+     - The Arduino toolchain (i.e., AVR-GCC)
+     
+     See file build/setEnv.ps1 to see, how to enable these external tools for the use in
+     this Ant file.
+       Please note, that all of this (including this Ant file) is not needed if you need the
+     sample integrations just for reading and inspection before you might want to integrate
+     the CAN interface into your own project with its existing build environment.
+
+     Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+
+     This program is free software: you can redistribute it and/or modify it
+     under the terms of the GNU Lesser General Public License as published by the
+     Free Software Foundation, either version 3 of the License, or any later
+     version.
+
+     This program is distributed in the hope that it will be useful, but WITHOUT
+     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+     FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
+     for more details.
+
+     You should have received a copy of the GNU Lesser General Public License
+     along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<project name="comFramework"
+         default="runSamples"
+         basedir=".."
+>
+  <description>
+ Run all samples: For all sample integrations, run the code generation and compile 
+ the application.
+  </description>
+
+  <!-- Provide access to the environment, write e.g. ${env.X} to access variable X. -->
+  <property environment="env"/>
+
+  <!-- set global properties for this build -->
+  <property name="version" value="1.3"/>
+  <property name="trunkCanInterface" location="canInterface/trunk"/>
+  <property name="trunkCodeGenerator" location="codeGenerator/trunk"/>
+  <property name="trunkExcelExporter" location="excelExporter/trunk"/>
+  <property name="doc" location="doc"/>
+  <property name="dist" location="dist"/>
+
+  <!-- Make a clean sweep. -->
+  <target name="clean"
+          description="Delete artifacts of previous build of sample integrations."
+  >
+    <!-- make.exe needs to be GNU make 3.82 -->
+    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/arduinoSampleIntegration">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s clean"/>
+    </exec>
+    <exec executable="mingw32-make"
+          dir="${trunkCanInterface}/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder"
+    >
+      <!-- line is the blank separated command line. -->
+      <arg line="-s clean"/>
+    </exec>
+    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/winSampleIntegration">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s clean"/>
+    </exec>
+    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/winTestMT">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s clean"/>
+    </exec>
+  </target> <!-- clean -->
+
+  <!-- Build the sample integrations. -->
+  <target name="build"
+          description="Build the sample integrations; these are prototypical Windows and Arduino applications."
+  >
+    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/arduinoSampleIntegration">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s build"/>
+    </exec>
+    <exec executable="mingw32-make"
+          dir="${trunkCanInterface}/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder"
+    >
+      <!-- line is the blank separated command line. -->
+      <arg line="-s build"/>
+    </exec>
+    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/winSampleIntegration">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s build"/>
+    </exec>
+    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/winTestMT">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s build"/>
+    </exec>
+  </target> <!-- build -->
+
+  <!-- Create a zip file for distribution of comFramework -->
+  <target name="doc"
+          description="Create Doxygen documenttaion of the public API of the CAN interface."
+          depends=""
+  >
+    <exec executable="doxygen" dir="canInterface/doc/doxygen"/>
+  </target> <!-- doc -->
+
+</project>

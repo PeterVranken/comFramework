@@ -86,8 +86,7 @@ $(document).ready(function(){initNavTree('mci__if_map_binary_search_can_id_8h.ht
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">mci_ifMapBinarySearchCanId.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -97,31 +96,28 @@ $(document).ready(function(){initNavTree('mci__if_map_binary_search_can_id_8h.ht
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionmci__can_id__t.html">mci_canId_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmci__pair_can_id_and_idx__t.html">mci_pairCanIdAndIdx_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a3273ea7038862b73586dce61b9b21893"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#a3273ea7038862b73586dce61b9b21893">_STDC_VERSION_C11</a></td></tr>
-<tr class="separator:a3273ea7038862b73586dce61b9b21893"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e8aeb972ad7ddb728224373bb1cbb6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#a9e8aeb972ad7ddb728224373bb1cbb6f">_STDC_VERSION_C17_C11</a></td></tr>
-<tr class="separator:a9e8aeb972ad7ddb728224373bb1cbb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fcd1bfa3eb65eff0cd4530eaef94c95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#a6fcd1bfa3eb65eff0cd4530eaef94c95">MCI_STD_CAN_ID</a>(id11Bit)&#160;&#160;&#160;((<a class="el" href="mci__if_map_binary_search_can_id_8h.html#a1730a684212fb4cde1d682dd1fc7013f">mci_canId_t</a>)((unsigned)(id11Bit)&amp;0x7FFu))</td></tr>
+<tr class="separator:a6fcd1bfa3eb65eff0cd4530eaef94c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0db58656eab8a1ac4151130302ccc4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#ad0db58656eab8a1ac4151130302ccc4e">MCI_CAN_ID</a>(ID,  isExt)&#160;&#160;&#160;(assert(!isExt),((<a class="el" href="mci__if_map_binary_search_can_id_8h.html#a1730a684212fb4cde1d682dd1fc7013f">mci_canId_t</a>)((unsigned)(id11Bit)&amp;0x7FFu)))</td></tr>
+<tr class="separator:ad0db58656eab8a1ac4151130302ccc4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f230f6c7463c020fce6d63b56682aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#ac0f230f6c7463c020fce6d63b56682aa">MCI_GET_CAN_ID</a>(mci_canId)&#160;&#160;&#160;(mci_canId)</td></tr>
+<tr class="separator:ac0f230f6c7463c020fce6d63b56682aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ee3df87eed92d3072fbc3a65be7466"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#a26ee3df87eed92d3072fbc3a65be7466">MCI_GET_IS_EXT_ID</a>(mci_canId)&#160;&#160;&#160;false</td></tr>
+<tr class="separator:a26ee3df87eed92d3072fbc3a65be7466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a060223eca20cde0756db5751b3899710"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#a060223eca20cde0756db5751b3899710">mci_uintMapValue_t</a></td></tr>
 <tr class="separator:a060223eca20cde0756db5751b3899710"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51d1ce2933e72e0ed8e4e3e84d417ff9"><td class="memItemLeft" align="right" valign="top">typedef union <a class="el" href="unionmci__can_id__t.html">mci_canId_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#a51d1ce2933e72e0ed8e4e3e84d417ff9">mci_canId_t</a></td></tr>
-<tr class="separator:a51d1ce2933e72e0ed8e4e3e84d417ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1730a684212fb4cde1d682dd1fc7013f"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#a1730a684212fb4cde1d682dd1fc7013f">mci_canId_t</a></td></tr>
+<tr class="separator:a1730a684212fb4cde1d682dd1fc7013f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a191fa016d1bc2f52ae9c829651f0089a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmci__pair_can_id_and_idx__t.html">mci_pairCanIdAndIdx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#a191fa016d1bc2f52ae9c829651f0089a">mci_pairCanIdAndIdx_t</a></td></tr>
 <tr class="separator:a191fa016d1bc2f52ae9c829651f0089a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aef3a1f7cd812d01e3b354fa6222b81f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mci__if_map_binary_search_can_id_8h.html#aef3a1f7cd812d01e3b354fa6222b81f6">_Static_assert</a> (sizeof(<a class="el" href="unionmci__can_id__t.html">mci_canId_t</a>)==sizeof(uint16_t), &quot;Unexpected size of data object&quot;)</td></tr>
-<tr class="separator:aef3a1f7cd812d01e3b354fa6222b81f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Interface definition of the data tables, which are used by the map. This interface definition is required by the auto-generated data tables and by the hand-coded lookup algorithms. This file is hand-coded.</p>
@@ -130,31 +126,89 @@ Functions</h2></td></tr>
 <p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.</p>
 <p >You should have received a copy of the GNU Lesser General Public License along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a3273ea7038862b73586dce61b9b21893" name="a3273ea7038862b73586dce61b9b21893"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3273ea7038862b73586dce61b9b21893">&#9670;&nbsp;</a></span>_STDC_VERSION_C11</h2>
+<a id="a6fcd1bfa3eb65eff0cd4530eaef94c95" name="a6fcd1bfa3eb65eff0cd4530eaef94c95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fcd1bfa3eb65eff0cd4530eaef94c95">&#9670;&nbsp;</a></span>MCI_STD_CAN_ID</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define _STDC_VERSION_C11</td>
+          <td class="memname">#define MCI_STD_CAN_ID</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id11Bit</td><td>)</td>
+          <td>&#160;&#160;&#160;((<a class="el" href="mci__if_map_binary_search_can_id_8h.html#a1730a684212fb4cde1d682dd1fc7013f">mci_canId_t</a>)((unsigned)(id11Bit)&amp;0x7FFu))</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >The definitions below depend on whether or not extended CAN IDs are in use. This needs to be decided before this header is included. Set <a class="el" href="mci__map_binary_search_can_id_8h.html#aee9d146fbbe72d87f912ca09f072bf30">MCI_SUPPORT_EXTENDED_CAN_IDS</a> to 0 or 1 prior to including this file. Helper to get CAN IDs: Get a 11 Bit standard CAN ID object from the raw number. </p>
 
 </div>
 </div>
-<a id="a9e8aeb972ad7ddb728224373bb1cbb6f" name="a9e8aeb972ad7ddb728224373bb1cbb6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e8aeb972ad7ddb728224373bb1cbb6f">&#9670;&nbsp;</a></span>_STDC_VERSION_C17_C11</h2>
+<a id="ad0db58656eab8a1ac4151130302ccc4e" name="ad0db58656eab8a1ac4151130302ccc4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0db58656eab8a1ac4151130302ccc4e">&#9670;&nbsp;</a></span>MCI_CAN_ID</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define _STDC_VERSION_C17_C11</td>
+          <td class="memname">#define MCI_CAN_ID</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ID, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">isExt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(assert(!isExt),((<a class="el" href="mci__if_map_binary_search_can_id_8h.html#a1730a684212fb4cde1d682dd1fc7013f">mci_canId_t</a>)((unsigned)(id11Bit)&amp;0x7FFu)))</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Helper to get CAN IDs: Get CAN ID object from raw number and Boolean <em>isExt</em>. </p>
+
+</div>
+</div>
+<a id="ac0f230f6c7463c020fce6d63b56682aa" name="ac0f230f6c7463c020fce6d63b56682aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f230f6c7463c020fce6d63b56682aa">&#9670;&nbsp;</a></span>MCI_GET_CAN_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MCI_GET_CAN_ID</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mci_canId</td><td>)</td>
+          <td>&#160;&#160;&#160;(mci_canId)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Helper to get the CAN ID as a number from a CAN ID object. </p>
+
+</div>
+</div>
+<a id="a26ee3df87eed92d3072fbc3a65be7466" name="a26ee3df87eed92d3072fbc3a65be7466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ee3df87eed92d3072fbc3a65be7466">&#9670;&nbsp;</a></span>MCI_GET_IS_EXT_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MCI_GET_IS_EXT_ID</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mci_canId</td><td>)</td>
+          <td>&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Helper to get the Boolean distinction between standard and extended CAN ID from a CAN ID object. </p>
 
 </div>
 </div>
@@ -170,22 +224,22 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >The definitions below depend on whether or not extended CAN IDs are in use. This needs to be decided before this header is included. Set <a class="el" href="mci__map_binary_search_can_id_8h.html#aee9d146fbbe72d87f912ca09f072bf30">MCI_SUPPORT_EXTENDED_CAN_IDS</a> to 0 or 1 prior to including this file. The map value type. Normally, a uint8 will be appropriate but if more than 254 CAN messages are defined in at least one involved event dispatcher system then this type would overflow and a unit16_t becomes the better choice. </p>
+<p >The map value type. Normally, an 8 Bit unsigned will be appropriate but if more than 254 CAN messages are defined in at least one involved event dispatcher system then this type would overflow and a uint16_t becomes the better choice. </p>
 
 </div>
 </div>
-<a id="a51d1ce2933e72e0ed8e4e3e84d417ff9" name="a51d1ce2933e72e0ed8e4e3e84d417ff9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51d1ce2933e72e0ed8e4e3e84d417ff9">&#9670;&nbsp;</a></span>mci_canId_t</h2>
+<a id="a1730a684212fb4cde1d682dd1fc7013f" name="a1730a684212fb4cde1d682dd1fc7013f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1730a684212fb4cde1d682dd1fc7013f">&#9670;&nbsp;</a></span>mci_canId_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef union <a class="el" href="unionmci__can_id__t.html">mci_canId_t</a> <a class="el" href="unionmci__can_id__t.html">mci_canId_t</a></td>
+          <td class="memname">typedef uint16_t <a class="el" href="mci__if_map_binary_search_can_id_8h.html#a1730a684212fb4cde1d682dd1fc7013f">mci_canId_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >CAN ID: The number and the Boolean distinction between standard 11 and extended 29 Bit IDs. </p>
+<p >CAN ID: A standard 11 Bit represented as a 16 Bit unsigned integer. The bits 11..15 are always zero. </p>
 
 </div>
 </div>
@@ -204,42 +258,13 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aef3a1f7cd812d01e3b354fa6222b81f6" name="aef3a1f7cd812d01e3b354fa6222b81f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef3a1f7cd812d01e3b354fa6222b81f6">&#9670;&nbsp;</a></span>_Static_assert()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">_Static_assert </td>
-          <td>(</td>
-          <td class="paramtype">sizeof(<a class="el" href="unionmci__can_id__t.html">mci_canId_t</a>)&#160;</td>
-          <td class="paramname"> = <code>=sizeof(uint16_t)</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&quot;Unexpected size of data object&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="dir_b30582f9ff20b54dfb5d39c40ac29991.html">handleMaps</a></li><li class="navelem"><a class="el" href="mci__if_map_binary_search_can_id_8h.html">mci_ifMapBinarySearchCanId.h</a></li>
-    <li class="footer">Generated on Tue Oct 4 2022 15:29:09 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Mon Nov 25 2024 21:39:40 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

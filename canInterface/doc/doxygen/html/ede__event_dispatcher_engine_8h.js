@@ -19,6 +19,7 @@ var ede__event_dispatcher_engine_8h =
     [ "ede_registerInternalEventSource", "ede__event_dispatcher_engine_8h.html#a95b4acb8c9d3016f7ed75e76eeea7781", null ],
     [ "ede_dispatcherMain", "ede__event_dispatcher_engine_8h.html#a57afe86d78bb39cd9bda3f89bd051662", null ],
     [ "ede_createPeriodicTimer", "ede__event_dispatcher_engine_8h.html#ada29bed68688fcac8bdb2abf6f1e23ed", null ],
+    [ "ede_createPeriodicTimerShifted", "ede__event_dispatcher_engine_8h.html#aa5e2082e76c0e4c7722ff91c95b1322b", null ],
     [ "ede_createSingleShotTimer", "ede__event_dispatcher_engine_8h.html#aee42755e2d4e83eb959af29acce60496", null ],
     [ "ede_killTimer", "ede__event_dispatcher_engine_8h.html#a3346fa9a775e9bc45b29e7f121694b75", null ],
     [ "ede_suspendSingleShotTimer", "ede__event_dispatcher_engine_8h.html#a18e3d51ed5a43be0c33c8ef7fb5a4c25", null ],

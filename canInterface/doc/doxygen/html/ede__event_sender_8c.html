@@ -104,16 +104,22 @@ Typedefs</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a427a4fb0c358294d426691783d816f31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_sender_8c.html#a427a4fb0c358294d426691783d816f31">ede_createSender</a> (<a class="el" href="ede__event_sender_8h.html#aab46fbce36a9ae7c406ff72f2b4ac149">ede_handleSender_t</a> *const pHandleSender, const <a class="el" href="structede__event_sender_port__t.html">ede_eventSenderPort_t</a> portAry[], unsigned int noPorts, const <a class="el" href="structede__map_sender_ev_handle_to_idx__t.html">ede_mapSenderEvHandleToIdx_t</a> *pMapSenderEvHandleToPortIndex, <a class="el" href="structede__memory_pool__t.html">ede_memoryPool_t</a> *const pMemPoolSender)</td></tr>
 <tr class="separator:a427a4fb0c358294d426691783d816f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3c84ef444f423e5e66db3626323094"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_sender_8c.html#a1c3c84ef444f423e5e66db3626323094">ede_getPortIndex</a> (<a class="el" href="ede__event_sender_8c.html#a3ced2f8d5ec2344cfaeadc4c4b986a05">ede_eventSender_t</a> *const hSender, <a class="el" href="ede__event_dispatcher_engine_8config_8h.html#a77c0796970c19f653ef7d7d95d3d90c1">ede_kindOfEvent_t</a> kindOfEvent, <a class="el" href="ede__event_dispatcher_engine_8config_8h.html#ada49b99ab4bcca0e08fdac728087eb65">ede_senderHandleEvent_t</a> senderHandleEvent)</td></tr>
+<tr class="separator:a1c3c84ef444f423e5e66db3626323094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab798e6f0c026481f4848e52207136aac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_sender_8c.html#ab798e6f0c026481f4848e52207136aac">ede_postEvent</a> (<a class="el" href="ede__event_sender_8c.html#a3ced2f8d5ec2344cfaeadc4c4b986a05">ede_eventSender_t</a> *const hSender, <a class="el" href="ede__event_dispatcher_engine_8config_8h.html#a77c0796970c19f653ef7d7d95d3d90c1">ede_kindOfEvent_t</a> kindOfEvent, <a class="el" href="ede__event_dispatcher_engine_8config_8h.html#ada49b99ab4bcca0e08fdac728087eb65">ede_senderHandleEvent_t</a> senderHandleEvent, const void *pData, unsigned int sizeOfData)</td></tr>
 <tr class="separator:ab798e6f0c026481f4848e52207136aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af784c1f528d120e096159eedfc7a6083"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_sender_8c.html#af784c1f528d120e096159eedfc7a6083">ede_postEventToPort</a> (<a class="el" href="ede__event_sender_8c.html#a3ced2f8d5ec2344cfaeadc4c4b986a05">ede_eventSender_t</a> *const hSender, unsigned int idxPort, <a class="el" href="ede__event_dispatcher_engine_8config_8h.html#a77c0796970c19f653ef7d7d95d3d90c1">ede_kindOfEvent_t</a> kindOfEvent, <a class="el" href="ede__event_dispatcher_engine_8config_8h.html#ada49b99ab4bcca0e08fdac728087eb65">ede_senderHandleEvent_t</a> senderHandleEvent, const void *pData, unsigned int sizeOfData)</td></tr>
 <tr class="separator:af784c1f528d120e096159eedfc7a6083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a9800ac09da1ab33eafb41a4db3d18"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_sender_8c.html#ac6a9800ac09da1ab33eafb41a4db3d18">ede_allocEventAtPort</a> (<a class="el" href="structede__external_event__t.html">ede_externalEvent_t</a> **const ppEvent, <a class="el" href="ede__event_sender_8c.html#a3ced2f8d5ec2344cfaeadc4c4b986a05">ede_eventSender_t</a> *const hSender, unsigned int idxPort, unsigned int sizeOfData)</td></tr>
+<tr class="separator:ac6a9800ac09da1ab33eafb41a4db3d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97795ca01671eed48eedef6188367391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_sender_8c.html#a97795ca01671eed48eedef6188367391">ede_submitEventToPort</a> (<a class="el" href="ede__event_sender_8c.html#a3ced2f8d5ec2344cfaeadc4c4b986a05">ede_eventSender_t</a> *const hSender, unsigned int idxPort)</td></tr>
+<tr class="separator:a97795ca01671eed48eedef6188367391"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d19cf302860504824ac3749a075d23f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ede__event_dispatcher_engine_8config_8h.html#a124b7daa71a5d329213c459f68203f89">ede_atomicUnsignedInt_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_sender_8c.html#a0d19cf302860504824ac3749a075d23f">ede_getNoSenderPortBlockedEvents</a> (<a class="el" href="ede__event_sender_8h.html#aab46fbce36a9ae7c406ff72f2b4ac149">ede_handleSender_t</a> hSender, unsigned int idxPort)</td></tr>
 <tr class="separator:a0d19cf302860504824ac3749a075d23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Implementation of the event sender. Any number of senders can be created and they can be flexibly connected to an unrelated set of dispatchers. n:m connectivity is supported.</p>
-<p >Copyright (C) 2021-2022 Peter Vranken (<a href="#" onclick="location.href='mai'+'lto:'+'Pet'+'er'+'_Vr'+'an'+'ken'+'@Y'+'aho'+'o.'+'de'; return false;">Peter<span class="obfuscator">.nosp@m.</span>_Vra<span class="obfuscator">.nosp@m.</span>nken@<span class="obfuscator">.nosp@m.</span>Yaho<span class="obfuscator">.nosp@m.</span>o.de</a>)</p>
+<p >Copyright (C) 2021-2023 Peter Vranken (<a href="#" onclick="location.href='mai'+'lto:'+'Pet'+'er'+'_Vr'+'an'+'ken'+'@Y'+'aho'+'o.'+'de'; return false;">Peter<span class="obfuscator">.nosp@m.</span>_Vra<span class="obfuscator">.nosp@m.</span>nken@<span class="obfuscator">.nosp@m.</span>Yaho<span class="obfuscator">.nosp@m.</span>o.de</a>)</p>
 <p >This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.</p>
 <p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.</p>
 <p >You should have received a copy of the GNU Lesser General Public License along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>. </p>
@@ -129,8 +135,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>The API of a sender port splits sending a data packet into buffer allocation and submission. There are a lot of use cases, where this two-step paradigm saves us payload copying. (Data can instead be directly produced inside the allocated buffer.) This advantage is lost when using the sender object, which offers just the one-step "post". The two-step approach should become an optionally applied additional sender API. </dd></dl>
-<p>An event sender object. </p>
+<p >An event sender object. </p>
 
 </div>
 </div>
@@ -192,11 +197,54 @@ Functions</h2></td></tr>
  If the sender has just one port then no mapping is required and NULL can be passed. All events will go into the only port. Note, a map still matters for a sender with a single port: A map now becomes a Boolean filter, whether or not an event may or can be posted.<br  />
  If only method <a class="el" href="ede__event_sender_8c.html#af784c1f528d120e096159eedfc7a6083">ede_postEventToPort()</a> is going to be used to send an event, i.e., method <a class="el" href="ede__event_sender_8c.html#ab798e6f0c026481f4848e52207136aac">ede_postEvent()</a> won't be used, then NULL can be passed even for a sender with more than one port. </td></tr>
     <tr><td class="paramname">pMemPoolSender</td><td>A memory pool by reference, which provides the memory needed for construction of the sender object.<br  />
- The memory dealt out by this pool needs to grant write-access to the context that runs the event posting process, i.e., the process, which is going to regularly call ede_sendEvent() for the here created sender object. All other contexts (e.g. dispatchers or other senders) don't need access to the memory. </td></tr>
+ The memory dealt out by this pool needs to grant write-access to the context that runs the event posting process, i.e., the process, which is going to regularly call ede_sendEvent() for the here created sender object. All other contexts (e.g., dispatchers or other senders) don't need access to the memory. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>The call of this function has to be done in a race condition free environment, prior to entering the multi-tasking phase of the application. Most platforms will offer an initialization task for this purpose. </dd></dl>
+
+</div>
+</div>
+<a id="a1c3c84ef444f423e5e66db3626323094" name="a1c3c84ef444f423e5e66db3626323094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c3c84ef444f423e5e66db3626323094">&#9670;&nbsp;</a></span>ede_getPortIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ede_getPortIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ede__event_sender_8c.html#a3ced2f8d5ec2344cfaeadc4c4b986a05">ede_eventSender_t</a> *const&#160;</td>
+          <td class="paramname"><em>hSender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ede__event_dispatcher_engine_8config_8h.html#a77c0796970c19f653ef7d7d95d3d90c1">ede_kindOfEvent_t</a>&#160;</td>
+          <td class="paramname"><em>kindOfEvent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ede__event_dispatcher_engine_8config_8h.html#ada49b99ab4bcca0e08fdac728087eb65">ede_senderHandleEvent_t</a>&#160;</td>
+          <td class="paramname"><em>senderHandleEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Find the port of a sender object, which is associated with an event about to be posted. The association is made using the map object, which has been provided in the constructor of the sender. (At the same time the mapping, which is implicitly used by <a class="el" href="ede__event_sender_8c.html#ab798e6f0c026481f4848e52207136aac">ede_postEvent()</a>.) The explicit call of this function may be useful if the two-step method for posting an event is applied, i.e., using <a class="el" href="ede__event_sender_8c.html#ac6a9800ac09da1ab33eafb41a4db3d18">ede_allocEventAtPort()</a> and <a class="el" href="ede__event_sender_8c.html#a97795ca01671eed48eedef6188367391">ede_submitEventToPort()</a> instead of <a class="el" href="ede__event_sender_8c.html#ab798e6f0c026481f4848e52207136aac">ede_postEvent()</a> or <a class="el" href="ede__event_sender_8c.html#af784c1f528d120e096159eedfc7a6083">ede_postEventToPort()</a>. </p><dl class="section return"><dt>Returns</dt><dd>The port of the sender object, which is associated with the given event, is returned by zero based index. The function returns UINT_MAX if not suitable port could be identified. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hSender</td><td>The sender object to use. Has been created before by <a class="el" href="ede__event_sender_8c.html#a427a4fb0c358294d426691783d816f31">ede_createSender()</a>. </td></tr>
+    <tr><td class="paramname">kindOfEvent</td><td>The kind of event. It is an enumeration, which is meaningless to the sender or dispatcher object. Which values are passed is entirely in the scope of the integration code, which defines both, the event reporting interrupts and the client code, which eventually evaluates the transmitted events. In the case of CAN communication, this will, e.g., be the CAN message reception event. </td></tr>
+    <tr><td class="paramname">senderHandleEvent</td><td>The event's handle as used (and issued) by the external integration code. In the case of CAN communication, this will, e.g., be the operating system's handle of a registered CAN message. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -251,8 +299,8 @@ event" and this will be an enumeration. The only constraint sender and dispatche
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hSender</td><td>The sender object to use. Has been created before by <a class="el" href="ede__event_sender_8c.html#a427a4fb0c358294d426691783d816f31">ede_createSender()</a>. </td></tr>
-    <tr><td class="paramname">kindOfEvent</td><td>The kind of event. It is an enumeration, which is meaningless to the sender or dispatcher object. Which values are passed is entirely in the scope of the integration code, which defines both, the event reporting interrupts and the client code, which eventually evaluates the transmitted events. In the case of CAN communication, this will e.g. be the CAN message reception event. </td></tr>
-    <tr><td class="paramname">senderHandleEvent</td><td>The event's handle as used (and issued) by the external integration code. In the case of CAN communication, this will e.g. be the operating system's handle of a registered CAN message. </td></tr>
+    <tr><td class="paramname">kindOfEvent</td><td>The kind of event. It is an enumeration, which is meaningless to the sender or dispatcher object. Which values are passed is entirely in the scope of the integration code, which defines both, the event reporting interrupts and the client code, which eventually evaluates the transmitted events. In the case of CAN communication, this will, e.g., be the CAN message reception event. </td></tr>
+    <tr><td class="paramname">senderHandleEvent</td><td>The event's handle as used (and issued) by the external integration code. In the case of CAN communication, this will , e.g., be the operating system's handle of a registered CAN message. </td></tr>
     <tr><td class="paramname">pData</td><td>A pointer to some event data, which is meaningless to the sender and dispatcher object. Typically used to convey CAN message content bytes in case of a reception event, but can be anything else. May be NULL if <em>sizeOfData</em> is zero, too. </td></tr>
     <tr><td class="paramname">sizeOfData</td><td>The number of data bytes, i.e., the number of bytes, <em>pData</em> points to. </td></tr>
   </table>
@@ -260,7 +308,6 @@ event" and this will be an enumeration. The only constraint sender and dispatche
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Posting an event to a particular port of the sender is not reentrant. If event sources running in different CPU contexts are posting to one and the same sender port then the integration code needs to implement mutual exclusion. All of these event sources need to be serialized with respect to event posting.<br  />
  In practice, concurrent event sources that require mutual exclusion will likely occur if the events are reported by different interrupts; different interrupts have different priorities on most existing systems and interrupts of higher priority are normally allowed to preempt those of lower priority. In this situation, a reasonable alternative to explicit mutual exclusion code is an architecture using another interconnected pair of sender and and dispatcher port for each interrupt. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Should this be counted like a lost event due to buffer full? </dd></dl>
 
 </div>
 </div>
@@ -320,13 +367,111 @@ event" and this will be an enumeration. The only constraint sender and dispatche
     <tr><td class="paramname">hSender</td><td>The sender object to use. Has been created before by <a class="el" href="ede__event_sender_8c.html#a427a4fb0c358294d426691783d816f31">ede_createSender()</a>. </td></tr>
     <tr><td class="paramname">idxPort</td><td>The port to be applied for the event by zero based index. The specified number must not be greater or equal to argument <em>noPorts</em> of the constructor call, which yielded <em>hSender</em>. </td></tr>
     <tr><td class="paramname">kindOfEvent</td><td>The kind of event. It is an enumeration, which is meaningless to connector element and dispatcher engine. </td></tr>
-    <tr><td class="paramname">senderHandleEvent</td><td>The event's handle as used (and issued) by the external integration code system. In the case of CAN communication, this will e.g. be the operating system's handle of a registered CAN message. </td></tr>
+    <tr><td class="paramname">senderHandleEvent</td><td>The event's handle as used (and issued) by the external integration code system. In the case of CAN communication, this will , e.g., be the operating system's handle of a registered CAN message. </td></tr>
     <tr><td class="paramname">pData</td><td>A pointer to some event data. It is delivered to the dispatcher as part of the event. </td></tr>
     <tr><td class="paramname">sizeOfData</td><td>The number of data bytes, i.e., the number of bytes, <em>pData</em> points to. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>All remarks made for <a class="el" href="ede__event_sender_8c.html#ab798e6f0c026481f4848e52207136aac">ede_postEvent()</a> hold for this function, too. </dd></dl>
+
+</div>
+</div>
+<a id="ac6a9800ac09da1ab33eafb41a4db3d18" name="ac6a9800ac09da1ab33eafb41a4db3d18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a9800ac09da1ab33eafb41a4db3d18">&#9670;&nbsp;</a></span>ede_allocEventAtPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * ede_allocEventAtPort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structede__external_event__t.html">ede_externalEvent_t</a> **const&#160;</td>
+          <td class="paramname"><em>ppEvent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ede__event_sender_8c.html#a3ced2f8d5ec2344cfaeadc4c4b986a05">ede_eventSender_t</a> *const&#160;</td>
+          <td class="paramname"><em>hSender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>idxPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>sizeOfData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Posting an event can be done in two steps: First the allocation or reservation of the needed memory space and later, after filling the memory appropriately, the submission of the event. The two-step approach is an alternative to the use of either <a class="el" href="ede__event_sender_8c.html#ab798e6f0c026481f4848e52207136aac">ede_postEvent()</a> or <a class="el" href="ede__event_sender_8c.html#af784c1f528d120e096159eedfc7a6083">ede_postEventToPort()</a>, which allows the implementation of zero-copy interfaces in some situations.<br  />
+ This function implements the reservation of the memory space. </p><dl class="section return"><dt>Returns</dt><dd>The address, where to put the event's payload data, is returned. Normally, this will just be the address of the event's field <em>dataAry</em> but it may be another, port decided address. (See the sender port's field <em>requiresDataByReference</em> for details.)<br  />
+ The function returns NULL if the port can't provide the needed memory. Almost always, this will be due to a temporary busy or queue-full state of the port. No event can currently be posted and the function call has no effect besides counting the failure in the port object. In particular, <a class="el" href="ede__event_sender_8c.html#a97795ca01671eed48eedef6188367391">ede_submitEventToPort()</a> must not be called in this case.<br  />
+ See field <em>dataAry</em> of type <em><a class="el" href="structede__external_event__t.html">ede_externalEvent_t</a></em> for details about the alignment of the returned pointer. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ppEvent</td><td>If the function doesn't return NULL then a still empty, not yet submitted event object is returned by reference in * <em>ppEvent</em>. The ownership of the event object is now at the caller. The caller has any time to fill the event object until he submits it.<br  />
+<ul>
+<li><em>ppEvent</em> is undefined if the function returns NULL. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">hSender</td><td>The sender object to use. Has been created before by <a class="el" href="ede__event_sender_8c.html#a427a4fb0c358294d426691783d816f31">ede_createSender()</a>. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">idxPort</td><td>The port by zero based index, which the event is going to be posted to. This port will provide the memory space for the returned event object.<br  />
+ The specified number must not be greater or equal to argument <em>noPorts</em> of the constructor call, which yielded <em>hSender</em>.<br  />
+ Note, if applicable, the required port index could be figured out using <a class="el" href="ede__event_sender_8c.html#a1c3c84ef444f423e5e66db3626323094">ede_getPortIndex()</a>. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">sizeOfData</td><td>The number of payload data bytes, which the returned event needs to have at least. This number of Byte can be safely written to where the function return value points. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Using the pair of <a class="el" href="ede__event_sender_8c.html#ac6a9800ac09da1ab33eafb41a4db3d18">ede_allocEventAtPort()</a> and <a class="el" href="ede__event_sender_8c.html#a97795ca01671eed48eedef6188367391">ede_submitEventToPort()</a> has race conditions with using <a class="el" href="ede__event_sender_8c.html#ab798e6f0c026481f4848e52207136aac">ede_postEvent()</a> and <a class="el" href="ede__event_sender_8c.html#af784c1f528d120e096159eedfc7a6083">ede_postEventToPort()</a>. The three ways of doing can be used alternatingly but not in an overlapping or concurrent way. In particular, if <a class="el" href="ede__event_sender_8c.html#ac6a9800ac09da1ab33eafb41a4db3d18">ede_allocEventAtPort()</a> succeeded to return an event, then <a class="el" href="ede__event_sender_8c.html#a97795ca01671eed48eedef6188367391">ede_submitEventToPort()</a> needs to be called for that event prior to the next use of either <a class="el" href="ede__event_sender_8c.html#ab798e6f0c026481f4848e52207136aac">ede_postEvent()</a> or <a class="el" href="ede__event_sender_8c.html#af784c1f528d120e096159eedfc7a6083">ede_postEventToPort()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a97795ca01671eed48eedef6188367391" name="a97795ca01671eed48eedef6188367391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97795ca01671eed48eedef6188367391">&#9670;&nbsp;</a></span>ede_submitEventToPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ede_submitEventToPort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ede__event_sender_8c.html#a3ced2f8d5ec2344cfaeadc4c4b986a05">ede_eventSender_t</a> *const&#160;</td>
+          <td class="paramname"><em>hSender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>idxPort</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Posting an event using the two-step approach: Submit the finalized event. See <a class="el" href="ede__event_sender_8c.html#ac6a9800ac09da1ab33eafb41a4db3d18">ede_allocEventAtPort()</a> for more details.<br  />
+ Caution: The ownership of the event ends with entry into this function. The event object and none of its fields must be touched any more. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hSender</td><td>The sender object to use. Has been created before by <a class="el" href="ede__event_sender_8c.html#a427a4fb0c358294d426691783d816f31">ede_createSender()</a>. </td></tr>
+    <tr><td class="paramname">idxPort</td><td>The port by zero based index, which the event is submitted to.<br  />
+ Caution: This needs to be the same port as specified in the earlier call of <a class="el" href="ede__event_sender_8c.html#ac6a9800ac09da1ab33eafb41a4db3d18">ede_allocEventAtPort()</a>, when getting the event object. It would be disastrous to submit an event to another port. It would result in unpredictable behavior reaching from memory leak till corrupted memories. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The function implicitly operates on the very object, which had been got with the last recent call of <a class="el" href="ede__event_sender_8c.html#ac6a9800ac09da1ab33eafb41a4db3d18">ede_allocEventAtPort()</a>, which had been made for port <em>idxPort</em>. </dd></dl>
 
 </div>
 </div>
@@ -355,7 +500,7 @@ event" and this will be an enumeration. The only constraint sender and dispatche
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Get the number of recorded port-blocked events, i.e. the number of lost events due to an currently unavailable port, e.g. because of an overfull queue. </p><dl class="section return"><dt>Returns</dt><dd>Get the number, which should should rise very slowly or not at all in case of a well designed implementation of the port interface. The counter for port-blocked events wraps at its implementation range. Therefore, the client code can easliy check for an allowed maximum loss rate by regularly evaluating the delta/increment of the returned function value. </dd></dl>
+<p >Get the number of recorded port-blocked events, i.e. the number of lost events due to an currently unavailable port, e.g., because of an overfull queue. </p><dl class="section return"><dt>Returns</dt><dd>Get the number, which should should rise very slowly or not at all in case of a well designed implementation of the port interface. The counter for port-blocked events wraps at its implementation range. Therefore, the client code can easliy check for an allowed maximum loss rate by regularly evaluating the delta/increment of the returned function value. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hSender</td><td>The sender object, which the query is made for. </td></tr>
@@ -373,7 +518,7 @@ event" and this will be an enumeration. The only constraint sender and dispatche
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="dir_081dba3b7b2444bc5b95b682ee9f194a.html">eventDispatcher</a></li><li class="navelem"><a class="el" href="ede__event_sender_8c.html">ede_eventSender.c</a></li>
-    <li class="footer">Generated on Tue Oct 4 2022 15:29:09 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Mon Nov 25 2024 21:39:40 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

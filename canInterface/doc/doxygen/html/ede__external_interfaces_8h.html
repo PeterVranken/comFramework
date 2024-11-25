@@ -91,7 +91,8 @@ $(document).ready(function(){initNavTree('ede__external_interfaces_8h.html','');
   <div class="headertitle"><div class="title">ede_externalInterfaces.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ede__basic_definitions_8h_source.html">ede_basicDefinitions.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ede__basic_definitions_8h_source.html">ede_basicDefinitions.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ede__event_dispatcher_engine_8config_8h_source.html">ede_eventDispatcherEngine.config.h</a>&quot;</code><br />
 </div>
 <p><a href="ede__external_interfaces_8h_source.html">Go to the source code of this file.</a></p>
@@ -111,10 +112,14 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac0dfb9afed1e568fc4de0629daa57a2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__external_interfaces_8h.html#ac0dfb9afed1e568fc4de0629daa57a2b">EDE_CALL_INTERFACE_VA_ARGS</a>(iObj,  method, ...)&#160;&#160;&#160;((iObj).method((iObj).hInstance, __VA_ARGS__))</td></tr>
+<tr class="memitem:ac0dfb9afed1e568fc4de0629daa57a2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__external_interfaces_8h.html#ac0dfb9afed1e568fc4de0629daa57a2b">EDE_CALL_INTERFACE_VA_ARGS</a>(iObj,  method, ...)&#160;&#160;&#160;            ((iObj).method((iObj).hInstance, __VA_ARGS__))</td></tr>
 <tr class="separator:ac0dfb9afed1e568fc4de0629daa57a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43309c399bb65bfbb4405cc7bafd8e76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__external_interfaces_8h.html#a43309c399bb65bfbb4405cc7bafd8e76">EDE_CALL_OPTIONAL_INTERFACE_VA_ARGS</a>(iObj,  method,  defVal, ...)&#160;&#160;&#160;            ((method) != NULL? <a class="el" href="ede__external_interfaces_8h.html#ac0dfb9afed1e568fc4de0629daa57a2b">EDE_CALL_INTERFACE_VA_ARGS</a>(iObj, method, __VA_ARGS__): (defVal))</td></tr>
+<tr class="separator:a43309c399bb65bfbb4405cc7bafd8e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53fee197120a647c50813f937b0b1976"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__external_interfaces_8h.html#a53fee197120a647c50813f937b0b1976">EDE_CALL_INTERFACE_NO_ARGS</a>(iObj,  method)&#160;&#160;&#160;((iObj).method((iObj).hInstance))</td></tr>
 <tr class="separator:a53fee197120a647c50813f937b0b1976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2126a4402c31c2c42d486e06f99f4780"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__external_interfaces_8h.html#a2126a4402c31c2c42d486e06f99f4780">EDE_CALL_OPTIONAL_INTERFACE_NO_ARGS</a>(iObj,  method,  defVal)&#160;&#160;&#160;            ((method) != NULL? <a class="el" href="ede__external_interfaces_8h.html#a53fee197120a647c50813f937b0b1976">EDE_CALL_INTERFACE_NO_ARGS</a>(iObj, method): (defVal))</td></tr>
+<tr class="separator:a2126a4402c31c2c42d486e06f99f4780"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab709bbe60f22d68650abbe3fe615d53a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__external_interfaces_8h.html#ab709bbe60f22d68650abbe3fe615d53a">EDE_INVALID_MEMORY_POOL</a></td></tr>
 <tr class="separator:ab709bbe60f22d68650abbe3fe615d53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ce9aa912a230204c5920d620aabf35e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__external_interfaces_8h.html#a3ce9aa912a230204c5920d620aabf35e">EDE_INVALID_EVENT_HANDLE_MAP</a></td></tr>
@@ -144,7 +149,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Definition of common global interface of component EDE, Event Dispatcher Engine. This file specifies required interfaces but there's no directly related implementation file, which would implement them. Some of the interfaces are intended for implementation in the external code; the integration of the component into a given, real environment will require a suitable, appropriate and specific implementation.</p>
-<p >Copyright (C) 2021-2022 Peter Vranken (<a href="#" onclick="location.href='mai'+'lto:'+'Pet'+'er'+'_Vr'+'an'+'ken'+'@Y'+'aho'+'o.'+'de'; return false;">Peter<span class="obfuscator">.nosp@m.</span>_Vra<span class="obfuscator">.nosp@m.</span>nken@<span class="obfuscator">.nosp@m.</span>Yaho<span class="obfuscator">.nosp@m.</span>o.de</a>)</p>
+<p >Copyright (C) 2021-2024 Peter Vranken (<a href="#" onclick="location.href='mai'+'lto:'+'Pet'+'er'+'_Vr'+'an'+'ken'+'@Y'+'aho'+'o.'+'de'; return false;">Peter<span class="obfuscator">.nosp@m.</span>_Vra<span class="obfuscator">.nosp@m.</span>nken@<span class="obfuscator">.nosp@m.</span>Yaho<span class="obfuscator">.nosp@m.</span>o.de</a>)</p>
 <p >This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.</p>
 <p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.</p>
 <p >You should have received a copy of the GNU Lesser General Public License along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>. </p>
@@ -176,11 +181,52 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((iObj).method((iObj).hInstance, __VA_ARGS__))</td>
+          <td></td><td>&#160;&#160;&#160;            ((iObj).method((iObj).hInstance, __VA_ARGS__))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p >Standard call of an interface function, which has one or more arguments. Can be applied to make such a call look like a normal function call. </p>
+
+</div>
+</div>
+<a id="a43309c399bb65bfbb4405cc7bafd8e76" name="a43309c399bb65bfbb4405cc7bafd8e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43309c399bb65bfbb4405cc7bafd8e76">&#9670;&nbsp;</a></span>EDE_CALL_OPTIONAL_INTERFACE_VA_ARGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EDE_CALL_OPTIONAL_INTERFACE_VA_ARGS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">iObj, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">method, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">defVal, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;            ((method) != NULL? <a class="el" href="ede__external_interfaces_8h.html#ac0dfb9afed1e568fc4de0629daa57a2b">EDE_CALL_INTERFACE_VA_ARGS</a>(iObj, method, __VA_ARGS__): (defVal))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Standard call of an interface function, which is optional and which has one or more arguments. Can be applied to make such a call look like a normal function call. </p>
 
 </div>
 </div>
@@ -210,6 +256,41 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Standard call of an interface function, which has no arguments. Can be applied to make such a call look like a normal function call. </p>
+
+</div>
+</div>
+<a id="a2126a4402c31c2c42d486e06f99f4780" name="a2126a4402c31c2c42d486e06f99f4780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2126a4402c31c2c42d486e06f99f4780">&#9670;&nbsp;</a></span>EDE_CALL_OPTIONAL_INTERFACE_NO_ARGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EDE_CALL_OPTIONAL_INTERFACE_NO_ARGS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">iObj, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">method, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">defVal&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;            ((method) != NULL? <a class="el" href="ede__external_interfaces_8h.html#a53fee197120a647c50813f937b0b1976">EDE_CALL_INTERFACE_NO_ARGS</a>(iObj, method): (defVal))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Standard call of an interface function, which is optional and which has no arguments. Can be applied to make such a call look like a normal function call. </p>
 
 </div>
 </div>
@@ -415,7 +496,7 @@ The map associates an abstract event handle with a sender's port (addressed by i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="dir_081dba3b7b2444bc5b95b682ee9f194a.html">eventDispatcher</a></li><li class="navelem"><a class="el" href="ede__external_interfaces_8h.html">ede_externalInterfaces.h</a></li>
-    <li class="footer">Generated on Tue Oct 4 2022 15:29:09 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Mon Nov 25 2024 21:39:40 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

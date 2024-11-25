@@ -91,10 +91,6 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dd><a class="anchor" id="_todo000002"></a>Specify the alignment, which suits to all basic machine words, e.g. 4 for most 32 Bit architectures. The define needs to expand to a integer literal, which designates a power of two, mostly one out of 1, 2, 4 or 8.  </dd>
 <dt>Global <a class="el" href="ede__event_dispatcher_engine_8h.html#a57afe86d78bb39cd9bda3f89bd051662">ede_dispatcherMain</a>  (ede_handleConstDispatcherSystem_t hSystem, unsigned int idxDispatcher)</dt>
 <dd><a class="anchor" id="_todo000004"></a>Should this be counted like a lost event due to queue full?  </dd>
-<dt>Global <a class="el" href="ede__event_sender_8c.html#a3ced2f8d5ec2344cfaeadc4c4b986a05">ede_eventSender_t</a>  </dt>
-<dd><a class="anchor" id="_todo000005"></a>The API of a sender port splits sending a data packet into buffer allocation and submission. There are a lot of use cases, where this two-step paradigm saves us payload copying. (Data can instead be directly produced inside the allocated buffer.) This advantage is lost when using the sender object, which offers just the one-step "post". The two-step approach should become an optionally applied additional sender API.  </dd>
-<dt>Global <a class="el" href="ede__event_sender_8c.html#ab798e6f0c026481f4848e52207136aac">ede_postEvent</a>  (ede_eventSender_t *const hSender, ede_kindOfEvent_t kindOfEvent, ede_senderHandleEvent_t senderHandleEvent, const void *pData, unsigned int sizeOfData)</dt>
-<dd><a class="anchor" id="_todo000006"></a>Should this be counted like a lost event due to buffer full?  </dd>
 <dt>Global <a class="el" href="ede__event_dispatcher_engine_8config_8h.html#ada49b99ab4bcca0e08fdac728087eb65">ede_senderHandleEvent_t</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a>Use the typedef to make our internally used <em>ede_senderHandleEvent_t</em> identical to the operating system's given handle or identifier type.  </dd>
 <dt>Global <a class="el" href="vsq__thread_safe_queue_variable_size_8h.html#adfb328fb5c2c9040e1400e8a4a3fa90c">vsq_linkQueueHeadWithTail</a>  (vsq_queueHead_t *pTheQueuesHead, const vsq_queueTail_t *pTheQueuesTail)</dt>
@@ -106,7 +102,7 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Oct 4 2022 15:29:09 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Mon Nov 25 2024 21:39:40 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

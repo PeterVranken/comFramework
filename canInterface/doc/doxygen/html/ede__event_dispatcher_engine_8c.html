@@ -155,6 +155,8 @@ Functions</h2></td></tr>
 <tr class="separator:a92423b842e575d300f2128781b88fde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcfd6b0933b7d357b0bf23016cd506c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ede__event_dispatcher_engine_8h.html#a63e9256208333c366bb2d5f49f0ba2f2">ede_handleTimer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_dispatcher_engine_8c.html#afcfd6b0933b7d357b0bf23016cd506c6">ede_createPeriodicTimer</a> (const <a class="el" href="ede__event_dispatcher_engine_8h.html#a3b9d6c6b8ea95bfd1581bff336f18358">ede_callbackContext_t</a> *const pContext, signed int tiPeriod, <a class="el" href="ede__event_dispatcher_engine_8h.html#ad4f52d381964483c4161b8acc7bb598a">ede_callback_t</a> callback, uintptr_t refUserContextData)</td></tr>
 <tr class="separator:afcfd6b0933b7d357b0bf23016cd506c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626641ed9149439b0b9f10de1bf2ecbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ede__event_dispatcher_engine_8h.html#a63e9256208333c366bb2d5f49f0ba2f2">ede_handleTimer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_dispatcher_engine_8c.html#a626641ed9149439b0b9f10de1bf2ecbb">ede_createPeriodicTimerShifted</a> (const <a class="el" href="ede__event_dispatcher_engine_8h.html#a3b9d6c6b8ea95bfd1581bff336f18358">ede_callbackContext_t</a> *const pContext, signed int tiPeriod, signed int tiPhase, <a class="el" href="ede__event_dispatcher_engine_8h.html#ad4f52d381964483c4161b8acc7bb598a">ede_callback_t</a> callback, uintptr_t refUserContextData)</td></tr>
+<tr class="separator:a626641ed9149439b0b9f10de1bf2ecbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ea437b625b5516ebc454475917bd77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ede__event_dispatcher_engine_8h.html#a63e9256208333c366bb2d5f49f0ba2f2">ede_handleTimer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_dispatcher_engine_8c.html#af4ea437b625b5516ebc454475917bd77">ede_createSingleShotTimer</a> (const <a class="el" href="ede__event_dispatcher_engine_8h.html#a3b9d6c6b8ea95bfd1581bff336f18358">ede_callbackContext_t</a> *const pContext, signed int tiFromNow, <a class="el" href="ede__event_dispatcher_engine_8h.html#ad4f52d381964483c4161b8acc7bb598a">ede_callback_t</a> callback, uintptr_t refUserContextData, bool killAtDueTime)</td></tr>
 <tr class="separator:af4ea437b625b5516ebc454475917bd77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e5ec6bbc83a0b2e667410d0d650cd44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ede__event_dispatcher_engine_8c.html#a6e5ec6bbc83a0b2e667410d0d650cd44">ede_killTimer</a> (const <a class="el" href="ede__event_dispatcher_engine_8h.html#a3b9d6c6b8ea95bfd1581bff336f18358">ede_callbackContext_t</a> *const pContext, <a class="el" href="ede__event_dispatcher_engine_8h.html#a63e9256208333c366bb2d5f49f0ba2f2">ede_handleTimer_t</a> hTimer)</td></tr>
@@ -187,7 +189,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The dispatcher engine for events. Events are either external events, which are sent with a connected sender object, or internal timer events.<br  />
  Both ends of the communication, sender and dispatcher can execute in different CPU contexts. This is the principal reason for the chosen design: Events, normally generated asynchonously in one or more interrupts can be processed in some application task context on the same or another core and without fearing difficult to handle race conditions.</p>
-<p >Copyright (C) 2015-2022 Peter Vranken (<a href="#" onclick="location.href='mai'+'lto:'+'Pet'+'er'+'_Vr'+'an'+'ken'+'@Y'+'aho'+'o.'+'de'; return false;">Peter<span class="obfuscator">.nosp@m.</span>_Vra<span class="obfuscator">.nosp@m.</span>nken@<span class="obfuscator">.nosp@m.</span>Yaho<span class="obfuscator">.nosp@m.</span>o.de</a>)</p>
+<p >Copyright (C) 2015-2024 Peter Vranken (<a href="#" onclick="location.href='mai'+'lto:'+'Pet'+'er'+'_Vr'+'an'+'ken'+'@Y'+'aho'+'o.'+'de'; return false;">Peter<span class="obfuscator">.nosp@m.</span>_Vra<span class="obfuscator">.nosp@m.</span>nken@<span class="obfuscator">.nosp@m.</span>Yaho<span class="obfuscator">.nosp@m.</span>o.de</a>)</p>
 <p >This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.</p>
 <p >This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.</p>
 <p >You should have received a copy of the GNU Lesser General Public License along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>. </p>
@@ -905,6 +907,71 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a626641ed9149439b0b9f10de1bf2ecbb" name="a626641ed9149439b0b9f10de1bf2ecbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a626641ed9149439b0b9f10de1bf2ecbb">&#9670;&nbsp;</a></span>ede_createPeriodicTimerShifted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ede__event_dispatcher_engine_8h.html#a63e9256208333c366bb2d5f49f0ba2f2">ede_handleTimer_t</a> ede_createPeriodicTimerShifted </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="ede__event_dispatcher_engine_8h.html#a3b9d6c6b8ea95bfd1581bff336f18358">ede_callbackContext_t</a> *const&#160;</td>
+          <td class="paramname"><em>pContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">signed int&#160;</td>
+          <td class="paramname"><em>tiPeriod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">signed int&#160;</td>
+          <td class="paramname"><em>tiPhase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ede__event_dispatcher_engine_8h.html#ad4f52d381964483c4161b8acc7bb598a">ede_callback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uintptr_t&#160;</td>
+          <td class="paramname"><em>refUserContextData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Create a periodic timer event from a callback. It is started with phase shift - this is the only difference to the other constructor <a class="el" href="ede__event_dispatcher_engine_8c.html#afcfd6b0933b7d357b0bf23016cd506c6">ede_createPeriodicTimer()</a>.<br  />
+ Typical use case in the context of CAN communication is a timer, which triggers sending of regular frames. The phase shift can be applied to avoid message bursts at integral mulitples of typical message period times like 10, 50, 100, 1000 ms. </p><dl class="section return"><dt>Returns</dt><dd>The timer handle is returned; this handle is used to identify a timer (if several timers should share the same callback function) or to perform other operations on this timer.<br  />
+ If no timer can be created due to a lack of memory then <a class="el" href="ede__event_dispatcher_engine_8h.html#a085cf262fcca3b3c43df4c23d724aa63">EDE_INVALID_TIMER_HANDLE</a> is returned instead. Due to the static, deterministic error allocation concept this error should preferrably be handled by a simple assertion only; if this assertion doesn't fire in the DEBUG compilation then there won't be an error in the production code neither. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pContext</td><td>The dispatcher context this callback is invoked from. </td></tr>
+    <tr><td class="paramname">tiPeriod</td><td>The timer will invoke the specified callback <em>callback</em> every <em>tiPeriod</em> time units. The unit is the same as that of argument <em>tiTick</em> in the call of <a class="el" href="ede__event_dispatcher_engine_8c.html#a7a34b2384bdda4a4c726f46f08671769">ede_createDispatcher()</a>.<br  />
+ The value needs to be positive. If it is less than the tick time of the dispatcher than it is rounded upwards to this tick time; the timer will fire in every tick of the dispatcher.<br  />
+ The cycle time is not rounded to a multiple of the dispatcher's clock tick. If <em>tiPeriod</em> is not a multiple of the clock tick then the timer will always fire at the first tick at or after the next nominal due time. The timer events are no longer equidistant but the nominal cycle time is kept in average. </td></tr>
+    <tr><td class="paramname">tiPhase</td><td>For periodic timers only, the first due time may differ from the repeated triggers; use case is control of a phase shift. The timer becomes due the first time at <em>tiPeriod</em> + <em>tiPhase</em> ticks from now. Range for this sum is 1.., silently limited. If <em>tiPhase</em> would shift the first trigger to a value less than one dispatcher tick then the first due time will be the next dispatcher tick. </td></tr>
+    <tr><td class="paramname">callback</td><td>Please refer to <em>tiPeriod</em>. </td></tr>
+    <tr><td class="paramname">refUserContextData</td><td>The user specified context information, which is stored with the timer and which will be brought back into its callback at due time. In the timer's callback, use <a class="el" href="ede__event_dispatcher_engine_8c.html#ab7cc1c3000c1589b4a1bf3410b073418">ede_getEventData()</a> to retrieve the value passed in here. The data type of the user specified context data is <em>uintptr_t</em>; if you pass in a pointer to some data then <a class="el" href="ede__event_dispatcher_engine_8c.html#ab7cc1c3000c1589b4a1bf3410b073418">ede_getEventData()</a> will only return the pointer - not the data it points to.<br  />
+ This argument is available only if <a class="el" href="ede__event_dispatcher_engine_8config_8h.html#a3e9cf46c02aa8ae9348d21b686f0f466">EDE_ENABLE_TIMER_CONTEXT_DATA</a> is set to 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>This method and <a class="el" href="ede__event_dispatcher_engine_8c.html#af4ea437b625b5516ebc454475917bd77">ede_createSingleShotTimer()</a> are the only pieces of code in the dispatcher implementation, which could suffer from race conditions. The timer objects are created from the memory pool specified in <a class="el" href="ede__event_dispatcher_engine_8c.html#a4f6cb6a9250a5f4ff0076a4e56b19e40">ede_createDispatcherSystem()</a>. Race conditions would occur if another task calls <a class="el" href="ede__event_dispatcher_engine_8c.html#a92423b842e575d300f2128781b88fde4">ede_dispatcherMain()</a> for another dispatcher object and that dispatcher coincidently creates a timer and both dispatchers use the same memory pool. (Two dispatchers will always use the same memory pool if they belong to the same system!)<br  />
+ In such a scenario, you'd need to use an implementation of the memory pool interface with appropriate mutual exclusion mechanism. The default implementation of the CAN interface, <a class="el" href="mem__malloc_8c.html">mem_malloc.c</a>, allows using a guard function provided by the integration code, see argument <em>mutualExclusionGuard</em> of its constructor <a class="el" href="mem__malloc_8c.html#a0a1c7b1ed77b3ebc7ffd0cdc0def4ddd">mem_createMemoryPool()</a>.<br  />
+ Even better is either having separated memory pools for concurrently executed dispatchers (not possible for same system) or not using the timer creation API at dispatcher run time. Instead, create your timers preferably at system initialization time. </dd></dl>
+
+</div>
+</div>
 <a id="af4ea437b625b5516ebc454475917bd77" name="af4ea437b625b5516ebc454475917bd77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4ea437b625b5516ebc454475917bd77">&#9670;&nbsp;</a></span>ede_createSingleShotTimer()</h2>
 
@@ -1400,7 +1467,7 @@ The alignment of the pointer is not ensured by the implementation of the dispatc
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="dir_081dba3b7b2444bc5b95b682ee9f194a.html">eventDispatcher</a></li><li class="navelem"><a class="el" href="ede__event_dispatcher_engine_8c.html">ede_eventDispatcherEngine.c</a></li>
-    <li class="footer">Generated on Tue Oct 4 2022 15:29:09 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Mon Nov 25 2024 21:39:40 for comFramework - CAN Interface by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>
