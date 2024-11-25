@@ -74,9 +74,9 @@
     
     <!-- Generate version information - assuming that a Git commit has been done prior to
          building the archive. -->
-    <exec executable="GitWCRev.exe" dir="build/GitWCRev">
+    <exec executable="GitWCRev.exe" dir=".">
       <arg value="."/>
-      <arg value="../../doc/verTemplate.txt"/>
+      <arg value="doc/verTemplate.txt"/>
       <arg value="${tmpDir}/comFramework/version.txt"/>
       <arg value="-q"/>
     </exec>

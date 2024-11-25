@@ -52,34 +52,26 @@
   <!-- Provide access to the environment, write e.g. ${env.X} to access variable X. -->
   <property environment="env"/>
 
-  <!-- set global properties for this build -->
-  <property name="version" value="1.3"/>
-  <property name="trunkCanInterface" location="canInterface/trunk"/>
-  <property name="trunkCodeGenerator" location="codeGenerator/trunk"/>
-  <property name="trunkExcelExporter" location="excelExporter/trunk"/>
-  <property name="doc" location="doc"/>
-  <property name="dist" location="dist"/>
-
   <!-- Make a clean sweep. -->
   <target name="clean"
           description="Delete artifacts of previous build of sample integrations."
   >
     <!-- make.exe needs to be GNU make 3.82 -->
-    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/arduinoSampleIntegration">
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/arduinoSampleIntegration">
       <!-- line is the blank separated command line. -->
       <arg line="-s clean"/>
     </exec>
     <exec executable="mingw32-make"
-          dir="${trunkCanInterface}/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder"
+          dir="canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder"
     >
       <!-- line is the blank separated command line. -->
       <arg line="-s clean"/>
     </exec>
-    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/winSampleIntegration">
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/winSampleIntegration">
       <!-- line is the blank separated command line. -->
       <arg line="-s clean"/>
     </exec>
-    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/winTestMT">
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/winTestMT">
       <!-- line is the blank separated command line. -->
       <arg line="-s clean"/>
     </exec>
@@ -89,21 +81,21 @@
   <target name="build"
           description="Build the sample integrations; these are prototypical Windows and Arduino applications."
   >
-    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/arduinoSampleIntegration">
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/arduinoSampleIntegration">
       <!-- line is the blank separated command line. -->
       <arg line="-s build"/>
     </exec>
     <exec executable="mingw32-make"
-          dir="${trunkCanInterface}/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder"
+          dir="canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder"
     >
       <!-- line is the blank separated command line. -->
       <arg line="-s build"/>
     </exec>
-    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/winSampleIntegration">
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/winSampleIntegration">
       <!-- line is the blank separated command line. -->
       <arg line="-s build"/>
     </exec>
-    <exec executable="mingw32-make" dir="${trunkCanInterface}/sampleIntegrations/winTestMT">
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/winTestMT">
       <!-- line is the blank separated command line. -->
       <arg line="-s build"/>
     </exec>

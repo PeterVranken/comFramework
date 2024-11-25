@@ -3,7 +3,7 @@
 # initially set.
 
 # Prepare the environment for the run of this scripr.
-$PSScriptRoot\setEnv.ps1
+."$PSScriptRoot\setEnv.ps1"
 
 $path = $env:PATH
 $env:PATH = "$env:JAVA_HOME\bin;$env:ANT_HOME\bin;$env:GITWCREV_HOME"

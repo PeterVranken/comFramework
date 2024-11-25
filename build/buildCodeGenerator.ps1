@@ -7,7 +7,7 @@
 
 $path = $env:PATH
 $env:PATH = "$env:JAVA_HOME\bin;$env:ANT_HOME\bin;$env:GITWCREV_HOME" `
-            + ";$env:MINGW_HOME\bin;$env:UNIX_TOOLS_BIN"
+            + ";$env:MINGW_HOME\bin;$env:UNIX_TOOLS_HOME"
 #write-host "PATH: $env:PATH"
 pushd $PSScriptRoot\..\codeGenerator\src
 ant -e $args

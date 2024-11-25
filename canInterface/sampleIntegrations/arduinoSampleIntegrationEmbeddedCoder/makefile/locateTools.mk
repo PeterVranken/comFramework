@@ -6,7 +6,7 @@
 # Help on the syntax of this makefile is got at
 # http://www.gnu.org/software/make/manual/make.pdf.
 #
-# Copyright (C) 2013-2022 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+# Copyright (C) 2013-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU Lesser General Public License as published by the
@@ -56,28 +56,28 @@ ARDUINO_HOME := $(call trailingSlash,$(call w2u,$(ARDUINO_HOME)))
 # standard UNIX commands to a Windows system. We need them however for execution of this
 # makefile. By default the location of such files is not known. To run this makefile an
 # environment variable needs to point to the right location. This is checked now.
-ifeq ($(strip $(UNIX_TOOLS_HOME)),)
-  $(error Environment variable UNIX_TOOLS_HOME is not set. Required UNIX commands like \
-          rm or mkdir can't be located. Environment variable UNIX_TOOLS_HOME needs to \
+ifeq ($(strip $(UNIX_TOOLS_BIN)),)
+  $(error Environment variable UNIX_TOOLS_BIN is not set. Required UNIX commands like \
+          rm or mkdir can't be located. Environment variable UNIX_TOOLS_BIN needs to \
           point to a directory, which contains rm.exe, mkdir.exe, etc, or rm, mkdir on \
           a Linux system, respectively. These executables are distributed in many ways. \
           You may e.g. install Git (https://git-scm.com/downloads) - the installation \
           contains all needed files)
 endif
 # Ensure a trailing slash at the end of this externally set variable.
-UNIX_TOOLS_HOME := $(call trailingSlash,$(call w2u,$(UNIX_TOOLS_HOME)))
-#$(info $$(UNIX_TOOLS_HOME): $(UNIX_TOOLS_HOME))
+UNIX_TOOLS_BIN := $(call trailingSlash,$(call w2u,$(UNIX_TOOLS_BIN)))
+#$(info $$(UNIX_TOOLS_BIN): $(UNIX_TOOLS_BIN))
 
-mkdir := $(UNIX_TOOLS_HOME)mkdir$(dotExe)
-rmdir := $(UNIX_TOOLS_HOME)rmdir$(dotExe)
-cat := $(UNIX_TOOLS_HOME)cat$(dotExe)
-echo := $(UNIX_TOOLS_HOME)echo$(dotExe)
-cp := $(UNIX_TOOLS_HOME)cp$(dotExe)
-rm := $(UNIX_TOOLS_HOME)rm$(dotExe)
-gawk := $(UNIX_TOOLS_HOME)gawk$(dotExe)
+mkdir := $(UNIX_TOOLS_BIN)mkdir$(dotExe)
+rmdir := $(UNIX_TOOLS_BIN)rmdir$(dotExe)
+cat := $(UNIX_TOOLS_BIN)cat$(dotExe)
+echo := $(UNIX_TOOLS_BIN)echo$(dotExe)
+cp := $(UNIX_TOOLS_BIN)cp$(dotExe)
+rm := $(UNIX_TOOLS_BIN)rm$(dotExe)
+gawk := $(UNIX_TOOLS_BIN)gawk$(dotExe)
 awk := $(gawk)
-touch := $(UNIX_TOOLS_HOME)touch$(dotExe)
-mv := $(UNIX_TOOLS_HOME)mv$(dotExe)
+touch := $(UNIX_TOOLS_BIN)touch$(dotExe)
+mv := $(UNIX_TOOLS_BIN)mv$(dotExe)
 avr-gcc := $(ARDUINO_HOME)hardware/tools/avr/bin/avr-gcc$(dotExe)
 avr-g++ := $(ARDUINO_HOME)hardware/tools/avr/bin/avr-g++$(dotExe)
 avr-ar := $(ARDUINO_HOME)hardware/tools/avr/bin/avr-ar$(dotExe)

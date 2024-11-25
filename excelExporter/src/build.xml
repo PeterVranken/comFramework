@@ -64,12 +64,6 @@
 
   <!-- Preparatory steps of any target. -->
   <target name="init">
-    <!-- Create the time stamp -->
-    <tstamp/>
-    <!-- Create a "unique" tag for temporary file names -->
-    <tstamp>
-      <format property="timeTag" pattern="yyMMddHHmmssSSS"/>
-    </tstamp>
     <!-- Create the build directory structure used by compile -->
     <mkdir dir="bin"/>
     <!-- Check the dependencies of the different source and class files. -->
