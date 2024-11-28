@@ -214,7 +214,7 @@ generation process makes it easy to design different interface
 architectures, which can reach a similar degree of automation with
 respect to changes of the network database(s).</p>
 <h3 data-number="1.1.1" id="the-can-interface"><span class="header-section-number">1.1.1</span> The CAN interface</h3>
-<p>The operational core of the <a href="https://github.com/PeterVranken/comFramework/wiki/canInterface">CAN
+<p>The operational core of the <a href="https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface">CAN
 interface</a> is a dispatcher engine that decouples the one or more
 interrupts, which are typically used by the CAN hardware driver for
 notification of send or receive events, from the application task(s);
@@ -285,7 +285,7 @@ script and have the information in the context of your automation
 environment. The configuration of the code generation can be tailored;
 you will just render those parts of the information you really need. No
 need to develop the most complex all embracing data structure. A simple
-<a href="https://github.com/PeterVranken/comFramework/wiki/useOfDbcParser/#example-the-code-generator-as-dbc-parser-for-gnu-octave-m">example
+<a href="https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility/#example-the-code-generator-as-dbc-parser-for-gnu-octave-m">example
 for GNU Octave</a> is provided.</p>
 <h3 data-number="1.1.4" id="excelexporter-as-auxiliary-code-generator"><span class="header-section-number">1.1.4</span> excelExporter as auxiliary
 code generator</h3>
@@ -307,7 +307,7 @@ specifications, etc.</p>
 <p>The project is ready for productive use.</p>
 <ul>
 <li>The CAN interface with its dispatcher engine is distributed as
-source code; concept and how-to-use are documented in this <a href="https://github.com/PeterVranken/comFramework/wiki/canInterface">Wiki
+source code; concept and how-to-use are documented in this <a href="https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface">Wiki
 page</a>.</li>
 <li>Several compilable and runnable sample integrations of the CAN
 interface are distributed with source code and makefiles together with
@@ -348,7 +348,7 @@ as <a href="https://github.com/PeterVranken/comFramework/wiki/Installation/">Ins
 of distributed ZIP archive</a>.</p>
 <h2 data-number="1.4" id="documentation"><span class="header-section-number">1.4</span> Documentation</h2>
 <h3 data-number="1.4.1" id="whats-new"><span class="header-section-number">1.4.1</span> What&#39;s new</h3>
-<p>The CAN interface is mainly documented in this <a href="https://github.com/PeterVranken/comFramework/wiki/canInterface">Wiki
+<p>The CAN interface is mainly documented in this <a href="https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface">Wiki
 page</a>. An overview of all available documentation and of the latest
 changes is given in the related <a href="https://petervranken.github.io/comFramework/canInterface/readMe.html">readMe</a>
 file.</p>
@@ -368,30 +368,30 @@ Wiki pages:</p>
 <ul>
 <li><a href="https://github.com/PeterVranken/comFramework/wiki/Installation/">Installation
 of distributed ZIP archive</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/canInterface">The
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface">The
 CAN interface - concept and usage</a></li>
 <li><a href="https://petervranken.github.io/comFramework/canInterface/doc/doxygen/html/index.html">The
 CAN interface - Doxygen pages</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/commandLineDbcCodeGen">The
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/The-Command-Line-of-the-comFramework-DBC-Code-Generator">The
 command line of the DBC code generator</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/useOfDbcParser#Compatibility">Compatibility
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility#Compatibility">Compatibility
 of the DBC parser with real *<em>.dbc</em> files</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/prerequistesAndPitfalls">Prerequisites,
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/Prerequisites,-Limitations-and-Pitfalls">Prerequisites,
 limitations and pitfalls</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/useOfDbcParser">Reusability
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility">Reusability
 of the DBC file parser in other contexts/applications</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/conditionalCode">Options
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/Conditional-Code-Generation-vs-Generation-of-Conditional-Code">Options
 for conditional code generation</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/useOfAttributes">The
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database">The
 use of attributes</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/useOfAttributes#typical-code-architecture">A
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database#typical-code-architecture">A
 common pattern how to combine handwritten code with auto-generated code
 in a beneficial way</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/sugarOnTopOfInheritance">Sugar
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/Sugar-on-Top-of-Inheritance-or-how-to-change-the-Copyright-Notice">Sugar
 on top of inheritance or how to change the copyright notice</a></li>
 <li><a href="https://sourceforge.net/p/excelexporter/wiki/Home/">Concept
 of excelExporter</a></li>
-<li><a href="https://github.com/PeterVranken/comFramework/wiki/canToolsVsCodeGenerator">Comparison
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/SourceForge-cantools-in-Comparison-to-the-comFramework-DBC-Code-Generator">Comparison
 of this project with the SourceForge project <em>cantools</em></a></li>
 </ul>
 </body>
