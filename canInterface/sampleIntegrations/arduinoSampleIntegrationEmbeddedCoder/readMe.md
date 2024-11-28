@@ -42,7 +42,7 @@ operations are located by the makefile via these variables:
 - UNIX_TOOLS_HOME: Needs to point to a folder containing UNIX
   executables like cp, mv, mkdir 
 
-GNU make 3.81 or higher should be in the system search path.
+GNU make 3.82 or higher should be in the system search path.
 
 Once these pre-conditions are fullfilled, the build command would be
 (Windows, other systems accordingly):

@@ -1,5 +1,5 @@
 #
-# Makefile for GNU Make 3.81
+# Makefile for GNU Make 3.82
 #
 # Locate all the external tools used by the other makefile fragments.
 #

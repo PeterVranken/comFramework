@@ -33,7 +33,7 @@ aspects - new with respect to the other, elder sample integrations:
 ## Build and run the test application
 
 The sample code comes along with all source files and build scripts
-(makefile based). GNU GCC and GNU make 3.81 should be in the system
+(makefile based). GNU GCC and GNU make 3.82 should be in the system
 search path, then the build command would be (Windows, other systems
 accordingly):
 

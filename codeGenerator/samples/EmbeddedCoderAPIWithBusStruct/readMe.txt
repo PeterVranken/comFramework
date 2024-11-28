@@ -103,7 +103,7 @@ codeGenerator/doc/installation.txt, too.
 
 To make the generated C sources compilable and testable we've added the
 hand-coded compileIt/mai_main.c. The makefile is compatible with GNU make
-3.81. To successfully run the build make and gcc need to be on the system
+3.82. To successfully run the build make and gcc need to be on the system
 search path. The build has been tried with MinGW gcc.exe (GCC) 4.5.2 under
 Windows 7 and mingw-w64-x86_64-8.1.0-posix-seh-rt_v6-rev0 under Windows
 10; as a matter of experience other GCC versions and their libraries,

@@ -1,5 +1,5 @@
 #
-# Makefile for GNU Make 3.81
+# Makefile for GNU Make 3.82
 #
 # Generation of C sources (and related files) from CAN network database files.
 #

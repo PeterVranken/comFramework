@@ -1,5 +1,5 @@
 # 
-# Makefile for GNU Make 3.81
+# Makefile for GNU Make 3.82
 #
 # Included makefile fragment, which specifies some application dependent settings.
 #   The main purpose of this makefile is to specify the source file folders. Furthermore,
@@ -8,7 +8,7 @@
 # Help on the syntax of this makefile is got at
 # http://www.gnu.org/software/make/manual/make.pdf.
 #
-# Copyright (C) 2013-2022 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+# Copyright (C) 2013-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU Lesser General Public License as published by the

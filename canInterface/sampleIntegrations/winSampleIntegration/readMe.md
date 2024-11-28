@@ -18,7 +18,7 @@ and engine torque from the CAN bus and computes the current power of the
 engine. The results are printed to the console and written in a log file.
 
 The sample code comes along with all source files and build scripts
-(makefile based). GNU GCC and GNU make 3.81 should be in the system
+(makefile based). GNU GCC and GNU make 3.82 should be in the system
 search path, then the build command would be (Windows, other systems
 accordingly):
 

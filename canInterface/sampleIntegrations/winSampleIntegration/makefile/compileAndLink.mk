@@ -1,12 +1,12 @@
 #
-# Generic Makefile for GNU Make 3.81
+# Generic Makefile for GNU Make 3.82
 #
 # Compilation and linkage of C(++) code.
 #
 # Help on the syntax of this makefile is got at
 # http://www.gnu.org/software/make/manual/make.pdf.
 #
-# Copyright (C) 2012-2022 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+# Copyright (C) 2012-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 #
 # This program is free software: you can redistribute it and/or modify it
 # under the terms of the GNU Lesser General Public License as published by the
@@ -24,7 +24,7 @@
 # Preconditions
 # =============
 #
-# The makefile is intended to be executed by the GNU make utility 3.81.
+# The makefile is intended to be executed by the GNU make utility 3.82.
 #   The name of the project needs to be assigned to the makefile macro projectName, see
 # heading part of the code section of this makefile.
 # The system search path needs to contain the location of the GNU compiler/linker etc. This

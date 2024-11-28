@@ -1,5 +1,5 @@
 The files in the folder and below contain a Windows test application for
-the timer API of the CAN interface. If GCC and GNU make 3.81 are available
+the timer API of the CAN interface. If GCC and GNU make 3.82 are available
 it can be compiled using the command:
 
 make -s build
