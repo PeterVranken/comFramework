@@ -135,7 +135,7 @@ The project is ready for productive use.
 - The code generators are distributed as Java application. A number of
   samples for the [DBC code generator](https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/samples) and for [excelExporter](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples) demonstrate
   how templates can look like, which do the transformations mentioned above.
-- [GitHub Releases](https://github.com/PeterVranken/comFramework/releases)
+- [GitHub Releases](https://github.com/PeterVranken/comFramework/tree/main/releases)
   provide ZIP archives for download, which bundle all needed tools, files
   and samples in a ready-to-use folder structure.
 - More recent revisions of the software are distributed as source code in
@@ -143,9 +143,9 @@ The project is ready for productive use.
   as compiled Java \*_.jar_ files. Get for example the last recent DBC
   code generator by replacing the files _dist/_\* in your installation by
   the files from
-  <https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/dist/>.
+  <https://github.com/PeterVranken/comFramework/tree/main/tree/main/codeGenerator/dist/>.
   excelExporter files would be found
-  [here](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/dist),
+  [here](https://github.com/PeterVranken/comFramework/tree/main/tree/main/excelExporter/dist),
   respectively.
 
 Support of the project is appreciated to support more kinds of network
@@ -170,13 +170,13 @@ like a C compiler are useful. Please find the installation guide as
 
 The CAN interface is mainly documented in this [Wiki page](https://github.com/PeterVranken/comFramework/wiki/canInterface). An overview of
 all available documentation and of the latest changes is given in the
-related [readMe](https://github.com/PeterVranken/comFramework/blob/main/canInterface/readMe.md) file.
+related [readMe](https://petervranken.github.io/comFramework/canInterface/readMe.html) file.
 
 An overview of the documentation and the latest changes of the DBC code
-generator is given in the related [readMe](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/readMe.md) file.
+generator is given in the related [readMe](https://petervranken.github.io/comFramework/codeGenerator/readMe.html) file.
 
 An overview of the documentation and the latest changes of the auxiliary
-code generator excelExporter is given in the related [readMe](https://github.com/PeterVranken/comFramework/blob/main/excelExporter/readMe.md) file.
+code generator excelExporter is given in the related [readMe](https://petervranken.github.io/comFramework/excelExporter/readMe.html) file.
 
 ### Wiki pages
 
