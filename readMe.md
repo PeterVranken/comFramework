@@ -135,7 +135,7 @@ The project is ready for productive use.
 - The code generators are distributed as Java application. A number of
   samples for the [DBC code generator](https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/samples) and for [excelExporter](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples) demonstrate
   how templates can look like, which do the transformations mentioned above.
-- [GitHub Releases](https://github.com/PeterVranken/comFramework/tree/main/releases)
+- [GitHub Releases](https://github.com/PeterVranken/comFramework/releases)
   provide ZIP archives for download, which bundle all needed tools, files
   and samples in a ready-to-use folder structure.
 - More recent revisions of the software are distributed as source code in
