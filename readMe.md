@@ -143,9 +143,9 @@ The project is ready for productive use.
   as compiled Java \*_.jar_ files. Get for example the last recent DBC
   code generator by replacing the files _dist/_\* in your installation by
   the files from
-  <https://github.com/PeterVranken/comFramework/tree/main/tree/main/codeGenerator/dist/>.
+  <https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/dist/>.
   excelExporter files would be found
-  [here](https://github.com/PeterVranken/comFramework/tree/main/tree/main/excelExporter/dist),
+  [here](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/dist),
   respectively.
 
 Support of the project is appreciated to support more kinds of network
