@@ -1,8 +1,8 @@
-[TOC]
+# comFramework 2.1
 
-# comFramework 2.0 (r500, 19.01.2023) #
+CAUTION: This repository is still under construction. Please, don't use it yet!
 
-## About this project ##
+## About this project
 
 This project presents a flexible, widely customizable CAN communication
 interface for embedded applications. It binds signal based application
@@ -24,9 +24,9 @@ makes it easy to design different interface architectures, which can reach
 a similar degree of automation with respect to changes of the network
 database(s).
 
-### The CAN interface ###
+### The CAN interface
 
-The operational core of the [CAN interface](https://sourceforge.net/p/comframe/wiki/The%20CAN%20Interface/) is a dispatcher engine that
+The operational core of the [CAN interface](https://github.com/PeterVranken/comFramework/wiki/canInterface) is a dispatcher engine that
 decouples the one or more interrupts, which are typically used by the CAN
 hardware driver for notification of send or receive events, from the
 application task(s); this makes the complete data processing at the
@@ -46,7 +46,7 @@ demonstrate both techniques.
 Any number of dispatcher objects can be instantiated in order to support
 multi-threading architectures in a transparent and convenient way.
 
-### The DBC code generator ###
+### The DBC code generator
 
 The code generator consists of an open source parser for CAN network
 database files (*_.dbc_ or DBC files) with connected general purpose code
@@ -66,30 +66,30 @@ different useful representations of the information in the network files,
 like:
 
 - An HTML report with all frames, signals, attributes and all the
-  properties of these
-- An Excel file with all the same (however, only as *_.csv_)
+  properties of these.
+- An Excel file with all the same (however, only as *_.csv_).
 - C source code and related header files, which implement a CAN interface.
   The interface will contain the needed data structures, timing related
   frame processing, validation code and pack and unpack operations to
   transform signal sets to frames and vice versa. The implementation can
-  be made specific to a particular platform's requirements
-- LaTeX source code for documentation of the interface
+  be made specific to a particular platform's requirements.
+- LaTeX source code for documentation of the interface.
 - Interface definition files: If code from a model based code generation
   environment is linked to the CAN interface (e.g. MathWorks MATLAB
   with either their Embedded Coder or with dSPACE TargetLink) then a
   descripition of the signal interface is essential as these code
   generators need to be aware of the signal sets and their properties,
   data types and scaling in the first place. Our code generator can
-  generate the required M scripts or XML files
+  generate the required M scripts or XML files.
 - ASAM MCD-2 MC interface description files (*_.a2l_) if the target
   platform shall be connected to a measurement and calibration tool like
-  ETAS INCA or Vector Informatik CANape
+  ETAS INCA or Vector Informatik CANape.
 - AUTOSAR specification code (*_.arxml_). The DBC file contents can be
   rendered as an AUTOSAR software component, which connects to the
   ISignals of the COM stack, including all required application data types
-  with scaling and more information
+  with scaling and more information.
 
-### DBC parser ###
+### DBC parser
 
 In most automation environments our code generator can be used as raw DBC
 parser for whatever purpose, too. Typically, interpreted languages like
@@ -100,10 +100,10 @@ scripting language. Run the code generator, run the generated script and
 have the information in the context of your automation environment. The
 configuration of the code generation can be tailored; you will just render
 those parts of the information you really need. No need to develop the
-most complex all embracing data structure. A simple [example for GNU Octave](https://sourceforge.net/p/comframe/wiki/Reusage%20and%20standalone%20usage%20of%20DBC%20parser/#example-the-code-generator-as-dbc-parser-for-gnu-octave-m)
+most complex all embracing data structure. A simple [example for GNU Octave](https://github.com/PeterVranken/comFramework/wiki/useOfDbcParser/#example-the-code-generator-as-dbc-parser-for-gnu-octave-m)
 is provided.
 
-### excelExporter as auxiliary code generator ###
+### excelExporter as auxiliary code generator
 
 A second, auxiliary code generator is part of the framework. This is the
 Java application excelExporter. The idea is nearly the same as for the
@@ -119,35 +119,34 @@ variables, diagnostic interface items, etc. and can be translated into
 C/C++ interface implementations, documentation, ASAM MCD-2 MC or
 AUTOSAR interface specifications, etc.
 
-## Status of the project ##
+## Status of the project
 
 The project is ready for productive use.
 
 - The CAN interface with its dispatcher engine is distributed as source
-  code; concept and how-to-use are documented in this [Wiki page](https://sourceforge.net/p/comframe/wiki/The%20CAN%20Interface/)
+  code; concept and how-to-use are documented in this [Wiki page](https://github.com/PeterVranken/comFramework/wiki/canInterface).
 - Several compilable and runnable sample integrations of the CAN interface
   are distributed with source code and makefiles together with the
   dispatcher engine. There are integrations for Windows, there's an
   Arduino ATmega 2560 real time integration and an integration with the
   MathWorks Embedded Coder. A complete runnable real-time application for
   MPC5748G with CAN driver and integrated CAN interface can be found at
-  [GitHub](https://github.com/PeterVranken/DEVKIT-MPC5748G/tree/master/samples/CAN)
+  [GitHub](https://github.com/PeterVranken/DEVKIT-MPC5748G/tree/master/samples/CAN).
 - The code generators are distributed as Java application. A number of
   samples for the [DBC code generator](https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/samples) and for [excelExporter](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples) demonstrate
-  how templates can look like, which do the transformations mentioned above
-- The [download page](https://sourceforge.net/p/comframe/files) at SourceForge provides a ZIP archive for download,
-  which bundles all needed tools, files and samples in a ready-to-use
-  folder structure. The archive contains the files of revision r500,
-  19.01.2023, of the SourceForge [SVN repository](https://sourceforge.net/p/comframe/code/HEAD/tree). The elder revision
-  1.51 (r430, 02.03.2022) is still available, too. It is the last update
-  of the software from before the redesign of the CAN interface
+  how templates can look like, which do the transformations mentioned above.
+- [GitHub Releases](https://github.com/PeterVranken/comFramework/releases)
+  provide ZIP archives for download, which bundle all needed tools, files
+  and samples in a ready-to-use folder structure.
 - More recent revisions of the software are distributed as source code in
   this repository and, as far as the code generation tools are concerned,
-  as compiled Java \*_.jar_ files. Get for example the last recent DBC code
-  generator by replacing the files _dist/_\* in your installation by the
-  files from
+  as compiled Java \*_.jar_ files. Get for example the last recent DBC
+  code generator by replacing the files _dist/_\* in your installation by
+  the files from
   <https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/dist/>.
-  excelExporter files would be found [here](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/dist), respectively
+  excelExporter files would be found
+  [here](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/dist),
+  respectively.
 
 Support of the project is appreciated to support more kinds of network
 databases. For now, we are restricted to the DBC format. However, this
@@ -159,17 +158,17 @@ a common data model for all of these buses and network files needs to be
 developed so that the parser becomes a configurable choice but the
 templates can be kept widely independent of the input format.
 
-## Installation ##
+## Installation
 
 comFramework is mainly distributed as a ZIP archive. Some external tools
 like a C compiler are useful. Please find the installation guide as
-[Installation of distributed ZIP archive](https://sourceforge.net/p/comframe/wiki/Installation/).
+[Installation of distributed ZIP archive](https://github.com/PeterVranken/comFramework/wiki/Installation/).
 
-## Documentation ##
+## Documentation
 
-### What's new ###
+### What's new
 
-The CAN interface is mainly documented in this [Wiki page](https://sourceforge.net/p/comframe/wiki/The%20CAN%20Interface/). An overview of
+The CAN interface is mainly documented in this [Wiki page](https://github.com/PeterVranken/comFramework/wiki/canInterface). An overview of
 all available documentation and of the latest changes is given in the
 related [readMe](https://github.com/PeterVranken/comFramework/blob/main/canInterface/readMe.md) file.
 
@@ -179,27 +178,27 @@ generator is given in the related [readMe](https://github.com/PeterVranken/comFr
 An overview of the documentation and the latest changes of the auxiliary
 code generator excelExporter is given in the related [readMe](https://github.com/PeterVranken/comFramework/blob/main/excelExporter/readMe.md) file.
 
-### Wiki pages ###
+### Wiki pages
 
-A growing source of documentation are the Wiki pages of the project,
-please refer to <https://sourceforge.net/p/comframe/wiki/browse_pages/>.
-The Wiki pages shade a light at some most relevant, selected issues; a
-comprehensive, self-contained (printable) manual is not planned.
+A growing source of documentation are the
+[Wiki pages](https://github.com/PeterVranken/comFramework/wiki) of the
+project. The Wiki pages shade a light at some most relevant, selected
+issues; a comprehensive, self-contained (printable) manual is not planned.
 
 As of today, November 2024, we have the following discussions in the Wiki
 pages:
 
-- [Installation of distributed ZIP archive](https://sourceforge.net/p/comframe/wiki/Installation/)
-- [The CAN interface - concept and usage](https://sourceforge.net/p/comframe/wiki/The%20CAN%20Interface/)
-- [The CAN interface - Doxygen pages](https://svn.code.sf.net/p/comframe/code/canInterface/trunk/doc/doxygen/html/index.html)
-- [The command line of the DBC code generator](https://sourceforge.net/p/comframe/wiki/Command%20Line%20DBC%20Code%20Generator/)
-- [Compatibility of the DBC parser with real *_.dbc_ files](https://sourceforge.net/p/comframe/wiki/Reusage%20and%20standalone%20usage%20of%20DBC%20parser/#compatibility)
-- [Prerequisites, limitations and pitfalls](https://sourceforge.net/p/comframe/wiki/Prerequisites%2C%20Limitations%20and%20Pitfalls/)
-- [Reusability of the DBC file parser in other contexts/applications](https://sourceforge.net/p/comframe/wiki/Reusage%20and%20standalone%20usage%20of%20DBC%20parser/)
-- [Options for conditional code generation](https://sourceforge.net/p/comframe/wiki/Conditional%20code/) 
-- [The use of attributes](https://sourceforge.net/p/comframe/wiki/Attributes%20in%20the%20network%20database/)
+- [Installation of distributed ZIP archive](https://github.com/PeterVranken/comFramework/wiki/Installation/)
+- [The CAN interface - concept and usage](https://github.com/PeterVranken/comFramework/wiki/canInterface)
+- [The CAN interface - Doxygen pages](https://petervranken.github.io/comFramework/canInterface/doc/doxygen/html/index.html)
+- [The command line of the DBC code generator](https://github.com/PeterVranken/comFramework/wiki/commandLineDbcCodeGen)
+- [Compatibility of the DBC parser with real *_.dbc_ files](https://github.com/PeterVranken/comFramework/wiki/useOfDbcParser#Compatibility)
+- [Prerequisites, limitations and pitfalls](https://github.com/PeterVranken/comFramework/wiki/prerequistesAndPitfalls)
+- [Reusability of the DBC file parser in other contexts/applications](https://github.com/PeterVranken/comFramework/wiki/useOfDbcParser)
+- [Options for conditional code generation](https://github.com/PeterVranken/comFramework/wiki/conditionalCode) 
+- [The use of attributes](https://github.com/PeterVranken/comFramework/wiki/useOfAttributes)
 - [A common pattern how to combine handwritten code with auto-generated
-  code in a beneficial way](https://sourceforge.net/p/comframe/wiki/Attributes%20in%20the%20network%20database/#typical-code-architecture)
-- [Sugar on top of inheritance or how to change the copyright notice](https://sourceforge.net/p/comframe/wiki/Sugar%20on%20top%20of%20Inheritance%20or%20how%20to%20change%20the%20copyright%20notice/)
+  code in a beneficial way](https://github.com/PeterVranken/comFramework/wiki/useOfAttributes#typical-code-architecture)
+- [Sugar on top of inheritance or how to change the copyright notice](https://github.com/PeterVranken/comFramework/wiki/sugarOnTopOfInheritance)
 - [Concept of excelExporter](https://sourceforge.net/p/excelexporter/wiki/Home/)
-- [Comparison of this project with the other SourceForge project *cantools*](https://sourceforge.net/p/comframe/wiki/cantools%20versus%20comFramework's%20Code%20Generator/)
+- [Comparison of this project with the SourceForge project *cantools*](https://github.com/PeterVranken/comFramework/wiki/canToolsVsCodeGenerator)

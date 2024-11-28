@@ -1,6 +1,6 @@
-comFramework 2.0
-Copyright (C) 2015-2023, Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
-https://github.com/PeterVranken/comFramework, $WCREV$, $WCDATE=%d.%m.%Y %H:%M:%S$
+comFramework 2.1 (Build $WCLOGCOUNT$, $WCDATE=%d.%m.%Y %H:%M:%S$)
+Copyright (C) 2015-2024, Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+https://github.com/PeterVranken/comFramework
 
 This program is free software: you can redistribute it and/or modify it
 under the terms of the GNU Lesser General Public License as published by the
