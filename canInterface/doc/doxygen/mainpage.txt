@@ -12,6 +12,6 @@ types. Use it as a reference book while working on your embedding
 software.
 
 For everything else, please refer to the <a
-href="https://sourceforge.net/p/comframe/wiki/Home/">comFramework Wiki pages</a>.
+href="https://github.com/PeterVranken/comFramework/wiki">comFramework Wiki pages</a>.
 
 */
