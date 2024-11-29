@@ -93,9 +93,9 @@ structure that are accessible from the StringTemplate V4 templates. The
 data structure is deeply nested, and actually, it are even two data
 structures, which are passed to the rendering process:
 
--   The parsed information forms an object of class Cluster
+-   The parsed information forms an object of class Cluster.
 -   The information about output files plus some environmental information
-    is put into an object of class Info
+    is put into an object of class Info.
 
 You will study the Javadoc pages to see, which pieces of information to be
 used from within a template.

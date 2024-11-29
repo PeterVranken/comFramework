@@ -9,13 +9,9 @@ general purpose text rendering application for Excel spreadsheets.
 
 excelExporter is the auxiliary code generator from the
 [comFramework](https://github.com/PeterVranken/comFramework/tree/main/)
-project. However, the use of excelExporter is in no way restricted to the
-context of CAN interface generation in embedded, automotive software
-development. Because of its generality we decided to publish it as
-independent SourceForge project. This relates to the binaries and the
-documentation. The source code and the build scripts remain part of
-project comFramework; some of the links down here will thus point to that
-other project.
+project. However, excelExporter is quite general and its use is in no way
+restricted to the context of CAN interface generation in embedded,
+automotive software development:
 
 The principal aim of the tool is supporting automation tasks in software
 development environments. In the context of the comFramework project this
@@ -38,10 +34,9 @@ contained sheets and columns.)
 
 Secondary, you will define a list of output files. The specification of
 each output file is associated with the specification of a StringTemplate
-V4 template file. The template controls the output generation and this is
-how the same information is rendered once as HTML code and once as - for
-example - C program fragment.
-
+V4 template group file. The templates control the output generation and
+this is how the same information is rendered, e.g., once as HTML code and
+once as C program fragment.
 
 ## Documentation
 
@@ -65,21 +60,21 @@ representation of an object in the parameter tree of the application. This
 is the model behind the parameter tree:
 
 - Root elements are either Excel input file specifications, specifications
-  of generated output files or worksheet templates
+  of generated output files or worksheet templates.
 - The input file specification contains the Excel file name and it has any
-  number of worksheet selection objects as children
+  number of worksheet selection objects as children.
     - A worksheet selection specifies one or more worksheets for parsing.
       All sheets or any sub-set of sheets of a workbook can be parsed.
-      Selection can be made by name or by index
+      Selection can be made by name or by index.
 - An output file specification contains the file name and information
-  about the StringTemplate V4 template to be applied
+  about the StringTemplate V4 template to be applied.
 - A worksheet template is a set of rules how to interpret one or more
   worksheets. It can be applied to a particular worksheet or to several of
   those, from either one or from several input files. It describes how the
   data of a worksheet is organized in terms of groups and sub-groups. It
-  has any number of column attributes objects as children
+  has any number of column attributes objects as children.
     - A column attributes object specifies properties of a column, like
-      name and sort order
+      name and sort order.
 
 Besides the command line arguments from a group or context there are
 "traditional" command line arguments, which relate to the run of the
@@ -115,9 +110,9 @@ data structure that are accessible from the StringTemplate V4 templates.
 The data structure is deeply nested, and actually, it are even two data
 structures, which are passed to the rendering process:
 
--   The parsed information forms an object of class *Cluster*
+-   The parsed information forms an object of class *Cluster*.
 -   The information about output files plus some environmental information
-    is put into an object of class *Info*
+    is put into an object of class *Info*.
 
 You will study the Javadoc pages to see, which pieces of information to be
 used from within a template.

@@ -208,13 +208,9 @@ application that can translate the information found in one or more
 Excel workbooks into manifold textual representations. excelExporter is
 a general purpose text rendering application for Excel spreadsheets.</p>
 <p>excelExporter is the auxiliary code generator from the <a href="https://github.com/PeterVranken/comFramework/tree/main/">comFramework</a>
-project. However, the use of excelExporter is in no way restricted to
-the context of CAN interface generation in embedded, automotive software
-development. Because of its generality we decided to publish it as
-independent SourceForge project. This relates to the binaries and the
-documentation. The source code and the build scripts remain part of
-project comFramework; some of the links down here will thus point to
-that other project.</p>
+project. However, excelExporter is quite general and its use is in no
+way restricted to the context of CAN interface generation in embedded,
+automotive software development:</p>
 <p>The principal aim of the tool is supporting automation tasks in
 software development environments. In the context of the comFramework
 project this targets the handling of data dictionaries and interfaces
@@ -234,9 +230,9 @@ are supported. (&quot;Format&quot; refers to the structure of the Excel files wi
 respect to contained sheets and columns.)</p>
 <p>Secondary, you will define a list of output files. The specification
 of each output file is associated with the specification of a
-StringTemplate V4 template file. The template controls the output
-generation and this is how the same information is rendered once as HTML
-code and once as - for example - C program fragment.</p>
+StringTemplate V4 template group file. The templates control the output
+generation and this is how the same information is rendered, e.g., once
+as HTML code and once as C program fragment.</p>
 <h2 data-number="1.2" id="documentation"><span class="header-section-number">1.2</span> Documentation</h2>
 <h3 data-number="1.2.1" id="command-line-interface-of-excelexporter"><span class="header-section-number">1.2.1</span> Command line interface of
 excelExporter</h3>
@@ -257,24 +253,24 @@ representation of an object in the parameter tree of the application.
 This is the model behind the parameter tree:</p>
 <ul>
 <li>Root elements are either Excel input file specifications,
-specifications of generated output files or worksheet templates</li>
+specifications of generated output files or worksheet templates.</li>
 <li>The input file specification contains the Excel file name and it has
-any number of worksheet selection objects as children
+any number of worksheet selection objects as children.
 <ul>
 <li>A worksheet selection specifies one or more worksheets for parsing.
 All sheets or any sub-set of sheets of a workbook can be parsed.
-Selection can be made by name or by index</li>
+Selection can be made by name or by index.</li>
 </ul></li>
 <li>An output file specification contains the file name and information
-about the StringTemplate V4 template to be applied</li>
+about the StringTemplate V4 template to be applied.</li>
 <li>A worksheet template is a set of rules how to interpret one or more
 worksheets. It can be applied to a particular worksheet or to several of
 those, from either one or from several input files. It describes how the
 data of a worksheet is organized in terms of groups and sub-groups. It
-has any number of column attributes objects as children
+has any number of column attributes objects as children.
 <ul>
 <li>A column attributes object specifies properties of a column, like
-name and sort order</li>
+name and sort order.</li>
 </ul></li>
 </ul>
 <p>Besides the command line arguments from a group or context there are
@@ -305,9 +301,9 @@ templates. The data structure is deeply nested, and actually, it are
 even two data structures, which are passed to the rendering process:</p>
 <ul>
 <li>The parsed information forms an object of class
-<em>Cluster</em></li>
+<em>Cluster</em>.</li>
 <li>The information about output files plus some environmental
-information is put into an object of class <em>Info</em></li>
+information is put into an object of class <em>Info</em>.</li>
 </ul>
 <p>You will study the Javadoc pages to see, which pieces of information
 to be used from within a template.</p>

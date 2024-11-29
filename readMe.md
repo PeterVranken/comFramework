@@ -1,7 +1,5 @@
 # comFramework 2.1
 
-CAUTION: This repository is still under construction. Please, don't use it yet!
-
 ## About this project
 
 This project presents a flexible, widely customizable CAN communication
