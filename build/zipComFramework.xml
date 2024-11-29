@@ -80,16 +80,10 @@
       <arg value="${tmpDir}/comFramework/version.txt"/>
       <arg value="-q"/>
     </exec>
-<!--
-    <exec executable="cmd.exe" dir="doc/wiki">
-      <! line is the blank separated command line. >
-      <arg line="/c updateGitRefs.cmd"/>
-    </exec>
--->
     <copy file="lgpl.txt" tofile="${tmpDir}/comFramework/lgpl.txt"/>
-    <copy file="doc/comFramework@Internet.html" tofile="${tmpDir}/comFramework/comFramework@Internet.html"/>
-    <copy file="doc/wiki/readMe.md" tofile="${tmpDir}/comFramework/readMe.md"/>
-    <copy file="doc/wiki/readMe.html" tofile="${tmpDir}/comFramework/readMe.html"/>
+    <copy file="doc/comFramework@Internet.html" tofile="${tmpDir}/comFramework/doc/comFramework@Internet.html"/>
+    <copy file="readMe.md" tofile="${tmpDir}/comFramework/readMe.md"/>
+    <copy file="readMe.html" tofile="${tmpDir}/comFramework/readMe.html"/>
 
     <copy todir="${tmpDir}/comFramework/canInterface">
       <fileset dir="canInterface">
@@ -137,8 +131,8 @@
     <delete verbose="false" file="${tmpDir}/comFramework/canInterface/sampleIntegrations/winSampleIntegration/code/codeGen/makeTag_generateCode"/>
     <delete verbose="false" file="${tmpDir}/comFramework/canInterface/sampleIntegrations/winTestMT/code/canApi/makeTag_generateCode"/>
     
-    <copy file="doc/wiki/installation.md" todir="${tmpDir}/comFramework/doc"/>
-    <copy file="doc/wiki/installation.html" todir="${tmpDir}/comFramework/doc"/>
+    <!-- <copy file="doc/installation.md" todir="${tmpDir}/comFramework/doc"/> -->
+    <copy file="doc/installation.html" todir="${tmpDir}/comFramework/doc"/>
     
     <delete verbose="true" file="dist/comFramework.zip"/>
     <zip destfile="dist/comFramework.zip"
