@@ -4,7 +4,7 @@ the use of StringTemplate V4's date renderer. Date and time designations
 in Excel spreadsheet can be rendered in virtually any format, using a
 format string mechanism similar to the Java class
 java.text.SimpleDateFormat (e.g.
-https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html).
+<https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html>).
         
 This sample demonstrates some of the various ways to render dates and
 times.

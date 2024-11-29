@@ -4,15 +4,15 @@ Excel files in this directory.
 
 The Excel file simpleTable.xls implements a flat table. excelExporter is
 capable to properly interpret the file contents with its standard
-settings. A single --input-file-name on the command line suffices to read
-the file.
+settings. A single `--input-file-name` on the command line suffices to
+read the file.
 
 The Excel file canComSpec.xlsx contains more complex data. The workbook
 models a CAN database, where a bus has frames and a frame has signals and
 a signal can have named values.
 
 The Excel file contents are interpreted in a structured way; the structure
-of the internal data model (i.e. the parse tree) that is passed to the
+of the internal data model (i.e., the parse tree) that is passed to the
 rendering process is superimposed by the grouping related command line
 arguments passed to the application. Successful interpretation of the
 Excel file requires a strict correspondence between the design of the
@@ -20,9 +20,9 @@ Excel table and according command line arguments of excelExporter;
 excelExporter can't figure this out itself!
 
 The other files in folder HTML have been downloaded from
-https://gallery.technet.microsoft.com/scriptcenter/Tree-View-HTML-Design-in-5-5c04fd13#content
+<https://gallery.technet.microsoft.com/scriptcenter/Tree-View-HTML-Design-in-5-5c04fd13#content>
 on Jan 11, 2016. The concept of the generated HTML code has been taken
-from this Internet site, too. Please refer to HTML/readMe.txt for further
+from this Internet site, too. Please refer to `HTML/readMe.txt` for further
 details.
 
 The intend of this sample is to demonstrate how structured data can be
@@ -41,24 +41,24 @@ excelExporter.)
 Re-usability of the StringTemplate V4 templates is the only reason why the
 templates aren't a mirror of the data structure implemented in the Excel
 input file: If we had designed the HTML particularly for the CAN
-specification canComSpec.xlsx then we would have taken specific titles
+specification `canComSpec.xlsx` then we would have taken specific titles
 like bus, frame and signal instead of "Group X" for the nodes of the tree
 and we wouldn't have implemented the rendering fully recursively. Instead
 we'd implemented the two or three levels of group nesting only and had
 outermost emitted an error if found deeper nesting.
 
 The code generation can be repeated by running the Windows script
-runTreeView.cmd from this working directory. Repeating the code generation
-should be tried as kind of installation test of the application
+`runTreeView.cmd` from this working directory. Repeating the code
+generation should be tried as kind of installation test of the application
 excelExporter.
 
 If you want to run the application from another working folder then you
-need to ensure that the environment variable EXCELEXPORTER_HOME is
+need to ensure that the environment variable `EXCELEXPORTER_HOME` is
 properly set. Please refer to the installation notes of excelExporter for
 details.
 
 You can open the generated HTML file by a double-click on the shortcut
-treeView.html in this directory.
+`treeView.html` in this directory.
 
 All Windows scripts are trivial; porting them to Linux or Mac OS is
 straightforward.
