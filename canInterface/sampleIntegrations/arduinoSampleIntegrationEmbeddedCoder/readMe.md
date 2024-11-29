@@ -149,7 +149,7 @@ all operations on the signals just like that in fixed point operations. No
 floating point operations are involved.
 
 The APSW is nearly identical to the code generator sample
-[EmbeddedCoderAPIWithBusStruct](https://github.com/PeterVranken/comFramework/codeGenerator/samples/EmbeddedCoderAPIWithBusStruct "GitHub, codeGenerator").
+[EmbeddedCoderAPIWithBusStruct](https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/samples/EmbeddedCoderAPIWithBusStruct "GitHub, codeGenerator").
 Refer to this sample and read file *readMe.txt* to get more details about
 the configuration of the Simulink/Embedded Coder model with help of MATLAB
 script files that are auto-coded from the DBC files.
