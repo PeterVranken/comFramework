@@ -158,9 +158,14 @@ templates can be kept widely independent of the input format.
 
 ## Installation
 
-comFramework is mainly distributed as a ZIP archive. Some external tools
-like a C compiler are useful. Please find the installation guide as
-[Installation of distributed ZIP archive](https://github.com/PeterVranken/comFramework/wiki/Installation/).
+comFramework is distributed as a ZIP archive. The installation means
+extracting the archive, providing a Java JRE and setting a few environment
+variables.
+
+Please find the installation guide 
+[online in GitHub](https://github.com/PeterVranken/comFramework/wiki/Installation/)
+or as file [_comFramework/doc/installation.html_](doc/installation.html)
+after extracting the archive.
 
 ## Documentation
 

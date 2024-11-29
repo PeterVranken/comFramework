@@ -16,17 +16,22 @@ The downloaded comFramework archive contains:
 -   Many code generators samples, that demonstrate how to write useful
     code generation templates.
 
-The source files of the CAN interface don't need any installation (with
-the trivial exception of a text editor to open and read them).
+The source files of the CAN interface don't need any installation. (With
+the trivial exception of a text editor to open and read them.)
 
 The DBC code generator is always needed. Its installation means to provide
-a Java runtime environment, 1.8 or higher, to set an environment variable
-and optionally to extend the system's search path.
+a Java runtime environment 8 (aka 1.8) or higher, to set two environment
+variables and optionally to extend the system's search path.
 
-excelExporter, the auxiliary code generator is not essential but useful.
-Its installation means to provide a Java runtime environment, 1.8 or
-higher, to set an environment variable and optionally to extend the
-system's search path.
+excelExporter, the auxiliary code generator, is not essential but useful.
+excelExporter uses the same Java runtime environment as the DBC code
+generator. The additional installation effort is no more than setting an
+environment variable and optionally to extend the system's search path.
+
+Having this done, productive work with comFramework can already begin
+&ndash; the rest is optional: A Java JDK and C (cross) compilers are
+(only) needed to build the comFramework tools from the Java source code or
+to build the sample integrations for deeper investigation.
 
 The sample integrations come along with the generated C source code. They
 are mainly meant as instructive sample code. An installation of tools is
@@ -45,17 +50,6 @@ tested; see
 for details. The file can be found locally as
 *comFramework/canInterface/sampleIntegrations/winTestMT/whichCCompilerToUse.html*.
 
-Compilation of the Windows samples has been done under Windows 7 and 10.
-The code is free of specific operating system calls and only uses
-functions from the GCC libraries. As these are widely operating system
-independent the sample should compile and run under other Windows
-versions, Linux and Mac OS as well; this has however never been tested and
-as a matter of experience most often there are some minor
-incompatibilities, which have to be sorted out first - just give it a try.
-
-Using another compiler than GCC will mean code changes in the application
-interface, command line evaluation in the first place.
-
 All C compilation and related operations is controlled from makefiles,
 which need the MinGW port of GNU make 3.82 or higher. If you type "make
 --version" in a shell window this revision of make needs to respond. Other
@@ -71,11 +65,11 @@ downloaded here <https://jdk.java.net/23/> (visited November 2024).
 After installing the Java package, you need to make the executables
 accessible. Either:
 
-- extend the Windows search path. Add the path to the folder containing
-  java.exe to environment variable PATH
-- create a new environment variable COMFRAMEWORK\_JAVA\_HOME and assign
+- Extend the Windows search path. Add the path to the folder containing
+  java.exe to environment variable PATH.
+- Create a new environment variable COMFRAMEWORK\_JAVA\_HOME and assign
   the Java JRE installation path. The right path is the one, which
-  contains bin\\java.exe
+  contains bin\\java.exe.
 
 Either of the two may be done globally and persistently or locally in the
 startup scripting of your project, which makes use of comFramework.
@@ -86,9 +80,8 @@ The installation of the main code generator is described in detail in file
 [installation.html](https://petervranken.github.io/comFramework/codeGenerator/doc/installation.html); the file can be found locally as
 *comFramework/codeGenerator/doc/installation.html*.
 
-Please refer to the files readMe.txt in the root directory of any of the
-samples, which come along with the code generator for more details on how
-to run the code generator.
+For more details on running the code generator, see the readMe.md files in
+the root directory of the examples that come with the code generator. 
 
 # excelExporter
 
@@ -96,16 +89,15 @@ The installation of the auxiliary code generator excelExporter is
 described in detail in file [installation.html](https://petervranken.github.io/comFramework/excelExporter/doc/installation.html); the file can be found locally as
 *comFramework/excelExporter/doc/installation.html*.
 
-Please refer to the files readMe.txt in the root directory of any of the
-samples, which come along with excelExporter for more details on how to
-run excelExporter.
+For more details on running the code generator, see the readMe.md files in
+the root directory of the examples that come with excelExporter. 
 
 # Arduino sample integrations
 
-Arduino 1.8.19 needs to be installed for compilation of the samples and even
-for upload of the pre-compiled binaries. (The GCC avr tools are taken from the
-Arduino installation.) Please refer to <http://www.arduino.cc/> (visited
-November 2024).
+Arduino 1.8.19 needs to be installed for compilation of the Arduino
+samples and even for upload of the pre-compiled binaries. (The GCC avr
+tools are taken from the Arduino installation.) Please refer to
+<http://www.arduino.cc/> (visited November 2024).
 
 Caution: Do not install the elder revision Arduino 1.6.5: This package did
 not contain all required GCC avr tools.
@@ -122,8 +114,8 @@ In a shell window type:
     make --version
 
 The MinGW port of GNU make 3.82 should respond. Now CD to one of the root
-directories comFramework/canInterface/sampleIntegrations/arduinoSampleIntegration
-or comFramework/canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder
+directories *comFramework/canInterface/sampleIntegrations/arduinoSampleIntegration*
+or *comFramework/canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder*
 of the Arduino samples and type:
 
     make help
@@ -146,9 +138,21 @@ The GNU C compiler GCC (32 or 64 Bit, e.g.,
 mingw-i686-8.1.0-release-win32-dwarf-rt_v6-rev0 or
 mingw-w64-x86_64-8.1.0-posix-seh-rt_v6-rev0) needs to be installed.
 
+Compilation of the Windows samples has been done under Windows 7 and 10.
+The code is free of specific operating system calls and only uses
+functions from the GCC libraries. As these are widely operating system
+independent the sample should compile and run under other Windows
+versions, Linux and Mac OS as well; this has however never been tested and
+as a matter of experience most often there are some minor
+incompatibilities, which have to be sorted out first &ndash; just give it
+a try.
+
+Using another compiler than GCC will mean code changes in the application
+interface, command line evaluation in the first place.
+
 On principle, the makefiles are prepared to support the compilation under
 Linux and Mac OS as well. If problems appear you should first have a look
-into sub-makefile locateTools.mk, which is responsible to find the paths
+into sub-makefile *locateTools.mk*, which is responsible to find the paths
 to the executables. There are different configuration possibilities to
 find the tools either via system search path or via environment variable
 settings. Maybe you need to alter this configuration first. The same holds
@@ -156,8 +160,8 @@ if you have different GCC revisions installed and want to switch between
 them.
 
 If MinGW GNU make 3.82 and GCC are installed then you can CD to the root
-directory comFramework/canInterface/sampleIntegrations/winSampleIntegration
-or comFramework/canInterface/sampleIntegrations/winTestMT of the Windows
+directory *comFramework/canInterface/sampleIntegrations/winSampleIntegration*
+or *comFramework/canInterface/sampleIntegrations/winTestMT* of the Windows
 sample integrations and type:
 
     make help

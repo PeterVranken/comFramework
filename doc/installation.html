@@ -198,15 +198,21 @@ support the interface design.</li>
 <li>Many code generators samples, that demonstrate how to write useful
 code generation templates.</li>
 </ul>
-<p>The source files of the CAN interface don&#39;t need any installation
-(with the trivial exception of a text editor to open and read them).</p>
+<p>The source files of the CAN interface don&#39;t need any installation.
+(With the trivial exception of a text editor to open and read them.)</p>
 <p>The DBC code generator is always needed. Its installation means to
-provide a Java runtime environment, 1.8 or higher, to set an environment
-variable and optionally to extend the system&#39;s search path.</p>
-<p>excelExporter, the auxiliary code generator is not essential but
-useful. Its installation means to provide a Java runtime environment,
-1.8 or higher, to set an environment variable and optionally to extend
-the system&#39;s search path.</p>
+provide a Java runtime environment 8 (aka 1.8) or higher, to set two
+environment variables and optionally to extend the system&#39;s search
+path.</p>
+<p>excelExporter, the auxiliary code generator, is not essential but
+useful. excelExporter uses the same Java runtime environment as the DBC
+code generator. The additional installation effort is no more than
+setting an environment variable and optionally to extend the system&#39;s
+search path.</p>
+<p>Having this done, productive work with comFramework can already begin
+– the rest is optional: A Java JDK and C (cross) compilers are (only)
+needed to build the comFramework tools from the Java source code or to
+build the sample integrations for deeper investigation.</p>
 <p>The sample integrations come along with the generated C source code.
 They are mainly meant as instructive sample code. An installation of
 tools is not required if this suffices, if there&#39;s no need or intention
@@ -221,16 +227,6 @@ and 64 Bit versions are supported but only a few versions of GCC have
 been tested; see <a href="https://petervranken.github.io/comFramework/canInterface/sampleIntegrations/winTestMT/whichCCompilerToUse.html">whichCCompilerToUse.html</a>
 for details. The file can be found locally as
 <em>comFramework/canInterface/sampleIntegrations/winTestMT/whichCCompilerToUse.html</em>.</p>
-<p>Compilation of the Windows samples has been done under Windows 7 and
-10. The code is free of specific operating system calls and only uses
-functions from the GCC libraries. As these are widely operating system
-independent the sample should compile and run under other Windows
-versions, Linux and Mac OS as well; this has however never been tested
-and as a matter of experience most often there are some minor
-incompatibilities, which have to be sorted out first - just give it a
-try.</p>
-<p>Using another compiler than GCC will mean code changes in the
-application interface, command line evaluation in the first place.</p>
 <p>All C compilation and related operations is controlled from
 makefiles, which need the MinGW port of GNU make 3.82 or higher. If you
 type &quot;make --version&quot; in a shell window this revision of make needs to
@@ -245,11 +241,11 @@ November 2024).</p>
 <p>After installing the Java package, you need to make the executables
 accessible. Either:</p>
 <ul>
-<li>extend the Windows search path. Add the path to the folder
-containing java.exe to environment variable PATH</li>
-<li>create a new environment variable COMFRAMEWORK_JAVA_HOME and assign
+<li>Extend the Windows search path. Add the path to the folder
+containing java.exe to environment variable PATH.</li>
+<li>Create a new environment variable COMFRAMEWORK_JAVA_HOME and assign
 the Java JRE installation path. The right path is the one, which
-contains bin\java.exe</li>
+contains bin\java.exe.</li>
 </ul>
 <p>Either of the two may be done globally and persistently or locally in
 the startup scripting of your project, which makes use of
@@ -259,21 +255,21 @@ comFramework.</p>
 file <a href="https://petervranken.github.io/comFramework/codeGenerator/doc/installation.html">installation.html</a>;
 the file can be found locally as
 <em>comFramework/codeGenerator/doc/installation.html</em>.</p>
-<p>Please refer to the files readMe.txt in the root directory of any of
-the samples, which come along with the code generator for more details
-on how to run the code generator.</p>
+<p>For more details on running the code generator, see the readMe.md
+files in the root directory of the examples that come with the code
+generator.</p>
 <h1 data-number="4" id="excelexporter"><span class="header-section-number">4</span> excelExporter</h1>
 <p>The installation of the auxiliary code generator excelExporter is
 described in detail in file <a href="https://petervranken.github.io/comFramework/excelExporter/doc/installation.html">installation.html</a>;
 the file can be found locally as
 <em>comFramework/excelExporter/doc/installation.html</em>.</p>
-<p>Please refer to the files readMe.txt in the root directory of any of
-the samples, which come along with excelExporter for more details on how
-to run excelExporter.</p>
+<p>For more details on running the code generator, see the readMe.md
+files in the root directory of the examples that come with
+excelExporter.</p>
 <h1 data-number="5" id="arduino-sample-integrations"><span class="header-section-number">5</span> Arduino sample integrations</h1>
-<p>Arduino 1.8.19 needs to be installed for compilation of the samples
-and even for upload of the pre-compiled binaries. (The GCC avr tools are
-taken from the Arduino installation.) Please refer to <a href="http://www.arduino.cc/">http://www.arduino.cc/</a> (visited
+<p>Arduino 1.8.19 needs to be installed for compilation of the Arduino
+samples and even for upload of the pre-compiled binaries. (The GCC avr
+tools are taken from the Arduino installation.) Please refer to <a href="http://www.arduino.cc/">http://www.arduino.cc/</a> (visited
 November 2024).</p>
 <p>Caution: Do not install the elder revision Arduino 1.6.5: This
 package did not contain all required GCC avr tools.</p>
@@ -286,8 +282,9 @@ variable such that GNU MinGW make 3.82 is found when typing &quot;make&quot;.</p
 <pre><code>make --version</code></pre>
 <p>The MinGW port of GNU make 3.82 should respond. Now CD to one of the
 root directories
-comFramework/canInterface/sampleIntegrations/arduinoSampleIntegration or
-comFramework/canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder
+<em>comFramework/canInterface/sampleIntegrations/arduinoSampleIntegration</em>
+or
+<em>comFramework/canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder</em>
 of the Arduino samples and type:</p>
 <pre><code>make help
 make -s clean
@@ -303,19 +300,29 @@ modifications of the makefiles.</p>
 <p>The GNU C compiler GCC (32 or 64 Bit, e.g.,
 mingw-i686-8.1.0-release-win32-dwarf-rt_v6-rev0 or
 mingw-w64-x86_64-8.1.0-posix-seh-rt_v6-rev0) needs to be installed.</p>
+<p>Compilation of the Windows samples has been done under Windows 7 and
+10. The code is free of specific operating system calls and only uses
+functions from the GCC libraries. As these are widely operating system
+independent the sample should compile and run under other Windows
+versions, Linux and Mac OS as well; this has however never been tested
+and as a matter of experience most often there are some minor
+incompatibilities, which have to be sorted out first – just give it a
+try.</p>
+<p>Using another compiler than GCC will mean code changes in the
+application interface, command line evaluation in the first place.</p>
 <p>On principle, the makefiles are prepared to support the compilation
 under Linux and Mac OS as well. If problems appear you should first have
-a look into sub-makefile locateTools.mk, which is responsible to find
-the paths to the executables. There are different configuration
+a look into sub-makefile <em>locateTools.mk</em>, which is responsible
+to find the paths to the executables. There are different configuration
 possibilities to find the tools either via system search path or via
 environment variable settings. Maybe you need to alter this
 configuration first. The same holds if you have different GCC revisions
 installed and want to switch between them.</p>
 <p>If MinGW GNU make 3.82 and GCC are installed then you can CD to the
 root directory
-comFramework/canInterface/sampleIntegrations/winSampleIntegration or
-comFramework/canInterface/sampleIntegrations/winTestMT of the Windows
-sample integrations and type:</p>
+<em>comFramework/canInterface/sampleIntegrations/winSampleIntegration</em>
+or <em>comFramework/canInterface/sampleIntegrations/winTestMT</em> of
+the Windows sample integrations and type:</p>
 <pre><code>make help
 make -s clean
 make -s build</code></pre>
