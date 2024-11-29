@@ -67,7 +67,7 @@ The DBC file used in this sample is the same as in the same integrations
 of comFramework's CAN interface. Hence, the specification of the
 functionality of the Simulink model can be found in form of the hand coded
 APSW in the sample integration of the CAN interface. See
-http://svn.code.sf.net/p/comframe/code/canInterface/trunk/sampleIntegrations/winSampleIntegration/code/APSW.
+link:../../../canInterface/sampleIntegrations/winSampleIntegration/code/APSW/pwr_computeEnginePower.c[canInterface/sampleIntegrations/winSampleIntegration/code/APSW/pwr_computeEnginePower.c^]
 
 Note, the pack and unpack functions as essential part of the code generation
 process are not included in the demo application. This sample focuses on
@@ -112,8 +112,8 @@ try. Note, C99 compliance is a must.
 
 To build and execute the demo application type:
 
-cd compileIt
-make run
+  cd compileIt
+  make run
 
 The demo application can be debugged using the script gdb.ps1. The GNU
 debugger needs to be on the system search path.
