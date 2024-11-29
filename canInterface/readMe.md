@@ -18,10 +18,13 @@ and the readMe files of the available sample integrations for details:
 
 Most relevant Wiki pages:
 
--   [GitHub, project home](https://github.com/PeterVranken/comFramework/wiki/Home)
--   [GitHub, installation](https://github.com/PeterVranken/comFramework/wiki/Installation)
--   [GitHub, CAN interface - concept and usage](https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface)
--   [GitHub, CAN interface - Doxygen pages](https://petervranken.github.io/comFramework/canInterface/doc/doxygen/html/index.html)
+-   [Project home](https://github.com/PeterVranken/comFramework/wiki/Home)
+-   [Installation](https://github.com/PeterVranken/comFramework/wiki/Installation)
+-   [CAN interface - concept and usage](https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface)
+
+API documentation:
+
+-   [CAN interface - Doxygen pages](https://petervranken.github.io/comFramework/canInterface/doc/doxygen/html/index.html)
 
 Sample integrations:
 

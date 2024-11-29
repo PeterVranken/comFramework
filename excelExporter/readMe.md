@@ -1,13 +1,14 @@
-# excelExporter - Rendering Excel Spreadsheets as Text #
+# excelExporter - Rendering Excel Spreadsheets as Text
 
-## Introduction ##
+## Introduction
 
 This archive contains the binary distribution of excelExporter, an
 application that can translate the information found in one or more Excel
 workbooks into manifold textual representations. excelExporter is a
 general purpose text rendering application for Excel spreadsheets.
 
-excelExporter is the auxiliary code generator from the [comFramework](https://github.com/PeterVranken/comFramework/tree/main/)
+excelExporter is the auxiliary code generator from the
+[comFramework](https://github.com/PeterVranken/comFramework/tree/main/)
 project. However, the use of excelExporter is in no way restricted to the
 context of CAN interface generation in embedded, automotive software
 development. Because of its generality we decided to publish it as
@@ -42,9 +43,9 @@ how the same information is rendered once as HTML code and once as - for
 example - C program fragment.
 
 
-## Documentation ##
+## Documentation
 
-### Command line interface of excelExporter ###
+### Command line interface of excelExporter
 
 The usage of the tool is explained in the application's command line usage
 text: Begin with running excelExporter with command line option --help.
@@ -99,20 +100,25 @@ the output files. The next sections explain the available, related
 documentation.
 
 
-### The data model ###
+### The data model
 
-The internal representation of the parsed input information is explained
-in detail in Wiki page [excelExporter's Data Model](https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/) and it is documented 
-as a [Javadoc of the complete data structure](https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/dataModel/index.html?overview-summary.html).
+The internal representation of the parsed input information, called "data
+model", is explained in detail in Wiki page
+[excelExporter's Data Model](https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/)
+and it is documented as a
+[Javadoc of the complete data structure](https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/index.html?overview-summary.html
+"Data model for StringTemplate V4"). The same is found in your local
+installation, please click on file
+`excelExporter/doc/dataModelForStringTemplateV4.html`.
 
 In the Javadoc you find the documentation of all public elements of the
 data structure that are accessible from the StringTemplate V4 templates.
 The data structure is deeply nested, and actually, it are even two data
 structures, which are passed to the rendering process:
 
-- The parsed information forms an object of class *Cluster*
-- The information about output files plus some environmental information
-  is put into an object of class *Info*
+-   The parsed information forms an object of class *Cluster*
+-   The information about output files plus some environmental information
+    is put into an object of class *Info*
 
 You will study the Javadoc pages to see, which pieces of information to be
 used from within a template.
@@ -122,11 +128,13 @@ data model. Their nesting is not fully transparent from the Javadoc since
 recursive structures are involved. The actual structure of the data
 model will depend on (and reflect) the structure the input data is
 organized in. Only in the most simple case it's a linear list of so called
-[RowObjects](https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/dataModel/excelExporter/excelParser/dataModel/RowObject.html), which represent a single row from the Excel input
-file and which consist of so called [CellObjects](https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/dataModel/excelExporter/excelParser/dataModel/CellObject.html). In all other cases the actual data structure
-depends on your input data, on the format of your Excel file and on your
-application configuration (which all needs to be consistent with one
-another).
+[RowObjects](https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/excelExporter/excelParser/dataModel/RowObject.html),
+which represent a single row from the Excel input
+file and which consist of so called
+[CellObjects](https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/excelExporter/excelParser/dataModel/CellObject.html).
+In all other cases the actual data structure depends on your input data,
+on the format of your Excel file and on your application configuration
+(which all needs to be consistent with one another).
 
 The explanation of the data model and how its structure depends on Excel
 input and application configuration is given in the Wiki page mentioned
@@ -134,48 +142,61 @@ before.
 
 Another source of knowledge about the data model and how to access its
 elements is the investigation of the sample templates:
-[excelExporter/samples/.../*.stg](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/).
+See files `excelExporter/samples/.../*.stg` in your local installation or
+online at
+<https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples>.
 
-### The StringTemplate V4 templates ###
+### The StringTemplate V4 templates
 
 The technique of rendering the information held in a *Cluster* and an *Info*
 object is well documented. The two objects are passed to the
 StringTemplate V4 template engine and this engine is fully documented.
-Please refer to <http://www.stringtemplate.org/> or find a printable version
-of the documentation as <https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf>.
+Please refer to
+<https://github.com/antlr/stringtemplate4/blob/master/doc/index.md> or
+find a printable version of the documentation online as
+<https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf>
+or as `excelExporter/doc/ST4-270115-0836-52.pdf` in your local
+installation.
 
 Please note, as a matter of experience, you will have to read the
 StringTemplate V4 documentation entirely before you can start to
 successfully develop your first useful template. StringTemplate V4 is
 powerful and convenient but not self-explaining.
 
-Studying the samples [excelExporter/samples/.../*.stg](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/)
+Studying the samples
+[excelExporter/samples/.../*.stg](https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/)
 is another important source of information.
 
-### The Wiki pages ###
+### The Wiki pages
 
-An additional source of documentation are the Wiki pages of the project,
-please refer to <https://sourceforge.net/p/excelexporter/wiki/browse_pages/>.
+An additional source of documentation are the Wiki pages of the project.
 The Wiki pages shade a light at some most relevant, selected issues; a
 comprehensive, self-contained (printable) manual is not planned. As of
-today, February 2023, we have the following discussions in the Wiki pages:
+today, Nov 2024, we have the following discussions in the Wiki pages,
+which directly relate to excelExporter, the auxiliary code generator:
 
 - [excelExporter's Data Model](https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/)
 - [Grouping and sorting](https://sourceforge.net/p/excelexporter/wiki/Grouping%20and%20sorting/)
 - [Overview on the comFramework project](https://sourceforge.net/p/comframe/wiki/Home/)
 
 
-## Installation ##
+## Installation
 
-excelExporter is a Java 18 application. The installation is as simple as
+excelExporter is a Java application. The installation is as simple as
 unpacking an archive and optionally setting an environment variable. It is
 described in detail in the file
 [installation.txt](https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/installation.txt).
 
+## What's new
 
-## What's new ##
+### Release 1.3
 
-### Release 1.2 ###
+This version increment was made to make a clean break when the project
+moved from SourceForge to GitHub. In fact, there are no significant
+changes to the DBC code generator since the last release, but there are a
+number of smaller corrections, mostly to the documentation.
+
+### Release 1.2
 
 Update of data model:
 
@@ -187,7 +208,7 @@ Update of data model:
   expressions. Text fields of the data model (e.g., cell contents) can be
   compared with one another or with expected contents.
 
-### Release 1.1 ###
+### Release 1.1
 
 Update of data model: The cell object now contains the field "is", which
 is a map with a single key/value pair. The key is the text contents of the
@@ -197,18 +218,18 @@ selector for different, enumerated options; those cells must contain one
 out of a limited set of predefined possible character strings and the
 template can check, which one it is.
 
-### Release 1.0.5 ###
+### Release 1.0.5
 
 Integration of latest release of StringTemplate V4, which is 4.3.3.
 
-### Release 1.0.4 ###
+### Release 1.0.4
 
 Migration of source code to Java Open JDK 18.0.
 
-### Release 1.0.3 ###
+### Release 1.0.3
 
 Text output, which contains non ASCII characters is now saved to file as
-UTF-8. (Used to be a non specified, default code page.) 
+UTF-8. (Used to be a non specified, default code page.)
 
 Master sample "renderTable" re-designed. This actually is a small
 convenience application, which strongly simplifies the use of
@@ -232,8 +253,8 @@ Caution, this will likely mean that this version of the code generator
 will produce different output when using the same, existing templates. The
 differences are however restricted to blank lines and should not matter in
 C code generation environments.
-  
-### Release 1.0 ###
+
+### Release 1.0
 
 After more than a year of hassle-free productive use of the tool we
 decided to make it a release and change the major field of the revision
@@ -266,7 +287,7 @@ use of the no longer existing field CellObject.isBlank: The behavior
 should be as wrong as it used to be. However, using the new field
 CellObject.isNotBlank, they can now be repaired.
 
-### Release 0.18 ###
+### Release 0.18
 
 New cell type "date" introduced for spreadsheet cell objects. Time and
 date designations read from an Excel spreadsheet can now be rendered with
@@ -275,15 +296,15 @@ similar to the Java class SimpleDateFormat.
 
 A new sample has been added, timeAndDate, which demonstrates the new
 capabilities.
-  
-### Release 0.17 ###
+
+### Release 0.17
 
 Documentation extended and many corrections made on documentation.
 
 The row object container got the new field prop to support the common use
 case of groups with a single row object.
 
-### Release 0.16 ###
+### Release 0.16
 
 The initial release. Full functionality of the application but preliminary
 state of samples and documentation.

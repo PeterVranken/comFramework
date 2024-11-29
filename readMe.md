@@ -168,15 +168,20 @@ like a C compiler are useful. Please find the installation guide as
 
 ### What's new
 
-The CAN interface is mainly documented in this [Wiki page](https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface). An overview of
-all available documentation and of the latest changes is given in the
-related [readMe](https://petervranken.github.io/comFramework/canInterface/readMe.html) file.
+CAN Interface: An overview of all available documentation and of the
+latest changes is given in the related
+[`readMe`](https://petervranken.github.io/comFramework/canInterface/readMe.html)
+file.
 
-An overview of the documentation and the latest changes of the DBC code
-generator is given in the related [readMe](https://petervranken.github.io/comFramework/codeGenerator/readMe.html) file.
+DBC Code Generator: An overview of the documentation and the latest
+changes is given in the related
+[`readMe`](https://petervranken.github.io/comFramework/codeGenerator/readMe.html)
+file.
 
-An overview of the documentation and the latest changes of the auxiliary
-code generator excelExporter is given in the related [readMe](https://petervranken.github.io/comFramework/excelExporter/readMe.html) file.
+Excel Exporter: An overview of the documentation and the latest changes is
+given in the related
+[`readMe`](https://petervranken.github.io/comFramework/excelExporter/readMe.html)
+file.
 
 ### Wiki pages
 
@@ -191,7 +196,6 @@ pages:
 
 - [Installation of distributed ZIP archive](https://github.com/PeterVranken/comFramework/wiki/Installation/)
 - [The CAN interface - concept and usage](https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface)
-- [The CAN interface - Doxygen pages](https://petervranken.github.io/comFramework/canInterface/doc/doxygen/html/index.html)
 - [The command line of the DBC code generator](https://github.com/PeterVranken/comFramework/wiki/The-Command-Line-of-the-comFramework-DBC-Code-Generator "Usage of DBC code generator")
 - [Compatibility of the DBC parser with real *_.dbc_ files](https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility#Compatibility)
 - [Prerequisites, limitations and pitfalls](https://github.com/PeterVranken/comFramework/wiki/Prerequisites,-Limitations-and-Pitfalls "Java version, known issues")

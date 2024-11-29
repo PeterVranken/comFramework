@@ -186,15 +186,16 @@ templates</a></li>
 <li><a href="#installation" id="toc-installation"><span class="toc-section-number">1.3</span> Installation</a></li>
 <li><a href="#whats-new" id="toc-whats-new"><span class="toc-section-number">1.4</span> What&#39;s new</a>
 <ul>
-<li><a href="#release-12" id="toc-release-12"><span class="toc-section-number">1.4.1</span> Release 1.2</a></li>
-<li><a href="#release-11" id="toc-release-11"><span class="toc-section-number">1.4.2</span> Release 1.1</a></li>
-<li><a href="#release-105" id="toc-release-105"><span class="toc-section-number">1.4.3</span> Release 1.0.5</a></li>
-<li><a href="#release-104" id="toc-release-104"><span class="toc-section-number">1.4.4</span> Release 1.0.4</a></li>
-<li><a href="#release-103" id="toc-release-103"><span class="toc-section-number">1.4.5</span> Release 1.0.3</a></li>
-<li><a href="#release-10" id="toc-release-10"><span class="toc-section-number">1.4.6</span> Release 1.0</a></li>
-<li><a href="#release-018" id="toc-release-018"><span class="toc-section-number">1.4.7</span> Release 0.18</a></li>
-<li><a href="#release-017" id="toc-release-017"><span class="toc-section-number">1.4.8</span> Release 0.17</a></li>
-<li><a href="#release-016" id="toc-release-016"><span class="toc-section-number">1.4.9</span> Release 0.16</a></li>
+<li><a href="#release-13" id="toc-release-13"><span class="toc-section-number">1.4.1</span> Release 1.3</a></li>
+<li><a href="#release-12" id="toc-release-12"><span class="toc-section-number">1.4.2</span> Release 1.2</a></li>
+<li><a href="#release-11" id="toc-release-11"><span class="toc-section-number">1.4.3</span> Release 1.1</a></li>
+<li><a href="#release-105" id="toc-release-105"><span class="toc-section-number">1.4.4</span> Release 1.0.5</a></li>
+<li><a href="#release-104" id="toc-release-104"><span class="toc-section-number">1.4.5</span> Release 1.0.4</a></li>
+<li><a href="#release-103" id="toc-release-103"><span class="toc-section-number">1.4.6</span> Release 1.0.3</a></li>
+<li><a href="#release-10" id="toc-release-10"><span class="toc-section-number">1.4.7</span> Release 1.0</a></li>
+<li><a href="#release-018" id="toc-release-018"><span class="toc-section-number">1.4.8</span> Release 0.18</a></li>
+<li><a href="#release-017" id="toc-release-017"><span class="toc-section-number">1.4.9</span> Release 0.17</a></li>
+<li><a href="#release-016" id="toc-release-016"><span class="toc-section-number">1.4.10</span> Release 0.16</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -292,10 +293,12 @@ representation of the read input data (i.e., the data model) and the way
 it is rendered in the output files. The next sections explain the
 available, related documentation.</p>
 <h3 data-number="1.2.2" id="the-data-model"><span class="header-section-number">1.2.2</span> The data model</h3>
-<p>The internal representation of the parsed input information is
-explained in detail in Wiki page <a href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/">excelExporter&#39;s
-Data Model</a> and it is documented as a <a href="https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/dataModel/index.html?overview-summary.html">Javadoc
-of the complete data structure</a>.</p>
+<p>The internal representation of the parsed input information, called
+&quot;data model&quot;, is explained in detail in Wiki page <a href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/">excelExporter&#39;s
+Data Model</a> and it is documented as a <a href="https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/index.html?overview-summary.html" title="Data model for StringTemplate V4">Javadoc of the complete data
+structure</a>. The same is found in your local installation, please
+click on file
+<code>excelExporter/doc/dataModelForStringTemplateV4.html</code>.</p>
 <p>In the Javadoc you find the documentation of all public elements of
 the data structure that are accessible from the StringTemplate V4
 templates. The data structure is deeply nested, and actually, it are
@@ -313,9 +316,9 @@ of the data model. Their nesting is not fully transparent from the
 Javadoc since recursive structures are involved. The actual structure of
 the data model will depend on (and reflect) the structure the input data
 is organized in. Only in the most simple case it&#39;s a linear list of so
-called <a href="https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/dataModel/excelExporter/excelParser/dataModel/RowObject.html">RowObjects</a>,
+called <a href="https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/excelExporter/excelParser/dataModel/RowObject.html">RowObjects</a>,
 which represent a single row from the Excel input file and which consist
-of so called <a href="https://svn.code.sf.net/p/comframe/code/excelExporter/trunk/doc/dataModel/excelExporter/excelParser/dataModel/CellObject.html">CellObjects</a>.
+of so called <a href="https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/excelExporter/excelParser/dataModel/CellObject.html">CellObjects</a>.
 In all other cases the actual data structure depends on your input data,
 on the format of your Excel file and on your application configuration
 (which all needs to be consistent with one another).</p>
@@ -323,14 +326,18 @@ on the format of your Excel file and on your application configuration
 Excel input and application configuration is given in the Wiki page
 mentioned before.</p>
 <p>Another source of knowledge about the data model and how to access
-its elements is the investigation of the sample templates: <a href="https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/">excelExporter/samples/.../*.stg</a>.</p>
+its elements is the investigation of the sample templates: See files
+<code>excelExporter/samples/.../*.stg</code> in your local installation
+or online at <a href="https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples">https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples</a>.</p>
 <h3 data-number="1.2.3" id="the-stringtemplate-v4-templates"><span class="header-section-number">1.2.3</span> The StringTemplate V4
 templates</h3>
 <p>The technique of rendering the information held in a <em>Cluster</em>
 and an <em>Info</em> object is well documented. The two objects are
 passed to the StringTemplate V4 template engine and this engine is fully
-documented. Please refer to <a href="http://www.stringtemplate.org/">http://www.stringtemplate.org/</a>
-or find a printable version of the documentation as <a href="https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf">https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf</a>.</p>
+documented. Please refer to <a href="https://github.com/antlr/stringtemplate4/blob/master/doc/index.md">https://github.com/antlr/stringtemplate4/blob/master/doc/index.md</a>
+or find a printable version of the documentation online as <a href="https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf">https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf</a>
+or as <code>excelExporter/doc/ST4-270115-0836-52.pdf</code> in your
+local installation.</p>
 <p>Please note, as a matter of experience, you will have to read the
 StringTemplate V4 documentation entirely before you can start to
 successfully develop your first useful template. StringTemplate V4 is
@@ -339,11 +346,11 @@ powerful and convenient but not self-explaining.</p>
 is another important source of information.</p>
 <h3 data-number="1.2.4" id="the-wiki-pages"><span class="header-section-number">1.2.4</span> The Wiki pages</h3>
 <p>An additional source of documentation are the Wiki pages of the
-project, please refer to <a href="https://sourceforge.net/p/excelexporter/wiki/browse_pages/">https://sourceforge.net/p/excelexporter/wiki/browse_pages/</a>.
-The Wiki pages shade a light at some most relevant, selected issues; a
-comprehensive, self-contained (printable) manual is not planned. As of
-today, February 2023, we have the following discussions in the Wiki
-pages:</p>
+project. The Wiki pages shade a light at some most relevant, selected
+issues; a comprehensive, self-contained (printable) manual is not
+planned. As of today, Nov 2024, we have the following discussions in the
+Wiki pages, which directly relate to excelExporter, the auxiliary code
+generator:</p>
 <ul>
 <li><a href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/">excelExporter&#39;s
 Data Model</a></li>
@@ -353,11 +360,17 @@ and sorting</a></li>
 the comFramework project</a></li>
 </ul>
 <h2 data-number="1.3" id="installation"><span class="header-section-number">1.3</span> Installation</h2>
-<p>excelExporter is a Java 18 application. The installation is as simple
-as unpacking an archive and optionally setting an environment variable.
-It is described in detail in the file <a href="https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/installation.txt">installation.txt</a>.</p>
+<p>excelExporter is a Java application. The installation is as simple as
+unpacking an archive and optionally setting an environment variable. It
+is described in detail in the file <a href="https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/installation.txt">installation.txt</a>.</p>
 <h2 data-number="1.4" id="whats-new"><span class="header-section-number">1.4</span> What&#39;s new</h2>
-<h3 data-number="1.4.1" id="release-12"><span class="header-section-number">1.4.1</span> Release 1.2</h3>
+<h3 data-number="1.4.1" id="release-13"><span class="header-section-number">1.4.1</span> Release 1.3</h3>
+<p>This version increment was made to make a clean break when the
+project moved from SourceForge to GitHub. In fact, there are no
+significant changes to the DBC code generator since the last release,
+but there are a number of smaller corrections, mostly to the
+documentation.</p>
+<h3 data-number="1.4.2" id="release-12"><span class="header-section-number">1.4.2</span> Release 1.2</h3>
 <p>Update of data model:</p>
 <ul>
 <li>The cell representation now offers a JSON and widely C/C++
@@ -370,7 +383,7 @@ to regular expressions. Text fields of the data model (e.g., cell
 contents) can be compared with one another or with expected
 contents.</li>
 </ul>
-<h3 data-number="1.4.2" id="release-11"><span class="header-section-number">1.4.2</span> Release 1.1</h3>
+<h3 data-number="1.4.3" id="release-11"><span class="header-section-number">1.4.3</span> Release 1.1</h3>
 <p>Update of data model: The cell object now contains the field &quot;is&quot;,
 which is a map with a single key/value pair. The key is the text
 contents of the cell and the value is a Boolean true. This allows to do
@@ -378,12 +391,12 @@ string compares with the cell contents in a template. The use case is
 using cells as selector for different, enumerated options; those cells
 must contain one out of a limited set of predefined possible character
 strings and the template can check, which one it is.</p>
-<h3 data-number="1.4.3" id="release-105"><span class="header-section-number">1.4.3</span> Release 1.0.5</h3>
+<h3 data-number="1.4.4" id="release-105"><span class="header-section-number">1.4.4</span> Release 1.0.5</h3>
 <p>Integration of latest release of StringTemplate V4, which is
 4.3.3.</p>
-<h3 data-number="1.4.4" id="release-104"><span class="header-section-number">1.4.4</span> Release 1.0.4</h3>
+<h3 data-number="1.4.5" id="release-104"><span class="header-section-number">1.4.5</span> Release 1.0.4</h3>
 <p>Migration of source code to Java Open JDK 18.0.</p>
-<h3 data-number="1.4.5" id="release-103"><span class="header-section-number">1.4.5</span> Release 1.0.3</h3>
+<h3 data-number="1.4.6" id="release-103"><span class="header-section-number">1.4.6</span> Release 1.0.3</h3>
 <p>Text output, which contains non ASCII characters is now saved to file
 as UTF-8. (Used to be a non specified, default code page.)</p>
 <p>Master sample &quot;renderTable&quot; re-designed. This actually is a small
@@ -405,7 +418,7 @@ accurately conveyed into the generated output.</p>
 generator will produce different output when using the same, existing
 templates. The differences are however restricted to blank lines and
 should not matter in C code generation environments.</p>
-<h3 data-number="1.4.6" id="release-10"><span class="header-section-number">1.4.6</span> Release 1.0</h3>
+<h3 data-number="1.4.7" id="release-10"><span class="header-section-number">1.4.7</span> Release 1.0</h3>
 <p>After more than a year of hassle-free productive use of the tool we
 decided to make it a release and change the major field of the revision
 designation to one - even if there&#39;s only little new functionality.</p>
@@ -432,19 +445,19 @@ model.</p>
 make use of the no longer existing field CellObject.isBlank: The
 behavior should be as wrong as it used to be. However, using the new
 field CellObject.isNotBlank, they can now be repaired.</p>
-<h3 data-number="1.4.7" id="release-018"><span class="header-section-number">1.4.7</span> Release 0.18</h3>
+<h3 data-number="1.4.8" id="release-018"><span class="header-section-number">1.4.8</span> Release 0.18</h3>
 <p>New cell type &quot;date&quot; introduced for spreadsheet cell objects. Time
 and date designations read from an Excel spreadsheet can now be rendered
 with the StringTemplate V4 DateRenderer and using format strings, which
 are similar to the Java class SimpleDateFormat.</p>
 <p>A new sample has been added, timeAndDate, which demonstrates the new
 capabilities.</p>
-<h3 data-number="1.4.8" id="release-017"><span class="header-section-number">1.4.8</span> Release 0.17</h3>
+<h3 data-number="1.4.9" id="release-017"><span class="header-section-number">1.4.9</span> Release 0.17</h3>
 <p>Documentation extended and many corrections made on
 documentation.</p>
 <p>The row object container got the new field prop to support the common
 use case of groups with a single row object.</p>
-<h3 data-number="1.4.9" id="release-016"><span class="header-section-number">1.4.9</span> Release 0.16</h3>
+<h3 data-number="1.4.10" id="release-016"><span class="header-section-number">1.4.10</span> Release 0.16</h3>
 <p>The initial release. Full functionality of the application but
 preliminary state of samples and documentation.</p>
 </body>
