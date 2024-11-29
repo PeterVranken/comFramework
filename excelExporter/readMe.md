@@ -176,8 +176,7 @@ which directly relate to excelExporter, the auxiliary code generator:
 
 - [excelExporter's Data Model](https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/)
 - [Grouping and sorting](https://sourceforge.net/p/excelexporter/wiki/Grouping%20and%20sorting/)
-- [Overview on the comFramework project](https://sourceforge.net/p/comframe/wiki/Home/)
-
+- [Overview on the comFramework project](https://github.com/PeterVranken/comFramework/wiki/Home/)
 
 ## Installation
 
@@ -192,8 +191,8 @@ described in detail in the file
 
 This version increment was made to make a clean break when the project
 moved from SourceForge to GitHub. In fact, there are no significant
-changes to the DBC code generator since the last release, but there are a
-number of smaller corrections, mostly to the documentation.
+changes to excelExporter since the last release, but there are a number of
+smaller corrections, mostly to the documentation.
 
 ### Release 1.2
 
@@ -228,7 +227,7 @@ Migration of source code to Java Open JDK 18.0.
 ### Release 1.0.3
 
 Text output, which contains non ASCII characters is now saved to file as
-UTF-8. (Used to be a non specified, default code page.)
+UTF-8. (Used to be a not specified, default code page.)
 
 Master sample "renderTable" re-designed. This actually is a small
 convenience application, which strongly simplifies the use of

@@ -100,11 +100,6 @@ structures, which are passed to the rendering process:
 You will study the Javadoc pages to see, which pieces of information to be
 used from within a template.
 
-Another source for this knowledge is the investigation of the sample
-templates: See files `codeGenerator/samples/.../*.stg` in your local
-installation or online at
-<https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/samples>.
-
 ### The StringTemplate V4 templates
 
 The technique of rendering the information held in a *Cluster* and an *Info*
@@ -122,9 +117,10 @@ StringTemplate V4 documentation entirely before you can start to
 successfully develop your first useful template. StringTemplate V4 is
 powerful and convenient but not self-explaining.
 
-Studying the samples
-[codeGenerator/samples/.../*.stg](https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/samples/)
-is another important source of information.
+Another source for this knowledge is the investigation of the sample
+templates: See files `codeGenerator/samples/.../*.stg` in your local
+installation or online at
+<https://github.com/PeterVranken/comFramework/tree/main/codeGenerator/samples>.
 
 ### The Wiki pages
 
