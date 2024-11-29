@@ -11,8 +11,7 @@ application.
 If you want to run the application from another working folder then you
 will have to modify the script: The Windows script references the required
 resources by relative paths from here. Please, refer to
-link:../../doc/installation.html[codeGenerator\doc\installation.txt^],
-too.
+codeGenerator/doc/installation.txt, too.
 
 All Windows scripts are trivial; porting them to Linux or Mac OS is
 straightforward.

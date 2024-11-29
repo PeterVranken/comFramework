@@ -112,8 +112,8 @@ try. Note, C99 compliance is a must.
 
 To build and execute the demo application type:
 
-  cd compileIt
-  make run
+    cd compileIt
+    make run
 
 The demo application can be debugged using the script gdb.ps1. The GNU
 debugger needs to be on the system search path.
