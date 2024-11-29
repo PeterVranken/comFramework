@@ -45,7 +45,7 @@
 
   <!-- Build the distribution of code generator and excelExporter -->
   <target name="zipDependents"
-          description="Run all sub-ordinated ANT builds, which this build depends on"
+          description="Run all sub-ordinated Ant builds, which this build depends on"
   >
     <ant antfile="build/zipCodeGenerator.xml"
          inheritAll="false"

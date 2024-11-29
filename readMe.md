@@ -181,9 +181,10 @@ code generator excelExporter is given in the related [readMe](https://petervrank
 ### Wiki pages
 
 A growing source of documentation are the
-[Wiki pages](https://github.com/PeterVranken/comFramework/wiki) of the
-project. The Wiki pages shade a light at some most relevant, selected
-issues; a comprehensive, self-contained (printable) manual is not planned.
+[Wiki pages](https://github.com/PeterVranken/comFramework/wiki "comFramework - About this Project")
+of the project. The Wiki pages shade a light at some most relevant,
+selected issues; a comprehensive, self-contained (printable) manual is not
+planned.
 
 As of today, November 2024, we have the following discussions in the Wiki
 pages:
@@ -191,14 +192,13 @@ pages:
 - [Installation of distributed ZIP archive](https://github.com/PeterVranken/comFramework/wiki/Installation/)
 - [The CAN interface - concept and usage](https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface)
 - [The CAN interface - Doxygen pages](https://petervranken.github.io/comFramework/canInterface/doc/doxygen/html/index.html)
-- [The command line of the DBC code generator](https://github.com/PeterVranken/comFramework/wiki/The-Command-Line-of-the-comFramework-DBC-Code-Generator)
+- [The command line of the DBC code generator](https://github.com/PeterVranken/comFramework/wiki/The-Command-Line-of-the-comFramework-DBC-Code-Generator "Usage of DBC code generator")
 - [Compatibility of the DBC parser with real *_.dbc_ files](https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility#Compatibility)
-- [Prerequisites, limitations and pitfalls](https://github.com/PeterVranken/comFramework/wiki/Prerequisites,-Limitations-and-Pitfalls)
-- [Reusability of the DBC file parser in other contexts/applications](https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility)
-- [Options for conditional code generation](https://github.com/PeterVranken/comFramework/wiki/Conditional-Code-Generation-vs-Generation-of-Conditional-Code) 
-- [The use of attributes](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database)
+- [Prerequisites, limitations and pitfalls](https://github.com/PeterVranken/comFramework/wiki/Prerequisites,-Limitations-and-Pitfalls "Java version, known issues")
+- [Reusability of the DBC file parser in other contexts/applications](https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility "Reusage of code, standalone use of DBC parser and compatibility")
+- [Options for conditional code generation](https://github.com/PeterVranken/comFramework/wiki/Conditional-Code-Generation-vs-Generation-of-Conditional-Code "Conditional code generation versus generation of conditional code")
+- [The use of attributes](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database "How to access attributes in the network database?")
 - [A common pattern how to combine handwritten code with auto-generated
-  code in a beneficial way](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database#typical-code-architecture)
-- [Sugar on top of inheritance or how to change the copyright notice](https://github.com/PeterVranken/comFramework/wiki/Sugar-on-Top-of-Inheritance-or-how-to-change-the-Copyright-Notice)
-- [Concept of excelExporter](https://sourceforge.net/p/excelexporter/wiki/Home/)
-- [Comparison of this project with the SourceForge project *cantools*](https://github.com/PeterVranken/comFramework/wiki/SourceForge-cantools-in-Comparison-to-the-comFramework-DBC-Code-Generator)
+  code in a beneficial way](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database#typical-code-architecture "Typical code architecture")
+- [Sugar on top of inheritance or how to change the copyright notice](https://github.com/PeterVranken/comFramework/wiki/Sugar-on-Top-of-Inheritance-or-how-to-change-the-Copyright-Notice "Terence Parr: 'Sugar on top of inheritance'")
+- [Concept of excelExporter](https://sourceforge.net/p/excelexporter/wiki/Home/ "excelExporter's Wiki, still at SourceForge)

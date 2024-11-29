@@ -1,6 +1,6 @@
-# comFramework - Code Generator #
+# comFramework - Code Generator
 
-## Introduction ##
+## Introduction
 
 This archive contains the binary distribution of the code generator from
 the comFramework project. The code generator can translate the information
@@ -16,22 +16,22 @@ However, C source code is just one out of a long list of useful
 representations. You can render the information also as:
 
 -   HTML or LaTeX for documentation
--   Excel Spreadsheet (*.csv only)
+-   Excel Spreadsheet (`*.csv` only)
 -   Various XML formats like AUTOSAR arxml or TargetLink configuration files
 -   M Scripts for the MathWorks Embedded Coder configuration
 -   A2L files for support of calibration interfaces
 -   Python, Perl or other interpreted languages for whatever purpose
 
 In- and output description are decoupled in the parametrization of the
-tool. First you will specify a set of CAN network databases (*.dbc files).
-All of these are parsed and merged to one large data structure. The use
-case of merging several databases is the code generation for network
-nodes, which are connected to several buses. (Merging different databases
-is of limited value if they are inhomogeneous with respect to the use of
-attributes. If the evaluation of frame properties like send period and
-transmission characteristics becomes quite different on different buses
-then it might be better to run the code generator several times and let it
-generate differently designed source files.)
+tool. First you will specify a set of CAN network databases (`*.dbc`
+files). All of these are parsed and merged to one large data structure.
+The use case of merging several databases is the code generation for
+network nodes, which are connected to several buses. (Merging different
+databases is of limited value if they are inhomogeneous with respect to
+the use of attributes. If the evaluation of frame properties like send
+period and transmission characteristics becomes quite different on
+different buses then it might be better to run the code generator several
+times and let it generate differently designed source files.)
 
 Secondary, you will define a list of output files. The specification of
 each output file is associated with the specification of a StringTemplate
@@ -40,13 +40,14 @@ how the same information is rendered once as C source code and once as
 Embedded Coder interface description (just to put it into an example).
 
 
-## Documentation ##
+## Documentation
 
-### Command line interface of code generator ###
+### Command line interface of code generator
 
 The usage of the tool is explained in the usage text: Begin with running
 the code generator with command line option `--help`. The same information
-can be found on-line and a bit more in detail on the [project Wiki](https://sourceforge.net/p/comframe/wiki/Command%20Line%20DBC%20Code%20Generator/).
+can be found on-line and a bit more in detail on the
+[project Wiki](https://github.com/PeterVranken/comFramework/wiki/The-Command-Line-of-the-comFramework-DBC-Code-Generator "Usage of DBC code generator").
 
 The command line interface of the code generator has the following
 concept:
@@ -70,8 +71,8 @@ settings.
 
 Please note, different to the common GNU command line interface this
 application demands a blank between the switch and its value. For example
--oMyOutputFile.c would be rejected, whereas -o MyOutputFile.c would be the
-correct specification of a generated output file.
+`-oMyOutputFile.c` would be rejected, whereas `-o MyOutputFile.c` would be
+the correct specification of a generated output file.
 
 The application's command line options mainly relate to the definition of
 in- and output files. The rest is the internal representation of the read
@@ -79,10 +80,14 @@ input data and the way it is rendered in the output files. The next
 sections explain the available, related documentation.
 
 
-### The data model ###
+### The data model
 
-The internal representation of the parsed input information is documented
-as a [Javadoc of the complete data structure](https://svn.code.sf.net/p/comframe/code/codeGenerator/trunk/doc/dataModel/index.html "dataModelForStringTemplateV4.html").
+The internal representation of the parsed input information, called "data
+model", is documented as a
+[Javadoc of the complete data structure](https://petervranken.github.io/comFramework/canInterface/doc/doxygen/html/index.html
+"Data model for StringTemplate V4"). The same is found in your local
+installation, please click on file
+`codeGenerator/doc/dataModelForStringTemplateV4.html`.
 
 Here, you find the documentation of all public elements of the data
 structure that are accessible from the StringTemplate V4 templates. The
@@ -97,51 +102,60 @@ You will study the Javadoc pages to see, which pieces of information to be
 used from within a template.
 
 Another source for this knowledge is the investigation of the sample
-templates: codeGenerator/samples/.../*.stg.
+templates: `codeGenerator/samples/.../*.stg`.
 
-### The StringTemplate V4 templates ###
+### The StringTemplate V4 templates
 
 The technique of rendering the information held in a Cluster and an Info
 object is well documented. The two objects are passed to the
 StringTemplate V4 template engine and this engine is fully documented.
-Please refer to <http://www.stringtemplate.org/> or find a printable version
-of the documentation as <https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/ST4-270115-0836-52.pdf>.
+Please refer to
+<https://github.com/antlr/stringtemplate4/blob/master/doc/index.md> or
+find a printable version of the documentation as
+<https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/ST4-270115-0836-52.pdf>.
 
 Please note, as a matter of experience, you will have to read the
 StringTemplate V4 documentation entirely before you can start to
 successfully develop your first useful template. StringTemplate V4 is
 powerful and convenient but not self-explaining.
 
-### The Wiki pages ###
+### The Wiki pages
 
-An additional source of documentation are the Wiki pages of the project,
-please refer to <https://sourceforge.net/p/comframe/wiki/browse_pages/>.
+An additional source of documentation are the Wiki pages of the project.
 The Wiki pages shade a light at some most relevant, selected issues; a
 comprehensive, self-contained (printable) manual is not planned. As of
-today, Sep 2023, we have the following discussions in the Wiki pages:
+today, Nov 2024, we have the following discussions in the Wiki pages,
+which directly relate to the DBC code generator:
 
--   [Overview on the comFramework project](https://sourceforge.net/p/comframe/wiki/Home/ "comFramework - About this Project")
--   [The command line of the DBC code generator](https://sourceforge.net/p/comframe/wiki/Command%20Line%20DBC%20Code%20Generator/)
--   [Comparison of this project with the other SourceForge project *cantools*](https://sourceforge.net/p/comframe/wiki/cantools%20versus%20comFramework's%20Code%20Generator/ "comFramework Code Generator vs. cantools")
--   [Prerequisites, limitations and pitfalls](https://sourceforge.net/p/comframe/wiki/Prerequisites%2C%20Limitations%20and%20Pitfalls/ "Java version, known issues")
--   [Compatibility of the DBC parser with real _*.dbc_ files](https://sourceforge.net/p/comframe/wiki/Reusage%20and%20standalone%20usage%20of%20DBC%20parser/#compatibility "Compatibility")
--   [Reusability of the DBC file parser in other contexts/applications](https://sourceforge.net/p/comframe/wiki/Reusage%20and%20standalone%20usage%20of%20DBC%20parser/ "Reusage of code, standalone use of DBC parser and compatibility")
--   [Options for conditional code generation](https://sourceforge.net/p/comframe/wiki/Conditional%20code/ "Conditional code generation versus generation of conditional code") 
--   [The use of attributes](https://sourceforge.net/p/comframe/wiki/Attributes%20in%20the%20network%20database/ "How to access attributes in the network database?")
+-   [Overview on the comFramework project](https://github.com/PeterVranken/comFramework/wiki/Home/ "comFramework - About this Project")
+-   [The command line of the DBC code generator](https://github.com/PeterVranken/comFramework/wiki/The-Command-Line-of-the-comFramework-DBC-Code-Generator "Usage of DBC code generator")
+-   [Prerequisites, limitations and pitfalls](https://github.com/PeterVranken/comFramework/wiki/Prerequisites,-Limitations-and-Pitfalls "Java version, known issues")
+-   [Compatibility of the DBC parser with real *_.dbc_ files](https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility#Compatibility)
+-   [Reusability of the DBC file parser in other contexts/applications](https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility "Reusage of code, standalone use of DBC parser and compatibility")
+-   [Options for conditional code generation](https://github.com/PeterVranken/comFramework/wiki/Conditional-Code-Generation-vs-Generation-of-Conditional-Code "Conditional code generation versus generation of conditional code")
+-   [The use of attributes](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database "How to access attributes in the network database?")
 -   [A common pattern how to combine handwritten code with auto-generated
-    code in a beneficial way](https://sourceforge.net/p/comframe/wiki/Attributes%20in%20the%20network%20database/#typical-code-architecture "Typical code architecture")
--   [Sugar on top of inheritance or how to change the copyright notice](https://sourceforge.net/p/comframe/wiki/Sugar%20on%20top%20of%20Inheritance%20or%20how%20to%20change%20the%20copyright%20notice/ "Terence Parr: 'Sugar on top of inheritance'")
+    code in a beneficial way](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database#typical-code-architecture "Typical code architecture")
+-   [Sugar on top of inheritance or how to change the copyright notice](https://github.com/PeterVranken/comFramework/wiki/Sugar-on-Top-of-Inheritance-or-how-to-change-the-Copyright-Notice "Terence Parr: 'Sugar on top of inheritance'")
 
 
-## Installation ##
+## Installation
 
 The code generator is a Java 18 application. The installation is as simple as
 unpacking an archive and setting an environment variable. It is described
-in detail in the file [installation.txt](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/installation.txt).
+in detail in the file
+[installation.txt](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/installation.txt).
 
-## What's new ##
+## What's new
 
-### Release 1.12.0 ###
+### Release 1.13.0
+
+This version increment was made when the project moved from SourceForge to
+GitHub to make a clean break. In fact, there are no significant changes to
+the DBC code generator since the last release, but there are a number of
+smaller corrections, mostly to the documentation.
+
+### Release 1.12.0
 
 The data model has been extended with string comparison operations and a
 related new sample has been added (stringCompare). Text fields of the data
@@ -166,7 +180,7 @@ The MathWorks Embedded Coder samples have been migrated to MATLAB 2021b.
 The special file names `stdout` and `stderr` are now supported for
 generated files. Generated output can directly go to the console.
 
-### Release 1.11.6 ###
+### Release 1.11.6
 
 Integration of the latest releases of StringTemplate V4 and ANTLR, which
 are 4.3.4 and 4.12.0, respectively.
@@ -187,12 +201,12 @@ Fix: The index i0 of bus objects inside the collection cluster of those
 had been wrong calculated. This is an ages old bug; probably the template
 expression \<bus.i0> won't ever have worked correct in the past.
 
-### Release 1.11.2 ###
+### Release 1.11.2
 
 Integration of the latest releases of StringTemplate V4 and ANTLR, which
 are 4.3.3 and 4.10.1, respectively.
 
-### Release 1.11 ###
+### Release 1.11
 
 Bug fix: Sorting frames by CAN ID had disregarded the property "is
 extended ID". If two frames would have had the same IDs, one as 11 and the
@@ -209,7 +223,7 @@ numeric ID value. (Inverse orders are supported as well.)
 
 Note, the data model revision has not been modified; it remains at 1010.
 
-### Release 1.10.6 ###
+### Release 1.10.6
 
 Bug fix: Bad lookup code had let the code generator mix up 11 and 29 Bit
 CAN IDs if they would have the same numeric values. Parser aborted with
@@ -223,8 +237,8 @@ been defined before as message related attribute. Such a wrong DBC file
 had been produced by the Kvaser Database Editor (Version 3.13.317, Sep 9,
 2020) after editing some attribute values. Now the application simply
 rejects the DBC file with precise hint what's wrong with the file.
-  
-### Release 1.10.4 ###
+
+### Release 1.10.4
 
 The code generator has been migrated to the recently issued revisions of
 StringTemplate and ANTLR, 4.3.1 and 4.8, respectively.
@@ -246,7 +260,7 @@ checked against the allowed CAN FD frame sizes. The data model has been
 extended by the data length code (DLC). The new data model has
 revision 1010.
 
-### Release 1.10 ###
+### Release 1.10
 
 Error handling improved. Firstly, internal errors of StringTemplate V4
 during rendering are now streamlined with the application logging. Before,
@@ -265,13 +279,13 @@ environment.
 Note: There's no change of the data model. It remains at revision
 designation 1009.
 
-### Release 1.9 ###
+### Release 1.9
 
 The data model class Signal gets a new field, which permits a template
 to find out if the signal is a particular "special" signal, like checksum
 or sequence counter.
 
-### Release 1.8 ###
+### Release 1.8
 
 New feature: A new command line argument, invert-transmission-direction,
 supports code generation for a node, which implements residual bus
@@ -328,7 +342,7 @@ Bug fix: The same misplaced *\<endif>* let to unwanted suppression of parts
 of the Embedded Coder interface. For unscaled integers was the chosen
 storage class mechanism not generated.
 
-### Release 1.7 ###
+### Release 1.7
 
 DBC Parser: User attributes and named signal values now support the full
 signed and unsigned 32 Bit integer range from -2^31 till 2^32-1. Before,
@@ -343,7 +357,7 @@ A new sample, EmbeddedCoderAPIWithBusStruct, demonstrates how to perfectly
 integrate a comFramework based CAN interface with model based APSW design
 and Embedded Coder based code generation from a Simulink model.
 
-### Release 1.6 ###
+### Release 1.6
 
 The DBC parser has been made more tolerant against typical mistakes:
 
@@ -372,14 +386,14 @@ A new sample, *scratchPad*, demonstrates the capabilities and the usage of
 the new scratch pad. Please have a look at the [generated output](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/scratchPad/output/demoScratchPad.txt) to get a
 first impression.
 
-### Release 1.5 ###
+### Release 1.5
 
 The data model now offers sorted lists of frames. A template can iterate
 along all frames in lexical order of their names or in numerical order of
 ID or in parsing i.e. file order. In all cases the iteration can be done
 in both directions.
 
-### Release 1.4 ###
+### Release 1.4
 
 A minor extension of the data model for sake of template design: The
 description of a signal's bit pattern in the PDU is supported by
@@ -389,14 +403,14 @@ Signal.
 Fix: The log file contained a few bad end of line characters, which let to
 a mixture of UNIX and Windows style.
 
-### Release 1.3 ###
+### Release 1.3
 
 Our understanding of multiplexed signals turned out to be wrong. Release
 1.2 and before only permitted alternative signals, where alternative sets
 of signals is the true intention. The according change of the data model
 required the increment of the minor version number.
 
-#### Fix 1.3.4 ###
+#### Fix 1.3.4
 
 Revision 1.3.3 had been released with a bug in one of its core sample
 templates. This bug has been fixed in 1.3.4. The source code of the code
@@ -415,7 +429,7 @@ used to refer to *s* to address to the signal in scope. This has now been
 aligned and all templates use the attribute name *signal*.
 
 
-### Release 1.2 ###
+### Release 1.2
 
 An unpleasant bug fix: The code itself was alright but there were two too
 strict assertions in the code of release 1.1, which let the program abort
@@ -438,7 +452,7 @@ data model. The StringTemplate V4 operator *\<length()>* is probably no
 longer required.
 
 
-### Release 1.1 ###
+### Release 1.1
 
 This release appeared already two weeks after the first release. By chance
 we found a side note in  the StringTemplate V4 documentation mentioning
@@ -454,20 +468,12 @@ idea, user specified options or, with other words, template attributes.
 Arbitrary attributes of Boolean, numerical or string type can be defined
 on the command line and are put into the rendered data model. The code
 generation process can be controlled by user specified command line
-options. 
+options.
 
 CAUTION: This revision will fail if run with assertion checking. See next
 revision for details.
 
-### Release 1.0 ###
+### Release 1.0
 
 The initial release. Full functionality of code generation but preliminary
 state of samples and documentation.
-
-
-## The comFramework project ##
-
-The code generator is only a part of the comFramework projects, which
-embeds the code generator into the concept of a highly reusable, flexibly
-integratable CAN interface. comFramework can be found at
-<https://github.com/PeterVranken/comFramework/tree/main/>.

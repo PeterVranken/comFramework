@@ -20,8 +20,8 @@
          default="zip"
          basedir="../excelExporter"
 >
-  <!-- Note, if Java 18 or higher is used then ANT 1.10.14 or higher is required. Till
-       ANT 1.10.13, the deprecated SecurityManager is used, which is eventually no longer
+  <!-- Note, if Java 18 or higher is used then Ant 1.10.14 or higher is required. Till
+       Ant 1.10.13, the deprecated SecurityManager is used, which is eventually no longer
        supported by Java 18. See https://downloads.apache.org/ant/ (Visited Jan 11, 2024). -->
        
   <description>

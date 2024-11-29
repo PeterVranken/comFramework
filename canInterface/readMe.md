@@ -1,6 +1,6 @@
-# The CAN interface #
+# The CAN interface
 
-This is the implementation of the comFramework CAN interface engine. 
+This is the implementation of the comFramework CAN interface engine.
 
 Folder `code` contains the source code of the engine. There are no other
 files, particularly no build scripts as the interface engine is intended
@@ -18,22 +18,29 @@ and the readMe files of the available sample integrations for details:
 
 Most relevant Wiki pages:
 
--   [SourceForge project home](https://sourceforge.net/p/comframe/wiki/Home/)
--   [SourceForge, installation](https://sourceforge.net/p/comframe/wiki/Installation/)
--   [SourceForge, CAN interface - concept and usage](https://sourceforge.net/p/comframe/wiki/The%20CAN%20Interface/)
--   [SourceForge, CAN interface - Doxygen pages](https://svn.code.sf.net/p/comframe/code/canInterface/trunk/doc/doxygen/html/index.html)
+-   [GitHub, project home](https://github.com/PeterVranken/comFramework/wiki/Home)
+-   [GitHub, installation](https://github.com/PeterVranken/comFramework/wiki/Installation)
+-   [GitHub, CAN interface - concept and usage](https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface)
+-   [GitHub, CAN interface - Doxygen pages](https://petervranken.github.io/comFramework/canInterface/doc/doxygen/html/index.html)
 
 Sample integrations:
 
+-   [Sample integration on DEVKIT-MPC5748G](https://github.com/PeterVranken/DEVKIT-MPC5748G/tree/master/samples/CAN)
 -   [Sample integration for Windows](https://github.com/PeterVranken/comFramework/tree/main/canInterface/sampleIntegrations/winSampleIntegration)
 -   [Sample integration on Arduino](https://github.com/PeterVranken/comFramework/tree/main/canInterface/sampleIntegrations/arduinoSampleIntegration)
 -   [Sample integration with MathWorks Embedded Coder on Arduino](https://github.com/PeterVranken/comFramework/tree/main/canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder)
 -   [Sample integration with POSIX multi-threading platform](https://github.com/PeterVranken/comFramework/tree/main/canInterface/sampleIntegrations/winTestMT)
--   [Sample integration on DEVKIT-MPC5748G](https://github.com/PeterVranken/DEVKIT-MPC5748G/tree/master/samples/CAN)
 
-# What's new #
+# What's new
 
-## Release 2.0 ##
+## Release 2.1
+
+This version increment was made when the project moved from SourceForge to
+GitHub to make a clean break. In fact, there are no significant changes to
+the CAN interface since the last release, but there are a number of
+smaller corrections, mostly to the documentation.
+
+## Release 2.0
 
 An redesign of the software's class model has been made. It targets at
 enlarging the number of supported integration use cases. It's now straight
@@ -84,7 +91,7 @@ in order to allow arbitrary mapping strategies. This has been even more
 generalized and a number of map implementations is provided, which should
 cover all existing use cases.
 
-## Release 1.5 ##
+## Release 1.5
 
 A new, abstract event source has been offered for the dispatcher
 mechanism. It can be applied for posting events, which are not directly
@@ -117,7 +124,7 @@ MinGW GCC (8.1.0, 32 Bit and 64 Bit).
 
 There are some minor bug fixes of the sample code and the makefiles.
 
-## Release 1.4 ##
+## Release 1.4
 
 New commonly usable templates have been added to the project-independent
 library template file codeGenC.stg: bitMask and bitMaskCalc to provide bit
@@ -126,7 +133,7 @@ masks for typical signal operations.
 The documentation has been improved and there are some minor bug
 fixes of the sample code and the makefiles.
 
-## Release 1.3 ##
+## Release 1.3
 
 The implementation of the CAN interface engine (also referred to as
 dispatcher engine) makes use of a new implementation of the thread-safe
@@ -153,7 +160,7 @@ which demonstrates how to design a different, more conventional
 architecture of the CAN interface and how to let the code generator
 generate CRC based end-to-end protection functions for CAN frames.
 
-## Release 1.2.1 ##
+## Release 1.2.1
 
 The thread safe implementation of the event queue has been supported by a
 memory barrier between data manipulation and acknowledge. This might be
