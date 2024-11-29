@@ -102,7 +102,8 @@ You will study the Javadoc pages to see, which pieces of information to be
 used from within a template.
 
 Another source for this knowledge is the investigation of the sample
-templates: `codeGenerator/samples/.../*.stg`.
+templates: See files `codeGenerator/samples/.../*.stg` in your local
+installation.
 
 ### The StringTemplate V4 templates
 
@@ -111,8 +112,10 @@ object is well documented. The two objects are passed to the
 StringTemplate V4 template engine and this engine is fully documented.
 Please refer to
 <https://github.com/antlr/stringtemplate4/blob/master/doc/index.md> or
-find a printable version of the documentation as
-<https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/ST4-270115-0836-52.pdf>.
+find a printable version of the documentation online as
+<https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/ST4-270115-0836-52.pdf>
+or as `codeGenerator/doc/ST4-270115-0836-52.pdf` in your local
+installation.
 
 Please note, as a matter of experience, you will have to read the
 StringTemplate V4 documentation entirely before you can start to
