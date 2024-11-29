@@ -1,18 +1,168 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>readMe</title>
   <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-  </style>
+html {
+font-family: Segoe UI;
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -20,49 +170,129 @@
 <body>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#windows-sample-integration"><span class="toc-section-number">1</span> Windows Sample Integration</a>
+<li><a href="#windows-sample-integration" id="toc-windows-sample-integration"><span class="toc-section-number">1</span> Windows Sample Integration</a>
 <ul>
-<li><a href="#scope"><span class="toc-section-number">1.1</span> Scope</a></li>
-<li><a href="#application-design"><span class="toc-section-number">1.2</span> Application design</a>
+<li><a href="#scope" id="toc-scope"><span class="toc-section-number">1.1</span> Scope</a></li>
+<li><a href="#application-design" id="toc-application-design"><span class="toc-section-number">1.2</span> Application design</a>
 <ul>
-<li><a href="#folder-ossimulation"><span class="toc-section-number">1.2.1</span> Folder osSimulation</a></li>
-<li><a href="#folder-apsw"><span class="toc-section-number">1.2.2</span> Folder APSW</a></li>
-<li><a href="#folder-integration"><span class="toc-section-number">1.2.3</span> Folder integration</a></li>
-<li><a href="#folder-codegen"><span class="toc-section-number">1.2.4</span> Folder codeGen</a></li>
-<li><a href="#folder-environment"><span class="toc-section-number">1.2.5</span> Folder environment</a></li>
+<li><a href="#folder-ossimulation" id="toc-folder-ossimulation"><span class="toc-section-number">1.2.1</span> Folder osSimulation</a></li>
+<li><a href="#folder-apsw" id="toc-folder-apsw"><span class="toc-section-number">1.2.2</span> Folder APSW</a></li>
+<li><a href="#folder-integration" id="toc-folder-integration"><span class="toc-section-number">1.2.3</span> Folder integration</a></li>
+<li><a href="#folder-codegen" id="toc-folder-codegen"><span class="toc-section-number">1.2.4</span> Folder codeGen</a></li>
+<li><a href="#folder-environment" id="toc-folder-environment"><span class="toc-section-number">1.2.5</span> Folder environment</a></li>
 </ul></li>
 </ul></li>
 </ul>
 </nav>
 <h1 data-number="1" id="windows-sample-integration"><span class="header-section-number">1</span> Windows Sample Integration</h1>
 <h2 data-number="1.1" id="scope"><span class="header-section-number">1.1</span> Scope</h2>
-<p>This sample application implements a power display device for an automotive vehicle as a Windows application. Although the application is entirely useless as such it contains all elements of the integration of the comFramework CAN interface into a real embedded platform. All needed code elements can be inspected and understood and the application can be run and debugged for detail investigations. Many of the code elements and particularly most of the code-generation template code will be reusable in the aimed target environment. This is proven by the second sample integration, ../arduinoSampleIntegration, which has the same functionality and shares many code elements with only minor modifications.</p>
-<p>The application reads the current values of engine rotational speed and engine torque from the CAN bus and computes the current power of the engine. The results are printed to the console and written in a log file.</p>
-<p>The sample code comes along with all source files and build scripts (makefile based). GNU GCC and GNU make 3.81 should be in the system search path, then the build command would be (Windows, other systems accordingly):</p>
+<p>This sample application implements a power display device for an
+automotive vehicle as a Windows application. Although the application is
+entirely useless as such it contains all elements of the integration of
+the comFramework CAN interface into a real embedded platform. All needed
+code elements can be inspected and understood and the application can be
+run and debugged for detail investigations. Many of the code elements
+and particularly most of the code-generation template code will be
+reusable in the aimed target environment. This is proven by the second
+sample integration, ../arduinoSampleIntegration, which has the same
+functionality and shares many code elements with only minor
+modifications.</p>
+<p>The application reads the current values of engine rotational speed
+and engine torque from the CAN bus and computes the current power of the
+engine. The results are printed to the console and written in a log
+file.</p>
+<p>The sample code comes along with all source files and build scripts
+(makefile based). GNU GCC and GNU make 3.82 should be in the system
+search path, then the build command would be (Windows, other systems
+accordingly):</p>
 <pre><code>cd &lt;...&gt;\comFramework\canInterface\sampleIntegrations\winSampleIntegration
 make -s build</code></pre>
 <p>To start the sample application you may type:</p>
 <pre><code>make -s run</code></pre>
 <p>Please try also: <code>make help</code></p>
-<p>Note, on Windows systems you will need the MinGW port of make, not the Cygwin port. Many GCC distributions contain both variants, so it depends on your system search path, which one is run. Or consider typing <code>mingw32-make build</code>; in a Windows GCC distribution this should be a safe reference to the right implementation of make. The Cygwin variant uses another interface to the underlying shell and this interface is not compatible with our makefiles.</p>
+<p>Note, on Windows systems you will need the MinGW port of make, not
+the Cygwin port. Many GCC distributions contain both variants, so it
+depends on your system search path, which one is run. Or consider typing
+<code>mingw32-make build</code>; in a Windows GCC distribution this
+should be a safe reference to the right implementation of make. The
+Cygwin variant uses another interface to the underlying shell and this
+interface is not compatible with our makefiles.</p>
 <h2 data-number="1.2" id="application-design"><span class="header-section-number">1.2</span> Application design</h2>
-<p>We designed this application to demonstrate how an integration into a real platform can look like. The actual capabilities of the application are secondary.</p>
+<p>We designed this application to demonstrate how an integration into a
+real platform can look like. The actual capabilities of the application
+are secondary.</p>
 <h3 data-number="1.2.1" id="folder-ossimulation"><span class="header-section-number">1.2.1</span> Folder osSimulation</h3>
-<p>The integration doesn’t support real CAN hardware and it neither builds on a real strictly priority controlled RTOS. Instead, a simulation frame has been shaped, which simulates the task scheduling and the interrupt based CAN interface of a fictive operating system. The simulation is most simple and particularly is it single-threaded. The tasks of different priorities and the interrupt notifications are executed strictly sequential and no race-conditions occur. All multi-threading related aspects of the CAN interface can in no way be tested in this environment but the code elements and structure and thus the instructive intention of the application are not affected by this fact.</p>
-<p>The simulation computes triangular curves of different frequencies for speed of rotation and engine torque. This leads to a dynamic but not exciting behavior of the application.</p>
-<p>The simulation code can inject the following kinds of CAN communication errors: Timeout, wrong data length code, bad checksum, bad sequence counter value, bus-off error (and recovery). The occurrence of the errors is random controlled; the probabilities can be adjusted by #define macros at compile time.</p>
+<p>The integration doesn&#39;t support real CAN hardware and it neither
+builds on a real strictly priority controlled RTOS. Instead, a
+simulation frame has been shaped, which simulates the task scheduling
+and the interrupt based CAN interface of a fictive operating system. The
+simulation is most simple and particularly is it single-threaded. The
+tasks of different priorities and the interrupt notifications are
+executed strictly sequential and no race-conditions occur. All
+multi-threading related aspects of the CAN interface can in no way be
+tested in this environment but the code elements and structure and thus
+the instructive intention of the application are not affected by this
+fact.</p>
+<p>The simulation computes triangular curves of different frequencies
+for speed of rotation and engine torque. This leads to a dynamic but not
+exciting behavior of the application.</p>
+<p>The simulation code can inject the following kinds of CAN
+communication errors: Timeout, wrong data length code, bad checksum, bad
+sequence counter value, bus-off error (and recovery). The occurrence of
+the errors is random controlled; the probabilities can be adjusted by
+#define macros at compile time.</p>
 <h3 data-number="1.2.2" id="folder-apsw"><span class="header-section-number">1.2.2</span> Folder APSW</h3>
-<p>The functional code, the application software or APSW, reads the current speed of rotation and engine torque values, computes the current engine power and prints the results. It can display a lot of program flow information and in particular the simulated and recognized CAN communication errors. The verbosity can be controlled via the command line. (Try <code>--help</code> first.)</p>
-<p>The APSW is hand-coded but in structure it is designed to resemble the code of typical model based development environments in that it simply reads required input signal values from some global variables, performs the computations and writes the results into other dedicated global variables. This design pattern was chosen in order to prove the CAN interface’s capabilities for support of data-change triggered frames. (Hand-coded software tends to be event driven by itself, which makes data-change recognition mechanisms obsolete.)</p>
+<p>The functional code, the application software or APSW, reads the
+current speed of rotation and engine torque values, computes the current
+engine power and prints the results. It can display a lot of program
+flow information and in particular the simulated and recognized CAN
+communication errors. The verbosity can be controlled via the command
+line. (Try <code>--help</code> first.)</p>
+<p>The APSW is hand-coded but in structure it is designed to resemble
+the code of typical model based development environments in that it
+simply reads required input signal values from some global variables,
+performs the computations and writes the results into other dedicated
+global variables. This design pattern was chosen in order to prove the
+CAN interface&#39;s capabilities for support of data-change triggered
+frames. (Hand-coded software tends to be event driven by itself, which
+makes data-change recognition mechanisms obsolete.)</p>
 <p>The APSW code is located in folder code\APSW.</p>
 <h3 data-number="1.2.3" id="folder-integration"><span class="header-section-number">1.2.3</span> Folder integration</h3>
-<p>More important is folder code\integration. It contains those hand-coded parts of the application, which are needed to integrate the CAN interface with any real platform (or operating system). The tasks are defined that do the initialization of the CAN interface (frame and bus registration) and the regular clocking of the interface engine instances. Moreover, the handle mapping and the checksum and sequence counter update/validation, which are external to but required by the CAN interface engine are implemented here.</p>
-<p>Please note: Handle mapping is always required by the CAN interface (it’ll be a trivial identity in many environments like in our Arduino integration), but checksum and sequence counter update/validation are a matter of application specific configuration only.</p>
-<p>The integration code contains the handling of bus errors, too. Although it strongly resembles the auto-generated code for frame handling (see below) and although it could be auto-generated, too, we decided for hand-coding. The reason simply is that the number of CAN buses is very low in comparison to the number of frames and that the CAN bus configuration typically doesn’t undergo frequent changes in the course of a software project. Maintaining this code through template programming as it would be required for auto-generated coding, won’t ever pay off.</p>
+<p>More important is folder code\integration. It contains those
+hand-coded parts of the application, which are needed to integrate the
+CAN interface with any real platform (or operating system). The tasks
+are defined that do the initialization of the CAN interface (frame and
+bus registration) and the regular clocking of the interface engine
+instances. Moreover, the handle mapping and the checksum and sequence
+counter update/validation, which are external to but required by the CAN
+interface engine are implemented here.</p>
+<p>Please note: Handle mapping is always required by the CAN interface
+(it&#39;ll be a trivial identity in many environments like in our Arduino
+integration), but checksum and sequence counter update/validation are a
+matter of application specific configuration only.</p>
+<p>The integration code contains the handling of bus errors, too.
+Although it strongly resembles the auto-generated code for frame
+handling (see below) and although it could be auto-generated, too, we
+decided for hand-coding. The reason simply is that the number of CAN
+buses is very low in comparison to the number of frames and that the CAN
+bus configuration typically doesn&#39;t undergo frequent changes in the
+course of a software project. Maintaining this code through template
+programming as it would be required for auto-generated coding, won&#39;t
+ever pay off.</p>
 <h3 data-number="1.2.4" id="folder-codegen"><span class="header-section-number">1.2.4</span> Folder codeGen</h3>
-<p>Most important is folder code\codeGen. It contains the configuration of the CAN interface for this application. This configuration is mainly determined by the code generation from the network database file(s). The transmission modes and all program flow for communication validation (timeouts, checksum and sequence counter support) are implemented here, controlled by the attributes in the network databases. Moreover, the global data API with the APSW, which is highly dependent on the network databases is implemented here, too.</p>
-<p>All C sources and related header files in this folder are generated by the code generator.</p>
+<p>Most important is folder code\codeGen. It contains the configuration
+of the CAN interface for this application. This configuration is mainly
+determined by the code generation from the network database file(s). The
+transmission modes and all program flow for communication validation
+(timeouts, checksum and sequence counter support) are implemented here,
+controlled by the attributes in the network databases. Moreover, the
+global data API with the APSW, which is highly dependent on the network
+databases is implemented here, too.</p>
+<p>All C sources and related header files in this folder are generated
+by the code generator.</p>
 <h3 data-number="1.2.5" id="folder-environment"><span class="header-section-number">1.2.5</span> Folder environment</h3>
-<p>This folder contains a few header and stub files to satisfy the compilation and to support compilation with both, Windows GCC 32 Bit and 64 Bit, which differ in some respects.</p>
+<p>This folder contains a few header and stub files to satisfy the
+compilation and to support compilation with both, Windows GCC 32 Bit and
+64 Bit, which differ in some respects.</p>
 </body>
 </html>

@@ -30,4 +30,4 @@ permanently hurt, up to several hundred Milliseconds. This has the
 consequence of exorbitant numbers of CAN timing errors being reported.
 
 The differences between the two compiler's are likely because of their
-individual implementations of the pthread environment.
+individual implementations of the pthreads environment.

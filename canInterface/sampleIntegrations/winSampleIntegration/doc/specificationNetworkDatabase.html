@@ -1,69 +1,310 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>specificationNetworkDatabase</title>
+  <style>
+html {
+font-family: Segoe UI;
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
-<nav id="TOC">
+<nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#scenario"><span class="toc-section-number">1</span> Scenario</a><ul>
-<li><a href="#involved-frames"><span class="toc-section-number">1.1</span> Involved frames</a></li>
-<li><a href="#specification-of-dbc-file"><span class="toc-section-number">1.2</span> Specification of DBC file</a><ul>
-<li><a href="#attributes"><span class="toc-section-number">1.2.1</span> Attributes</a></li>
-<li><a href="#special-signals"><span class="toc-section-number">1.2.2</span> Special signals</a></li>
-<li><a href="#allocation-of-bits"><span class="toc-section-number">1.2.3</span> Allocation of bits</a></li>
+<li><a href="#scenario" id="toc-scenario"><span class="toc-section-number">1</span> Scenario</a>
+<ul>
+<li><a href="#involved-frames" id="toc-involved-frames"><span class="toc-section-number">1.1</span> Involved frames</a></li>
+<li><a href="#specification-of-dbc-file" id="toc-specification-of-dbc-file"><span class="toc-section-number">1.2</span> Specification of DBC file</a>
+<ul>
+<li><a href="#attributes" id="toc-attributes"><span class="toc-section-number">1.2.1</span> Attributes</a></li>
+<li><a href="#special-signals" id="toc-special-signals"><span class="toc-section-number">1.2.2</span> Special signals</a></li>
+<li><a href="#allocation-of-bits" id="toc-allocation-of-bits"><span class="toc-section-number">1.2.3</span> Allocation of bits</a></li>
 </ul></li>
 </ul></li>
 </ul>
 </nav>
-<h1 id="scenario"><span class="header-section-number">1</span> Scenario</h1>
-<p>This sample application implements a power display device for an automotive vehicle. It reads the current values of engine rotational speed and engine torque from the CAN bus and computes the current power of the engine. The power is broadcasted on the CAN bus (to whom it may concern, no specific receiver is specified). This message transfer is regular, in- and output are repeated every 10 ms.</p>
-<p>The power display sends a second frame. It counts all recognized error events (timeout, DLC, checksum and transmission sequence). Some of these are regularly reported by a dedicated CAN frame. However, this frame is not only sent regularly but also in the instance of a changing counter value. This is called the mixed mode.</p>
-<p>To make the sample more instructive some less realistic CAN messages have been invented. For whatever reasons our application can compare the computed power and the rotational speed against some user-defined limits. If a range is exceeded (or when we get into range again) then and only then an according CAN frame is broadcasted. This “functionality” has been specified for the only reason to have some purely event based frames in the system. Two frames are involved: The vehicle sends the limits and our power display sends the in-range or range violation frame.</p>
-<h2 id="involved-frames"><span class="header-section-number">1.1</span> Involved frames</h2>
-<p>StateEcu01, StateEcu02: Inbound frames to our power display. Origin is the engine control unit. These frames contain current values of rotational speed and torque. They are sent periodically every 10 ms.</p>
-<p>UserLimits: Inbound frame for our power display application. There may be a human machine interface in the vehicle, where the user can enter the current ranges for the observation of rotational speed and power. The frame is only sent when one of the settings is changed. This will happen rarely and occasionally only.</p>
-<p>InfoPowerDisplay: This frame is sent regularly by our power display. It contains the computed power plus a status signal. This status will indicate if the compute power is invalid or unavailable, e.g. due to recognized errors on the input frames.</p>
-<p>StatusPowerDisplay: The number of recognized checksum, DLC and transmission sequence errors so far. Sent by the power display, when one of the counter values alters. But no more often then every 50 ms. If no counter value has altered during the last 1000 ms then the frame is re-sent with same contents (except for the sequence counter of course). If the counter values never change than this frame becomes a regular 1000 ms frame.</p>
-<p>LimitsPowerDisplay: Sent by the power display in logical (not immediate) response to frame UserLimits. When the range for speed of rotation or power as defined by the last recently received frame UserLimits is violated the first time or when violation the range is over then the power display sends this frame to indicate the current in- or out-of-range status. As long as this status doesn’t change this frame won’t be sent.</p>
-<h2 id="specification-of-dbc-file"><span class="header-section-number">1.2</span> Specification of DBC file</h2>
-<h3 id="attributes"><span class="header-section-number">1.2.1</span> Attributes</h3>
-<p>The DBC file uses some application specific attributes to specify the different behavior of the frames and signals.</p>
+<h1 data-number="1" id="scenario"><span class="header-section-number">1</span> Scenario</h1>
+<p>This sample application implements a power display device for an
+automotive vehicle. It reads the current values of engine rotational
+speed and engine torque from the CAN bus and computes the current power
+of the engine. The power is broadcasted on the CAN bus (to whom it may
+concern, no specific receiver is specified). This message transfer is
+regular, in- and output are repeated every 10 ms.</p>
+<p>The power display sends a second frame. It counts all recognized
+error events (timeout, DLC, checksum and transmission sequence). Some of
+these are regularly reported by a dedicated CAN frame. However, this
+frame is not only sent regularly but also in the instance of a changing
+counter value. This is called the mixed mode.</p>
+<p>To make the sample more instructive some less realistic CAN messages
+have been invented. For whatever reasons our application can compare the
+computed power and the rotational speed against some user-defined
+limits. If a range is exceeded (or when we get into range again) then
+and only then an according CAN frame is broadcasted. This
+&quot;functionality&quot; has been specified for the only reason to have some
+purely event based frames in the system. Two frames are involved: The
+vehicle sends the limits and our power display sends the in-range or
+range violation frame.</p>
+<h2 data-number="1.1" id="involved-frames"><span class="header-section-number">1.1</span> Involved frames</h2>
+<p>StateEcu01, StateEcu02: Inbound frames to our power display. Origin
+is the engine control unit. These frames contain current values of
+rotational speed and torque. They are sent periodically every 10 ms.</p>
+<p>UserLimits: Inbound frame for our power display application. There
+may be a human machine interface in the vehicle, where the user can
+enter the current ranges for the observation of rotational speed and
+power. The frame is only sent when one of the settings is changed. This
+will happen rarely and occasionally only.</p>
+<p>InfoPowerDisplay: This frame is sent regularly by our power display.
+It contains the computed power plus a status signal. This status will
+indicate if the compute power is invalid or unavailable, e.g. due to
+recognized errors on the input frames.</p>
+<p>StatusPowerDisplay: The number of recognized checksum, DLC and
+transmission sequence errors so far. Sent by the power display, when one
+of the counter values alters. But no more often then every 50 ms. If no
+counter value has altered during the last 1000 ms then the frame is
+re-sent with same contents (except for the sequence counter of course).
+If the counter values never change than this frame becomes a regular
+1000 ms frame.</p>
+<p>LimitsPowerDisplay: Sent by the power display in logical (not
+immediate) response to frame UserLimits. When the range for speed of
+rotation or power as defined by the last recently received frame
+UserLimits is violated the first time or when violation the range is
+over then the power display sends this frame to indicate the current in-
+or out-of-range status. As long as this status doesn&#39;t change this frame
+won&#39;t be sent.</p>
+<h2 data-number="1.2" id="specification-of-dbc-file"><span class="header-section-number">1.2</span> Specification of DBC file</h2>
+<h3 data-number="1.2.1" id="attributes"><span class="header-section-number">1.2.1</span> Attributes</h3>
+<p>The DBC file uses some application specific attributes to specify the
+different behavior of the frames and signals.</p>
 <p>The following frame related attributes have been defined:</p>
 <ul>
-<li>frameSendMode: An enumeration, which specifies the transmission/timing pattern of the frame. Known values are “regular”, “event” and “mixed”. Default value is regular
+<li><p>frameSendMode: An enumeration, which specifies the
+transmission/timing pattern of the frame. Known values are &quot;regular&quot;,
+&quot;event&quot; and &quot;mixed&quot;. Default value is regular</p>
 <ul>
-<li>regular: Purely time controlled frames. Inbound frames are expected regularly and a timeout error is raised if they stay away. Outbound frames are sent strictly regular</li>
-<li>event: Frames are excepted to be sent when and only when their contents change. For inbound frames it means that a timeout can’t be defined. Outbound frames are sent on data change. A minimum distance in time is defined, which limits the frequency of send events even in case of permanent content changes</li>
-<li>mixed: Outbound frames are send on data change but no more often as defined by the minimum distance in time. If no data change has been seen for a second specified time parameter then the frame is sent, too. Inbound frames are handled like regular frames with the only exception that the timeout is related to the specified minimum send frequency</li>
+<li>regular: Purely time controlled frames. Inbound frames are expected
+regularly and a timeout error is raised if they stay away. Outbound
+frames are sent strictly regular</li>
+<li>event: Frames are excepted to be sent when and only when their
+contents change. For inbound frames it means that a timeout can&#39;t be
+defined. Outbound frames are sent on data change. A minimum distance in
+time is defined, which limits the frequency of send events even in case
+of permanent content changes</li>
+<li>mixed: Outbound frames are send on data change but no more often as
+defined by the minimum distance in time. If no data change has been seen
+for a second specified time parameter then the frame is sent, too.
+Inbound frames are handled like regular frames with the only exception
+that the timeout is related to the specified minimum send frequency</li>
 </ul></li>
-<li><p>sendPeriod: A numeric integer value specifying the period time of regular frames in Milliseconds. Range is [5, 10000] ms. Default value is 10 ms.</p>
-<p>For mixed mode frames this value specifies the maximum time span in between two transmission events.</p>
+<li><p>sendPeriod: A numeric integer value specifying the period time of
+regular frames in Milliseconds. Range is [5, 10000] ms. Default value is
+10 ms.</p>
+<p>For mixed mode frames this value specifies the maximum time span in
+between two transmission events.</p>
 <p>For event mode frames this attribute is irrelevant</p></li>
-<li><p>eventMinDistance: A numeric integer value specifying the minimum distance in time between two transmission events in Milliseconds. Range is [5, 10000] ms. Default value is 20 ms.</p>
+<li><p>eventMinDistance: A numeric integer value specifying the minimum
+distance in time between two transmission events in Milliseconds. Range
+is [5, 10000] ms. Default value is 20 ms.</p>
 <p>For regular frames this attribute is ignored</p></li>
-<li><p>checksumStartValue: To avoid confounding frames of different CAN IDs the checksum validation uses different checksum definitions for different frames. An individual start value of the computation is applied. The start value is specified with this attribute. It is an integer number in the range [0, 255] and the default value is 0</p></li>
+<li><p>checksumStartValue: To avoid confounding frames of different CAN
+IDs the checksum validation uses different checksum definitions for
+different frames. An individual start value of the computation is
+applied. The start value is specified with this attribute. It is an
+integer number in the range [0, 255] and the default value is 0</p></li>
 </ul>
 <p>The following signal related attributes have been defined:</p>
 <ul>
-<li><p>initialValue: A floating point number in the range [-1e99, 1e99], which specifies the inital world value of the signal. Default value is 0.</p>
-<p>For inbound frames, the API will show this value for the signal as long as the containing frame has never been received.</p>
-<p>For outbound frames, this value will be sent as long as the APSW has not updated the API value yet</p></li>
+<li><p>initialValue: A floating point number in the range [-1e99, 1e99],
+which specifies the inital world value of the signal. Default value is
+0.</p>
+<p>For inbound frames, the API will show this value for the signal as
+long as the containing frame has never been received.</p>
+<p>For outbound frames, this value will be sent as long as the APSW has
+not updated the API value yet</p></li>
 </ul>
-<h3 id="special-signals"><span class="header-section-number">1.2.2</span> Special signals</h3>
-<p>The sample implements a production level validation of the communication. It defines a checksum and a sequence counter signal for most frames. (Not for all however, to get more inhomogeneity and better test coverage into the code.) The code generation process is supported by specifying naming schemes for these signals:</p>
+<h3 data-number="1.2.2" id="special-signals"><span class="header-section-number">1.2.2</span> Special signals</h3>
+<p>The sample implements a production level validation of the
+communication. It defines a checksum and a sequence counter signal for
+most frames. (Not for all however, to get more inhomogeneity and better
+test coverage into the code.) The code generation process is supported
+by specifying naming schemes for these signals:</p>
 <ul>
-<li><p>checksum: If a signal has this name then it is considered an 8 Bit checksum. The checksum needs to allocate a complete byte of the frame; it must not go across a byte location. The checksum is defined to be the binary inverted arithmetic sum of all other frame content bytes and the frame individual start value</p></li>
-<li><p>sequenceCounter: If a signal has this name then it is considered a cyclic sequence counter. The counter may have up to eight bit and it may go across a byte location in the frame. The counting range is defined by the min and max property of the signal. min &gt; max is permitted; this means inverse counting direction. A counting cycle always begins with min and always ends with max</p></li>
+<li><p>checksum: If a signal has this name then it is considered an 8
+Bit checksum. The checksum needs to allocate a complete byte of the
+frame; it must not go across a byte location. The checksum is defined to
+be the binary inverted arithmetic sum of all other frame content bytes
+and the frame individual start value</p></li>
+<li><p>sequenceCounter: If a signal has this name then it is considered
+a cyclic sequence counter. The counter may have up to eight bit and it
+may go across a byte location in the frame. The counting range is
+defined by the min and max property of the signal. min &gt; max is
+permitted; this means inverse counting direction. A counting cycle
+always begins with min and always ends with max</p></li>
 </ul>
-<h3 id="allocation-of-bits"><span class="header-section-number">1.2.3</span> Allocation of bits</h3>
-<p>The positioning of signals in the frames has purposely been done in an inefficient way. This must not be considered a design error of the sample. Useless crossing of byte boundaries, useless gaps between signals and mixed byte ordering have been defined just to make the required pack and unpack code more difficult and to improve the test coverage.</p>
+<h3 data-number="1.2.3" id="allocation-of-bits"><span class="header-section-number">1.2.3</span> Allocation of bits</h3>
+<p>The positioning of signals in the frames has purposely been done in
+an inefficient way. This must not be considered a design error of the
+sample. Useless crossing of byte boundaries, useless gaps between
+signals and mixed byte ordering have been defined just to make the
+required pack and unpack code more difficult and to improve the test
+coverage.</p>
 </body>
 </html>
