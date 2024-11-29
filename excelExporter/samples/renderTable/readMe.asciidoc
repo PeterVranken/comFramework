@@ -34,16 +34,17 @@ Script `renderTable.cmd` is typically used in two steps:
 - The first run generates a default StringTemplate V4 template file, which
   serves as a starting point for your desired templates. Moreover, this
   run of the script generates a simple Windows wrapper script with an
-  appropriate command line for _excelExporter_
+  appropriate command line for _excelExporter_.
 - Subsequent runs are done indirectly via the wrapper script generated in
   the first step. These runs require the specification of wanted output
   file and Excel workbook. They will render the workbook according to the
-  template file generated in the first step (and maybe meanwhile modified)
+  template file generated in the first step (and maybe meanwhile modified).
 
-The generated StringTemplate V4 template group file is organized such that the
-framing text blocks and the template for the basic pattern for a single
-data item (i.e., Excel row) can be easily identified and customized to your
-particular needs. It contains TODO tags, how to elaborate if for your needs.
+The generated StringTemplate V4 template group file is organized such that
+the framing text blocks and the template for the basic pattern for a
+single data item (i.e., Excel row) can be easily identified and customized
+to your particular needs. It contains TODO tags, how to elaborate it for
+your needs.
 
 Before you start your work, you should type:
 
@@ -54,10 +55,10 @@ The first command prints the usage message, which explains in detail how
 to run the two steps and the second one will open all the documents you
 normally require to develop an _excelExporter_ application:
 
-- Explanation of concepts of _excelExporter_
-- The manual of StringTemplate V4
-- The Javadoc documentation of the internal data model of _excelExporter_
-- It prints the command line documentation ("usage") of _excelExporter_
+- Explanation of concepts of _excelExporter_.
+- The manual of StringTemplate V4.
+- The Javadoc documentation of the internal data model of _excelExporter_.
+- It prints the command line documentation ("usage") of _excelExporter_.
 
 A valid installation of _excelExporter_ is prerequisite; in particular, 
 environment variable EXCELEXPORTER_HOME needs to be set and point to the
@@ -72,21 +73,21 @@ as described above.
 === Install _renderTable_
 
 . Copy the folder `renderTable` to an installation location of your
-  choice. The chosen path must not contain any blanks
+  choice. The chosen path must not contain any blanks.
   - The sub-folder `example` is part of this tutorial only and is not
-    required in the installation. You may delete it from your copy
+    required in the installation. You may delete it from your copy.
 . Add the installation directory to environment variable PATH. In a newly 
   opened shell window, type: "where.exe renderTable.cmd" The response
-  should point to your installation directory
+  should point to your installation directory.
   
 === Generate wrapper script
 
 . Copy folder `example` to a location of your choice. This is your working
   environment, not an installation directory. The chosen path must not
-  contain any blanks
-. In a newly opened PowerShell window, `cd` to your copy of folder `example`
-. Type: "renderTable -h" and carefully read the response
-. Type: "renderTable --help" and inspect the opening documents
+  contain any blanks.
+. In a newly opened PowerShell window, `cd` to your copy of folder `example`.
+. Type: "renderTable -h" and carefully read the response.
+. Type: "renderTable --help" and inspect the opening documents.
 . Type: "renderTable renderMySimpleTable.stg": Two new files appear in
   your working folder:
   - renderMySimpleTable.stg, a StringTemplate V4 template group file
@@ -100,8 +101,8 @@ as described above.
 . Type: ".\renderMySimpleTable.ps1 stdout mySimpleTable.xlsx", which would
   be the correct usage of the wrapper script. The generated text is written
   to the console. The generated text indicates, what has still to be done
-  in the preliminary template group file
-. Open `renderMySimpleTable.stg` in a text editor
+  in the preliminary template group file.
+. Open `renderMySimpleTable.stg` in a text editor.
 . Replace
 +
     This is how row <row.iRow> looks like. TODO: Edit template renderRow(row) in <\\>
@@ -126,7 +127,7 @@ into, for example:
     <sheet.rowAry:renderRow()><\\>
     We rendered <info.calc.noRows> data items.
 
-. Repeat the previous PowerShell command and double-check the new output
+. Repeat the previous PowerShell command and double-check the new output.
 
 === Generate your output file
 
@@ -137,4 +138,4 @@ into, for example:
 
 . Open `myOutput.txt` in a text editor and check the result! From now on,
   the expected work flow is that you maintain your Excel table and re-run
-  the wrapper script to update the generated text file accordingly
+  the wrapper script to update the generated text file accordingly.

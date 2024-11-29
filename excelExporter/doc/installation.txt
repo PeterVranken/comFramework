@@ -1,70 +1,99 @@
-Installation of binary distribution of Java application excelExporter
----------------------------------------------------------------------
+= Installation of binary distribution of Java application excelExporter
 
-excelExporter is a stand-alone Java application. An installed Java 18 or
-higher is a prerequisite of running the code generator. You can get the
-Java Open JDK at https://jdk.java.net/18/ (May 2022). Download the archive
-(e.g.
-https://download.java.net/java/GA/jdk18.0.1.1/65ae32619e2f40f3a9af3af1851d6e19/2/GPL/openjdk-18.0.1.1_windows-x64_bin.zip
+== Installation of Java runtime
+
+Please note, that this installation step is shared with the installation
+of the DBC code generator. You don't need to do this twice, if you are
+going to use both tools.
+
+excelExporter, the auxiliary code generator from project comFramework is a
+stand-alone Java application. An installed Java runtime environment of
+version 8 (aka 1.8) or higher is a prerequisite of running it. If such a
+Java RTE is in your system's search path for executables then you can skip
+this step. Even setting environment variable `COMFRAMEWORK_JAVA_HOME` (see
+below) is not a must; if you don't do then the Java executable from the
+search path will be used.
+
+If no suitable Java RTE is available in your system's search path, then
+you can get an appropriate Java Open JDK at
+https://jdk.java.net/23/ (Nov 2024). Download the archive (e.g.,
+https://download.java.net/java/GA/jdk23.0.1/c28985cbf10d4e648e4004050f8781aa/11/GPL/openjdk-23.0.1_windows-x64_bin.zip
 for Windows x64 users).
 
-Unzip the archive to a location of your choice and consider adding this
-location to the operating system's search path. Either the Java
+Unzip the Java archive to a location of your choice and consider adding
+this location to the operating system's search path. Either the Java
 executable, java.exe, needs to be in the Windows search path or the Java
-installation path -- where bin\java(.exe) is located in -- is assigned to
-a new environment variable COMFRAMEWORK_JAVA_HOME. Given, you're Java
-executable would be c:\ProgramFiles\jdk18.0.1.1\bin\java.exe, then you
-could issue the command
+installation path -- where `bin\java.exe` is located in -- is assigned to
+a new environment variable `COMFRAMEWORK_JAVA_HOME`. Given, you're Java
+executable would be `c:\ProgramFiles\jdk-23.0.1\bin\java.exe`, then you
+could issue the command:
 
-    setx COMFRAMEWORK_JAVA_HOME c:\ProgramFiles\jdk18.0.1.1
+    setx COMFRAMEWORK_JAVA_HOME c:\ProgramFiles\jdk-23.0.1
 
-from a Command Prompt window. (Now you need to open another shell window
-to proceed; the current one will not take the new setting.) Please note,
-that the proposed command will install the new environment variable only
-for the current user. A machine wide setting by putting /m at the end of
-the command line requires administrator rights.
+from a Command Prompt window. Please note, that the proposed command will
+install the new environment variable only for the current user. A machine
+wide setting by putting /m at the end of the command line requires
+administrator rights.
 
-Now you unzip the contents of the excelExporter archive to any
-location. However, to avoid later problems with localizing files from
-shell command line and scripts you should only consider paths, which do
-not contain any blanks.
+== Unzip the comFramework archive
 
-TIP: Usually, excelExporter is distributed as an element of the
-comFramework package. If so, then the comFramework archive is the only one
-to unzip; folder excelExporter is contained.
+If not already done for the installation of the DBC code generator, you
+would now unzip the comFramework archive to a location of your choice.
+Installation paths containing blanks must be avoided.
 
-The complete installation path, including the name of the archive's root
-folder excelExporter is assigned to a new environment variable
-EXCELEXPORTER_HOME. The script that launches the Java application, will
-set the Java CLASSPATH based on this root directory. Java will fail to
+The installation path of excelExporter, comFramework's auxiliary code
+generator, (i.e., a path like `...\comFramework\excelExporter`, where
+folder `dist` is located in) is assigned to a new environment variable
+`EXCELEXPORTER_HOME`. The script that launches the Java application, will
+set the Java class path based on this root directory. Java will fail to
 locate the required jar files if the environment variable is not properly
 set. Given, you'd copied the archive's contents to the folder
-c:\ProgramFiles, then you could issue the command
+`c:\ProgramFiles`, then you could issue the command:
 
-    setx EXCELEXPORTER_HOME c:\ProgramFiles\excelExporter
+    setx EXCELEXPORTER_HOME c:\ProgramFiles\comFramework\excelExporter
 
-from a Command Prompt window.
+from a Command Prompt window. Please note, that the proposed command will
+install the new environment variable only for the current user. A machine
+wide setting by putting /m at the end of the command line requires
+administrator rights.
 
-The application launcher is a Windows script named excelExporter.cmd. It
-is located in the folder excelExporter\dist. It's a very simple script and
-Linux and Mac OS users won't have any problems to write the same script in
-their respective shell script languages. The script becomes most useful if
-the folder dist is added to the system search path (i.e. environment
-variable PATH would be extended by c:\ProgramFiles\excelExporter\dist in
-the example case above). Consider to type
+The application launcher is a Windows script named `excelExporter.cmd`. It
+is located in the folder `excelExporter\dist`. It's a very simple script
+and Linux and Mac OS users won't have any problems to write the same
+script in their respective shell script languages. The script becomes most
+useful if the folder dist is added to the system search path (i.e.,
+environment variable `PATH` would be extended by
+`c:\ProgramFiles\comFramework\excelExporter\dist` in the example case
+above). Consider typing:
 
-    pathman c:\ProgramFiles\excelExporter\dist
+    pathman /au c:\ProgramFiles\comFramework\excelExporter\dist
 
-in a shell window.
+in a shell window. Please note, that the proposed command will
+extend the Windows search path only for the current user. A machine wide
+setting by putting `/as` instead of `/au` requires administrator rights.
 
-Alternatively, the tiny script excelExporter.cmd can be copied to all
-locations where the code generator is about to be used.
+Alternatively, the tiny script `excelExporter.cmd` can be copied to all
+locations where excelExporter is about to be used.
 
-If you decided to extend your PATH variable then you should test your
-installation by opening a new shell window, cd'ing to an arbitrary working
-directory and submitting the command:
+== Test your installation
+
+If you decided to extend your `PATH` variable then you should test your
+installation by opening a _new_ shell window -- the Windows configuration
+settings made by commands `setx` and `pathman` are not adopted by the
+shell instance, which they are submitted from. In the new shell, `cd` to
+an arbitrary working directory and submit the command:
 
     excelExporter.cmd --help
 
-The application should be started and it should respond with its usage
+The application should start up and it should respond with its usage
 text.
+
+From the same shell, `cd` to sample `firstSample`, i.e., folder
+`...\comFramework\excelExporter\samples\firstSample. Type:
+
+    runFirstSample
+
+`runFirstSample` is a small wrapper script with the command line
+appropriate for this sample. excelExporter is run and should properly
+reproduce the generated file `output.txt`, which already was in the ZIP
+archive. The generated text output is written to the shell window, too.

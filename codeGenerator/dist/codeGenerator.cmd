@@ -13,7 +13,7 @@ echo separated list of paths holding your project templates. (The local working 
 echo already is part of the class path.) Please note, setting the environment variable
 echo should be done only locally as it'll contain project specific paths!
 rem
-rem  Copyright (C) 2015-2023 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+rem  Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 rem
 rem  This program is free software: you can redistribute it and/or modify it
 rem  under the terms of the GNU Lesser General Public License as published by the

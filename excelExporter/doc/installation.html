@@ -438,102 +438,119 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
+<h1>Installation of binary distribution of Java application excelExporter</h1>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_installation_of_binary_distribution_of_java_application_excelexporter">Installation of binary distribution of Java application excelExporter</h2>
+<h2 id="_installation_of_java_runtime">Installation of Java runtime</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>excelExporter is a stand-alone Java application. An installed Java 18 or
-higher is a prerequisite of running the code generator. You can get the
-Java Open JDK at <a href="https://jdk.java.net/18/" class="bare">https://jdk.java.net/18/</a> (May 2022). Download the archive
-(e.g.
-<a href="https://download.java.net/java/GA/jdk18.0.1.1/65ae32619e2f40f3a9af3af1851d6e19/2/GPL/openjdk-18.0.1.1_windows-x64_bin.zip" class="bare">https://download.java.net/java/GA/jdk18.0.1.1/65ae32619e2f40f3a9af3af1851d6e19/2/GPL/openjdk-18.0.1.1_windows-x64_bin.zip</a>
+<p>Please note, that this installation step is shared with the installation
+of the DBC code generator. You don&#8217;t need to do this twice, if you are
+going to use both tools.</p>
+</div>
+<div class="paragraph">
+<p>excelExporter, the auxiliary code generator from project comFramework is a
+stand-alone Java application. An installed Java runtime environment of
+version 8 (aka 1.8) or higher is a prerequisite of running it. If such a
+Java RTE is in your system&#8217;s search path for executables then you can skip
+this step. Even setting environment variable <code>COMFRAMEWORK_JAVA_HOME</code> (see
+below) is not a must; if you don&#8217;t do then the Java executable from the
+search path will be used.</p>
+</div>
+<div class="paragraph">
+<p>If no suitable Java RTE is available in your system&#8217;s search path, then
+you can get an appropriate Java Open JDK at
+<a href="https://jdk.java.net/23/" class="bare">https://jdk.java.net/23/</a> (Nov 2024). Download the archive (e.g.,
+<a href="https://download.java.net/java/GA/jdk23.0.1/c28985cbf10d4e648e4004050f8781aa/11/GPL/openjdk-23.0.1_windows-x64_bin.zip" class="bare">https://download.java.net/java/GA/jdk23.0.1/c28985cbf10d4e648e4004050f8781aa/11/GPL/openjdk-23.0.1_windows-x64_bin.zip</a>
 for Windows x64 users).</p>
 </div>
 <div class="paragraph">
-<p>Unzip the archive to a location of your choice and consider adding this
-location to the operating system&#8217;s search path. Either the Java
+<p>Unzip the Java archive to a location of your choice and consider adding
+this location to the operating system&#8217;s search path. Either the Java
 executable, java.exe, needs to be in the Windows search path or the Java
-installation path&#8201;&#8212;&#8201;where bin\java(.exe) is located in&#8201;&#8212;&#8201;is assigned to
-a new environment variable COMFRAMEWORK_JAVA_HOME. Given, you&#8217;re Java
-executable would be c:\ProgramFiles\jdk18.0.1.1\bin\java.exe, then you
-could issue the command</p>
+installation path&#8201;&#8212;&#8201;where <code>bin\java.exe</code> is located in&#8201;&#8212;&#8201;is assigned to
+a new environment variable <code>COMFRAMEWORK_JAVA_HOME</code>. Given, you&#8217;re Java
+executable would be <code>c:\ProgramFiles\jdk-23.0.1\bin\java.exe</code>, then you
+could issue the command:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>setx COMFRAMEWORK_JAVA_HOME c:\ProgramFiles\jdk18.0.1.1</pre>
+<pre>setx COMFRAMEWORK_JAVA_HOME c:\ProgramFiles\jdk-23.0.1</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>from a Command Prompt window. (Now you need to open another shell window
-to proceed; the current one will not take the new setting.) Please note,
-that the proposed command will install the new environment variable only
-for the current user. A machine wide setting by putting /m at the end of
-the command line requires administrator rights.</p>
+<p>from a Command Prompt window. Please note, that the proposed command will
+install the new environment variable only for the current user. A machine
+wide setting by putting /m at the end of the command line requires
+administrator rights.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unzip_the_comframework_archive">Unzip the comFramework archive</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If not already done for the installation of the DBC code generator, you
+would now unzip the comFramework archive to a location of your choice.
+Installation paths containing blanks must be avoided.</p>
 </div>
 <div class="paragraph">
-<p>Now you unzip the contents of the excelExporter archive to any
-location. However, to avoid later problems with localizing files from
-shell command line and scripts you should only consider paths, which do
-not contain any blanks.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Tip</div>
-</td>
-<td class="content">
-Usually, excelExporter is distributed as an element of the
-comFramework package. If so, then the comFramework archive is the only one
-to unzip; folder excelExporter is contained.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The complete installation path, including the name of the archive&#8217;s root
-folder excelExporter is assigned to a new environment variable
-EXCELEXPORTER_HOME. The script that launches the Java application, will
-set the Java CLASSPATH based on this root directory. Java will fail to
+<p>The installation path of excelExporter, comFramework&#8217;s auxiliary code
+generator, (i.e., a path like <code>&#8230;&#8203;\comFramework\excelExporter</code>, where
+folder <code>dist</code> is located in) is assigned to a new environment variable
+<code>EXCELEXPORTER_HOME</code>. The script that launches the Java application, will
+set the Java class path based on this root directory. Java will fail to
 locate the required jar files if the environment variable is not properly
 set. Given, you&#8217;d copied the archive&#8217;s contents to the folder
-c:\ProgramFiles, then you could issue the command</p>
+<code>c:\ProgramFiles</code>, then you could issue the command:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>setx EXCELEXPORTER_HOME c:\ProgramFiles\excelExporter</pre>
+<pre>setx EXCELEXPORTER_HOME c:\ProgramFiles\comFramework\excelExporter</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>from a Command Prompt window.</p>
+<p>from a Command Prompt window. Please note, that the proposed command will
+install the new environment variable only for the current user. A machine
+wide setting by putting /m at the end of the command line requires
+administrator rights.</p>
 </div>
 <div class="paragraph">
-<p>The application launcher is a Windows script named excelExporter.cmd. It
-is located in the folder excelExporter\dist. It&#8217;s a very simple script and
-Linux and Mac OS users won&#8217;t have any problems to write the same script in
-their respective shell script languages. The script becomes most useful if
-the folder dist is added to the system search path (i.e. environment
-variable PATH would be extended by c:\ProgramFiles\excelExporter\dist in
-the example case above). Consider to type</p>
+<p>The application launcher is a Windows script named <code>excelExporter.cmd</code>. It
+is located in the folder <code>excelExporter\dist</code>. It&#8217;s a very simple script
+and Linux and Mac OS users won&#8217;t have any problems to write the same
+script in their respective shell script languages. The script becomes most
+useful if the folder dist is added to the system search path (i.e.,
+environment variable <code>PATH</code> would be extended by
+<code>c:\ProgramFiles\comFramework\excelExporter\dist</code> in the example case
+above). Consider typing:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>pathman c:\ProgramFiles\excelExporter\dist</pre>
+<pre>pathman /au c:\ProgramFiles\comFramework\excelExporter\dist</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>in a shell window.</p>
+<p>in a shell window. Please note, that the proposed command will
+extend the Windows search path only for the current user. A machine wide
+setting by putting <code>/as</code> instead of <code>/au</code> requires administrator rights.</p>
 </div>
 <div class="paragraph">
-<p>Alternatively, the tiny script excelExporter.cmd can be copied to all
-locations where the code generator is about to be used.</p>
+<p>Alternatively, the tiny script <code>excelExporter.cmd</code> can be copied to all
+locations where excelExporter is about to be used.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_test_your_installation">Test your installation</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>If you decided to extend your PATH variable then you should test your
-installation by opening a new shell window, cd&#8217;ing to an arbitrary working
-directory and submitting the command:</p>
+<p>If you decided to extend your <code>PATH</code> variable then you should test your
+installation by opening a <em>new</em> shell window&#8201;&#8212;&#8201;the Windows configuration
+settings made by commands <code>setx</code> and <code>pathman</code> are not adopted by the
+shell instance, which they are submitted from. In the new shell, <code>cd</code> to
+an arbitrary working directory and submit the command:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -541,15 +558,30 @@ directory and submitting the command:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The application should be started and it should respond with its usage
+<p>The application should start up and it should respond with its usage
 text.</p>
+</div>
+<div class="paragraph">
+<p>From the same shell, <code>cd</code> to sample <code>firstSample</code>, i.e., folder
+`&#8230;&#8203;\comFramework\excelExporter\samples\firstSample. Type:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>runFirstSample</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>runFirstSample</code> is a small wrapper script with the command line
+appropriate for this sample. excelExporter is run and should properly
+reproduce the generated file <code>output.txt</code>, which already was in the ZIP
+archive. The generated text output is written to the shell window, too.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-05-16 10:28:51 +0200
+Last updated 2024-11-29 19:04:30 +0100
 </div>
 </div>
 </body>

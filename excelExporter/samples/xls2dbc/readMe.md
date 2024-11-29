@@ -47,7 +47,7 @@ suffers from the fact that groups can only be sorted either in appearance
 in the input or in lexical order of their names. When using dedicated
 sheets for the different kinds of data item as done in folder usingSheets
 then all items form lists of row objects and these lists can be sorted
-according to all the row objects' properties (i.e. the columns of the
+according to all the row objects' properties (i.e., the columns of the
 Excel input). Only by adding some sort arguments to the command line we
 could order the frames in the generated *.dbc file by size, by CAN ID, by
 transmission characteristics, etc. Multi-priority sorting would enable to
