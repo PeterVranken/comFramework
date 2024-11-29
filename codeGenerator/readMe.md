@@ -84,9 +84,8 @@ sections explain the available, related documentation.
 
 The internal representation of the parsed input information, called "data
 model", is documented as a
-[Javadoc of the complete data structure]https://petervranken.github.io/comFramework/codeGenerator/doc/dataModel/index.html?overview-summary.html
-"Data model for StringTemplate V4"). The same is found in your local
-installation, please click on file
+[Javadoc of the complete data structure]https://petervranken.github.io/comFramework/codeGenerator/doc/dataModel/index.html?overview-summary.html "Data model for StringTemplate V4").
+The same is found in your local installation, please click on file
 `codeGenerator/doc/dataModelForStringTemplateV4.html`.
 
 Here, you find the documentation of all public elements of the data
@@ -149,7 +148,7 @@ which directly relate to the DBC code generator:
 
 ## Installation
 
-The code generator is a Java 18 application. The installation is as simple as
+The code generator is a Java application. The installation is as simple as
 unpacking an archive and setting an environment variable. It is described
 in detail in the file
 [installation.txt](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/installation.txt).
@@ -158,10 +157,10 @@ in detail in the file
 
 ### Release 1.13.0
 
-This version increment was made when the project moved from SourceForge to
-GitHub to make a clean break. In fact, there are no significant changes to
-the DBC code generator since the last release, but there are a number of
-smaller corrections, mostly to the documentation.
+This version increment was made to make a clean break when the project
+moved from SourceForge to GitHub. In fact, there are no significant
+changes to the DBC code generator since the last release, but there are a
+number of smaller corrections, mostly to the documentation.
 
 ### Release 1.12.0
 
@@ -427,12 +426,12 @@ its revision designation because of the high impact of this issue: Most
 people will use the sample templates as starting point for their
 application and would suffer from the inherited bug in the template.
 
-The bug was located and is fixed in the template [codeGenC.stg](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/codeGenC.stg "GitHub
-repository").
+The bug was located and is fixed in the template [codeGenC.stg](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/codeGenC.stg "GitHub repository").
 
 However, the complete set of templates should be exchanged for consistency
-reasons. The introduction of the support template [iterations.stg](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/iterations.stg "GitHub repository") had
-established the attribute name *signal* for signals. Earlier templates
+reasons. The introduction of the support template
+[iterations.stg](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/iterations.stg "GitHub repository")
+had established the attribute name *signal* for signals. Earlier templates
 used to refer to *s* to address to the signal in scope. This has now been
 aligned and all templates use the attribute name *signal*.
 

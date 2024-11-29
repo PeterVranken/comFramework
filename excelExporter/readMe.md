@@ -106,9 +106,8 @@ The internal representation of the parsed input information, called "data
 model", is explained in detail in Wiki page
 [excelExporter's Data Model](https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/)
 and it is documented as a
-[Javadoc of the complete data structure](https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/index.html?overview-summary.html
-"Data model for StringTemplate V4"). The same is found in your local
-installation, please click on file
+[Javadoc of the complete data structure](https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/index.html?overview-summary.html "Data model for StringTemplate V4").
+The same is found in your local installation, please click on file
 `excelExporter/doc/dataModelForStringTemplateV4.html`.
 
 In the Javadoc you find the documentation of all public elements of the

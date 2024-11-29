@@ -202,7 +202,6 @@ pages:
 - [Reusability of the DBC file parser in other contexts/applications](https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility "Reusage of code, standalone use of DBC parser and compatibility")
 - [Options for conditional code generation](https://github.com/PeterVranken/comFramework/wiki/Conditional-Code-Generation-vs-Generation-of-Conditional-Code "Conditional code generation versus generation of conditional code")
 - [The use of attributes](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database "How to access attributes in the network database?")
-- [A common pattern how to combine handwritten code with auto-generated
-  code in a beneficial way](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database#typical-code-architecture "Typical code architecture")
+- [A common pattern how to combine handwritten code with auto-generated code in a beneficial way](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database#typical-code-architecture "Typical code architecture")
 - [Sugar on top of inheritance or how to change the copyright notice](https://github.com/PeterVranken/comFramework/wiki/Sugar-on-Top-of-Inheritance-or-how-to-change-the-Copyright-Notice "Terence Parr: 'Sugar on top of inheritance'")
 - [Concept of excelExporter](https://sourceforge.net/p/excelexporter/wiki/Home/ "excelExporter's Wiki, still at SourceForge)
