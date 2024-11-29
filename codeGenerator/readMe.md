@@ -84,7 +84,7 @@ sections explain the available, related documentation.
 
 The internal representation of the parsed input information, called "data
 model", is documented as a
-[Javadoc of the complete data structure]https://petervranken.github.io/comFramework/codeGenerator/doc/dataModel/index.html?overview-summary.html "Data model for StringTemplate V4").
+[Javadoc of the complete data structure](https://petervranken.github.io/comFramework/codeGenerator/doc/dataModel/index.html?overview-summary.html "Data model for StringTemplate V4").
 The same is found in your local installation, please click on file
 `codeGenerator/doc/dataModelForStringTemplateV4.html`.
 
