@@ -203,6 +203,7 @@ pages:
 
 - [Installation of distributed ZIP archive](https://github.com/PeterVranken/comFramework/wiki/Installation/)
 - [The CAN interface - concept and usage](https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface)
+- [The DBC code generator](https://github.com/PeterVranken/comFramework/wiki/The-DBC-Code-Generator)
 - [The command line of the DBC code generator](https://github.com/PeterVranken/comFramework/wiki/The-Command-Line-of-the-comFramework-DBC-Code-Generator "Usage of DBC code generator")
 - [Compatibility of the DBC parser with real *_.dbc_ files](https://github.com/PeterVranken/comFramework/wiki/Reusage-of-Code,-Standalone-Use-of-DBC-Parser-and-Compatibility#Compatibility)
 - [Prerequisites, limitations and pitfalls](https://github.com/PeterVranken/comFramework/wiki/Prerequisites,-Limitations-and-Pitfalls "Java version, known issues")
