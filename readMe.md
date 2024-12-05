@@ -24,11 +24,13 @@ database(s).
 
 ### The CAN interface
 
-The operational core of the [CAN interface](https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface) is a dispatcher engine that
-decouples the one or more interrupts, which are typically used by the CAN
-hardware driver for notification of send or receive events, from the
-application task(s); this makes the complete data processing at the
-application side safe, straightforward, race condition free programming.
+The operational core of the
+[CAN interface](https://github.com/PeterVranken/comFramework/wiki/The-CAN-Interface)
+is a dispatcher engine that decouples the one or more interrupts, which
+are typically used by the CAN hardware driver for notification of send or
+receive events, from the application task(s); this makes the complete data
+processing at the application side safe, straightforward, race condition
+free programming.
 
 The dispatcher implements a generic concept of events and notifications by
 callbacks. Among more, events can be interrupts from the hardware layer or
@@ -46,9 +48,11 @@ multi-threading architectures in a transparent and convenient way.
 
 ### The DBC code generator
 
-The code generator consists of an open source parser for CAN network
-database files (*_.dbc_ or DBC files) with connected general purpose code
-generator. The idea is most simple and most flexible:
+The
+[DBC code generator](https://petervranken.github.io/comFramework/codeGenerator/readMe.html)
+consists of an open source parser for CAN network database files (*_.dbc_
+or DBC files) with connected general purpose code generator. The idea is
+most simple and most flexible:
 
 The parser transforms the DBC files into an internal data representation,
 which holds all information about the network. This data structure is a
@@ -194,7 +198,7 @@ of the project. The Wiki pages shade a light at some most relevant,
 selected issues; a comprehensive, self-contained (printable) manual is not
 planned.
 
-As of today, November 2024, we have the following discussions in the Wiki
+As of today, December 2024, we have the following discussions in the Wiki
 pages:
 
 - [Installation of distributed ZIP archive](https://github.com/PeterVranken/comFramework/wiki/Installation/)
@@ -207,4 +211,4 @@ pages:
 - [The use of attributes](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database "How to access attributes in the network database?")
 - [A common pattern how to combine handwritten code with auto-generated code in a beneficial way](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database#typical-code-architecture "Typical code architecture")
 - [Sugar on top of inheritance or how to change the copyright notice](https://github.com/PeterVranken/comFramework/wiki/Sugar-on-Top-of-Inheritance-or-how-to-change-the-Copyright-Notice "Terence Parr: 'Sugar on top of inheritance'")
-- [Concept of excelExporter](https://sourceforge.net/p/excelexporter/wiki/Home/ "excelExporter's Wiki, still at SourceForge")
+- [Concept of excelExporter](https://github.com/PeterVranken/comFramework/wiki/Home/ "excelExporter's Wiki Home Page")

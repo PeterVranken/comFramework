@@ -198,36 +198,39 @@ templates</a></li>
 <li><a href="#release-016" id="toc-release-016"><span class="toc-section-number">1.4.10</span> Release 0.16</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#download" id="toc-download"><span class="toc-section-number">2</span> Download</a></li>
 </ul>
 </nav>
 <h1 data-number="1" id="excelexporter---rendering-excel-spreadsheets-as-text"><span class="header-section-number">1</span> excelExporter - Rendering Excel
 Spreadsheets as Text</h1>
 <h2 data-number="1.1" id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
-<p>This archive contains the binary distribution of excelExporter, an
-application that can translate the information found in one or more
-Excel workbooks into manifold textual representations. excelExporter is
-a general purpose text rendering application for Excel spreadsheets.</p>
-<p>excelExporter is the auxiliary code generator from the <a href="https://github.com/PeterVranken/comFramework/tree/main/">comFramework</a>
-project. However, excelExporter is quite general and its use is in no
-way restricted to the context of CAN interface generation in embedded,
-automotive software development:</p>
-<p>The principal aim of the tool is supporting automation tasks in
-software development environments. In the context of the comFramework
-project this targets the handling of data dictionaries and interfaces
-but excelExporter is by design independent from this intended purpose
-and will be useful for various other automation tasks.</p>
+<p>excelExporter is a Java application that can translate the
+information found in one or more Excel workbooks into manifold textual
+representations. excelExporter is a general purpose text rendering
+application for Excel spreadsheets.</p>
+<p>excelExporter is distributed as part of <a href="https://github.com/PeterVranken/comFramework/wiki">comFramework</a>
+project. Here, it is considered an auxiliary code generator targeting
+the handling of data dictionaries and the generation of related
+interfaces.</p>
+<p>However, the use of excelExporter is in no way restricted to the
+context of CAN interface generation in automotive software development
+and, indeed, excelExporter can be installed and used independently from
+the rest of comFramework. Inside the downloaded comFramework archive, it
+has its own folder and installation guide. Just cut it out. It&#39;ll be
+useful for various automation tasks in other software development
+environments, too.</p>
 <p>You can render the information in the Excel input for example as:</p>
 <ul>
-<li>HTML or LaTeX for reporting and documentation</li>
-<li>Various XML formats for interfacing with other applications</li>
-<li>C/C++ or any other textual programming languages</li>
+<li>HTML or LaTeX for reporting and documentation.</li>
+<li>Various XML formats for interfacing with other applications.</li>
+<li>C/C++ or any other textual programming languages.</li>
 </ul>
-<p>In- and output description are decoupled in the parametrization of
-the tool. First you will specify a set of Excel input files. All of
-these are parsed and merged to one large data structure, often referred
-to as <em>data model</em>. Input files of same or of different format
-are supported. (&quot;Format&quot; refers to the structure of the Excel files with
-respect to contained sheets and columns.)</p>
+<p>In- and output are described separately in the configuration of the
+tool. First you will specify a set of Excel input files. All of these
+are parsed and merged to one large data structure, often referred to as
+data model. Input files of same or of different format are supported.
+(&quot;Format&quot; refers to the structure of the Excel files with respect to
+contained sheets and columns.)</p>
 <p>Secondary, you will define a list of output files. The specification
 of each output file is associated with the specification of a
 StringTemplate V4 template group file. The templates control the output
@@ -238,7 +241,7 @@ as HTML code and once as C program fragment.</p>
 excelExporter</h3>
 <p>The usage of the tool is explained in the application&#39;s command line
 usage text: Begin with running excelExporter with command line option
---help.</p>
+<code>--help</code>.</p>
 <p>The command line interface of the application has the following
 concept:</p>
 <p>The arguments form groups. A group of successive arguments can
@@ -246,8 +249,11 @@ specify an input file, another group can specify another input file or
 an output file and so on. The beginning of a group of arguments is
 recognized by a specific argument, the principal argument of the group.
 The usage text typically says &quot;this argument opens the context of ...&quot;.
-Naturally, the same command line switches can be repeatedly used, once
-in each group of same kind.</p>
+Groups of arguments are nested. A group can have child groups. A group
+of arguments ends either at the end of the command line or when another
+group of same or higher level (i.e., parent level) begins. Naturally,
+the same command line switches can be repeatedly used, once in each
+group of same kind.</p>
 <p>Such a group of command line arguments or a &quot;context&quot; actually is the
 representation of an object in the parameter tree of the application.
 This is the model behind the parameter tree:</p>
@@ -276,11 +282,15 @@ name and sort order.</li>
 <p>Besides the command line arguments from a group or context there are
 &quot;traditional&quot; command line arguments, which relate to the run of the
 application as a whole, like logging and verbosity settings. The
-application usage text says they belong to the global context.</p>
+application usage text says they belong to the global context. The
+global context isinitially open and ends forever when one of the above
+mentioned, specific contexts is opened. With other words, the
+&quot;traditional&quot; arguments need to come first.</p>
 <p>Please note, different to the common GNU command line interface this
 application demands a blank between the switch and its value. For
-example -oMyOutputFile.c would be rejected, whereas -o MyOutputFile.c
-would be the correct specification of a generated output file.</p>
+example <code>-oMyOutputFile.c</code> would be rejected, whereas
+<code>-o MyOutputFile.c</code> would be the correct specification of a
+generated output file.</p>
 <p>The application&#39;s command line arguments relate to the definition of
 in- and output files and how to parse the input. This should be
 understood after reading the application usage text. To successfully use
@@ -290,7 +300,7 @@ it is rendered in the output files. The next sections explain the
 available, related documentation.</p>
 <h3 data-number="1.2.2" id="the-data-model"><span class="header-section-number">1.2.2</span> The data model</h3>
 <p>The internal representation of the parsed input information, called
-&quot;data model&quot;, is explained in detail in Wiki page <a href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/">excelExporter&#39;s
+&quot;data model&quot;, is explained in detail in Wiki page <a href="https://github.com/PeterVranken/comFramework/wiki/The-excelExporter-Data-Model/">excelExporter&#39;s
 Data Model</a> and it is documented as a <a href="https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/index.html?overview-summary.html" title="Data model for StringTemplate V4">Javadoc of the complete data
 structure</a>. The same is found in your local installation, please
 click on file
@@ -301,9 +311,9 @@ templates. The data structure is deeply nested, and actually, it are
 even two data structures, which are passed to the rendering process:</p>
 <ul>
 <li>The parsed information forms an object of class
-<em>Cluster</em>.</li>
+<code>Cluster</code>.</li>
 <li>The information about output files plus some environmental
-information is put into an object of class <em>Info</em>.</li>
+information is put into an object of class <code>Info</code>.</li>
 </ul>
 <p>You will study the Javadoc pages to see, which pieces of information
 to be used from within a template.</p>
@@ -327,38 +337,40 @@ its elements is the investigation of the sample templates: See files
 or online at <a href="https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples">https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples</a>.</p>
 <h3 data-number="1.2.3" id="the-stringtemplate-v4-templates"><span class="header-section-number">1.2.3</span> The StringTemplate V4
 templates</h3>
-<p>The technique of rendering the information held in a <em>Cluster</em>
-and an <em>Info</em> object is well documented. The two objects are
-passed to the StringTemplate V4 template engine and this engine is fully
-documented. Please refer to <a href="https://github.com/antlr/stringtemplate4/blob/master/doc/index.md">https://github.com/antlr/stringtemplate4/blob/master/doc/index.md</a>
-or find a printable version of the documentation online as <a href="https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf">https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf</a>
-or as <code>excelExporter/doc/ST4-270115-0836-52.pdf</code> in your
-local installation.</p>
+<p>The technique of rendering the information held in a
+<code>Cluster</code> and an <code>Info</code> object is well documented,
+see previous section. The two objects are passed to the StringTemplate
+V4 template engine and this engine is fully documented and needs to be
+understood. Please refer to <a href="https://github.com/antlr/stringtemplate4/blob/master/doc/index.md">https://github.com/antlr/stringtemplate4/blob/master/doc/index.md</a>
+or find a printable version of the documentation either <a href="https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/ST4-270115-0836-52.pdf">online</a>
+or locally in your installation as
+<code>excelExporter/doc/ST4-270115-0836-52.pdf</code>.</p>
 <p>Please note, as a matter of experience, you will have to read the
 StringTemplate V4 documentation entirely before you can start to
 successfully develop your first useful template. StringTemplate V4 is
 powerful and convenient but not self-explaining.</p>
-<p>Studying the samples <a href="https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/">excelExporter/samples/.../*.stg</a>
-is another important source of information.</p>
+<p>Studying the template group files (*.stg) from our samples is another
+important source of information, see <a href="https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples/">excelExporter/samples/.../*.stg</a>.</p>
 <h3 data-number="1.2.4" id="the-wiki-pages"><span class="header-section-number">1.2.4</span> The Wiki pages</h3>
 <p>An additional source of documentation are the Wiki pages of the
 project. The Wiki pages shade a light at some most relevant, selected
 issues; a comprehensive, self-contained (printable) manual is not
-planned. As of today, Nov 2024, we have the following discussions in the
-Wiki pages, which directly relate to excelExporter, the auxiliary code
-generator:</p>
+planned. As of today, December 2024, we have the following discussions
+in the Wiki pages, which directly relate to excelExporter:</p>
 <ul>
-<li><a href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/">excelExporter&#39;s
-Data Model</a></li>
-<li><a href="https://sourceforge.net/p/excelexporter/wiki/Grouping%20and%20sorting/">Grouping
-and sorting</a></li>
 <li><a href="https://github.com/PeterVranken/comFramework/wiki/Home/">Overview
 on the comFramework project</a></li>
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/The-excelExporter-Data-Model/">excelExporter&#39;s
+Data Model</a></li>
+<li><a href="https://github.com/PeterVranken/comFramework/wiki/excelExporter,-Grouping-and-sorting/">Grouping
+and sorting</a></li>
 </ul>
 <h2 data-number="1.3" id="installation"><span class="header-section-number">1.3</span> Installation</h2>
 <p>excelExporter is a Java application. The installation is as simple as
 unpacking an archive and optionally setting an environment variable. It
-is described in detail in the file <a href="https://github.com/PeterVranken/comFramework/blob/main/excelExporter/doc/installation.txt">installation.txt</a>.</p>
+is described in detail either <a href="https://petervranken.github.io/comFramework/excelExporter/doc/installation.html">online</a>
+or locally in your installation as file
+<code>excelExporter/doc/installation.txt</code>.</p>
 <h2 data-number="1.4" id="whats-new"><span class="header-section-number">1.4</span> What&#39;s new</h2>
 <h3 data-number="1.4.1" id="release-13"><span class="header-section-number">1.4.1</span> Release 1.3</h3>
 <p>This version increment was made to make a clean break when the
@@ -367,25 +379,23 @@ significant changes to excelExporter since the last release, but there
 are a number of smaller corrections, mostly to the documentation.</p>
 <h3 data-number="1.4.2" id="release-12"><span class="header-section-number">1.4.2</span> Release 1.2</h3>
 <p>Update of data model:</p>
-<ul>
-<li>The cell representation now offers a JSON and widely C/C++
-compatible text representation, so that string objects of these contexts
-can be created.</li>
-<li>Update of data model: The support of string comparison operations
-has been adopted from codeGenerator. &lt;info.str&gt; is a new
+<p>The cell representation now offers a JSON and widely C/C++ compatible
+text representation, so that string objects of these contexts can be
+created.</p>
+<p>Update of data model: The support of string comparison operations has
+been adopted from codeGenerator. <code>&lt;info.str&gt;</code> is a new
 attribute, which offers some comparison operations, including matching
 to regular expressions. Text fields of the data model (e.g., cell
 contents) can be compared with one another or with expected
-contents.</li>
-</ul>
+contents.</p>
 <h3 data-number="1.4.3" id="release-11"><span class="header-section-number">1.4.3</span> Release 1.1</h3>
-<p>Update of data model: The cell object now contains the field &quot;is&quot;,
-which is a map with a single key/value pair. The key is the text
-contents of the cell and the value is a Boolean true. This allows to do
-string compares with the cell contents in a template. The use case is
-using cells as selector for different, enumerated options; those cells
-must contain one out of a limited set of predefined possible character
-strings and the template can check, which one it is.</p>
+<p>Update of data model: The cell object now contains the field
+<code>is</code>, which is a map with a single key/value pair. The key is
+the text contents of the cell and the value is a Boolean true. This
+allows to do string compares with the cell contents in a template. The
+use case is using cells as selector for different, enumerated options;
+those cells must contain one out of a limited set of predefined possible
+character strings and the template can check, which one it is.</p>
 <h3 data-number="1.4.4" id="release-105"><span class="header-section-number">1.4.4</span> Release 1.0.5</h3>
 <p>Integration of latest release of StringTemplate V4, which is
 4.3.3.</p>
@@ -394,8 +404,8 @@ strings and the template can check, which one it is.</p>
 <h3 data-number="1.4.6" id="release-103"><span class="header-section-number">1.4.6</span> Release 1.0.3</h3>
 <p>Text output, which contains non ASCII characters is now saved to file
 as UTF-8. (Used to be a not specified, default code page.)</p>
-<p>Master sample &quot;renderTable&quot; re-designed. This actually is a small
-convenience application, which strongly simplifies the use of
+<p>Master sample <code>renderTable</code> re-designed. This actually is
+a small convenience application, which strongly simplifies the use of
 excelExporter for the most common use cases.</p>
 <p>Fix: We found an Excel workbook, which let to still unexpected
 runtime errors of POI when evaluating the cell contents. These Java
@@ -428,23 +438,23 @@ were printed in the log (together with the bulky but in the given
 context meaningless Java stack frame) but were not recognized or counted
 by the application.</p>
 <p>Minor improvements of documentation.</p>
-<p>Fix: The field &quot;isBlank&quot; of a CellObject in the data model was not
-operational. Blank cells are not put into the data model at all; so any
-access to this field would evaluate to either false (for normal, non
-blank cells) or null (for blank cells). Now the data model offers the
-logically inverse as isNotBlank: This evaluates to true for normal, non
-blank cells or null (interpreted as false) for blank cells. This change
-is the only reason for the increase of the version number of the data
-model.</p>
+<p>Fix: The field <code>isBlank</code> of a CellObject in the data model
+was not operational. Blank cells are not put into the data model at all;
+so any access to this field would evaluate to either false (for normal,
+non blank cells) or null (for blank cells). Now the data model offers
+the logically inverse as isNotBlank: This evaluates to true for normal,
+non blank cells or null (interpreted as false) for blank cells. This
+change is the only reason for the increase of the version number of the
+data model.</p>
 <p>There should be no functional change for existing templates, which
 make use of the no longer existing field CellObject.isBlank: The
 behavior should be as wrong as it used to be. However, using the new
 field CellObject.isNotBlank, they can now be repaired.</p>
 <h3 data-number="1.4.8" id="release-018"><span class="header-section-number">1.4.8</span> Release 0.18</h3>
-<p>New cell type &quot;date&quot; introduced for spreadsheet cell objects. Time
-and date designations read from an Excel spreadsheet can now be rendered
-with the StringTemplate V4 DateRenderer and using format strings, which
-are similar to the Java class SimpleDateFormat.</p>
+<p>New cell type <code>date</code> introduced for spreadsheet cell
+objects. Time and date designations read from an Excel spreadsheet can
+now be rendered with the StringTemplate V4 DateRenderer and using format
+strings, which are similar to the Java class SimpleDateFormat.</p>
 <p>A new sample has been added, timeAndDate, which demonstrates the new
 capabilities.</p>
 <h3 data-number="1.4.9" id="release-017"><span class="header-section-number">1.4.9</span> Release 0.17</h3>
@@ -455,5 +465,13 @@ use case of groups with a single row object.</p>
 <h3 data-number="1.4.10" id="release-016"><span class="header-section-number">1.4.10</span> Release 0.16</h3>
 <p>The initial release. Full functionality of the application but
 preliminary state of samples and documentation.</p>
+<h1 data-number="2" id="download"><span class="header-section-number">2</span> Download</h1>
+<p>After transition from SourceForge to GitHub, excelExporter is no
+longer provided as separate package. You get it as an element of the
+comFramework download, see <a href="https://github.com/PeterVranken/comFramework/releases">here</a>.</p>
+<p>However, if really nothing from comFramework but excelExporter is
+relevant to use, than you can easily cut it out of the comFramework
+archive. The installation of excelExporter doesn&#39;t depend on the rest of
+comFramework.</p>
 </body>
 </html>
