@@ -102,7 +102,7 @@ used from within a template.
 
 ### The StringTemplate V4 templates
 
-The technique of rendering the information held in a *Cluster* and an *Info*
+The technique of rendering the information held in a `Cluster` and an `Info`
 object is well documented. The two objects are passed to the
 StringTemplate V4 template engine and this engine is fully documented.
 Please refer to
@@ -202,7 +202,7 @@ null pointer exception if a template made use of frame sorting.
 
 Fix: The index i0 of bus objects inside the collection cluster of those
 had been wrong calculated. This is an ages old bug; probably the template
-expression \<bus.i0> won't ever have worked correct in the past.
+expression `<bus.i0>` won't ever have worked correct in the past.
 
 ### Release 1.11.2
 
@@ -335,13 +335,13 @@ Although this is basically correct was it found to be hindering because
 many real network databases don't specify senders and receivers properly
 for all frames and signals.
 
-Bug fix: A misplaced *\<endif>* has been found in template cap_canApi.c.stg
+Bug fix: A misplaced `<endif>` has been found in template cap_canApi.c.stg
 of the Embedded Coder sample. The #define's that make min and max of a
 signal public were only generated for scaled signals. This was not by
 intention, min and max are as useful for unscaled integers. Now, the min
 and max values are available as #define for all signals.
 
-Bug fix: The same misplaced *\<endif>* let to unwanted suppression of parts
+Bug fix: The same misplaced `<endif>` let to unwanted suppression of parts
 of the Embedded Coder interface. For unscaled integers was the chosen
 storage class mechanism not generated.
 
@@ -385,7 +385,7 @@ info, has two new elements:
     the data model. This means a new level of conditional code generation
     and opens some new structural possibilities
 
-A new sample, *scratchPad*, demonstrates the capabilities and the usage of
+A new sample, `scratchPad`, demonstrates the capabilities and the usage of
 the new scratch pad. Please have a look at the [generated output](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/scratchPad/output/demoScratchPad.txt) to get a
 first impression.
 
@@ -427,9 +427,9 @@ The bug was located and is fixed in the template [codeGenC.stg](https://github.c
 However, the complete set of templates should be exchanged for consistency
 reasons. The introduction of the support template
 [iterations.stg](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/iterations.stg "GitHub repository")
-had established the attribute name *signal* for signals. Earlier templates
-used to refer to *s* to address to the signal in scope. This has now been
-aligned and all templates use the attribute name *signal*.
+had established the attribute name `signal` for signals. Earlier templates
+used to refer to `s` to address to the signal in scope. This has now been
+aligned and all templates use the attribute name `signal`.
 
 
 ### Release 1.2
@@ -444,14 +444,14 @@ assertion support (-ea).
 
 The release number has been incremented not because of the fixes but since
 the data model has been polished. All objects now support the method
-*toString* so that they can be rendered in a template by themselves, e.g.
-*\<frame>* will render a complete frame object. The default behavior is to
-render an object as its name, *\<frame>* would be identical to
-*\<frame.name>*.
+`toString` so that they can be rendered in a template by themselves, e.g.
+`<frame>` will render a complete frame object. The default behavior is to
+render an object as its name, `<frame>` would be identical to
+`<frame.name>`.
 
 Furthermore, the availability of get-number-of-element methods has been
 harmonized; they should now be available for all the collections in the
-data model. The StringTemplate V4 operator *\<length()>* is probably no
+data model. The StringTemplate V4 operator `<length()>` is probably no
 longer required.
 
 

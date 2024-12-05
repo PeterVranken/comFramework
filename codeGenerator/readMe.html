@@ -299,10 +299,10 @@ information is put into an object of class Info.</li>
 to be used from within a template.</p>
 <h3 data-number="1.2.3" id="the-stringtemplate-v4-templates"><span class="header-section-number">1.2.3</span> The StringTemplate V4
 templates</h3>
-<p>The technique of rendering the information held in a <em>Cluster</em>
-and an <em>Info</em> object is well documented. The two objects are
-passed to the StringTemplate V4 template engine and this engine is fully
-documented. Please refer to <a href="https://github.com/antlr/stringtemplate4/blob/master/doc/index.md">https://github.com/antlr/stringtemplate4/blob/master/doc/index.md</a>
+<p>The technique of rendering the information held in a
+<code>Cluster</code> and an <code>Info</code> object is well documented.
+The two objects are passed to the StringTemplate V4 template engine and
+this engine is fully documented. Please refer to <a href="https://github.com/antlr/stringtemplate4/blob/master/doc/index.md">https://github.com/antlr/stringtemplate4/blob/master/doc/index.md</a>
 or find a printable version of the documentation online as <a href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/ST4-270115-0836-52.pdf">https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/ST4-270115-0836-52.pdf</a>
 or as <code>codeGenerator/doc/ST4-270115-0836-52.pdf</code> in your
 local installation.</p>
@@ -385,8 +385,8 @@ model version from formerly 1.10 to 1.11.</p>
 sorting.</p>
 <p>Fix: The index i0 of bus objects inside the collection cluster of
 those had been wrong calculated. This is an ages old bug; probably the
-template expression &lt;bus.i0&gt; won&#39;t ever have worked correct in the
-past.</p>
+template expression <code>&lt;bus.i0&gt;</code> won&#39;t ever have worked
+correct in the past.</p>
 <h3 data-number="1.4.4" id="release-1112"><span class="header-section-number">1.4.4</span> Release 1.11.2</h3>
 <p>Integration of the latest releases of StringTemplate V4 and ANTLR,
 which are 4.3.3 and 4.10.1, respectively.</p>
@@ -495,15 +495,16 @@ transmitted frame. So far, only sent and received signals had been
 listed. Although this is basically correct was it found to be hindering
 because many real network databases don&#39;t specify senders and receivers
 properly for all frames and signals.</p>
-<p>Bug fix: A misplaced <em>&lt;endif&gt;</em> has been found in
+<p>Bug fix: A misplaced <code>&lt;endif&gt;</code> has been found in
 template cap_canApi.c.stg of the Embedded Coder sample. The #define&#39;s
 that make min and max of a signal public were only generated for scaled
 signals. This was not by intention, min and max are as useful for
 unscaled integers. Now, the min and max values are available as #define
 for all signals.</p>
-<p>Bug fix: The same misplaced <em>&lt;endif&gt;</em> let to unwanted
-suppression of parts of the Embedded Coder interface. For unscaled
-integers was the chosen storage class mechanism not generated.</p>
+<p>Bug fix: The same misplaced <code>&lt;endif&gt;</code> let to
+unwanted suppression of parts of the Embedded Coder interface. For
+unscaled integers was the chosen storage class mechanism not
+generated.</p>
 <h3 data-number="1.4.11" id="release-17"><span class="header-section-number">1.4.11</span> Release 1.7</h3>
 <p>DBC Parser: User attributes and named signal values now support the
 full signed and unsigned 32 Bit integer range from -2^31 till 2^32-1.
@@ -544,8 +545,8 @@ comparisons and binary operations, can be applied to numeric fields of
 the data model. This means a new level of conditional code generation
 and opens some new structural possibilities</li>
 </ul>
-<p>A new sample, <em>scratchPad</em>, demonstrates the capabilities and
-the usage of the new scratch pad. Please have a look at the <a href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/scratchPad/output/demoScratchPad.txt">generated
+<p>A new sample, <code>scratchPad</code>, demonstrates the capabilities
+and the usage of the new scratch pad. Please have a look at the <a href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/scratchPad/output/demoScratchPad.txt">generated
 output</a> to get a first impression.</p>
 <h3 data-number="1.4.13" id="release-15"><span class="header-section-number">1.4.13</span> Release 1.5</h3>
 <p>The data model now offers sorted lists of frames. A template can
@@ -575,9 +576,10 @@ application and would suffer from the inherited bug in the template.</p>
 <p>The bug was located and is fixed in the template <a href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/codeGenC.stg" title="GitHub repository">codeGenC.stg</a>.</p>
 <p>However, the complete set of templates should be exchanged for
 consistency reasons. The introduction of the support template <a href="https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/samples/raceTechnology/templates/lib/iterations.stg" title="GitHub repository">iterations.stg</a> had established the
-attribute name <em>signal</em> for signals. Earlier templates used to
-refer to <em>s</em> to address to the signal in scope. This has now been
-aligned and all templates use the attribute name <em>signal</em>.</p>
+attribute name <code>signal</code> for signals. Earlier templates used
+to refer to <code>s</code> to address to the signal in scope. This has
+now been aligned and all templates use the attribute name
+<code>signal</code>.</p>
 <h3 data-number="1.4.16" id="release-12"><span class="header-section-number">1.4.16</span> Release 1.2</h3>
 <p>An unpleasant bug fix: The code itself was alright but there were two
 too strict assertions in the code of release 1.1, which let the program
@@ -588,15 +590,15 @@ common situation. Release 1.1 would run if the Java machine is not
 started with assertion support (-ea).</p>
 <p>The release number has been incremented not because of the fixes but
 since the data model has been polished. All objects now support the
-method <em>toString</em> so that they can be rendered in a template by
-themselves, e.g. <em>&lt;frame&gt;</em> will render a complete frame
-object. The default behavior is to render an object as its name,
-<em>&lt;frame&gt;</em> would be identical to
-<em>&lt;frame.name&gt;</em>.</p>
+method <code>toString</code> so that they can be rendered in a template
+by themselves, e.g. <code>&lt;frame&gt;</code> will render a complete
+frame object. The default behavior is to render an object as its name,
+<code>&lt;frame&gt;</code> would be identical to
+<code>&lt;frame.name&gt;</code>.</p>
 <p>Furthermore, the availability of get-number-of-element methods has
 been harmonized; they should now be available for all the collections in
-the data model. The StringTemplate V4 operator <em>&lt;length()&gt;</em>
-is probably no longer required.</p>
+the data model. The StringTemplate V4 operator
+<code>&lt;length()&gt;</code> is probably no longer required.</p>
 <h3 data-number="1.4.17" id="release-11"><span class="header-section-number">1.4.17</span> Release 1.1</h3>
 <p>This release appeared already two weeks after the first release. By
 chance we found a side note in the StringTemplate V4 documentation
