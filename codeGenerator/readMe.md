@@ -141,13 +141,14 @@ which directly relate to the DBC code generator:
     code in a beneficial way](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database#typical-code-architecture "Typical code architecture")
 -   [Sugar on top of inheritance or how to change the copyright notice](https://github.com/PeterVranken/comFramework/wiki/Sugar-on-Top-of-Inheritance-or-how-to-change-the-Copyright-Notice "Terence Parr: 'Sugar on top of inheritance'")
 
-
 ## Installation
 
 The code generator is a Java application. The installation is as simple as
-unpacking an archive and setting an environment variable. It is described
-in detail in the file
-[installation.txt](https://github.com/PeterVranken/comFramework/blob/main/codeGenerator/doc/installation.txt).
+unpacking an archive and optionally setting an environment variable. It is
+described in detail either
+[online](https://petervranken.github.io/comFramework/codeGenerator/doc/installation.html)
+or locally in your installation as file
+`codeGenerator/doc/installation.html`.
 
 ## What's new
 

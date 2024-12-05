@@ -185,7 +185,7 @@ unpacking an archive and optionally setting an environment variable. It is
 described in detail either
 [online](https://petervranken.github.io/comFramework/excelExporter/doc/installation.html)
 or locally in your installation as file
-`excelExporter/doc/installation.txt`.
+`excelExporter/doc/installation.html`.
 
 ## What's new
 
