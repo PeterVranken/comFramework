@@ -2,7 +2,7 @@
  * @file crt_canRT.c
  * Implementation of CAN interface for cluster raceCar.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.2,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)

@@ -24,12 +24,32 @@
 
 delimiters "<", ">"
 
+import "templateErr.stg"
+
 // The module name mnemonic is used over and over during code generation and therefore we
 // provide a short alias. This template returns it as prefix for global symbols, i.e.
 // including the separating underscore.
 mnm() ::= "<info.output.mnm>_"
 MNM() ::= <<
 <info.output.mnm; format="upper">_
+>>
+
+// Helper: Check if a template requires the runtime of at least a certain version. If the
+// runtime is of lower version than required, then an error is raised and code generation
+// is aborted.
+//   This template doesn't emit anything into the generated output.
+//   Attribute neededVersion:
+// The mimimum version of the code generator, which is required to properly process the
+// current template. The attribute relates to the data model's version major.minor and it
+// is an integer number in the format of <info.versionDataModel>: major*1000 + minor.
+//   Attribute templateName:
+// The designation of the checked template, which is used in the emitted error message.
+// Should be some text indicating the template name and /or the ST4 template group file.
+isAtLeastVersionDataModel(neededVersion, templateName) ::= <<
+<info.calc.({tmp_set_<info.versionDataModel>})><\\>
+<if(info.calc.({tmp_isL_<neededVersion>}))><\\>
+<error({<templateName>: This template is designed for data model revision <neededVersion> but run with data model revision <info.versionDataModel>})><\\>
+<endif>
 >>
 
 // The frame of a C implementation file.
@@ -65,17 +85,14 @@ modC(desc) ::= <<
 #error Module name mnemonic is not set but needed for shaping a unique name space
 
 <endif>
-<if(!info.isVersionDataModel.v1012)>
-# error This code is generated from a template designed for data model revision 1012 but run with data model revision <info.versionDataModel>
-<info.error.({This code is generated from a template designed for data model revision 1012 but run with data model revision <info.versionDataModel>})>
-<endif>
+<isAtLeastVersionDataModel("1010", "lib/mod.stg")><\\>
 /*
  * Include files
  */
 
-<@includes()><\\>
 #include "<info.output.rawName>.h"
 
+<@includes()><\\>
 
 /*
  * Defines
@@ -181,5 +198,5 @@ modH(desc) ::= <<
  */
 
 <@inlines()>
-#endif // !defined(<info.output.rawName; format="upper">_DEFINED)
+#endif // !defined(<info.output.rawName; format="upper">_DEFINED)<\n>
 >>

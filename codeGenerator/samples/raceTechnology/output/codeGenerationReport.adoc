@@ -1,5 +1,5 @@
 = Code Generation Report for CAN Network raceCar
-:Author:    comFramework - codeGenerator version 1.12.2 (http://sourceforge.net/projects/comframe/)
+:Author:    comFramework - codeGenerator version 1.13.0 (http://sourceforge.net/projects/comframe/)
 :toc:               left
 :toclevels:         4
 :xrefstyle:         short

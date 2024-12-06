@@ -63,7 +63,7 @@ REM do not designate the actually loaded jars but those, which were used at appl
 REM time. The printed versions are correct only if the classpath defined here is identical
 REM to the one used for building.
 java ^
-  -cp "%COMFRAMEWORK_CODEGENERATOR_HOME%\dist\antlr-4.12.0-complete.jar;%COMFRAMEWORK_CODEGENERATOR_HOME%\dist\log4j-1.2.11.jar;%COMFRAMEWORK_CODEGENERATOR_HOME%\dist\comFrameworkCodeGenerator-1.12.jar;%CLASSPATH%" ^
+  -cp "%COMFRAMEWORK_CODEGENERATOR_HOME%\dist\antlr-4.12.0-complete.jar;%COMFRAMEWORK_CODEGENERATOR_HOME%\dist\log4j-1.2.11.jar;%COMFRAMEWORK_CODEGENERATOR_HOME%\dist\comFrameworkCodeGenerator-1.13.jar;%CLASSPATH%" ^
   -Xss10M ^
   -ea ^
   codeGenerator.main.CodeGenerator %*

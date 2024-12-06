@@ -41,10 +41,10 @@ import "AUTOSAR_PlatformTypes.arxml.stg"
 // some error message will be written into the generated output, which will surely be
 // reported (as syntax or file format error) by any application reading the file.
 checkPrecos(dir) ::= <<
-$if(!info.isVersionDataModel.v1012)$
+$if(!info.isVersionDataModel.v1013)$
 $! The template should fit to the data model supported by the code generator !$
-ARXML error: This code is generated from a template designed for data model revision 1012 but run with data model revision $info.versionDataModel$
-$info.error.({This code is generated from a template designed for data model revision 1012 but run with data model revision $info.versionDataModel$})$
+ARXML error: This code is generated from a template designed for data model revision 1013 but run with data model revision $info.versionDataModel$
+$info.error.({This code is generated from a template designed for data model revision 1013 but run with data model revision $info.versionDataModel$})$
 $endif$
 $if(!info.output.mnm)$
 $! By convention a module and thus a SW-C should have a three character mnemonic as

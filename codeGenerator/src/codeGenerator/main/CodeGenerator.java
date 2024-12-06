@@ -53,7 +53,7 @@ public class CodeGenerator
     public static final String _applicationName = "comFramework - codeGenerator";
 
     /** The parts of the version designation: major, minor, fix, build. */
-    private static int[] _versionAry = {1, 12, 2, GitRevision.getProjectRevision()};
+    private static int[] _versionAry = {1, 13, 0, GitRevision.getProjectRevision()};
 
     /** The first three parts of the version of the tool, which relate to functional
         changes of the application.
@@ -74,7 +74,7 @@ public class CodeGenerator
     /** The version of the data model, which is input to the templates. The integer number
         is composed as M*1000+m if M.m.f is the version designation of the tool when the data
         model was changed the last time. */
-    public static final int _versionDataModel = 1012;
+    public static final int _versionDataModel = 1013;
 
     /** The global logger object for all progress and error reporting. */
     private static Logger _logger = Logger.getLogger(CodeGenerator.class.getName());

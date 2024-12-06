@@ -1,6 +1,6 @@
 % This is an interface specification for the Mathwork's Embedded Coder C code generator.
 %
-% This file has been created with comFramework - codeGenerator version 1.12.2,
+% This file has been created with comFramework - codeGenerator version 1.13.0,
 % see http://sourceforge.net/projects/comframe/
 %
 % The interface is generated from these network database files:

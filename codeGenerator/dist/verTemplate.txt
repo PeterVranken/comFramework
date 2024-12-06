@@ -1,4 +1,4 @@
-comFramework codeGenerator 1.12.2.$WCLOGCOUNT$, $WCDATE=%H:%M:%S %d.%m.%Y$
+comFramework codeGenerator 1.13.0.$WCLOGCOUNT$, $WCDATE=%H:%M:%S %d.%m.%Y$
 Copyright (C) 2015-2024, Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 https://github.com/PeterVranken/comFramework
 

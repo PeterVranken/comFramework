@@ -34,7 +34,7 @@ the code generator, execute the tests or create a jar library.
   <property environment="env"/>
 
   <!-- Set global properties for this build. -->
-  <property name="version" value="1.12"/>
+  <property name="version" value="1.13"/>
   <property name="javaReleaseForJars" value="8"/>
   <property name="srcDM" location="src/codeGenerator/DataModelListener"/>
   <property name="doc" location="doc"/>
