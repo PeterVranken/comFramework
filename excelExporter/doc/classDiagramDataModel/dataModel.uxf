@@ -144,7 +144,7 @@ group=6</panel_attributes>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1
 m2=0..n
-A RowObjectContainer
+ A RowObjectContainer
 recursively holds
 RowObjectContainers
 by map functionality,
@@ -358,7 +358,7 @@ bg=blue
 --
 Pseudo-Fields
 +excelFile: FileExt
-+sheetAry: OjectList&lt;ExcelWorksheet&gt;
++sheetAry: ObjectList&lt;ExcelWorksheet&gt;
 +noSheets: int
 +theOnlyWorksheet: ExcelWorksheet
 +optionMap: Map&lt;String,Object&gt;
