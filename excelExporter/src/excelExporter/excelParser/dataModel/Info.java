@@ -3,7 +3,7 @@
  * This file implements a data container for general information needed during code
  * generation: Date and time, the names of involved files, etc.
  *
- * Copyright (C) 2015-2023 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the
@@ -86,7 +86,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         version designation of the tool when the data model was changed the last time.<p>
           Please refer to <b>isVersionDataModel</b> for testing the data model version from
         a template. */
-    public static int versionDataModel = 1002;
+    public static int versionDataModel = 1003;
     
     /** The version designation <b>versionDataModel</b> for the data model, which is
         essential for relating templates to permitted, compatible tool revisions, is

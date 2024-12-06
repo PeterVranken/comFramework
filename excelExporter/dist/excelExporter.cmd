@@ -55,7 +55,7 @@ REM template engine. Therefore, all loops are limited to the number of recursion
 REM the stack of the JVM overflows. By experience, 10 MByte allow about 5000
 REM loop-iterations.
 java ^
-  -cp "%EXCELEXPORTER_HOME%\dist\antlr-4.10.1-complete.jar;%EXCELEXPORTER_HOME%\dist\log4j-api-2.4.jar;%EXCELEXPORTER_HOME%\dist\log4j-core-2.4.jar;%EXCELEXPORTER_HOME%\dist\excelExporter-1.2.jar;%EXCELEXPORTER_HOME%\dist\poi-3.13-20150929.jar;%EXCELEXPORTER_HOME%\dist\poi-ooxml-3.13-20150929.jar;%EXCELEXPORTER_HOME%\dist\poi-ooxml-schemas-3.13-20150929.jar;%EXCELEXPORTER_HOME%\dist\xmlbeans-2.6.0.jar;.;%CLASSPATH%" ^
+  -cp "%EXCELEXPORTER_HOME%\dist\antlr-4.10.1-complete.jar;%EXCELEXPORTER_HOME%\dist\log4j-api-2.4.jar;%EXCELEXPORTER_HOME%\dist\log4j-core-2.4.jar;%EXCELEXPORTER_HOME%\dist\excelExporter-1.3.jar;%EXCELEXPORTER_HOME%\dist\poi-3.13-20150929.jar;%EXCELEXPORTER_HOME%\dist\poi-ooxml-3.13-20150929.jar;%EXCELEXPORTER_HOME%\dist\poi-ooxml-schemas-3.13-20150929.jar;%EXCELEXPORTER_HOME%\dist\xmlbeans-2.6.0.jar;.;%CLASSPATH%" ^
   -Xss10M ^
   -ea ^
   excelExporter.main.ExcelExporter %*
