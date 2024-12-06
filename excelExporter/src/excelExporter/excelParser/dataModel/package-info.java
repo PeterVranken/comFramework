@@ -7,8 +7,8 @@
  * described here are accessible from within the template.<p>
  *   An overview on the data model including UML diagrams and an explanation with examples
  * how to use it can be found online in the Wiki page <a
- * href="https://sourceforge.net/p/excelexporter/wiki/The%20Data%20Model/">The Data
- * Model</a> of the excelExporter project.
+ * href="https://github.com/PeterVranken/comFramework/wiki/The-excelExporter-Data-Model">The excelExporter Data Model</a>
+ * of the excelExporter project.
  */
 
 package excelExporter.excelParser.dataModel;

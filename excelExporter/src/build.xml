@@ -124,14 +124,13 @@
              windowtitle="Data Model of excelExporter for StringTemplate V4 templates"
              doctitle="Data Model of excelExporter for StringTemplate V4 templates"
              author="Peter Vranken (Peter_Vranken@Yahoo.de)"
+             Overview="src/overview.html"
     >
       <!-- See http://stackoverflow.com/questions/18063880/executing-the-eclipse-generate-javadoc-from-the-command-line -->
       <arg value="-tag"/> <arg value="todo:cmf:TODO:"/>
       <arg value="-tag"/> <arg value="remark:cmf:Remark:"/>
       <arg value="-notimestamp"/>
       <arg value="-public"/>
-      <arg value="-overview"/>
-      <arg value="src/overview.html"/>
       <classpath refid="classpath"/>
     </javadoc>
   </target>
