@@ -76,13 +76,6 @@ the code generator, execute the tests or create a jar library.
       <arg value="src/codeGenerator/main/GitRevision.java"/>
       <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
     </exec>
-    <echo message="Running GitWCRev.exe to generate file version.txt"/>
-    <exec executable="GitWCRev.exe" dir="dist">
-      <arg value=".."/>
-      <arg value="verTemplate.txt"/>
-      <arg value="version.txt"/>
-      <arg value="-q"/> <!-- -q: Suppress warning on uncommitted changes -->
-    </exec>
   </target>
 
   <!-- Generate javadocs for complete source code into ${doc} -->

@@ -92,13 +92,6 @@
         <exclude name="**/*.el"/>
       </fileset>
     </copy>
-<!--
-    <exec executable="doxygen"
-          dir="${tmpDir}/comFramework/canInterface/doc/doxygen"
-    >
-      <arg line=""/>
-    </exec>
--->
     <delete verbose="false" dir="${tmpDir}/comFramework/canInterface/sampleIntegrations/winSampleIntegration/bin"/>
     <delete verbose="false" dir="${tmpDir}/comFramework/canInterface/sampleIntegrations/winTest"/>
     <copy todir="${tmpDir}/comFramework/canInterface/sampleIntegrations/arduinoSampleIntegration/bin">
