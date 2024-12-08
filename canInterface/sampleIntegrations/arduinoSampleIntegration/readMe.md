@@ -37,7 +37,9 @@ Once these pre-conditions are fullfilled, the build command would be
 
 ~~~~~~~~~~~~~~~~~~~
 cd <...>\comFramework\canInterface\sampleIntegrations\arduinoSampleIntegration
-make build
+make -h
+make help
+make -s build
 ~~~~~~~~~~~~~~~~~~~
 
 to build the flashable hex file or

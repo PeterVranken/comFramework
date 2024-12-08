@@ -18,7 +18,7 @@
  * exclusion with the Embedded Coder generated APSW code, which also accesses the API data.
  * Although less likely may the same hold for CAN output.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.1,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
@@ -41,12 +41,12 @@
  * Include files
  */
 
+#include "cap_canApi.h"
+
 #include <string.h>
 #include <assert.h>
 
 #include "types.h"
-#include "cap_canApi.h"
-
 
 /*
  * Defines

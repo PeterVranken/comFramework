@@ -9,7 +9,7 @@
  * generates then from the CAN databases. This way the simulation knowns, which CAN frames
  * to simulate and how to.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.0,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)

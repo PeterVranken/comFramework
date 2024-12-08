@@ -1,7 +1,7 @@
 /*
  * CAN cluster arduinoSampleIntegrationEC
  *
- * This file has been created with comFramework - codeGenerator version 1.12.1,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
@@ -68,7 +68,7 @@
       "Linear mapping, used for variable PT_1024_speedOfRotation"
       RAT_FUNC
       "%10" /* Format */
-      "rpm"
+      "rpm" /* Unit */
       COEFFS 0 -1 0.0 0 0 -0.1
     /end COMPU_METHOD
 
@@ -148,7 +148,7 @@
       "Linear mapping, used for variable PT_1040_torque"
       RAT_FUNC
       "%10" /* Format */
-      "Nm"
+      "Nm" /* Unit */
       COEFFS 0 -1 0.0 0 0 -0.5
     /end COMPU_METHOD
 
@@ -200,7 +200,7 @@
       "Linear mapping, used for variable PT_2032_minSpeedOfRotation"
       RAT_FUNC
       "%10" /* Format */
-      "rpm"
+      "rpm" /* Unit */
       COEFFS 0 -1 0.0 0 0 -1.6
     /end COMPU_METHOD
 
@@ -222,7 +222,7 @@
       "Linear mapping, used for variable PT_2032_maxSpeedOfRotation"
       RAT_FUNC
       "%10" /* Format */
-      "rpm"
+      "rpm" /* Unit */
       COEFFS 0 -1 0.0 0 0 -1.6
     /end COMPU_METHOD
 
@@ -258,7 +258,7 @@
       "Linear mapping, used for variable PT_2032_minPower"
       RAT_FUNC
       "%10" /* Format */
-      "KW"
+      "KW" /* Unit */
       COEFFS 0 -1 -10.0 0 0 -0.5
     /end COMPU_METHOD
 
@@ -280,7 +280,7 @@
       "Linear mapping, used for variable PT_2032_maxPower"
       RAT_FUNC
       "%10" /* Format */
-      "KW"
+      "KW" /* Unit */
       COEFFS 0 -1 -10.0 0 0 -0.5
     /end COMPU_METHOD
 
@@ -346,7 +346,7 @@
       "Linear mapping, used for variable PT_1536_power"
       RAT_FUNC
       "%10" /* Format */
-      "W"
+      "W" /* Unit */
       COEFFS 0 -1 -500000.0 0 0 -32.0
     /end COMPU_METHOD
 
@@ -543,7 +543,7 @@
       "Identity, real-world value is same as binary value"
       IDENTICAL
       "%10" /* Format */
-      ""
+      "" /* Unit */
     /end COMPU_METHOD
 
     /begin GROUP Bus_PT_Rx

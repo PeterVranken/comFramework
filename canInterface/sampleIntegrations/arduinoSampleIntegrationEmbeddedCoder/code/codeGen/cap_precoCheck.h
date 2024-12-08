@@ -23,7 +23,7 @@
  * file about most of the tests! Error code will show up only if the error has been
  * detected in the network file.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.1,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
@@ -199,3 +199,4 @@
  */
 
 #endif // !defined(CAP_PRECOCHECK_DEFINED)
+

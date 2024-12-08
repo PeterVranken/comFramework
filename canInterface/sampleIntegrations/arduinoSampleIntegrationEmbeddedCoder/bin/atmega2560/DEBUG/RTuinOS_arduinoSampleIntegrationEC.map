@@ -93,7 +93,7 @@ c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../..
 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(rand.o)
                               bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o (rand)
 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(abort.o)
-                              bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o (abort)
+                              bin/atmega2560/DEBUG/obj/ede_eventSender.o (abort)
 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(ftoa_engine.o)
                               c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libprintf_flt.a(vfprintf_flt.o) (__ftoa_engine)
 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
@@ -468,8 +468,10 @@ Discarded input sections
  .text          0x00000000        0x0 bin/atmega2560/DEBUG/obj/ede_eventSender.o
  .data          0x00000000        0x0 bin/atmega2560/DEBUG/obj/ede_eventSender.o
  .bss           0x00000000        0x0 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+ .text.ede_getPortIndex
+                0x00000000       0xc6 bin/atmega2560/DEBUG/obj/ede_eventSender.o
  .text.ede_postEvent
-                0x00000000       0xfe bin/atmega2560/DEBUG/obj/ede_eventSender.o
+                0x00000000       0x50 bin/atmega2560/DEBUG/obj/ede_eventSender.o
  .text.ede_getNoSenderPortBlockedEvents
                 0x00000000       0xb8 bin/atmega2560/DEBUG/obj/ede_eventSender.o
  .debug_macro   0x00000000      0xb5c bin/atmega2560/DEBUG/obj/ede_eventSender.o
@@ -806,7 +808,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/mpo_mapOffsetOnly.o
  .debug_macro   0x00000000       0x28 bin/atmega2560/DEBUG/obj/mpo_mapOffsetOnly.o
  .debug_line    0x00000000      0x72b bin/atmega2560/DEBUG/obj/mpo_mapOffsetOnly.o
- .debug_str     0x00000000     0xfa4f bin/atmega2560/DEBUG/obj/mpo_mapOffsetOnly.o
+ .debug_str     0x00000000     0xfa40 bin/atmega2560/DEBUG/obj/mpo_mapOffsetOnly.o
  .comment       0x00000000       0x12 bin/atmega2560/DEBUG/obj/mpo_mapOffsetOnly.o
  .debug_frame   0x00000000       0xd4 bin/atmega2560/DEBUG/obj/mpo_mapOffsetOnly.o
  .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/mid_mapIdentity.o
@@ -890,7 +892,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x10c bin/atmega2560/DEBUG/obj/mid_mapIdentity.o
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/mid_mapIdentity.o
  .debug_line    0x00000000      0x434 bin/atmega2560/DEBUG/obj/mid_mapIdentity.o
- .debug_str     0x00000000     0xf677 bin/atmega2560/DEBUG/obj/mid_mapIdentity.o
+ .debug_str     0x00000000     0xf668 bin/atmega2560/DEBUG/obj/mid_mapIdentity.o
  .comment       0x00000000       0x12 bin/atmega2560/DEBUG/obj/mid_mapIdentity.o
  .debug_frame   0x00000000       0x34 bin/atmega2560/DEBUG/obj/mid_mapIdentity.o
  .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/m16_mapDirectLookupU16.o
@@ -980,7 +982,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/m16_mapDirectLookupU16.o
  .debug_macro   0x00000000       0x28 bin/atmega2560/DEBUG/obj/m16_mapDirectLookupU16.o
  .debug_line    0x00000000      0x7f2 bin/atmega2560/DEBUG/obj/m16_mapDirectLookupU16.o
- .debug_str     0x00000000     0xfa41 bin/atmega2560/DEBUG/obj/m16_mapDirectLookupU16.o
+ .debug_str     0x00000000     0xfa32 bin/atmega2560/DEBUG/obj/m16_mapDirectLookupU16.o
  .comment       0x00000000       0x12 bin/atmega2560/DEBUG/obj/m16_mapDirectLookupU16.o
  .debug_frame   0x00000000      0x140 bin/atmega2560/DEBUG/obj/m16_mapDirectLookupU16.o
  .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/mu8_mapDirectLookupU8.o
@@ -1070,7 +1072,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/mu8_mapDirectLookupU8.o
  .debug_macro   0x00000000       0x28 bin/atmega2560/DEBUG/obj/mu8_mapDirectLookupU8.o
  .debug_line    0x00000000      0x7ff bin/atmega2560/DEBUG/obj/mu8_mapDirectLookupU8.o
- .debug_str     0x00000000     0xfa3e bin/atmega2560/DEBUG/obj/mu8_mapDirectLookupU8.o
+ .debug_str     0x00000000     0xfa2f bin/atmega2560/DEBUG/obj/mu8_mapDirectLookupU8.o
  .comment       0x00000000       0x12 bin/atmega2560/DEBUG/obj/mu8_mapDirectLookupU8.o
  .debug_frame   0x00000000      0x140 bin/atmega2560/DEBUG/obj/mu8_mapDirectLookupU8.o
  .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o
@@ -1166,7 +1168,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o
  .debug_macro   0x00000000       0x28 bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o
  .debug_line    0x00000000      0x777 bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o
- .debug_str     0x00000000     0xfc8c bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o
+ .debug_str     0x00000000     0xfc7d bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o
  .comment       0x00000000       0x12 bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o
  .debug_frame   0x00000000      0x108 bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o
  .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
@@ -1359,9 +1361,12 @@ Discarded input sections
  .data.cap_pPT_StateEcu01_1024
                 0x00000000        0x2 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .debug_macro   0x00000000      0xb5c bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_macro   0x00000000       0x16 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .debug_macro   0x00000000       0x1c bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_macro   0x00000000      0x10e bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_macro   0x00000000       0x66 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .debug_macro   0x00000000       0x22 bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_macro   0x00000000       0x16 bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_macro   0x00000000       0x20 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .debug_macro   0x00000000      0x160 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .debug_macro   0x00000000      0x1c9 bin/atmega2560/DEBUG/obj/cap_canApi.o
@@ -1381,9 +1386,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1e4 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .debug_macro   0x00000000      0x102 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_macro   0x00000000      0x36a bin/atmega2560/DEBUG/obj/cap_canApi.o
- .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .group         0x00000000        0x8 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
@@ -1428,20 +1431,16 @@ Discarded input sections
  .data          0x00000000        0x0 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .bss           0x00000000        0x0 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000      0xb5c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00000000      0x1c9 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00000000      0x2fc bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00000000       0x58 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00000000       0x97 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00000000       0xf2 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x1c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00000000       0x97 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00000000      0x10e bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x66 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00000000       0x22 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x16 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x20 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00000000       0x22 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000      0x160 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00000000      0x1c9 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00000000      0x2fc bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x12 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0xaa bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000     0x1ecb bin/atmega2560/DEBUG/obj/cbk_callbacks.o
@@ -1460,6 +1459,10 @@ Discarded input sections
  .debug_macro   0x00000000      0x10c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x86 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x16 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00000000       0x58 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00000000       0x35 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00000000       0xf2 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x1e bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x3a bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_macro   0x00000000       0x34 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
@@ -1507,7 +1510,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/chk_checksum.o
  .debug_macro   0x00000000       0x20 bin/atmega2560/DEBUG/obj/chk_checksum.o
  .debug_macro   0x00000000       0xf2 bin/atmega2560/DEBUG/obj/chk_checksum.o
- .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/chk_checksum.o
  .debug_macro   0x00000000       0x22 bin/atmega2560/DEBUG/obj/chk_checksum.o
  .debug_macro   0x00000000       0x16 bin/atmega2560/DEBUG/obj/chk_checksum.o
  .debug_macro   0x00000000      0x160 bin/atmega2560/DEBUG/obj/chk_checksum.o
@@ -1691,6 +1693,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1e4 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
  .debug_macro   0x00000000      0x102 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
  .debug_macro   0x00000000       0x10 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+ .debug_macro   0x00000000      0x364 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
  .debug_macro   0x00000000       0x16 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
  .debug_macro   0x00000000      0x10c bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
  .debug_macro   0x00000000       0x86 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
@@ -2086,7 +2089,7 @@ Discarded input sections
                 0x00000000       0x20 bin/atmega2560/core/core.a(abi.o)
  .debug_ranges  0x00000000       0x10 bin/atmega2560/core/core.a(abi.o)
  .debug_line    0x00000000      0x11f bin/atmega2560/core/core.a(abi.o)
- .debug_str     0x00000000      0x1ec bin/atmega2560/core/core.a(abi.o)
+ .debug_str     0x00000000      0x1dd bin/atmega2560/core/core.a(abi.o)
  .comment       0x00000000       0x12 bin/atmega2560/core/core.a(abi.o)
  .debug_frame   0x00000000       0x34 bin/atmega2560/core/core.a(abi.o)
  .group         0x00000000        0x8 bin/atmega2560/core/core.a(HardwareSerial.o)
@@ -2441,8 +2444,6 @@ Discarded input sections
  .text          0x00000000        0x0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(abort.o)
  .data          0x00000000        0x0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(abort.o)
  .bss           0x00000000        0x0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(abort.o)
- .text.avr-libc
-                0x00000000        0xa c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(abort.o)
  .text          0x00000000        0x0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(ftoa_engine.o)
  .data          0x00000000        0x0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(ftoa_engine.o)
  .bss           0x00000000        0x0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(ftoa_engine.o)
@@ -2645,7 +2646,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0xaf70
+.text           0x00000000     0xaff4
  *(.vectors)
  .vectors       0x00000000       0xe4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6/crtatmega2560.o
                 0x00000000                __vector_default
@@ -2873,493 +2874,502 @@ END GROUP
  .text.ede_createSender
                 0x00002ec6      0x172 bin/atmega2560/DEBUG/obj/ede_eventSender.o
                 0x00002ec6                ede_createSender
+ .text.ede_allocEventAtPort
+                0x00003038      0x148 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+                0x00003038                ede_allocEventAtPort
+ .text.ede_submitEventToPort
+                0x00003180       0x34 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+                0x00003180                ede_submitEventToPort
  .text.ede_postEventToPort
-                0x00003038      0x172 bin/atmega2560/DEBUG/obj/ede_eventSender.o
-                0x00003038                ede_postEventToPort
+                0x000031b4       0x72 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+                0x000031b4                ede_postEventToPort
  .text.mallocChunk
-                0x000031aa       0xa2 bin/atmega2560/DEBUG/obj/mem_malloc.o
+                0x00003226       0xa2 bin/atmega2560/DEBUG/obj/mem_malloc.o
  .text.getNbrOfAvailableBytes
-                0x0000324c       0x20 bin/atmega2560/DEBUG/obj/mem_malloc.o
+                0x000032c8       0x20 bin/atmega2560/DEBUG/obj/mem_malloc.o
  .text.getNbrOfAllocatedBytes
-                0x0000326c        0x8 bin/atmega2560/DEBUG/obj/mem_malloc.o
+                0x000032e8        0x8 bin/atmega2560/DEBUG/obj/mem_malloc.o
  .text.mem_createMemoryPool
-                0x00003274       0xc6 bin/atmega2560/DEBUG/obj/mem_malloc.o
-                0x00003274                mem_createMemoryPool
+                0x000032f0       0xc6 bin/atmega2560/DEBUG/obj/mem_malloc.o
+                0x000032f0                mem_createMemoryPool
  .text.vsq_getSizeOfQueueHead
-                0x0000333a        0x6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                0x0000333a                vsq_getSizeOfQueueHead
+                0x000033b6        0x6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x000033b6                vsq_getSizeOfQueueHead
  .text.vsq_getSizeOfQueueTail
-                0x00003340       0xb6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                0x00003340                vsq_getSizeOfQueueTail
+                0x000033bc       0xb6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x000033bc                vsq_getSizeOfQueueTail
  .text.vsq_createQueueHead
-                0x000033f6        0xa bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                0x000033f6                vsq_createQueueHead
+                0x00003472        0xa bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x00003472                vsq_createQueueHead
  .text.vsq_createQueueTail
-                0x00003400      0x2b8 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                0x00003400                vsq_createQueueTail
+                0x0000347c      0x2b8 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x0000347c                vsq_createQueueTail
  .text.vsq_linkQueueHeadWithTail
-                0x000036b8       0x10 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                0x000036b8                vsq_linkQueueHeadWithTail
+                0x00003734       0x10 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x00003734                vsq_linkQueueHeadWithTail
  .text.vsq_linkQueueTailWithHead
-                0x000036c8       0xa6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                0x000036c8                vsq_linkQueueTailWithHead
+                0x00003744       0xa6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x00003744                vsq_linkQueueTailWithHead
  .text.vsq_allocTailElement
-                0x0000376e      0x7b6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                0x0000376e                vsq_allocTailElement
+                0x000037ea      0x7b6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x000037ea                vsq_allocTailElement
  .text.vsq_postTailElement
-                0x00003f24       0xa6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                0x00003f24                vsq_postTailElement
+                0x00003fa0       0xa6 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x00003fa0                vsq_postTailElement
  .text.vsq_readFromHead
-                0x00003fca      0x1fe bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                0x00003fca                vsq_readFromHead
+                0x00004046      0x1fe bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x00004046                vsq_readFromHead
  .text.edePortDisp_freeBuffer
-                0x000041c8        0x2 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+                0x00004244        0x2 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
  .text.edePortDisp_readBuffer
-                0x000041ca       0xbc bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+                0x00004246       0xbc bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
  .text.edePortSdr_submitBuffer
-                0x00004286        0x4 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+                0x00004302        0x4 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
  .text.edePortSdr_allocBuffer
-                0x0000428a        0x8 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+                0x00004306        0x8 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
  .text.vsq_createEventQueueHead
-                0x00004292       0x54 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
-                0x00004292                vsq_createEventQueueHead
+                0x0000430e       0x54 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+                0x0000430e                vsq_createEventQueueHead
  .text.vsq_createEventQueueTail
-                0x000042e6       0x74 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
-                0x000042e6                vsq_createEventQueueTail
+                0x00004362       0x74 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+                0x00004362                vsq_createEventQueueTail
  .text.vsq_createEventQueue
-                0x0000435a       0x78 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
-                0x0000435a                vsq_createEventQueue
+                0x000043d6       0x78 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+                0x000043d6                vsq_createEventQueue
  .text.task100ms
-                0x000043d2      0x132 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+                0x0000444e      0x132 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
  .text.task10ms
-                0x00004504      0x132 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+                0x00004580      0x132 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
  .text.taskOnCanReceive
-                0x00004636      0x14a bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
- .text.setup    0x00004780       0x82 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
-                0x00004780                setup
- .text.loop     0x00004802      0x260 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
-                0x00004802                loop
+                0x000046b2      0x14a bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+ .text.setup    0x000047fc       0x82 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+                0x000047fc                setup
+ .text.loop     0x0000487e      0x260 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+                0x0000487e                loop
  .text.cde_getCanId
-                0x00004a62       0xa6 bin/atmega2560/DEBUG/obj/cde_stubs.o
-                0x00004a62                cde_getCanId
+                0x00004ade       0xa6 bin/atmega2560/DEBUG/obj/cde_stubs.o
+                0x00004ade                cde_getCanId
  .text.cap_unpack_PT_StateEcu01_1024
-                0x00004b08       0x56 bin/atmega2560/DEBUG/obj/cap_canApi.o
-                0x00004b08                cap_unpack_PT_StateEcu01_1024
+                0x00004b84       0x56 bin/atmega2560/DEBUG/obj/cap_canApi.o
+                0x00004b84                cap_unpack_PT_StateEcu01_1024
  .text.cap_unpack_PT_StateEcu02_1040
-                0x00004b5e       0x3e bin/atmega2560/DEBUG/obj/cap_canApi.o
-                0x00004b5e                cap_unpack_PT_StateEcu02_1040
+                0x00004bda       0x3e bin/atmega2560/DEBUG/obj/cap_canApi.o
+                0x00004bda                cap_unpack_PT_StateEcu02_1040
  .text.cap_unpack_PT_UserLimits_2032
-                0x00004b9c       0xc8 bin/atmega2560/DEBUG/obj/cap_canApi.o
-                0x00004b9c                cap_unpack_PT_UserLimits_2032
+                0x00004c18       0xc8 bin/atmega2560/DEBUG/obj/cap_canApi.o
+                0x00004c18                cap_unpack_PT_UserLimits_2032
  .text.cap_pack_PT_InfoPowerDisplay_1536
-                0x00004c64       0x82 bin/atmega2560/DEBUG/obj/cap_canApi.o
-                0x00004c64                cap_pack_PT_InfoPowerDisplay_1536
+                0x00004ce0       0x82 bin/atmega2560/DEBUG/obj/cap_canApi.o
+                0x00004ce0                cap_pack_PT_InfoPowerDisplay_1536
  .text.cap_pack_PT_StatusPowerDisplay_1537
-                0x00004ce6       0x8a bin/atmega2560/DEBUG/obj/cap_canApi.o
-                0x00004ce6                cap_pack_PT_StatusPowerDisplay_1537
+                0x00004d62       0x8a bin/atmega2560/DEBUG/obj/cap_canApi.o
+                0x00004d62                cap_pack_PT_StatusPowerDisplay_1537
  .text.cap_pack_PT_LimitsPowerDisplay_1538
-                0x00004d70       0x52 bin/atmega2560/DEBUG/obj/cap_canApi.o
-                0x00004d70                cap_pack_PT_LimitsPowerDisplay_1538
+                0x00004dec       0x52 bin/atmega2560/DEBUG/obj/cap_canApi.o
+                0x00004dec                cap_pack_PT_LimitsPowerDisplay_1538
  .text.onTimeoutFrame_PT_1040
-                0x00004dc2       0x94 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x00004e3e       0x94 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onTimeoutFrame_PT_1024
-                0x00004e56       0x94 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x00004ed2       0x94 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onInitFrame_PT_1538
-                0x00004eea      0x126 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x00004f66      0x126 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onInitFrame_PT_1537
-                0x00005010      0x1b2 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x0000508c      0x1b2 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onDueCheckEventFrame_PT_1538
-                0x000051c2      0x192 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x0000523e      0x192 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onSendFrame_PT_1537
-                0x00005354      0x11a bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x000053d0      0x11a bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onDueCheckEventFrame_PT_1537
-                0x0000546e       0xc0 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x000054ea       0xc0 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onInitFrame_PT_1536
-                0x0000552e      0x11c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x000055aa      0x11c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onSendFrame_PT_1536
-                0x0000564a       0xe2 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x000056c6       0xe2 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onInitFrame_PT_2032
-                0x0000572c       0x9e bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x000057a8       0x9e bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onInitFrame_PT_1040
-                0x000057ca      0x130 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x00005846      0x130 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onInitFrame_PT_1024
-                0x000058fa      0x130 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x00005976      0x130 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onReceiveFrame_PT_2032
-                0x00005a2a      0x134 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x00005aa6      0x134 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onReceiveFrame_PT_1040
-                0x00005b5e      0x148 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x00005bda      0x148 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.onReceiveFrame_PT_1024
-                0x00005ca6      0x146 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x00005d22      0x146 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .text.cbk_initInterface
-                0x00005dec      0x3e0 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
-                0x00005dec                cbk_initInterface
+                0x00005e68      0x3e0 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x00005e68                cbk_initInterface
  .text.chk_validateSequenceCounter
-                0x000061cc       0x7a bin/atmega2560/DEBUG/obj/chk_checksum.o
-                0x000061cc                chk_validateSequenceCounter
+                0x00006248       0x7a bin/atmega2560/DEBUG/obj/chk_checksum.o
+                0x00006248                chk_validateSequenceCounter
  .text.chk_updateSequenceCounter
-                0x00006246       0x28 bin/atmega2560/DEBUG/obj/chk_checksum.o
-                0x00006246                chk_updateSequenceCounter
+                0x000062c2       0x28 bin/atmega2560/DEBUG/obj/chk_checksum.o
+                0x000062c2                chk_updateSequenceCounter
  .text.chk_validateChecksum
-                0x0000626e       0xc4 bin/atmega2560/DEBUG/obj/chk_checksum.o
-                0x0000626e                chk_validateChecksum
+                0x000062ea       0xc4 bin/atmega2560/DEBUG/obj/chk_checksum.o
+                0x000062ea                chk_validateChecksum
  .text.chk_computeChecksum
-                0x00006332      0x150 bin/atmega2560/DEBUG/obj/chk_checksum.o
-                0x00006332                chk_computeChecksum
+                0x000063ae      0x150 bin/atmega2560/DEBUG/obj/chk_checksum.o
+                0x000063ae                chk_computeChecksum
  .text.getMapValue
-                0x00006482      0x134 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x000064fe      0x134 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
  .text.checkFrameHandles
-                0x000065b6      0x122 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x00006632      0x122 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
  .text.onInitEvRecovBusOff
-                0x000066d8       0x9e bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x00006754       0x9e bin/atmega2560/DEBUG/obj/apt_applicationTask.o
  .text.onBusOnOff
-                0x00006776      0x168 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x000067f2      0x168 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
  .text.onInitEvBusOff
-                0x000068de      0x1aa bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x0000695a      0x1aa bin/atmega2560/DEBUG/obj/apt_applicationTask.o
  .text.csh_callbackOnBusStateChange
-                0x00006a88       0xd8 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
-                0x00006a88                csh_callbackOnBusStateChange
+                0x00006b04       0xd8 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x00006b04                csh_callbackOnBusStateChange
  .text.csh_callbackOnReceiveCanFrame
-                0x00006b60       0x94 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
-                0x00006b60                csh_callbackOnReceiveCanFrame
+                0x00006bdc       0x94 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x00006bdc                csh_callbackOnReceiveCanFrame
  .text.apt_taskInit
-                0x00006bf4      0x6ae bin/atmega2560/DEBUG/obj/apt_applicationTask.o
-                0x00006bf4                apt_taskInit
+                0x00006c70      0x6ae bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x00006c70                apt_taskInit
  .text.apt_task10ms
-                0x000072a2       0x14 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
-                0x000072a2                apt_task10ms
+                0x0000731e       0x14 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x0000731e                apt_task10ms
  .text.apt_task100ms
-                0x000072b6       0x14 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
-                0x000072b6                apt_task100ms
+                0x00007332       0x14 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x00007332                apt_task100ms
  .text.upd_updateDisplay
-                0x000072ca      0x102 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
-                0x000072ca                upd_updateDisplay
+                0x00007346      0x102 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+                0x00007346                upd_updateDisplay
  .text._ZN5Print17availableForWriteEv
-                0x000073cc        0x6 bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x000073cc                Print::availableForWrite()
+                0x00007448        0x6 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x00007448                Print::availableForWrite()
  .text._ZN5Print5flushEv
-                0x000073d2        0x2 bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x000073d2                Print::flush()
+                0x0000744e        0x2 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x0000744e                Print::flush()
  .text._ZN13dpy_display_tC2Ev
-                0x000073d4       0x54 bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x000073d4                dpy_display_t::dpy_display_t()
-                0x000073d4                dpy_display_t::dpy_display_t()
+                0x00007450       0x54 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x00007450                dpy_display_t::dpy_display_t()
+                0x00007450                dpy_display_t::dpy_display_t()
  .text._ZN13dpy_display_t13printGreetingEv
-                0x00007428      0x12a bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x00007428                dpy_display_t::printGreeting()
+                0x000074a4      0x12a bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x000074a4                dpy_display_t::printGreeting()
  .text._ZN13dpy_display_t15printBackgroundEv
-                0x00007552       0x94 bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x00007552                dpy_display_t::printBackground()
+                0x000075ce       0x94 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x000075ce                dpy_display_t::printBackground()
  .text._ZN13dpy_display_t15printValueAsBarEhh
-                0x000075e6      0x106 bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x000075e6                dpy_display_t::printValueAsBar(unsigned char, unsigned char)
+                0x00007662      0x106 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x00007662                dpy_display_t::printValueAsBar(unsigned char, unsigned char)
  .text._ZN13dpy_display_t13printTqAndPwrEii
-                0x000076ec      0x1ca bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x000076ec                dpy_display_t::printTqAndPwr(int, int)
+                0x00007768      0x1ca bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x00007768                dpy_display_t::printTqAndPwr(int, int)
  .text._ZN13dpy_display_t11printStatusEPKc
-                0x000078b6       0x72 bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x000078b6                dpy_display_t::printStatus(char const*)
+                0x00007932       0x72 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x00007932                dpy_display_t::printStatus(char const*)
  .text.dpy_printGreeting
-                0x00007928        0x8 bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x00007928                dpy_printGreeting
+                0x000079a4        0x8 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x000079a4                dpy_printGreeting
  .text.dpy_printBackground
-                0x00007930        0x8 bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x00007930                dpy_printBackground
+                0x000079ac        0x8 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x000079ac                dpy_printBackground
  .text.dpy_printValueAsBar
-                0x00007938        0xc bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x00007938                dpy_printValueAsBar
+                0x000079b4        0xc bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x000079b4                dpy_printValueAsBar
  .text.dpy_printTqAndPwr
-                0x00007944        0xc bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x00007944                dpy_printTqAndPwr
+                0x000079c0        0xc bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x000079c0                dpy_printTqAndPwr
  .text.dpy_printStatus
-                0x00007950        0xa bin/atmega2560/DEBUG/obj/dpy_display.o
-                0x00007950                dpy_printStatus
+                0x000079cc        0xa bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x000079cc                dpy_printStatus
  .text._GLOBAL__sub_I_dpy_display
-                0x0000795a        0x8 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x000079d6        0x8 bin/atmega2560/DEBUG/obj/dpy_display.o
  .text.mul_wide_su32
-                0x00007962      0x1fe bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
-                0x00007962                mul_wide_su32
+                0x000079de      0x1fe bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+                0x000079de                mul_wide_su32
  .text.mul_ssu32_hiSR
-                0x00007b60       0x5c bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
-                0x00007b60                mul_ssu32_hiSR
+                0x00007bdc       0x5c bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+                0x00007bdc                mul_ssu32_hiSR
  .text.mul_wide_s32
-                0x00007bbc      0x256 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
-                0x00007bbc                mul_wide_s32
+                0x00007c38      0x256 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+                0x00007c38                mul_wide_s32
  .text.mul_s32_loSR_sat
-                0x00007e12      0x11e bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
-                0x00007e12                mul_s32_loSR_sat
+                0x00007e8e      0x11e bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+                0x00007e8e                mul_s32_loSR_sat
  .text.pwr_detectAndCountError
-                0x00007f30       0x1a bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
-                0x00007f30                pwr_detectAndCountError
+                0x00007fac       0x1a bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+                0x00007fac                pwr_detectAndCountError
  .text.pwr_computeEnginePower_step
-                0x00007f4a      0x372 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
-                0x00007f4a                pwr_computeEnginePower_step
+                0x00007fc6      0x372 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+                0x00007fc6                pwr_computeEnginePower_step
  .text.pwr_computeEnginePower_initialize
-                0x000082bc        0x2 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
-                0x000082bc                pwr_computeEnginePower_initialize
+                0x00008338        0x2 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+                0x00008338                pwr_computeEnginePower_initialize
  .text.sim_simulateCanReception
-                0x000082be      0xa64 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
-                0x000082be                sim_simulateCanReception
+                0x0000833a      0xa64 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+                0x0000833a                sim_simulateCanReception
  .text.registerCanFrame
-                0x00008d22      0x160 bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x00008d9e      0x160 bin/atmega2560/DEBUG/obj/csh_canShield.o
  .text.csh_initModule
-                0x00008e82       0x5a bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x00008e82                csh_initModule
+                0x00008efe       0x5a bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x00008efe                csh_initModule
  .text.csh_registerStdCanFrame
-                0x00008edc       0xc8 bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x00008edc                csh_registerStdCanFrame
+                0x00008f58       0xc8 bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x00008f58                csh_registerStdCanFrame
  .text.csh_sendExtCanFrame
-                0x00008fa4      0x1d2 bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x00008fa4                csh_sendExtCanFrame
+                0x00009020      0x1d2 bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x00009020                csh_sendExtCanFrame
  .text.csh_sendStdCanFrame
-                0x00009176       0xc2 bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x00009176                csh_sendStdCanFrame
+                0x000091f2       0xc2 bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x000091f2                csh_sendStdCanFrame
  .text.csh_restartCanBus
-                0x00009238        0x8 bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x00009238                csh_restartCanBus
+                0x000092b4        0x8 bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x000092b4                csh_restartCanBus
  .text.csh_getCanDLC
-                0x00009240       0x9e bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x00009240                csh_getCanDLC
+                0x000092bc       0x9e bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x000092bc                csh_getCanDLC
  .text.csh_getFrameData
-                0x000092de       0xc8 bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x000092de                csh_getFrameData
+                0x0000935a       0xc8 bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x0000935a                csh_getFrameData
  .text.csh_hwBusStateChange
-                0x000093a6       0xb0 bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x000093a6                csh_hwBusStateChange
+                0x00009422       0xb0 bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x00009422                csh_hwBusStateChange
  .text.csh_hwGetRestartBus
-                0x00009456        0xa bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x00009456                csh_hwGetRestartBus
+                0x000094d2        0xa bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x000094d2                csh_hwGetRestartBus
  .text.csh_hwFrameReceived
-                0x00009460      0x1cc bin/atmega2560/DEBUG/obj/csh_canShield.o
-                0x00009460                csh_hwFrameReceived
+                0x000094dc      0x1cc bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x000094dc                csh_hwFrameReceived
  .text._ZN5Print5writeEPKhj
-                0x0000962c       0x5e bin/atmega2560/core/core.a(Print.o)
-                0x0000962c                Print::write(unsigned char const*, unsigned int)
+                0x000096a8       0x5e bin/atmega2560/core/core.a(Print.o)
+                0x000096a8                Print::write(unsigned char const*, unsigned int)
  .text._ZN5Print5printEPKc
-                0x0000968a       0x98 bin/atmega2560/core/core.a(Print.o)
-                0x0000968a                Print::print(char const*)
+                0x00009706       0x98 bin/atmega2560/core/core.a(Print.o)
+                0x00009706                Print::print(char const*)
  .text.__vector_23
-                0x00009722       0x94 bin/atmega2560/core/core.a(wiring.o)
-                0x00009722                __vector_23
- .text.millis   0x000097b6       0x18 bin/atmega2560/core/core.a(wiring.o)
-                0x000097b6                millis
- .text.delay    0x000097ce       0xf8 bin/atmega2560/core/core.a(wiring.o)
-                0x000097ce                delay
+                0x0000979e       0x94 bin/atmega2560/core/core.a(wiring.o)
+                0x0000979e                __vector_23
+ .text.millis   0x00009832       0x18 bin/atmega2560/core/core.a(wiring.o)
+                0x00009832                millis
+ .text.delay    0x0000984a       0xf8 bin/atmega2560/core/core.a(wiring.o)
+                0x0000984a                delay
  .text.delayMicroseconds
-                0x000098c6       0x16 bin/atmega2560/core/core.a(wiring.o)
-                0x000098c6                delayMicroseconds
- .text.init     0x000098dc       0xc4 bin/atmega2560/core/core.a(wiring.o)
-                0x000098dc                init
- .text.pinMode  0x000099a0       0x82 bin/atmega2560/core/core.a(wiring_digital.o)
-                0x000099a0                pinMode
+                0x00009942       0x16 bin/atmega2560/core/core.a(wiring.o)
+                0x00009942                delayMicroseconds
+ .text.init     0x00009958       0xc4 bin/atmega2560/core/core.a(wiring.o)
+                0x00009958                init
+ .text.pinMode  0x00009a1c       0x82 bin/atmega2560/core/core.a(wiring_digital.o)
+                0x00009a1c                pinMode
  .text.digitalWrite
-                0x00009a22      0x142 bin/atmega2560/core/core.a(wiring_digital.o)
-                0x00009a22                digitalWrite
+                0x00009a9e      0x142 bin/atmega2560/core/core.a(wiring_digital.o)
+                0x00009a9e                digitalWrite
  .text._ZN14HardwareSerial9availableEv
-                0x00009b64       0x18 bin/atmega2560/core/core.a(HardwareSerial.o)
-                0x00009b64                HardwareSerial::available()
+                0x00009be0       0x18 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00009be0                HardwareSerial::available()
  .text._ZN14HardwareSerial4peekEv
-                0x00009b7c       0x1c bin/atmega2560/core/core.a(HardwareSerial.o)
-                0x00009b7c                HardwareSerial::peek()
+                0x00009bf8       0x1c bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00009bf8                HardwareSerial::peek()
  .text._ZN14HardwareSerial4readEv
-                0x00009b98       0x28 bin/atmega2560/core/core.a(HardwareSerial.o)
-                0x00009b98                HardwareSerial::read()
+                0x00009c14       0x28 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00009c14                HardwareSerial::read()
  .text._ZN14HardwareSerial17availableForWriteEv
-                0x00009bc0       0x22 bin/atmega2560/core/core.a(HardwareSerial.o)
-                0x00009bc0                HardwareSerial::availableForWrite()
+                0x00009c3c       0x22 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00009c3c                HardwareSerial::availableForWrite()
  .text._ZN14HardwareSerial5flushEv
-                0x00009be2       0x78 bin/atmega2560/core/core.a(HardwareSerial.o)
-                0x00009be2                HardwareSerial::flush()
+                0x00009c5e       0x78 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00009c5e                HardwareSerial::flush()
  .text._ZN14HardwareSerial5writeEh
-                0x00009c5a       0xca bin/atmega2560/core/core.a(HardwareSerial.o)
-                0x00009c5a                HardwareSerial::write(unsigned char)
+                0x00009cd6       0xca bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00009cd6                HardwareSerial::write(unsigned char)
  .text._ZN14HardwareSerial17_tx_udr_empty_irqEv
-                0x00009d24       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
-                0x00009d24                HardwareSerial::_tx_udr_empty_irq()
+                0x00009da0       0x44 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00009da0                HardwareSerial::_tx_udr_empty_irq()
  .text._ZN14HardwareSerial5beginEmh
-                0x00009d68       0xc0 bin/atmega2560/core/core.a(HardwareSerial.o)
-                0x00009d68                HardwareSerial::begin(unsigned long, unsigned char)
+                0x00009de4       0xc0 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00009de4                HardwareSerial::begin(unsigned long, unsigned char)
  .text.__vector_25
-                0x00009e28       0x6c bin/atmega2560/core/core.a(HardwareSerial0.o)
-                0x00009e28                __vector_25
+                0x00009ea4       0x6c bin/atmega2560/core/core.a(HardwareSerial0.o)
+                0x00009ea4                __vector_25
  .text.__vector_26
-                0x00009e94       0x52 bin/atmega2560/core/core.a(HardwareSerial0.o)
-                0x00009e94                __vector_26
+                0x00009f10       0x52 bin/atmega2560/core/core.a(HardwareSerial0.o)
+                0x00009f10                __vector_26
  .text.startup._GLOBAL__sub_I___vector_25
-                0x00009ee6       0x5a bin/atmega2560/core/core.a(HardwareSerial0.o)
+                0x00009f62       0x5a bin/atmega2560/core/core.a(HardwareSerial0.o)
  .text._ZN13LiquidCrystal5writeEh
-                0x00009f40      0x140 bin/atmega2560/core/core.a(LiquidCrystal.o)
-                0x00009f40                LiquidCrystal::write(unsigned char)
+                0x00009fbc      0x140 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x00009fbc                LiquidCrystal::write(unsigned char)
  .text._ZN13LiquidCrystal4sendEhh.constprop.1
-                0x0000a080      0x13a bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x0000a0fc      0x13a bin/atmega2560/core/core.a(LiquidCrystal.o)
  .text._ZN13LiquidCrystal5beginEhhh
-                0x0000a1ba      0x276 bin/atmega2560/core/core.a(LiquidCrystal.o)
-                0x0000a1ba                LiquidCrystal::begin(unsigned char, unsigned char, unsigned char)
+                0x0000a236      0x276 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x0000a236                LiquidCrystal::begin(unsigned char, unsigned char, unsigned char)
  .text._ZN13LiquidCrystalC2Ehhhhhh
-                0x0000a430       0x3e bin/atmega2560/core/core.a(LiquidCrystal.o)
-                0x0000a430                LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
-                0x0000a430                LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
+                0x0000a4ac       0x3e bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x0000a4ac                LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
+                0x0000a4ac                LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
  .text._ZN13LiquidCrystal9setCursorEhh
-                0x0000a46e       0x20 bin/atmega2560/core/core.a(LiquidCrystal.o)
-                0x0000a46e                LiquidCrystal::setCursor(unsigned char, unsigned char)
+                0x0000a4ea       0x20 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x0000a4ea                LiquidCrystal::setCursor(unsigned char, unsigned char)
  .text._ZN13LiquidCrystal8noCursorEv
-                0x0000a48e        0xc bin/atmega2560/core/core.a(LiquidCrystal.o)
-                0x0000a48e                LiquidCrystal::noCursor()
+                0x0000a50a        0xc bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x0000a50a                LiquidCrystal::noCursor()
  .text._ZN13LiquidCrystal7noBlinkEv
-                0x0000a49a        0xc bin/atmega2560/core/core.a(LiquidCrystal.o)
-                0x0000a49a                LiquidCrystal::noBlink()
+                0x0000a516        0xc bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x0000a516                LiquidCrystal::noBlink()
  .text.avr-libc.fplib
-                0x0000a4a6        0xa c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(addsf3.o)
-                0x0000a4a6                __subsf3
-                0x0000a4a8                __addsf3
+                0x0000a522        0xa c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(addsf3.o)
+                0x0000a522                __subsf3
+                0x0000a524                __addsf3
  .text.avr-libc.fplib
-                0x0000a4b0       0xc0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(addsf3x.o)
-                0x0000a4ca                __addsf3x
+                0x0000a52c       0xc0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(addsf3x.o)
+                0x0000a546                __addsf3x
  .text.avr-libc.fplib
-                0x0000a570        0x8 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
-                0x0000a570                __nesf2
-                0x0000a570                __eqsf2
-                0x0000a570                __cmpsf2
-                0x0000a570                __ltsf2
-                0x0000a570                __lesf2
+                0x0000a5ec        0x8 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(cmpsf2.o)
+                0x0000a5ec                __nesf2
+                0x0000a5ec                __eqsf2
+                0x0000a5ec                __cmpsf2
+                0x0000a5ec                __ltsf2
+                0x0000a5ec                __lesf2
  .text.avr-libc.fplib
-                0x0000a578        0x4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
-                0x0000a578                __divsf3
+                0x0000a5f4        0x4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(divsf3.o)
+                0x0000a5f4                __divsf3
  .text.avr-libc.fplib
-                0x0000a57c       0xcc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
-                0x0000a592                __divsf3x
-                0x0000a596                __divsf3_pse
+                0x0000a5f8       0xcc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(divsf3x.o)
+                0x0000a60e                __divsf3x
+                0x0000a612                __divsf3_pse
  .text.avr-libc.fplib
-                0x0000a648       0x74 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fixsfdi.o)
-                0x0000a648                __fixsfdi
-                0x0000a652                __fixunssfdi
+                0x0000a6c4       0x74 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fixsfdi.o)
+                0x0000a6c4                __fixsfdi
+                0x0000a6ce                __fixunssfdi
  .text.avr-libc.fplib
-                0x0000a6bc        0xa c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
-                0x0000a6bc                __fixsfsi
+                0x0000a738        0xa c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fixsfsi.o)
+                0x0000a738                __fixsfsi
  .text.avr-libc.fplib
-                0x0000a6c6       0x58 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
-                0x0000a6c6                __fixunssfsi
+                0x0000a742       0x58 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fixunssfsi.o)
+                0x0000a742                __fixunssfsi
  .text.avr-libc.fplib
-                0x0000a71e       0x7a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(floatsisf.o)
-                0x0000a71e                __floatunsisf
-                0x0000a722                __floatsisf
+                0x0000a79a       0x7a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(floatsisf.o)
+                0x0000a79a                __floatunsisf
+                0x0000a79e                __floatsisf
  .text.avr-libc.fplib
-                0x0000a798       0x48 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
-                0x0000a798                __fp_cmp
+                0x0000a814       0x48 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_cmp.o)
+                0x0000a814                __fp_cmp
  .text.avr-libc.fplib
-                0x0000a7e0        0xc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
-                0x0000a7e0                __fp_inf
+                0x0000a85c        0xc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_inf.o)
+                0x0000a85c                __fp_inf
  .text.avr-libc.fplib
-                0x0000a7ec        0x6 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
-                0x0000a7ec                __fp_nan
+                0x0000a868        0x6 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_nan.o)
+                0x0000a868                __fp_nan
  .text.avr-libc.fplib
-                0x0000a7f2       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_negdi.o)
-                0x0000a7f2                __fp_negdi
+                0x0000a86e       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_negdi.o)
+                0x0000a86e                __fp_negdi
  .text.avr-libc.fplib
-                0x0000a812        0xe c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
-                0x0000a812                __fp_pscA
+                0x0000a88e        0xe c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_pscA.o)
+                0x0000a88e                __fp_pscA
  .text.avr-libc.fplib
-                0x0000a820        0xe c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
-                0x0000a820                __fp_pscB
+                0x0000a89c        0xe c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_pscB.o)
+                0x0000a89c                __fp_pscB
  .text.avr-libc.fplib
-                0x0000a82e       0x22 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
-                0x0000a82e                __fp_round
+                0x0000a8aa       0x22 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_round.o)
+                0x0000a8aa                __fp_round
  .text.avr-libc.fplib
-                0x0000a850       0x44 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
-                0x0000a850                __fp_split3
-                0x0000a860                __fp_splitA
+                0x0000a8cc       0x44 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_split3.o)
+                0x0000a8cc                __fp_split3
+                0x0000a8dc                __fp_splitA
  .text.avr-libc.fplib
-                0x0000a894        0xe c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
-                0x0000a894                __fp_zero
-                0x0000a896                __fp_szero
+                0x0000a910        0xe c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(fp_zero.o)
+                0x0000a910                __fp_zero
+                0x0000a912                __fp_szero
  .text.avr-libc.fplib
-                0x0000a8a2        0x8 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
-                0x0000a8a2                __gesf2
-                0x0000a8a2                __gtsf2
+                0x0000a91e        0x8 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(gesf2.o)
+                0x0000a91e                __gesf2
+                0x0000a91e                __gtsf2
  .text.avr-libc.fplib
-                0x0000a8aa        0x4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
-                0x0000a8aa                __mulsf3
+                0x0000a926        0x4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(mulsf3.o)
+                0x0000a926                __mulsf3
  .text.avr-libc.fplib
-                0x0000a8ae       0xc2 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
-                0x0000a8c2                __mulsf3x
-                0x0000a8c6                __mulsf3_pse
+                0x0000a92a       0xc2 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libm.a(mulsf3x.o)
+                0x0000a93e                __mulsf3x
+                0x0000a942                __mulsf3_pse
  .text.libgcc.mul
-                0x0000a970       0x1e c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
-                0x0000a970                __mulsi3
+                0x0000a9ec       0x1e c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
+                0x0000a9ec                __mulsi3
  .text.libgcc.div
-                0x0000a98e       0x28 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
-                0x0000a98e                __udivmodhi4
+                0x0000aa0a       0x28 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
+                0x0000aa0a                __udivmodhi4
  .text.libgcc.div
-                0x0000a9b6       0x26 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
-                0x0000a9b6                _div
-                0x0000a9b6                __divmodhi4
+                0x0000aa32       0x26 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
+                0x0000aa32                _div
+                0x0000aa32                __divmodhi4
  .text.libgcc.div
-                0x0000a9dc       0x44 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
-                0x0000a9dc                __udivmodsi4
+                0x0000aa58       0x44 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
+                0x0000aa58                __udivmodsi4
  .text.libgcc.div
-                0x0000aa20       0x28 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
-                0x0000aa20                __divmodsi4
+                0x0000aa9c       0x28 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
+                0x0000aa9c                __divmodsi4
  .text.libgcc.div
-                0x0000aa48       0x10 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
-                0x0000aa48                __negsi2
- .text.libgcc   0x0000aa58       0x10 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
-                0x0000aa58                __tablejump2__
+                0x0000aac4       0x10 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
+                0x0000aac4                __negsi2
+ .text.libgcc   0x0000aad4       0x10 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
+                0x0000aad4                __tablejump2__
  .text.libgcc.mul
-                0x0000aa68        0xc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
-                0x0000aa68                __usmulhisi3
-                0x0000aa6a                __usmulhisi3_tail
+                0x0000aae4        0xc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
+                0x0000aae4                __usmulhisi3
+                0x0000aae6                __usmulhisi3_tail
  .text.libgcc.mul
-                0x0000aa74       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
-                0x0000aa74                __muluhisi3
+                0x0000aaf0       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
+                0x0000aaf0                __muluhisi3
  .text.libgcc.mul
-                0x0000aa88       0x1e c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
-                0x0000aa88                __umulhisi3
+                0x0000ab04       0x1e c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
+                0x0000ab04                __umulhisi3
  .text.avr-libc
-                0x0000aaa6       0xaa c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(rand.o)
-                0x0000ab32                rand_r
-                0x0000ab34                rand
-                0x0000ab3a                srand
+                0x0000ab22       0xaa c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(rand.o)
+                0x0000abae                rand_r
+                0x0000abb0                rand
+                0x0000abb6                srand
  .text.avr-libc
-                0x0000ab50      0x1b0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(ftoa_engine.o)
-                0x0000ab50                __ftoa_engine
+                0x0000abcc        0x8 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(abort.o)
+                0x0000abcc                abort
  .text.avr-libc
-                0x0000ad00       0x16 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
-                0x0000ad00                strnlen_P
+                0x0000abd4      0x1b0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(ftoa_engine.o)
+                0x0000abd4                __ftoa_engine
  .text.avr-libc
-                0x0000ad16       0x1a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(memcmp.o)
-                0x0000ad16                memcmp
+                0x0000ad84       0x16 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(strnlen_P.o)
+                0x0000ad84                strnlen_P
  .text.avr-libc
-                0x0000ad30       0x12 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(memcpy.o)
-                0x0000ad30                memcpy
+                0x0000ad9a       0x1a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(memcmp.o)
+                0x0000ad9a                memcmp
  .text.avr-libc
-                0x0000ad42        0xe c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(memset.o)
-                0x0000ad42                memset
+                0x0000adb4       0x12 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(memcpy.o)
+                0x0000adb4                memcpy
  .text.avr-libc
-                0x0000ad50       0x16 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(strnlen.o)
-                0x0000ad50                strnlen
+                0x0000adc6        0xe c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(memset.o)
+                0x0000adc6                memset
  .text.avr-libc
-                0x0000ad66       0x60 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(fputc.o)
-                0x0000ad66                fputc
+                0x0000add4       0x16 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(strnlen.o)
+                0x0000add4                strnlen
  .text.avr-libc
-                0x0000adc6       0x28 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(printf.o)
-                0x0000adc6                printf
+                0x0000adea       0x60 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(fputc.o)
+                0x0000adea                fputc
  .text.avr-libc
-                0x0000adee       0x56 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(puts.o)
-                0x0000adee                puts
+                0x0000ae4a       0x28 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(printf.o)
+                0x0000ae4a                printf
  .text.avr-libc
-                0x0000ae44       0x60 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(sprintf.o)
-                0x0000ae44                sprintf
+                0x0000ae72       0x56 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(puts.o)
+                0x0000ae72                puts
  .text.avr-libc
-                0x0000aea4       0xbc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(ultoa_invert.o)
-                0x0000aea4                __ultoa_invert
+                0x0000aec8       0x60 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(sprintf.o)
+                0x0000aec8                sprintf
+ .text.avr-libc
+                0x0000af28       0xbc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(ultoa_invert.o)
+                0x0000af28                __ultoa_invert
  .text.libgcc.mul
-                0x0000af60        0xc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
-                0x0000af60                __mulshisi3
-                0x0000af64                __mulohisi3
-                0x0000af6c                . = ALIGN (0x2)
+                0x0000afe4        0xc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
+                0x0000afe4                __mulshisi3
+                0x0000afe8                __mulohisi3
+                0x0000aff0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000af6c        0x0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
-                0x0000af6c                _exit
-                0x0000af6c                exit
+ .fini9         0x0000aff0        0x0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
+                0x0000aff0                _exit
+                0x0000aff0                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -3378,11 +3388,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000af6c        0x4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
+ .fini0         0x0000aff0        0x4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000af70                _etext = .
+                0x0000aff4                _etext = .
 
-.data           0x00800200      0x68c load address 0x0000af70
+.data           0x00800200      0x68c load address 0x0000aff4
                 0x00800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800200        0x4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(rand.o)
@@ -3545,7 +3555,7 @@ END GROUP
                 0x00800c05        0x2 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .bss._hTimerTimeout_PT_1024
                 0x00800c07        0x2 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .bss.heapMemoryForCanInterface.2822
+ .bss.heapMemoryForCanInterface.2839
                 0x00800c09      0x3e8 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
  .bss._hTimerBusRecovery
                 0x00800ff1        0x2 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
@@ -3606,8 +3616,8 @@ END GROUP
  COMMON         0x008013a4        0x6 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(iob.o)
                 0x008013a4                __iob
                 0x008013aa                PROVIDE (__bss_end, .)
-                0x0000af70                __data_load_start = LOADADDR (.data)
-                0x0000b5fc                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000aff4                __data_load_start = LOADADDR (.data)
+                0x0000b680                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008013aa        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -3710,7 +3720,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xba0
+.debug_aranges  0x00000000      0xbb8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x28 bin/atmega2560/DEBUG/obj/main.o
@@ -3723,172 +3733,172 @@ END GROUP
  .debug_aranges
                 0x000000e8       0xc8 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
  .debug_aranges
-                0x000001b0       0x38 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+                0x000001b0       0x50 bin/atmega2560/DEBUG/obj/ede_eventSender.o
  .debug_aranges
-                0x000001e8       0x38 bin/atmega2560/DEBUG/obj/mem_malloc.o
+                0x00000200       0x38 bin/atmega2560/DEBUG/obj/mem_malloc.o
  .debug_aranges
-                0x00000220       0x88 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                0x00000238       0x88 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
  .debug_aranges
-                0x000002a8       0x60 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+                0x000002c0       0x60 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
  .debug_aranges
-                0x00000308       0x40 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+                0x00000320       0x40 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
  .debug_aranges
-                0x00000348       0x20 bin/atmega2560/DEBUG/obj/cde_stubs.o
+                0x00000360       0x20 bin/atmega2560/DEBUG/obj/cde_stubs.o
  .debug_aranges
-                0x00000368       0x48 bin/atmega2560/DEBUG/obj/cap_canApi.o
+                0x00000380       0x48 bin/atmega2560/DEBUG/obj/cap_canApi.o
  .debug_aranges
-                0x000003b0       0x98 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                0x000003c8       0x98 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
  .debug_aranges
-                0x00000448       0x38 bin/atmega2560/DEBUG/obj/chk_checksum.o
+                0x00000460       0x38 bin/atmega2560/DEBUG/obj/chk_checksum.o
  .debug_aranges
-                0x00000480       0x68 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                0x00000498       0x68 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
  .debug_aranges
-                0x000004e8       0x20 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+                0x00000500       0x20 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
  .debug_aranges
-                0x00000508       0x88 bin/atmega2560/DEBUG/obj/dpy_display.o
+                0x00000520       0x88 bin/atmega2560/DEBUG/obj/dpy_display.o
  .debug_aranges
-                0x00000590       0x58 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+                0x000005a8       0x58 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
  .debug_aranges
-                0x000005e8       0x20 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+                0x00000600       0x20 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
  .debug_aranges
-                0x00000608       0x90 bin/atmega2560/DEBUG/obj/csh_canShield.o
+                0x00000620       0x90 bin/atmega2560/DEBUG/obj/csh_canShield.o
  .debug_aranges
-                0x00000698      0x100 bin/atmega2560/core/core.a(Print.o)
+                0x000006b0      0x100 bin/atmega2560/core/core.a(Print.o)
  .debug_aranges
-                0x00000798       0x48 bin/atmega2560/core/core.a(wiring.o)
+                0x000007b0       0x48 bin/atmega2560/core/core.a(wiring.o)
  .debug_aranges
-                0x000007e0       0x30 bin/atmega2560/core/core.a(wiring_digital.o)
+                0x000007f8       0x30 bin/atmega2560/core/core.a(wiring_digital.o)
  .debug_aranges
-                0x00000810       0x68 bin/atmega2560/core/core.a(HardwareSerial.o)
+                0x00000828       0x68 bin/atmega2560/core/core.a(HardwareSerial.o)
  .debug_aranges
-                0x00000878       0x38 bin/atmega2560/core/core.a(HardwareSerial0.o)
+                0x00000890       0x38 bin/atmega2560/core/core.a(HardwareSerial0.o)
  .debug_aranges
-                0x000008b0      0x110 bin/atmega2560/core/core.a(LiquidCrystal.o)
+                0x000008c8      0x110 bin/atmega2560/core/core.a(LiquidCrystal.o)
  .debug_aranges
-                0x000009c0       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
+                0x000009d8       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
  .debug_aranges
-                0x000009e0       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
+                0x000009f8       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
  .debug_aranges
-                0x00000a00       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
+                0x00000a18       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
  .debug_aranges
-                0x00000a20       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
+                0x00000a38       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
  .debug_aranges
-                0x00000a40       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
+                0x00000a58       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
  .debug_aranges
-                0x00000a60       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
+                0x00000a78       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
  .debug_aranges
-                0x00000a80       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
+                0x00000a98       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
  .debug_aranges
-                0x00000aa0       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
+                0x00000ab8       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
  .debug_aranges
-                0x00000ac0       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_copy_data.o)
+                0x00000ad8       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_copy_data.o)
  .debug_aranges
-                0x00000ae0       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_clear_bss.o)
+                0x00000af8       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_clear_bss.o)
  .debug_aranges
-                0x00000b00       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_ctors.o)
+                0x00000b18       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_ctors.o)
  .debug_aranges
-                0x00000b20       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
+                0x00000b38       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
  .debug_aranges
-                0x00000b40       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
+                0x00000b58       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
  .debug_aranges
-                0x00000b60       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
+                0x00000b78       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
  .debug_aranges
-                0x00000b80       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
+                0x00000b98       0x20 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x1e3b8
+.debug_info     0x00000000    0x1e61d
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xbbc c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6/crtatmega2560.o
  .debug_info    0x00000bbc      0x2bf bin/atmega2560/DEBUG/obj/main.o
  .debug_info    0x00000e7b      0x3f0 bin/atmega2560/DEBUG/obj/gsl_systemLoad.o
  .debug_info    0x0000126b      0xda2 bin/atmega2560/DEBUG/obj/rtos.o
  .debug_info    0x0000200d      0x623 bin/atmega2560/DEBUG/obj/stdout.o
- .debug_info    0x00002630     0x1bae bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
- .debug_info    0x000041de      0x988 bin/atmega2560/DEBUG/obj/ede_eventSender.o
- .debug_info    0x00004b66      0x67a bin/atmega2560/DEBUG/obj/mem_malloc.o
- .debug_info    0x000051e0     0x1726 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
- .debug_info    0x00006906      0xba5 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
- .debug_info    0x000074ab      0xe24 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
- .debug_info    0x000082cf      0x43e bin/atmega2560/DEBUG/obj/cde_stubs.o
- .debug_info    0x0000870d      0x9fa bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_info    0x00009107     0x1c5c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_info    0x0000ad63      0x5b4 bin/atmega2560/DEBUG/obj/chk_checksum.o
- .debug_info    0x0000b317     0x17da bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_info    0x0000caf1      0xa0b bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
- .debug_info    0x0000d4fc     0x103b bin/atmega2560/DEBUG/obj/dpy_display.o
- .debug_info    0x0000e537      0xced bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
- .debug_info    0x0000f224      0x8ce bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
- .debug_info    0x0000faf2      0xb7f bin/atmega2560/DEBUG/obj/csh_canShield.o
- .debug_info    0x00010671     0x5500 bin/atmega2560/core/core.a(Print.o)
- .debug_info    0x00015b71      0x5c8 bin/atmega2560/core/core.a(wiring.o)
- .debug_info    0x00016139      0x80d bin/atmega2560/core/core.a(wiring_digital.o)
- .debug_info    0x00016946     0x22a5 bin/atmega2560/core/core.a(HardwareSerial.o)
- .debug_info    0x00018beb     0x1d30 bin/atmega2560/core/core.a(HardwareSerial0.o)
- .debug_info    0x0001a91b     0x2fa8 bin/atmega2560/core/core.a(LiquidCrystal.o)
- .debug_info    0x0001d8c3       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
- .debug_info    0x0001d97e       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
- .debug_info    0x0001da39       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
- .debug_info    0x0001daf4       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
- .debug_info    0x0001dbaf       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
- .debug_info    0x0001dc6a       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
- .debug_info    0x0001dd25       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
- .debug_info    0x0001dde0       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
- .debug_info    0x0001de9b       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_copy_data.o)
- .debug_info    0x0001df56       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_clear_bss.o)
- .debug_info    0x0001e011       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_ctors.o)
- .debug_info    0x0001e0cc       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
- .debug_info    0x0001e187       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
- .debug_info    0x0001e242       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
- .debug_info    0x0001e2fd       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
+ .debug_info    0x00002630     0x1bd7 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
+ .debug_info    0x00004207      0xbc4 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+ .debug_info    0x00004dcb      0x67a bin/atmega2560/DEBUG/obj/mem_malloc.o
+ .debug_info    0x00005445     0x1726 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+ .debug_info    0x00006b6b      0xba5 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+ .debug_info    0x00007710      0xe24 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+ .debug_info    0x00008534      0x43e bin/atmega2560/DEBUG/obj/cde_stubs.o
+ .debug_info    0x00008972      0x9fa bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_info    0x0000936c     0x1c5c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_info    0x0000afc8      0x5b4 bin/atmega2560/DEBUG/obj/chk_checksum.o
+ .debug_info    0x0000b57c     0x17da bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_info    0x0000cd56      0xa0b bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+ .debug_info    0x0000d761     0x103b bin/atmega2560/DEBUG/obj/dpy_display.o
+ .debug_info    0x0000e79c      0xced bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+ .debug_info    0x0000f489      0x8ce bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+ .debug_info    0x0000fd57      0xb7f bin/atmega2560/DEBUG/obj/csh_canShield.o
+ .debug_info    0x000108d6     0x5500 bin/atmega2560/core/core.a(Print.o)
+ .debug_info    0x00015dd6      0x5c8 bin/atmega2560/core/core.a(wiring.o)
+ .debug_info    0x0001639e      0x80d bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_info    0x00016bab     0x22a5 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_info    0x00018e50     0x1d30 bin/atmega2560/core/core.a(HardwareSerial0.o)
+ .debug_info    0x0001ab80     0x2fa8 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .debug_info    0x0001db28       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
+ .debug_info    0x0001dbe3       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
+ .debug_info    0x0001dc9e       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
+ .debug_info    0x0001dd59       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
+ .debug_info    0x0001de14       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
+ .debug_info    0x0001decf       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
+ .debug_info    0x0001df8a       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
+ .debug_info    0x0001e045       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
+ .debug_info    0x0001e100       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_copy_data.o)
+ .debug_info    0x0001e1bb       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_clear_bss.o)
+ .debug_info    0x0001e276       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_ctors.o)
+ .debug_info    0x0001e331       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
+ .debug_info    0x0001e3ec       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
+ .debug_info    0x0001e4a7       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
+ .debug_info    0x0001e562       0xbb c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
 
-.debug_abbrev   0x00000000     0x59c2
+.debug_abbrev   0x00000000     0x5a2a
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0xb1a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6/crtatmega2560.o
  .debug_abbrev  0x00000b1a       0xfd bin/atmega2560/DEBUG/obj/main.o
  .debug_abbrev  0x00000c17      0x192 bin/atmega2560/DEBUG/obj/gsl_systemLoad.o
  .debug_abbrev  0x00000da9      0x386 bin/atmega2560/DEBUG/obj/rtos.o
  .debug_abbrev  0x0000112f      0x2df bin/atmega2560/DEBUG/obj/stdout.o
- .debug_abbrev  0x0000140e      0x3a7 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
- .debug_abbrev  0x000017b5      0x2ae bin/atmega2560/DEBUG/obj/ede_eventSender.o
- .debug_abbrev  0x00001a63      0x1ea bin/atmega2560/DEBUG/obj/mem_malloc.o
- .debug_abbrev  0x00001c4d      0x394 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
- .debug_abbrev  0x00001fe1      0x334 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
- .debug_abbrev  0x00002315      0x2a8 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
- .debug_abbrev  0x000025bd      0x208 bin/atmega2560/DEBUG/obj/cde_stubs.o
- .debug_abbrev  0x000027c5      0x188 bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_abbrev  0x0000294d      0x2ec bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_abbrev  0x00002c39      0x20b bin/atmega2560/DEBUG/obj/chk_checksum.o
- .debug_abbrev  0x00002e44      0x34e bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_abbrev  0x00003192      0x1b7 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
- .debug_abbrev  0x00003349      0x46c bin/atmega2560/DEBUG/obj/dpy_display.o
- .debug_abbrev  0x000037b5      0x1fc bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
- .debug_abbrev  0x000039b1      0x2a7 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
- .debug_abbrev  0x00003c58      0x33b bin/atmega2560/DEBUG/obj/csh_canShield.o
- .debug_abbrev  0x00003f93      0x55e bin/atmega2560/core/core.a(Print.o)
- .debug_abbrev  0x000044f1      0x2a3 bin/atmega2560/core/core.a(wiring.o)
- .debug_abbrev  0x00004794      0x26b bin/atmega2560/core/core.a(wiring_digital.o)
- .debug_abbrev  0x000049ff      0x537 bin/atmega2560/core/core.a(HardwareSerial.o)
- .debug_abbrev  0x00004f36      0x44e bin/atmega2560/core/core.a(HardwareSerial0.o)
- .debug_abbrev  0x00005384      0x512 bin/atmega2560/core/core.a(LiquidCrystal.o)
- .debug_abbrev  0x00005896       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
- .debug_abbrev  0x000058aa       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
- .debug_abbrev  0x000058be       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
- .debug_abbrev  0x000058d2       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
- .debug_abbrev  0x000058e6       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
- .debug_abbrev  0x000058fa       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
- .debug_abbrev  0x0000590e       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
- .debug_abbrev  0x00005922       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
- .debug_abbrev  0x00005936       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_copy_data.o)
- .debug_abbrev  0x0000594a       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_clear_bss.o)
- .debug_abbrev  0x0000595e       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_ctors.o)
- .debug_abbrev  0x00005972       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
- .debug_abbrev  0x00005986       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
- .debug_abbrev  0x0000599a       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
- .debug_abbrev  0x000059ae       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
+ .debug_abbrev  0x0000140e      0x3b6 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
+ .debug_abbrev  0x000017c4      0x307 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+ .debug_abbrev  0x00001acb      0x1ea bin/atmega2560/DEBUG/obj/mem_malloc.o
+ .debug_abbrev  0x00001cb5      0x394 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+ .debug_abbrev  0x00002049      0x334 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+ .debug_abbrev  0x0000237d      0x2a8 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+ .debug_abbrev  0x00002625      0x208 bin/atmega2560/DEBUG/obj/cde_stubs.o
+ .debug_abbrev  0x0000282d      0x188 bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_abbrev  0x000029b5      0x2ec bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_abbrev  0x00002ca1      0x20b bin/atmega2560/DEBUG/obj/chk_checksum.o
+ .debug_abbrev  0x00002eac      0x34e bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_abbrev  0x000031fa      0x1b7 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+ .debug_abbrev  0x000033b1      0x46c bin/atmega2560/DEBUG/obj/dpy_display.o
+ .debug_abbrev  0x0000381d      0x1fc bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+ .debug_abbrev  0x00003a19      0x2a7 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+ .debug_abbrev  0x00003cc0      0x33b bin/atmega2560/DEBUG/obj/csh_canShield.o
+ .debug_abbrev  0x00003ffb      0x55e bin/atmega2560/core/core.a(Print.o)
+ .debug_abbrev  0x00004559      0x2a3 bin/atmega2560/core/core.a(wiring.o)
+ .debug_abbrev  0x000047fc      0x26b bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_abbrev  0x00004a67      0x537 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_abbrev  0x00004f9e      0x44e bin/atmega2560/core/core.a(HardwareSerial0.o)
+ .debug_abbrev  0x000053ec      0x512 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .debug_abbrev  0x000058fe       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
+ .debug_abbrev  0x00005912       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
+ .debug_abbrev  0x00005926       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
+ .debug_abbrev  0x0000593a       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
+ .debug_abbrev  0x0000594e       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
+ .debug_abbrev  0x00005962       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
+ .debug_abbrev  0x00005976       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
+ .debug_abbrev  0x0000598a       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
+ .debug_abbrev  0x0000599e       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_copy_data.o)
+ .debug_abbrev  0x000059b2       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_clear_bss.o)
+ .debug_abbrev  0x000059c6       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_ctors.o)
+ .debug_abbrev  0x000059da       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
+ .debug_abbrev  0x000059ee       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
+ .debug_abbrev  0x00005a02       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
+ .debug_abbrev  0x00005a16       0x14 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
 
-.debug_line     0x00000000     0xccab
+.debug_line     0x00000000     0xcd58
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000       0x1a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6/crtatmega2560.o
  .debug_line    0x0000001a      0x2fb bin/atmega2560/DEBUG/obj/main.o
@@ -3896,155 +3906,155 @@ END GROUP
  .debug_line    0x0000068f      0x960 bin/atmega2560/DEBUG/obj/rtos.o
  .debug_line    0x00000fef      0x43e bin/atmega2560/DEBUG/obj/stdout.o
  .debug_line    0x0000142d     0x1011 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
- .debug_line    0x0000243e      0x5ea bin/atmega2560/DEBUG/obj/ede_eventSender.o
- .debug_line    0x00002a28      0x4d0 bin/atmega2560/DEBUG/obj/mem_malloc.o
- .debug_line    0x00002ef8      0xc00 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
- .debug_line    0x00003af8      0x59a bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
- .debug_line    0x00004092      0x7a2 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
- .debug_line    0x00004834      0x440 bin/atmega2560/DEBUG/obj/cde_stubs.o
- .debug_line    0x00004c74      0x4e6 bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_line    0x0000515a      0xc78 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_line    0x00005dd2      0x4bf bin/atmega2560/DEBUG/obj/chk_checksum.o
- .debug_line    0x00006291      0xafe bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_line    0x00006d8f      0x629 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
- .debug_line    0x000073b8      0x7bb bin/atmega2560/DEBUG/obj/dpy_display.o
- .debug_line    0x00007b73      0x92f bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
- .debug_line    0x000084a2      0x613 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
- .debug_line    0x00008ab5      0x83e bin/atmega2560/DEBUG/obj/csh_canShield.o
- .debug_line    0x000092f3     0x12c1 bin/atmega2560/core/core.a(Print.o)
- .debug_line    0x0000a5b4      0x3fe bin/atmega2560/core/core.a(wiring.o)
- .debug_line    0x0000a9b2      0x3cf bin/atmega2560/core/core.a(wiring_digital.o)
- .debug_line    0x0000ad81      0x5e0 bin/atmega2560/core/core.a(HardwareSerial.o)
- .debug_line    0x0000b361      0x292 bin/atmega2560/core/core.a(HardwareSerial0.o)
- .debug_line    0x0000b5f3      0xd28 bin/atmega2560/core/core.a(LiquidCrystal.o)
- .debug_line    0x0000c31b       0xb0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
- .debug_line    0x0000c3cb       0xce c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
- .debug_line    0x0000c499       0xc8 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
- .debug_line    0x0000c561      0x122 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
- .debug_line    0x0000c683       0xce c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
- .debug_line    0x0000c751       0x62 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
- .debug_line    0x0000c7b3       0x62 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
- .debug_line    0x0000c815       0x86 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
- .debug_line    0x0000c89b       0xa4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_copy_data.o)
- .debug_line    0x0000c93f       0x86 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_clear_bss.o)
- .debug_line    0x0000c9c5       0xb0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_ctors.o)
- .debug_line    0x0000ca75       0x7a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
- .debug_line    0x0000caef       0x92 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
- .debug_line    0x0000cb81       0xb0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
- .debug_line    0x0000cc31       0x7a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
+ .debug_line    0x0000243e      0x697 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+ .debug_line    0x00002ad5      0x4d0 bin/atmega2560/DEBUG/obj/mem_malloc.o
+ .debug_line    0x00002fa5      0xc00 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+ .debug_line    0x00003ba5      0x59a bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+ .debug_line    0x0000413f      0x7a2 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+ .debug_line    0x000048e1      0x440 bin/atmega2560/DEBUG/obj/cde_stubs.o
+ .debug_line    0x00004d21      0x4e6 bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_line    0x00005207      0xc78 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_line    0x00005e7f      0x4bf bin/atmega2560/DEBUG/obj/chk_checksum.o
+ .debug_line    0x0000633e      0xafe bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_line    0x00006e3c      0x629 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+ .debug_line    0x00007465      0x7bb bin/atmega2560/DEBUG/obj/dpy_display.o
+ .debug_line    0x00007c20      0x92f bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+ .debug_line    0x0000854f      0x613 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+ .debug_line    0x00008b62      0x83e bin/atmega2560/DEBUG/obj/csh_canShield.o
+ .debug_line    0x000093a0     0x12c1 bin/atmega2560/core/core.a(Print.o)
+ .debug_line    0x0000a661      0x3fe bin/atmega2560/core/core.a(wiring.o)
+ .debug_line    0x0000aa5f      0x3cf bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_line    0x0000ae2e      0x5e0 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_line    0x0000b40e      0x292 bin/atmega2560/core/core.a(HardwareSerial0.o)
+ .debug_line    0x0000b6a0      0xd28 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .debug_line    0x0000c3c8       0xb0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulsi3.o)
+ .debug_line    0x0000c478       0xce c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodhi4.o)
+ .debug_line    0x0000c546       0xc8 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodhi4.o)
+ .debug_line    0x0000c60e      0x122 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_udivmodsi4.o)
+ .debug_line    0x0000c730       0xce c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_divmodsi4.o)
+ .debug_line    0x0000c7fe       0x62 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_negsi2.o)
+ .debug_line    0x0000c860       0x62 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
+ .debug_line    0x0000c8c2       0x86 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_tablejump2.o)
+ .debug_line    0x0000c948       0xa4 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_copy_data.o)
+ .debug_line    0x0000c9ec       0x86 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_clear_bss.o)
+ .debug_line    0x0000ca72       0xb0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_ctors.o)
+ .debug_line    0x0000cb22       0x7a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_usmulhisi3.o)
+ .debug_line    0x0000cb9c       0x92 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_muluhisi3.o)
+ .debug_line    0x0000cc2e       0xb0 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_umulhisi3.o)
+ .debug_line    0x0000ccde       0x7a c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_mulshisi3.o)
 
-.debug_frame    0x00000000     0x2f34
+.debug_frame    0x00000000     0x2f9c
  *(.debug_frame)
  .debug_frame   0x00000000       0x34 bin/atmega2560/DEBUG/obj/main.o
  .debug_frame   0x00000034       0x84 bin/atmega2560/DEBUG/obj/gsl_systemLoad.o
  .debug_frame   0x000000b8      0x198 bin/atmega2560/DEBUG/obj/rtos.o
  .debug_frame   0x00000250       0x64 bin/atmega2560/DEBUG/obj/stdout.o
  .debug_frame   0x000002b4      0x578 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
- .debug_frame   0x0000082c      0x170 bin/atmega2560/DEBUG/obj/ede_eventSender.o
- .debug_frame   0x0000099c       0xa4 bin/atmega2560/DEBUG/obj/mem_malloc.o
- .debug_frame   0x00000a40      0x324 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
- .debug_frame   0x00000d64      0x1e0 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
- .debug_frame   0x00000f44      0x1a8 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
- .debug_frame   0x000010ec       0x44 bin/atmega2560/DEBUG/obj/cde_stubs.o
- .debug_frame   0x00001130       0x8c bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_frame   0x000011bc      0x314 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_frame   0x000014d0       0xb8 bin/atmega2560/DEBUG/obj/chk_checksum.o
- .debug_frame   0x00001588      0x200 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_frame   0x00001788       0x44 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
- .debug_frame   0x000017cc      0x214 bin/atmega2560/DEBUG/obj/dpy_display.o
- .debug_frame   0x000019e0      0x214 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
- .debug_frame   0x00001bf4       0x68 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
- .debug_frame   0x00001c5c      0x350 bin/atmega2560/DEBUG/obj/csh_canShield.o
- .debug_frame   0x00001fac      0x7f0 bin/atmega2560/core/core.a(Print.o)
- .debug_frame   0x0000279c       0xd4 bin/atmega2560/core/core.a(wiring.o)
- .debug_frame   0x00002870       0x50 bin/atmega2560/core/core.a(wiring_digital.o)
- .debug_frame   0x000028c0       0xf8 bin/atmega2560/core/core.a(HardwareSerial.o)
- .debug_frame   0x000029b8       0xd4 bin/atmega2560/core/core.a(HardwareSerial0.o)
- .debug_frame   0x00002a8c      0x4a8 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .debug_frame   0x0000082c      0x1d8 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+ .debug_frame   0x00000a04       0xa4 bin/atmega2560/DEBUG/obj/mem_malloc.o
+ .debug_frame   0x00000aa8      0x324 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+ .debug_frame   0x00000dcc      0x1e0 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+ .debug_frame   0x00000fac      0x1a8 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+ .debug_frame   0x00001154       0x44 bin/atmega2560/DEBUG/obj/cde_stubs.o
+ .debug_frame   0x00001198       0x8c bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_frame   0x00001224      0x314 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_frame   0x00001538       0xb8 bin/atmega2560/DEBUG/obj/chk_checksum.o
+ .debug_frame   0x000015f0      0x200 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_frame   0x000017f0       0x44 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+ .debug_frame   0x00001834      0x214 bin/atmega2560/DEBUG/obj/dpy_display.o
+ .debug_frame   0x00001a48      0x214 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+ .debug_frame   0x00001c5c       0x68 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+ .debug_frame   0x00001cc4      0x350 bin/atmega2560/DEBUG/obj/csh_canShield.o
+ .debug_frame   0x00002014      0x7f0 bin/atmega2560/core/core.a(Print.o)
+ .debug_frame   0x00002804       0xd4 bin/atmega2560/core/core.a(wiring.o)
+ .debug_frame   0x000028d8       0x50 bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_frame   0x00002928       0xf8 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_frame   0x00002a20       0xd4 bin/atmega2560/core/core.a(HardwareSerial0.o)
+ .debug_frame   0x00002af4      0x4a8 bin/atmega2560/core/core.a(LiquidCrystal.o)
 
-.debug_str      0x00000000    0x194bd
+.debug_str      0x00000000    0x19485
  *(.debug_str)
  .debug_str     0x00000000      0x3e6 c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6/crtatmega2560.o
- .debug_str     0x000003e6     0xedaa bin/atmega2560/DEBUG/obj/main.o
-                               0xeef7 (size before relaxing)
- .debug_str     0x0000f190      0x658 bin/atmega2560/DEBUG/obj/gsl_systemLoad.o
-                               0xeca5 (size before relaxing)
- .debug_str     0x0000f7e8      0xc5d bin/atmega2560/DEBUG/obj/rtos.o
-                              0x1014f (size before relaxing)
- .debug_str     0x00010445      0xea1 bin/atmega2560/DEBUG/obj/stdout.o
-                               0xf6f2 (size before relaxing)
- .debug_str     0x000112e6     0x1338 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
-                              0x10054 (size before relaxing)
- .debug_str     0x0001261e      0x1f3 bin/atmega2560/DEBUG/obj/ede_eventSender.o
-                               0xfa26 (size before relaxing)
- .debug_str     0x00012811      0x376 bin/atmega2560/DEBUG/obj/mem_malloc.o
-                               0xf5f4 (size before relaxing)
- .debug_str     0x00012b87      0x70a bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
-                               0xf9ea (size before relaxing)
- .debug_str     0x00013291      0x1f8 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
-                               0xf769 (size before relaxing)
- .debug_str     0x00013489     0x1f26 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
-                              0x11fde (size before relaxing)
- .debug_str     0x000153af      0x127 bin/atmega2560/DEBUG/obj/cde_stubs.o
-                               0xf883 (size before relaxing)
- .debug_str     0x000154d6      0x227 bin/atmega2560/DEBUG/obj/cap_canApi.o
-                              0x1031d (size before relaxing)
- .debug_str     0x000156fd      0x415 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
-                              0x11aba (size before relaxing)
- .debug_str     0x00015b12       0x54 bin/atmega2560/DEBUG/obj/chk_checksum.o
-                               0xed51 (size before relaxing)
- .debug_str     0x00015b66      0x753 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
-                              0x1211c (size before relaxing)
- .debug_str     0x000162b9       0xe5 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
-                              0x1178b (size before relaxing)
- .debug_str     0x0001639e      0x6fd bin/atmega2560/DEBUG/obj/dpy_display.o
-                              0x107ca (size before relaxing)
- .debug_str     0x00016a9b      0x225 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
-                              0x109b5 (size before relaxing)
- .debug_str     0x00016cc0      0x712 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
-                               0xf4c4 (size before relaxing)
- .debug_str     0x000173d2      0x142 bin/atmega2560/DEBUG/obj/csh_canShield.o
-                               0xef90 (size before relaxing)
- .debug_str     0x00017514      0xf9f bin/atmega2560/core/core.a(Print.o)
-                               0x132a (size before relaxing)
- .debug_str     0x000184b3       0x97 bin/atmega2560/core/core.a(wiring.o)
-                                0x419 (size before relaxing)
- .debug_str     0x0001854a       0x7d bin/atmega2560/core/core.a(wiring_digital.o)
-                                0x3f2 (size before relaxing)
- .debug_str     0x000185c7      0x897 bin/atmega2560/core/core.a(HardwareSerial.o)
-                               0x17cb (size before relaxing)
- .debug_str     0x00018e5e       0xc3 bin/atmega2560/core/core.a(HardwareSerial0.o)
-                               0x152e (size before relaxing)
- .debug_str     0x00018f21      0x59c bin/atmega2560/core/core.a(LiquidCrystal.o)
-                                0xa41 (size before relaxing)
+ .debug_str     0x000003e6     0xed9b bin/atmega2560/DEBUG/obj/main.o
+                               0xeee8 (size before relaxing)
+ .debug_str     0x0000f181      0x658 bin/atmega2560/DEBUG/obj/gsl_systemLoad.o
+                               0xec96 (size before relaxing)
+ .debug_str     0x0000f7d9      0xc5d bin/atmega2560/DEBUG/obj/rtos.o
+                              0x10140 (size before relaxing)
+ .debug_str     0x00010436      0xea1 bin/atmega2560/DEBUG/obj/stdout.o
+                               0xf6e3 (size before relaxing)
+ .debug_str     0x000112d7     0x12b2 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
+                              0x10045 (size before relaxing)
+ .debug_str     0x00012589      0x250 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+                               0xfa74 (size before relaxing)
+ .debug_str     0x000127d9      0x376 bin/atmega2560/DEBUG/obj/mem_malloc.o
+                               0xf5e5 (size before relaxing)
+ .debug_str     0x00012b4f      0x70a bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+                               0xf9db (size before relaxing)
+ .debug_str     0x00013259      0x1f8 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+                               0xf75a (size before relaxing)
+ .debug_str     0x00013451     0x1f26 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+                              0x11fcf (size before relaxing)
+ .debug_str     0x00015377      0x127 bin/atmega2560/DEBUG/obj/cde_stubs.o
+                               0xf874 (size before relaxing)
+ .debug_str     0x0001549e      0x227 bin/atmega2560/DEBUG/obj/cap_canApi.o
+                              0x1030e (size before relaxing)
+ .debug_str     0x000156c5      0x415 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+                              0x11aab (size before relaxing)
+ .debug_str     0x00015ada       0x54 bin/atmega2560/DEBUG/obj/chk_checksum.o
+                               0xed42 (size before relaxing)
+ .debug_str     0x00015b2e      0x753 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+                              0x1210d (size before relaxing)
+ .debug_str     0x00016281       0xe5 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+                              0x1177c (size before relaxing)
+ .debug_str     0x00016366      0x6fd bin/atmega2560/DEBUG/obj/dpy_display.o
+                              0x107bb (size before relaxing)
+ .debug_str     0x00016a63      0x225 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+                              0x109a6 (size before relaxing)
+ .debug_str     0x00016c88      0x712 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+                               0xf4b5 (size before relaxing)
+ .debug_str     0x0001739a      0x142 bin/atmega2560/DEBUG/obj/csh_canShield.o
+                               0xef81 (size before relaxing)
+ .debug_str     0x000174dc      0xf9f bin/atmega2560/core/core.a(Print.o)
+                               0x131b (size before relaxing)
+ .debug_str     0x0001847b       0x97 bin/atmega2560/core/core.a(wiring.o)
+                                0x40a (size before relaxing)
+ .debug_str     0x00018512       0x7d bin/atmega2560/core/core.a(wiring_digital.o)
+                                0x3e3 (size before relaxing)
+ .debug_str     0x0001858f      0x897 bin/atmega2560/core/core.a(HardwareSerial.o)
+                               0x17bc (size before relaxing)
+ .debug_str     0x00018e26       0xc3 bin/atmega2560/core/core.a(HardwareSerial0.o)
+                               0x151f (size before relaxing)
+ .debug_str     0x00018ee9      0x59c bin/atmega2560/core/core.a(LiquidCrystal.o)
+                                0xa32 (size before relaxing)
 
-.debug_loc      0x00000000    0x16ac5
+.debug_loc      0x00000000    0x16fbe
  *(.debug_loc)
  .debug_loc     0x00000000      0x20f bin/atmega2560/DEBUG/obj/gsl_systemLoad.o
  .debug_loc     0x0000020f      0xeba bin/atmega2560/DEBUG/obj/rtos.o
  .debug_loc     0x000010c9      0x267 bin/atmega2560/DEBUG/obj/stdout.o
- .debug_loc     0x00001330     0x24a3 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
- .debug_loc     0x000037d3      0x917 bin/atmega2560/DEBUG/obj/ede_eventSender.o
- .debug_loc     0x000040ea      0x4cd bin/atmega2560/DEBUG/obj/mem_malloc.o
- .debug_loc     0x000045b7     0x1aef bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
- .debug_loc     0x000060a6      0x97e bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
- .debug_loc     0x00006a24      0x5bf bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
- .debug_loc     0x00006fe3       0xb0 bin/atmega2560/DEBUG/obj/cde_stubs.o
- .debug_loc     0x00007093      0x2ad bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_loc     0x00007340      0xd19 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_loc     0x00008059      0x580 bin/atmega2560/DEBUG/obj/chk_checksum.o
- .debug_loc     0x000085d9      0x8d4 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_loc     0x00008ead       0xfd bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
- .debug_loc     0x00008faa      0x7ea bin/atmega2560/DEBUG/obj/dpy_display.o
- .debug_loc     0x00009794      0xd69 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
- .debug_loc     0x0000a4fd      0x320 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
- .debug_loc     0x0000a81d      0xe65 bin/atmega2560/DEBUG/obj/csh_canShield.o
- .debug_loc     0x0000b682     0x7a5c bin/atmega2560/core/core.a(Print.o)
- .debug_loc     0x000130de      0x274 bin/atmega2560/core/core.a(wiring.o)
- .debug_loc     0x00013352      0x61b bin/atmega2560/core/core.a(wiring_digital.o)
- .debug_loc     0x0001396d      0x4fb bin/atmega2560/core/core.a(HardwareSerial.o)
- .debug_loc     0x00013e68      0x164 bin/atmega2560/core/core.a(HardwareSerial0.o)
- .debug_loc     0x00013fcc     0x2af9 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .debug_loc     0x00001330     0x24c5 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
+ .debug_loc     0x000037f5      0xdee bin/atmega2560/DEBUG/obj/ede_eventSender.o
+ .debug_loc     0x000045e3      0x4cd bin/atmega2560/DEBUG/obj/mem_malloc.o
+ .debug_loc     0x00004ab0     0x1aef bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+ .debug_loc     0x0000659f      0x97e bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+ .debug_loc     0x00006f1d      0x5bf bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+ .debug_loc     0x000074dc       0xb0 bin/atmega2560/DEBUG/obj/cde_stubs.o
+ .debug_loc     0x0000758c      0x2ad bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_loc     0x00007839      0xd19 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_loc     0x00008552      0x580 bin/atmega2560/DEBUG/obj/chk_checksum.o
+ .debug_loc     0x00008ad2      0x8d4 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_loc     0x000093a6       0xfd bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+ .debug_loc     0x000094a3      0x7ea bin/atmega2560/DEBUG/obj/dpy_display.o
+ .debug_loc     0x00009c8d      0xd69 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+ .debug_loc     0x0000a9f6      0x320 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+ .debug_loc     0x0000ad16      0xe65 bin/atmega2560/DEBUG/obj/csh_canShield.o
+ .debug_loc     0x0000bb7b     0x7a5c bin/atmega2560/core/core.a(Print.o)
+ .debug_loc     0x000135d7      0x274 bin/atmega2560/core/core.a(wiring.o)
+ .debug_loc     0x0001384b      0x61b bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_loc     0x00013e66      0x4fb bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_loc     0x00014361      0x164 bin/atmega2560/core/core.a(HardwareSerial0.o)
+ .debug_loc     0x000144c5     0x2af9 bin/atmega2560/core/core.a(LiquidCrystal.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -4064,36 +4074,36 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000     0x1ca8
+.debug_ranges   0x00000000     0x1cd8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x18 bin/atmega2560/DEBUG/obj/main.o
  .debug_ranges  0x00000018       0x10 bin/atmega2560/DEBUG/obj/gsl_systemLoad.o
  .debug_ranges  0x00000028      0x118 bin/atmega2560/DEBUG/obj/rtos.o
  .debug_ranges  0x00000140       0x38 bin/atmega2560/DEBUG/obj/stdout.o
  .debug_ranges  0x00000178      0x1b0 bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
- .debug_ranges  0x00000328       0x40 bin/atmega2560/DEBUG/obj/ede_eventSender.o
- .debug_ranges  0x00000368       0x28 bin/atmega2560/DEBUG/obj/mem_malloc.o
- .debug_ranges  0x00000390      0x388 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
- .debug_ranges  0x00000718       0x50 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
- .debug_ranges  0x00000768       0x30 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
- .debug_ranges  0x00000798       0x10 bin/atmega2560/DEBUG/obj/cde_stubs.o
- .debug_ranges  0x000007a8       0x38 bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_ranges  0x000007e0       0xd0 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_ranges  0x000008b0       0x28 bin/atmega2560/DEBUG/obj/chk_checksum.o
- .debug_ranges  0x000008d8       0x58 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_ranges  0x00000930       0x10 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
- .debug_ranges  0x00000940       0x90 bin/atmega2560/DEBUG/obj/dpy_display.o
- .debug_ranges  0x000009d0       0x48 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
- .debug_ranges  0x00000a18       0x90 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
- .debug_ranges  0x00000aa8       0x98 bin/atmega2560/DEBUG/obj/csh_canShield.o
- .debug_ranges  0x00000b40      0xde0 bin/atmega2560/core/core.a(Print.o)
- .debug_ranges  0x00001920       0x38 bin/atmega2560/core/core.a(wiring.o)
- .debug_ranges  0x00001958       0x20 bin/atmega2560/core/core.a(wiring_digital.o)
- .debug_ranges  0x00001978       0x58 bin/atmega2560/core/core.a(HardwareSerial.o)
- .debug_ranges  0x000019d0       0x40 bin/atmega2560/core/core.a(HardwareSerial0.o)
- .debug_ranges  0x00001a10      0x298 bin/atmega2560/core/core.a(LiquidCrystal.o)
+ .debug_ranges  0x00000328       0x70 bin/atmega2560/DEBUG/obj/ede_eventSender.o
+ .debug_ranges  0x00000398       0x28 bin/atmega2560/DEBUG/obj/mem_malloc.o
+ .debug_ranges  0x000003c0      0x388 bin/atmega2560/DEBUG/obj/vsq_threadSafeQueueVariableSize.o
+ .debug_ranges  0x00000748       0x50 bin/atmega2560/DEBUG/obj/vsq_dispatcherPortInterface.o
+ .debug_ranges  0x00000798       0x30 bin/atmega2560/DEBUG/obj/asi_arduinoSampleIntegration.o
+ .debug_ranges  0x000007c8       0x10 bin/atmega2560/DEBUG/obj/cde_stubs.o
+ .debug_ranges  0x000007d8       0x38 bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_ranges  0x00000810       0xd0 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_ranges  0x000008e0       0x28 bin/atmega2560/DEBUG/obj/chk_checksum.o
+ .debug_ranges  0x00000908       0x58 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_ranges  0x00000960       0x10 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+ .debug_ranges  0x00000970       0x90 bin/atmega2560/DEBUG/obj/dpy_display.o
+ .debug_ranges  0x00000a00       0x48 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+ .debug_ranges  0x00000a48       0x90 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+ .debug_ranges  0x00000ad8       0x98 bin/atmega2560/DEBUG/obj/csh_canShield.o
+ .debug_ranges  0x00000b70      0xde0 bin/atmega2560/core/core.a(Print.o)
+ .debug_ranges  0x00001950       0x38 bin/atmega2560/core/core.a(wiring.o)
+ .debug_ranges  0x00001988       0x20 bin/atmega2560/core/core.a(wiring_digital.o)
+ .debug_ranges  0x000019a8       0x58 bin/atmega2560/core/core.a(HardwareSerial.o)
+ .debug_ranges  0x00001a00       0x40 bin/atmega2560/core/core.a(HardwareSerial0.o)
+ .debug_ranges  0x00001a40      0x298 bin/atmega2560/core/core.a(LiquidCrystal.o)
 
-.debug_macro    0x00000000     0x9360
+.debug_macro    0x00000000     0x91ba
  *(.debug_macro)
  .debug_macro   0x00000000      0x12c bin/atmega2560/DEBUG/obj/main.o
  .debug_macro   0x0000012c      0xb5c bin/atmega2560/DEBUG/obj/main.o
@@ -4171,33 +4181,28 @@ END GROUP
  .debug_macro   0x00007981      0x1b9 bin/atmega2560/DEBUG/obj/cde_stubs.o
  .debug_macro   0x00007b3a       0x16 bin/atmega2560/DEBUG/obj/cde_stubs.o
  .debug_macro   0x00007b50      0x14a bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_macro   0x00007c9a       0x97 bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_macro   0x00007d31       0x16 bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_macro   0x00007d47       0x97 bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_macro   0x00007dde       0x5a bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_macro   0x00007e38       0x1c bin/atmega2560/DEBUG/obj/cap_canApi.o
- .debug_macro   0x00007e54      0x204 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00008058       0x10 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00008068       0x10 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00008078       0x10 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x00008088       0x1c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x000080a4       0x34 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
- .debug_macro   0x000080d8      0x15c bin/atmega2560/DEBUG/obj/chk_checksum.o
- .debug_macro   0x00008234      0x254 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_macro   0x00008488       0x24 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_macro   0x000084ac       0x10 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_macro   0x000084bc       0x40 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_macro   0x000084fc       0x10 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_macro   0x0000850c       0x2e bin/atmega2560/DEBUG/obj/apt_applicationTask.o
- .debug_macro   0x0000853a      0x217 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
- .debug_macro   0x00008751      0x364 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
- .debug_macro   0x00008ab5      0x242 bin/atmega2560/DEBUG/obj/dpy_display.o
- .debug_macro   0x00008cf7       0xac bin/atmega2560/DEBUG/obj/dpy_display.o
- .debug_macro   0x00008da3       0x16 bin/atmega2560/DEBUG/obj/dpy_display.o
- .debug_macro   0x00008db9      0x166 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
- .debug_macro   0x00008f1f       0x4c bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
- .debug_macro   0x00008f6b      0x293 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
- .debug_macro   0x000091fe      0x162 bin/atmega2560/DEBUG/obj/csh_canShield.o
+ .debug_macro   0x00007c9a      0x364 bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_macro   0x00007ffe       0x1c bin/atmega2560/DEBUG/obj/cap_canApi.o
+ .debug_macro   0x0000801a      0x20c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00008226       0x10 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00008236       0x1c bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00008252       0x34 bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ .debug_macro   0x00008286      0x15c bin/atmega2560/DEBUG/obj/chk_checksum.o
+ .debug_macro   0x000083e2       0x10 bin/atmega2560/DEBUG/obj/chk_checksum.o
+ .debug_macro   0x000083f2      0x254 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_macro   0x00008646       0x24 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_macro   0x0000866a       0x10 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_macro   0x0000867a       0x40 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_macro   0x000086ba       0x10 bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_macro   0x000086ca       0x2e bin/atmega2560/DEBUG/obj/apt_applicationTask.o
+ .debug_macro   0x000086f8      0x217 bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+ .debug_macro   0x0000890f      0x242 bin/atmega2560/DEBUG/obj/dpy_display.o
+ .debug_macro   0x00008b51       0xac bin/atmega2560/DEBUG/obj/dpy_display.o
+ .debug_macro   0x00008bfd       0x16 bin/atmega2560/DEBUG/obj/dpy_display.o
+ .debug_macro   0x00008c13      0x166 bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+ .debug_macro   0x00008d79       0x4c bin/atmega2560/DEBUG/obj/pwr_computeEnginePower.o
+ .debug_macro   0x00008dc5      0x293 bin/atmega2560/DEBUG/obj/sim_simulateCanReception.o
+ .debug_macro   0x00009058      0x162 bin/atmega2560/DEBUG/obj/csh_canShield.o
 OUTPUT(bin/atmega2560/DEBUG/RTuinOS_arduinoSampleIntegrationEC.elf elf32-avr)
 LOAD linker stubs
 
@@ -4585,6 +4590,7 @@ _tryToRestartCanBus                               bin/atmega2560/DEBUG/obj/csh_c
 abort                                             c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6\libc.a(abort.o)
                                                   bin/atmega2560/core/core.a(abi.o)
                                                   bin/atmega2560/DEBUG/obj/mci_mapBinarySearchCanId.o
+                                                  bin/atmega2560/DEBUG/obj/ede_eventSender.o
 apt_canBusOff                                     bin/atmega2560/DEBUG/obj/apt_applicationTask.o
                                                   bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
 apt_hDispatcherSystem                             bin/atmega2560/DEBUG/obj/apt_applicationTask.o
@@ -4689,6 +4695,7 @@ dpy_printTqAndPwr                                 bin/atmega2560/DEBUG/obj/dpy_d
                                                   bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
 dpy_printValueAsBar                               bin/atmega2560/DEBUG/obj/dpy_display.o
                                                   bin/atmega2560/DEBUG/obj/upd_updateDisplay.o
+ede_allocEventAtPort                              bin/atmega2560/DEBUG/obj/ede_eventSender.o
 ede_createDispatcher                              bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
                                                   bin/atmega2560/DEBUG/obj/apt_applicationTask.o
 ede_createDispatcherSystem                        bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
@@ -4716,6 +4723,7 @@ ede_getKindOfEvent                                bin/atmega2560/DEBUG/obj/ede_e
                                                   bin/atmega2560/DEBUG/obj/apt_applicationTask.o
                                                   bin/atmega2560/DEBUG/obj/cbk_callbacks.o
 ede_getNoSenderPortBlockedEvents                  bin/atmega2560/DEBUG/obj/ede_eventSender.o
+ede_getPortIndex                                  bin/atmega2560/DEBUG/obj/ede_eventSender.o
 ede_installCallback                               bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
                                                   bin/atmega2560/DEBUG/obj/apt_applicationTask.o
                                                   bin/atmega2560/DEBUG/obj/cbk_callbacks.o
@@ -4731,6 +4739,7 @@ ede_registerInternalEventSource                   bin/atmega2560/DEBUG/obj/ede_e
 ede_retriggerSingleShotTimer                      bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
                                                   bin/atmega2560/DEBUG/obj/apt_applicationTask.o
                                                   bin/atmega2560/DEBUG/obj/cbk_callbacks.o
+ede_submitEventToPort                             bin/atmega2560/DEBUG/obj/ede_eventSender.o
 ede_suspendSingleShotTimer                        bin/atmega2560/DEBUG/obj/ede_eventDispatcherEngine.o
                                                   bin/atmega2560/DEBUG/obj/apt_applicationTask.o
 exit                                              c:/programfiles/arduino-1.8.19/hardware/tools/avr/bin/../lib/gcc/avr/7.3.0/avr6\libgcc.a(_exit.o)
@@ -4881,7 +4890,7 @@ AVR Memory Usage
 ----------------
 Device: atmega2560
 
-Program:   46588 bytes (17.8% Full)
+Program:   46720 bytes (17.8% Full)
 (.text + .data + .bootloader)
 
 Data:       4522 bytes (55.2% Full)

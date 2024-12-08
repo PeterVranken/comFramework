@@ -3,7 +3,7 @@
  * Main function of the Windows demo application of the timer facilities of the event
  * dispatcher engine.
  *
- * Copyright (C) 2015-2022 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the
@@ -209,7 +209,7 @@ signed int main( signed int argc ATTRIB_UNUSED
     const char * const greeting =
            "-----------------------------------------------------------------------------\n"
            " " MAIN_APP_GREETING "\n"
-           " Copyright (C) 2015-2022 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)\n"
+           " Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)\n"
            " This is free software; see the source for copying conditions. There is NO\n"
            " warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
            "-----------------------------------------------------------------------------";

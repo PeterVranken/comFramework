@@ -110,7 +110,7 @@
  * message buffer full or bus-off. This bit is written into the status word in the API to
  * the APSW.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.1,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
@@ -133,6 +133,8 @@
  * Include files
  */
 
+#include "cbk_callbacks.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -145,8 +147,6 @@
 #include "chk_checksum.h"
 #include "cap_canApi.h"
 #include "apt_applicationTask.h"
-#include "cbk_callbacks.h"
-
 
 /*
  * Defines

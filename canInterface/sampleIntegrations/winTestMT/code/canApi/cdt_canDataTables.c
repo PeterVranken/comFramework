@@ -6,7 +6,7 @@
  * event dispatchers will access the tables to implement the frame-indvidual behavior like
  * different timing patterns, different checksum protections, different size, etc.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.0,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
@@ -29,6 +29,8 @@
  * Include files
  */
 
+#include "cdt_canDataTables.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,8 +41,6 @@
 #include "cst_canStatistics.h"
 #include "ose_operatingSystemEmulation.h"
 #include "e2e_frameProtection.h"
-#include "cdt_canDataTables.h"
-
 
 /*
  * Defines

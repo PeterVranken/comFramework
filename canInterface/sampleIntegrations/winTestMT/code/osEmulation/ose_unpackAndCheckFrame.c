@@ -4,7 +4,7 @@
  * This module contains the set of functions for the end-to-end validation of the CAN
  * frames. A CRC checking function is generated for each CAN frame.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.0,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
@@ -27,6 +27,8 @@
  * Include files
  */
 
+#include "ose_unpackAndCheckFrame.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -35,8 +37,6 @@
 #include "types.h"
 #include "cap_canApi.h"
 #include "e2e_frameProtection.h"
-#include "ose_unpackAndCheckFrame.h"
-
 
 /*
  * Defines

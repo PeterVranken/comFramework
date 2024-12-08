@@ -7,7 +7,7 @@
  * generates then from the CAN databases. This way the simulation knowns, which CAN frames
  * to simulate and how to.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.0,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
@@ -30,6 +30,8 @@
  * Include files
  */
 
+#include "ose_dataTables.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -41,8 +43,6 @@
 #include "ede_eventDispatcherEngine.h"
 #include "ose_unpackAndCheckFrame.h"
 #include "ose_operatingSystemEmulation.h"
-#include "ose_dataTables.h"
-
 
 /*
  * Defines

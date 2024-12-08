@@ -2,7 +2,7 @@
  * @file pck_packCanFrame.c
  * Implementation of pack/unpack functions for the CAN frames of cluster arduinoSampleIntegration.
  *
- * This file has been created with comFramework - codeGenerator version 1.12.1,
+ * This file has been created with comFramework - codeGenerator version 1.13.0,
  * see http://sourceforge.net/projects/comframe/
  *
  * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
@@ -25,12 +25,12 @@
  * Include files
  */
 
+#include "pck_packCanFrame.h"
+
 #include <string.h>
 
 #include "types.h"
 #include "rtos_assert.h"
-#include "pck_packCanFrame.h"
-
 
 /*
  * Defines
