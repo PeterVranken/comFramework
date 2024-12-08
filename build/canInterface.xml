@@ -67,6 +67,10 @@
       <!-- line is the blank separated command line. -->
       <arg line="-s clean"/>
     </exec>
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/timerDemo">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s clean"/>
+    </exec>
     <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/winSampleIntegration">
       <!-- line is the blank separated command line. -->
       <arg line="-s clean"/>
@@ -91,6 +95,10 @@
       <!-- line is the blank separated command line. -->
       <arg line="-s build"/>
     </exec>
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/timerDemo">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s build"/>
+    </exec>
     <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/winSampleIntegration">
       <!-- line is the blank separated command line. -->
       <arg line="-s build"/>
@@ -98,6 +106,25 @@
     <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/winTestMT">
       <!-- line is the blank separated command line. -->
       <arg line="-s build"/>
+    </exec>
+  </target> <!-- build -->
+
+  <!-- Run the Windows sample integrations. -->
+  <target name="runSamples"
+          description="Build the sample integrations and run those, which are directly executable under Windows"
+          depends="build"
+  >
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/timerDemo">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s run"/>
+    </exec>
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/winSampleIntegration">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s run"/>
+    </exec>
+    <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/winTestMT">
+      <!-- line is the blank separated command line. -->
+      <arg line="-s run -- ARG=--simulated-time-span=25"/>
     </exec>
   </target> <!-- build -->
 
