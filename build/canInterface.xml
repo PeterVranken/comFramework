@@ -59,13 +59,13 @@
     <!-- make.exe needs to be GNU make 3.82 -->
     <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/arduinoSampleIntegration">
       <!-- line is the blank separated command line. -->
-      <arg line="-s clean"/>
+      <arg line="-s clean cleanCore"/>
     </exec>
     <exec executable="mingw32-make"
           dir="canInterface/sampleIntegrations/arduinoSampleIntegrationEmbeddedCoder"
     >
       <!-- line is the blank separated command line. -->
-      <arg line="-s clean"/>
+      <arg line="-s clean cleanCore"/>
     </exec>
     <exec executable="mingw32-make" dir="canInterface/sampleIntegrations/timerDemo">
       <!-- line is the blank separated command line. -->
