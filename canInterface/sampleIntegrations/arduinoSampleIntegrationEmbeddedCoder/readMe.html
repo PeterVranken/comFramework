@@ -174,14 +174,14 @@ vertical-align: middle;
 MathWorks Embedded Coder</a>
 <ul>
 <li><a href="#scope" id="toc-scope"><span class="toc-section-number">1.1</span> Scope</a></li>
-</ul></li>
-<li><a href="#application-design" id="toc-application-design"><span class="toc-section-number">2</span> Application design</a>
+<li><a href="#application-design" id="toc-application-design"><span class="toc-section-number">1.2</span> Application design</a>
 <ul>
-<li><a href="#folder-canshield" id="toc-folder-canshield"><span class="toc-section-number">2.0.1</span> Folder canShield</a></li>
-<li><a href="#folder-apsw" id="toc-folder-apsw"><span class="toc-section-number">2.0.2</span> Folder APSW</a></li>
-<li><a href="#folder-integration" id="toc-folder-integration"><span class="toc-section-number">2.0.3</span> Folder integration</a></li>
-<li><a href="#folder-codegen" id="toc-folder-codegen"><span class="toc-section-number">2.0.4</span> Folder codeGen</a></li>
-<li><a href="#folder-rtos" id="toc-folder-rtos"><span class="toc-section-number">2.0.5</span> Folder RTOS</a></li>
+<li><a href="#folder-canshield" id="toc-folder-canshield"><span class="toc-section-number">1.2.1</span> Folder canShield</a></li>
+<li><a href="#folder-apsw" id="toc-folder-apsw"><span class="toc-section-number">1.2.2</span> Folder APSW</a></li>
+<li><a href="#folder-integration" id="toc-folder-integration"><span class="toc-section-number">1.2.3</span> Folder integration</a></li>
+<li><a href="#folder-codegen" id="toc-folder-codegen"><span class="toc-section-number">1.2.4</span> Folder codeGen</a></li>
+<li><a href="#folder-rtos" id="toc-folder-rtos"><span class="toc-section-number">1.2.5</span> Folder RTOS</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -226,12 +226,17 @@ executables like cp, mv, mkdir</li>
 <p>Once these pre-conditions are fullfilled, the build command would be
 (Windows, other systems accordingly):</p>
 <pre><code>cd &lt;...&gt;\comFramework\canInterface\sampleIntegrations\arduinoSampleIntegrationEmbeddedCoder
-make build</code></pre>
+make -h
+make help
+make -s build</code></pre>
 <p>to build the flashable hex file or</p>
 <pre><code>cd &lt;...&gt;\comFramework\canInterface\sampleIntegrations\arduinoSampleIntegrationEmbeddedCoder
-make -s COM_PORT=COM10 upload</code></pre>
+make COM_PORT=COM10 upload</code></pre>
 <p>to build and upload the application to a Arduino Mega board, which is
 connected to the specified COM port.</p>
+<p>After flashing, the same COM port can be used to observe the console
+output of the flashed application. Open a terminal program and open this
+COM port with 9600 Bd, 8 bit, 1 Stop bit, no parity to see.</p>
 <p>Note, on Windows systems you will need the MinGW port of make, not
 the Cygwin port. Many GCC distributions contain both variants, so it
 depends on your system search path, which one is run. Or consider typing
@@ -245,7 +250,7 @@ and the makefile will fail to locate these tools. You will have to
 modify the makefile or use your system search path settings to overcome
 this. Caution, for this reason, we&#39;ve never tried this code with Arduino
 1.6 so far!</p>
-<h1 data-number="2" id="application-design"><span class="header-section-number">2</span> Application design</h1>
+<h2 data-number="1.2" id="application-design"><span class="header-section-number">1.2</span> Application design</h2>
 <p>This is a sample integration of comFramework&#39;s CAN interface but not
 an Arduino sample. Arduino is just an easily available, commonly known,
 easy to use platform. We designed this application to demonstrate how an
@@ -253,7 +258,7 @@ integration of the CAN interface into a real platform can look like. The
 actual capabilities of the application are secondary. Our CAN interface
 builds on the hardware driver layer. This means a CAN shield for
 Arduino.</p>
-<h3 data-number="2.0.1" id="folder-canshield"><span class="header-section-number">2.0.1</span> Folder canShield</h3>
+<h3 data-number="1.2.1" id="folder-canshield"><span class="header-section-number">1.2.1</span> Folder canShield</h3>
 <p>So far the integration doesn&#39;t go down to real CAN hardware. Instead
 a simulation frame has been shaped, which exposes a typical CAN hardware
 driver interface to the rest of the software. This interface looks like
@@ -278,7 +283,7 @@ simulation code have been placed in folder code\canShield. If this
 application would be made a real CAN device then this folder would
 become obsolete and replaced by some adaptation of the remaining code to
 the actual CAN API.</p>
-<h3 data-number="2.0.2" id="folder-apsw"><span class="header-section-number">2.0.2</span> Folder APSW</h3>
+<h3 data-number="1.2.2" id="folder-apsw"><span class="header-section-number">1.2.2</span> Folder APSW</h3>
 <p>The functional code, the application software or APSW, reads the
 current speed of rotation and engine torque values, computes the current
 engine power and updates the LCDisplay. It displays speed of rotation
@@ -312,8 +317,8 @@ to this sample and read file <em>readMe.txt</em> to get more details
 about the configuration of the Simulink/Embedded Coder model with help
 of MATLAB script files that are auto-coded from the DBC files.</p>
 <p>The APSW code is located in folder code\APSW.</p>
-<h3 data-number="2.0.3" id="folder-integration"><span class="header-section-number">2.0.3</span> Folder integration</h3>
-<p>The folder code\integration contains those hand-coded parts of the
+<h3 data-number="1.2.3" id="folder-integration"><span class="header-section-number">1.2.3</span> Folder integration</h3>
+<p>Folder code\integration contains those hand-coded parts of the
 application, which are needed to integrate the CAN interface with any
 real platform (or operating system). The tasks are defined that do the
 initialization of the CAN interface (frame and bus registration) and the
@@ -334,7 +339,7 @@ bus configuration typically doesn&#39;t undergo frequent changes in the
 course of a software project. Maintaining this code through template
 programming as it would be required for auto-generated coding, won&#39;t
 ever pay off.</p>
-<h3 data-number="2.0.4" id="folder-codegen"><span class="header-section-number">2.0.4</span> Folder codeGen</h3>
+<h3 data-number="1.2.4" id="folder-codegen"><span class="header-section-number">1.2.4</span> Folder codeGen</h3>
 <p>Most important is folder code\codeGen. It contains the configuration
 of the CAN interface for this application. This configuration is mainly
 determined by the code generation from the network database file(s). The
@@ -345,7 +350,7 @@ global data API with the APSW, which is highly dependent on the network
 databases is implemented here, too.</p>
 <p>All C sources and related header files in this folder are generated
 by the code generator.</p>
-<h3 data-number="2.0.5" id="folder-rtos"><span class="header-section-number">2.0.5</span> Folder RTOS</h3>
+<h3 data-number="1.2.5" id="folder-rtos"><span class="header-section-number">1.2.5</span> Folder RTOS</h3>
 <p>Last but not least we have folder RTOS. A popular open source real
 time operating system for Arduino has been placed here. Nothing special
 about this, maybe with the exception of file

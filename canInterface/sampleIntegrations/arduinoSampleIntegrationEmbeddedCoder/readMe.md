@@ -47,18 +47,24 @@ Once these pre-conditions are fullfilled, the build command would be
 
 ~~~~~~~~~~~~~~~~~~~
 cd <...>\comFramework\canInterface\sampleIntegrations\arduinoSampleIntegrationEmbeddedCoder
-make build
+make -h
+make help
+make -s build
 ~~~~~~~~~~~~~~~~~~~
 
 to build the flashable hex file or
 
 ~~~~~~~~~~~~~~~~~~~
 cd <...>\comFramework\canInterface\sampleIntegrations\arduinoSampleIntegrationEmbeddedCoder
-make -s COM_PORT=COM10 upload
+make COM_PORT=COM10 upload
 ~~~~~~~~~~~~~~~~~~~
 
 to build and upload the application to a Arduino Mega board, which is
 connected to the specified COM port.
+
+After flashing, the same COM port can be used to observe the console
+output of the flashed application. Open a terminal program and open this
+COM port with 9600 Bd, 8 bit, 1 Stop bit, no parity to see.
 
 Note, on Windows systems you will need the MinGW port of make, not the
 Cygwin port. Many GCC distributions contain both variants, so it depends
@@ -76,7 +82,7 @@ Caution, for this reason, we've never tried this code with Arduino 1.6 so
 far!
 
 
-# Application design
+## Application design
 
 This is a sample integration of comFramework's CAN interface but not an
 Arduino sample. Arduino is just an easily available, commonly known, easy
@@ -158,7 +164,7 @@ The APSW code is located in folder code\\APSW.
 
 ### Folder integration
 
-The folder code\\integration contains those hand-coded parts of the
+Folder code\\integration contains those hand-coded parts of the
 application, which are needed to integrate the CAN interface with any real
 platform (or operating system). The tasks are defined that do the
 initialization of the CAN interface (frame and bus registration) and the

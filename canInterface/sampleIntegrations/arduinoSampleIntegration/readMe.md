@@ -46,11 +46,15 @@ to build the flashable hex file or
 
 ~~~~~~~~~~~~~~~~~~~
 cd <...>\comFramework\canInterface\sampleIntegrations\arduinoSampleIntegration
-make -s COM_PORT=COM10 upload
+make COM_PORT=COM10 upload
 ~~~~~~~~~~~~~~~~~~~
 
 to build and upload the application to a Arduino Mega board, which is
 connected to the specified COM port.
+
+After flashing, the same COM port can be used to observe the console
+output of the flashed application. Open a terminal program and open this
+COM port with 9600 Bd, 8 bit, 1 Stop bit, no parity to see.
 
 Note, on Windows systems you will need the MinGW port of make, not the
 Cygwin port. Many GCC distributions contain both variants, so it depends
@@ -60,12 +64,12 @@ reference to the right implementation of make. The Cygwin variant uses
 another interface to the underlying shell and this interface is not
 compatible with our makefiles.
 
-Arduino 1.6 won't work out of the box; the Arduino people decided to no
-longer package the Arduino IDE with the GNU avr-gcc tools and the makefile
-will fail to locate these tools. You will have to modify the makefile or
-use your system search path settings to overcome this.
-
-Caution, we've never tried this code with Arduino 1.6 so far!
+Arduino 1.6 won't work out of the box; in this revision, the Arduino
+people decided not to package the Arduino IDE with the GNU avr-gcc tools
+and the makefile will fail to locate these tools. You will have to modify
+the makefile or use your system search path settings to overcome this.
+Caution, for this reason, we've never tried this code with Arduino 1.6 so
+far!
 
 
 ## Application design
@@ -132,14 +136,13 @@ The APSW code is located in folder code\\APSW.
 
 ### Folder integration
 
-More important is folder code\\integration. It contains those hand-coded
-parts of the application, which are needed to integrate the CAN interface
-with any real platform (or operating system). The tasks are defined that
-do the initialization of the CAN interface (frame and bus registration)
-and the regular clocking of the interface engine instances. Moreover, the
-handle mapping and the checksum and sequence counter update/validation,
-which are external to but required by the CAN interface engine are
-implemented here.
+Folder code\\integration contains those hand-coded parts of the
+application, which are needed to integrate the CAN interface with any real
+platform (or operating system). The tasks are defined that do the
+initialization of the CAN interface (frame and bus registration) and the
+regular clocking of the interface engine instances. Moreover, the handle
+mapping and the checksum and sequence counter update/validation, which are
+external to but required by the CAN interface engine are implemented here.
 
 Please note: Handle mapping is always required by the CAN interface,
 (it'll be a trivial identity in many environments like in our Arduino

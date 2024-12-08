@@ -215,12 +215,17 @@ executables like cp, mv, mkdir</li>
 <p>Once these pre-conditions are fullfilled, the build command would be
 (Windows, other systems accordingly):</p>
 <pre><code>cd &lt;...&gt;\comFramework\canInterface\sampleIntegrations\arduinoSampleIntegration
-make build</code></pre>
+make -h
+make help
+make -s build</code></pre>
 <p>to build the flashable hex file or</p>
 <pre><code>cd &lt;...&gt;\comFramework\canInterface\sampleIntegrations\arduinoSampleIntegration
-make -s COM_PORT=COM10 upload</code></pre>
+make COM_PORT=COM10 upload</code></pre>
 <p>to build and upload the application to a Arduino Mega board, which is
 connected to the specified COM port.</p>
+<p>After flashing, the same COM port can be used to observe the console
+output of the flashed application. Open a terminal program and open this
+COM port with 9600 Bd, 8 bit, 1 Stop bit, no parity to see.</p>
 <p>Note, on Windows systems you will need the MinGW port of make, not
 the Cygwin port. Many GCC distributions contain both variants, so it
 depends on your system search path, which one is run. Or consider typing
@@ -228,11 +233,12 @@ depends on your system search path, which one is run. Or consider typing
 should be a safe reference to the right implementation of make. The
 Cygwin variant uses another interface to the underlying shell and this
 interface is not compatible with our makefiles.</p>
-<p>Arduino 1.6 won&#39;t work out of the box; the Arduino people decided to
-no longer package the Arduino IDE with the GNU avr-gcc tools and the
-makefile will fail to locate these tools. You will have to modify the
-makefile or use your system search path settings to overcome this.</p>
-<p>Caution, we&#39;ve never tried this code with Arduino 1.6 so far!</p>
+<p>Arduino 1.6 won&#39;t work out of the box; in this revision, the Arduino
+people decided not to package the Arduino IDE with the GNU avr-gcc tools
+and the makefile will fail to locate these tools. You will have to
+modify the makefile or use your system search path settings to overcome
+this. Caution, for this reason, we&#39;ve never tried this code with Arduino
+1.6 so far!</p>
 <h2 data-number="1.2" id="application-design"><span class="header-section-number">1.2</span> Application design</h2>
 <p>This is a sample integration of comFramework&#39;s CAN interface but not
 an Arduino sample. Arduino is just an easily available, commonly known,
@@ -287,14 +293,14 @@ operations. This is however out of scope of demonstrating the CAN
 interface&#39;s integration.</p>
 <p>The APSW code is located in folder code\APSW.</p>
 <h3 data-number="1.2.3" id="folder-integration"><span class="header-section-number">1.2.3</span> Folder integration</h3>
-<p>More important is folder code\integration. It contains those
-hand-coded parts of the application, which are needed to integrate the
-CAN interface with any real platform (or operating system). The tasks
-are defined that do the initialization of the CAN interface (frame and
-bus registration) and the regular clocking of the interface engine
-instances. Moreover, the handle mapping and the checksum and sequence
-counter update/validation, which are external to but required by the CAN
-interface engine are implemented here.</p>
+<p>Folder code\integration contains those hand-coded parts of the
+application, which are needed to integrate the CAN interface with any
+real platform (or operating system). The tasks are defined that do the
+initialization of the CAN interface (frame and bus registration) and the
+regular clocking of the interface engine instances. Moreover, the handle
+mapping and the checksum and sequence counter update/validation, which
+are external to but required by the CAN interface engine are implemented
+here.</p>
 <p>Please note: Handle mapping is always required by the CAN interface,
 (it&#39;ll be a trivial identity in many environments like in our Arduino
 integration) but checksum and sequence counter update/validation are a

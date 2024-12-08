@@ -35,23 +35,11 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
-$sh = get-command pwsh -ErrorAction SilentlyContinue
-if($sh.Source -match ".+") {
-    write-host "PowerShell is installed and used as" $sh.Source
-} else {
-    write-host "PowerShell is not installed as pwsh."
-    $sh = get-command PowerShell -ErrorAction SilentlyContinue
-    if($sh.Source -match ".+") {
-        write-host "PowerShell is installed and used as" $sh.Source
-    } else {
-        write-host "PowerShell does not seem to be installed."
-        Write-Host "Press any key to continue ..."
-        $dummy = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-        exit 1
-    }
-}
+# Which executable is currently executing the launch script?
+$sh = (Get-Process -Id $PID).Path
 
-.$sh.Source -WindowStyle Normal -Interactive -NoExit -Command {
+# Start same executable with appropriate session configuration.
+.$sh -WindowStyle Normal -Interactive -NoExit -Command {
     setEnv.ps1
     $env:PATH = "$env:JAVA_HOME\bin;$env:ANT_HOME\bin;$env:GITWCREV_HOME;$PSScriptRoot;.;$env:PATH"
     #write-host "PATH: $env:PATH"
