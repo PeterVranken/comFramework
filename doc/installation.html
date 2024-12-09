@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Installation of comFramework</title>
+  <title>installation</title>
   <style>
 html {
 font-family: Segoe UI;
@@ -168,9 +168,6 @@ vertical-align: middle;
   <![endif]-->
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Installation of comFramework</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#overview" id="toc-overview"><span class="toc-section-number">1</span> Overview</a></li>
@@ -216,16 +213,16 @@ build the sample integrations for deeper investigation.</p>
 <p>The sample integrations come along with the generated C source code.
 They are mainly meant as instructive sample code. An installation of
 tools is not required if this suffices, if there&#39;s no need or intention
-to alter the sample code and re-compile it.</p>
-<p>The Arduino sample comes along with source code and the compiled
-executable; you can immediately upload it to your Arduino Mega 2560
-board and see how it behaves. An installation of Arduino 1.8.19 is
-required.</p>
-<p>If the Windows examples should be needed as running applications for
-further investigation or debugging then GCC needs to be installed. 32
-and 64 Bit versions are supported but only a few versions of GCC have
-been tested; see <a href="https://petervranken.github.io/comFramework/canInterface/sampleIntegrations/winTestMT/whichCCompilerToUse.html">whichCCompilerToUse.html</a>
-for details. The file can be found locally as
+to alter the sample code and re-compile it:</p>
+<p>The Arduino sample integrations comes along with source code and the
+compiled executable; you can immediately upload it to your Arduino Mega
+2560 board and see how it behaves. An installation of Arduino 1.8.19 is
+required for this.</p>
+<p>If the Windows sample integrations should be needed as running
+applications for further investigation or debugging then GCC needs to be
+installed. 32 and 64 Bit versions are supported but only a few versions
+of GCC have been tested; see <a href="https://petervranken.github.io/comFramework/canInterface/sampleIntegrations/winTestMT/whichCCompilerToUse.html">whichCCompilerToUse.html</a>
+for details. The same file can be found locally as
 <em>comFramework/canInterface/sampleIntegrations/winTestMT/whichCCompilerToUse.html</em>.</p>
 <p>All C compilation and related operations is controlled from
 makefiles, which need the MinGW port of GNU make 3.82 or higher. If you
@@ -234,9 +231,14 @@ respond. Other make derivatives or elder revisions of GNU make won&#39;t
 probably work.</p>
 <h1 data-number="2" id="java"><span class="header-section-number">2</span> Java</h1>
 <p>A Java SDK or RTE is not element of this repository but required for
-build or execution, respectively. A Java SDK of version 23 or higher is
-recommended. The installation of an according Java system can be
-downloaded here <a href="https://jdk.java.net/23/">https://jdk.java.net/23/</a> (visited
+build or execution, respectively.</p>
+<p>Java binaries are not element of this repository. For running the
+installed tools, a Java 8 RTE suffices (and should be found on nearly
+any machine).</p>
+<p>If you don&#39;t have suitable Java binaries on your machine or if you
+want to build the tools from source code then a Java SDK of version 23
+or higher is recommended. The installation of an according Java system
+can be downloaded here <a href="https://jdk.java.net/23/">https://jdk.java.net/23/</a> (visited
 November 2024).</p>
 <p>After installing the Java package, you need to make the executables
 accessible. Either:</p>
