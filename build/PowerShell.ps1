@@ -1,6 +1,6 @@
 #!/usr/bin/env PowerShell
 # Open a PowerShell window in interactive mode and with the environment properly prepared for
-# executing the build commands for makingthe tools, running the samples and creating a
+# executing the build commands for making the tools, running the samples and creating a
 # release archive.
 #
 # Please note: On Windows machines, the use of PowerShell is initially hindered by two
@@ -35,13 +35,23 @@
 # You should have received a copy of the GNU General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
+# The location of the script is not available inside the command block, which is used to
+# define the session configuration. We make it available by means of a shared script
+# variable. Note, neither variables ordinarily on script scope nor those with scope
+# $global: are shared with the code block. We need to use an environment variable to get
+# out of the process and into the newly span process.
+$env:SCRIPT_ROOT = [System.IO.Path]::GetFullPath("$PSScriptRoot")
+
 # Which executable is currently executing the launch script?
 $sh = (Get-Process -Id $PID).Path
 
 # Start same executable with appropriate session configuration.
 .$sh -WindowStyle Normal -Interactive -NoExit -Command {
-    setEnv.ps1
-    $env:PATH = "$env:JAVA_HOME\bin;$env:ANT_HOME\bin;$env:GITWCREV_HOME;$PSScriptRoot;.;$env:PATH"
+    # Use "dot sourcing" to Run the shared helper script, which prepares all (environment)
+    # variables, such that the modifications persist in this script.
+    . setEnv.ps1
+
+    $env:PATH = "$env:JAVA_HOME\bin;$env:ANT_HOME\bin;$env:GITWCREV_HOME;$env:SCRIPT_ROOT;.;$env:PATH"
     #write-host "PATH: $env:PATH"
     pushd $PSScriptRoot
     dir *.ps1

@@ -93,7 +93,7 @@ The application should start up and it should respond with its usage
 text.
 
 From the same shell, `cd` to sample `firstSample`, i.e., folder
-`...\comFramework\excelExporter\samples\firstSample. Type:
+`...\comFramework\excelExporter\samples\firstSample`. Type:
 
     runFirstSample
 
