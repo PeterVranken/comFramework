@@ -105,7 +105,7 @@ documentation.
 
 The internal representation of the parsed input information, called "data
 model", is explained in detail in Wiki page
-[excelExporter's Data Model](https://github.com/PeterVranken/comFramework/wiki/The-excelExporter-Data-Model/)
+[excelExporter's Data Model](https://github.com/PeterVranken/comFramework/wiki/The-excelExporter-Data-Model)
 and it is documented as a
 [Javadoc of the complete data structure](https://petervranken.github.io/comFramework/excelExporter/doc/dataModel/index.html?overview-summary.html "Data model for StringTemplate V4").
 The same is found in your local installation, please click on file
@@ -141,8 +141,8 @@ input and application configuration is given in the Wiki page mentioned
 before.
 
 Another source of knowledge about the data model and how to access its
-elements is the investigation of the sample templates:
-See files `excelExporter/samples/.../*.stg` in your local installation or
+elements is the investigation of the templates (`*.stg`) in our samples, see
+files `excelExporter/samples/.../*.stg` in your local installation or
 online at
 <https://github.com/PeterVranken/comFramework/tree/main/excelExporter/samples>.
 
@@ -317,5 +317,5 @@ provided as separate package. You get it as an element of the comFramework
 download, see [here](https://github.com/PeterVranken/comFramework/releases).
 
 However, if really nothing from comFramework but excelExporter is relevant
-to use, than you can easily cut it out of the comFramework archive. The
+to you, then you can easily cut it out of the comFramework archive. The
 installation of excelExporter doesn't depend on the rest of comFramework.

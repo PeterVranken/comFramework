@@ -36,18 +36,19 @@ to build the sample integrations for deeper investigation.
 The sample integrations come along with the generated C source code. They
 are mainly meant as instructive sample code. An installation of tools is
 not required if this suffices, if there's no need or intention to alter
-the sample code and re-compile it.
+the sample code and re-compile it:
 
-The Arduino sample comes along with source code and the compiled
-executable; you can immediately upload it to your Arduino Mega 2560 board
-and see how it behaves. An installation of Arduino 1.8.19 is required.
+The Arduino sample integrations comes along with source code and the
+compiled executable; you can immediately upload it to your Arduino Mega
+2560 board and see how it behaves. An installation of Arduino 1.8.19 is
+required for this.
 
-If the Windows examples should be needed as running applications for
-further investigation or debugging then GCC needs to be installed. 32 and
-64 Bit versions are supported but only a few versions of GCC have been
-tested; see
+If the Windows sample integrations should be needed as running
+applications for further investigation or debugging then GCC needs to be
+installed. 32 and 64 Bit versions are supported but only a few versions of
+GCC have been tested; see
 [whichCCompilerToUse.html](https://petervranken.github.io/comFramework/canInterface/sampleIntegrations/winTestMT/whichCCompilerToUse.html)
-for details. The file can be found locally as
+for details. The same file can be found locally as
 *comFramework/canInterface/sampleIntegrations/winTestMT/whichCCompilerToUse.html*.
 
 All C compilation and related operations is controlled from makefiles,
@@ -58,9 +59,16 @@ make derivatives or elder revisions of GNU make won't probably work.
 # Java
 
 A Java SDK or RTE is not element of this repository but required for build
-or execution, respectively. A Java SDK of version 23 or higher is
-recommended. The installation of an according Java system can be
-downloaded here <https://jdk.java.net/23/> (visited November 2024).
+or execution, respectively.
+
+Java binaries are not element of this repository. For running the
+installed tools, a Java 8 RTE suffices (and should be found on nearly any
+machine).
+
+If you don't have suitable Java binaries on your machine or if you want
+to build the tools from source code then a Java SDK of version 23
+or higher is recommended. The installation of an according Java system can
+be downloaded here <https://jdk.java.net/23/> (visited November 2024).
 
 After installing the Java package, you need to make the executables
 accessible. Either:

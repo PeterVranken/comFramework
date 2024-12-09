@@ -93,7 +93,7 @@
       </fileset>
     </copy>
     <delete verbose="false" dir="${tmpDir}/comFramework/canInterface/sampleIntegrations/winSampleIntegration/bin"/>
-    <delete verbose="false" dir="${tmpDir}/comFramework/canInterface/sampleIntegrations/winTest"/>
+    <delete verbose="false" dir="${tmpDir}/comFramework/canInterface/sampleIntegrations/timerDemo/bin"/>
     <copy todir="${tmpDir}/comFramework/canInterface/sampleIntegrations/arduinoSampleIntegration/bin">
       <fileset dir="canInterface/sampleIntegrations/arduinoSampleIntegration/bin">
         <include name="**/RTuinOS_arduinoSampleIntegration.*"/>
