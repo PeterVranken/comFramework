@@ -3,7 +3,7 @@
  * A simple main function for demonstration how to use and integrate the generated parts of
  * the C code.
  *
- * Copyright (C) 2016-2021 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2016-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the
@@ -134,7 +134,7 @@ int main(int noArgs ATTRIB_UNUSED, const char *argAry[] ATTRIB_UNUSED)
     const char * const greeting =
        "----------------------------------------------------------------------------------------\n"
        " EmbeddedCoderAPIWithBusStruct - A demo of comFramework's support of the Embedded Coder\n"
-       " Copyright (C) 2016-2023 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)\n"
+       " Copyright (C) 2016-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)\n"
        " This is free software; see the source for copying conditions. There is NO\n"
        " warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
        "----------------------------------------------------------------------------------------";
