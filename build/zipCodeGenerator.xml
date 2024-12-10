@@ -62,6 +62,7 @@
         <include name="scratchPad/runDemoScratchPad.cmd"/>
         <include name="iterations/runDemoIterations.cmd"/>
         <include name="iterations/runTestIterations.cmd"/>
+        <include name="stringCompare/runDemoStringCompare.cmd"/>
         <include name="**/readMe.txt"/>
         <include name="**/readMe.md"/>
         <include name="**/readMe.html"/>
