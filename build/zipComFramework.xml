@@ -124,7 +124,7 @@
     <delete verbose="false" file="${tmpDir}/comFramework/canInterface/sampleIntegrations/winSampleIntegration/code/codeGen/makeTag_generateCode"/>
     <delete verbose="false" file="${tmpDir}/comFramework/canInterface/sampleIntegrations/winTestMT/code/canApi/makeTag_generateCode"/>
     
-    <!-- <copy file="doc/installation.md" todir="${tmpDir}/comFramework/doc"/> -->
+    <copy file="doc/installation.md" todir="${tmpDir}/comFramework/doc"/>
     <copy file="doc/installation.html" todir="${tmpDir}/comFramework/doc"/>
     
     <delete verbose="true" file="dist/comFramework.zip"/>

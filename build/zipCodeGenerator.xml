@@ -63,6 +63,8 @@
         <include name="iterations/runDemoIterations.cmd"/>
         <include name="iterations/runTestIterations.cmd"/>
         <include name="**/readMe.txt"/>
+        <include name="**/readMe.md"/>
+        <include name="**/readMe.html"/>
         <include name="**/dataModelForStringTemplateV4.html"/>
         <include name="AUTOSAR/output/cif_swcCanInterface.arxml"/>
         <include name="**/output/**/codeGenerationReport.*"/>
