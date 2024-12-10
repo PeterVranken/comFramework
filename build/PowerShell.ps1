@@ -4,14 +4,14 @@
 # release archive.
 #
 # Please note: On Windows machines, the use of PowerShell is initially hindered by two
-# stupid settings, but normal user rights permit to fully enable its use. 
-# 
+# stupid settings, but normal user rights permit to fully enable its use.
+#
 # First, the use of PowerShell is by default restricted to interactive use but script
 # execution is forbidden. To overcome this, open a PowerShell window interactively and
 # type:
 #
 #   Set-ExecutionPolicy unrestricted -Scope CurrentUser
-# 
+#
 # The effect of the command is permanent. You can close your PowerShell window and start
 # using our PowerShell scripts.
 #
@@ -51,7 +51,14 @@ $sh = (Get-Process -Id $PID).Path
     # variables, such that the modifications persist in this script.
     . setEnv.ps1
 
-    $env:PATH = "$env:JAVA_HOME\bin;$env:ANT_HOME\bin;$env:GITWCREV_HOME;$env:SCRIPT_ROOT;.;$env:PATH"
+    $env:PATH = "$env:JAVA_HOME\bin;" `
+                + "$env:ANT_HOME\bin;" `
+                + "$env:GITWCREV_HOME;" `
+                + "$env:MINGW_HOME\bin;" `
+                + "$env:UNIX_TOOLS_BIN;" `
+                + "$env:SCRIPT_ROOT;" `
+                + ".;" `
+                + "$env:PATH"
     #write-host "PATH: $env:PATH"
     pushd $PSScriptRoot
     dir *.ps1
