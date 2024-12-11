@@ -62,7 +62,7 @@ if "%EXCELEXPORTER_HOME%" == "" (
     echo   You can either persistently set environment variable EXCELEXPORTER_HOME or you can
     echo write the path into this script. Look for TODO tags.
     echo   If you didn't install excelExporter yet then have a look here:
-    echo https://sourceforge.net/p/excelexporter/wiki/Home/
+    echo https://github.com/PeterVranken/comFramework/wiki/excelExporter,-Rendering-Excel-Spreadsheets-as-Text
 
     REM TODO Remove the next line if you decide to write the path into this script.
     goto :eof
