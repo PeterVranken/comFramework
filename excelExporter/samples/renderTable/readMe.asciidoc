@@ -98,10 +98,10 @@ as described above.
 
 === Elaborate templates
 
-. Type: ".\renderMySimpleTable.ps1 stdout mySimpleTable.xlsx", which would
-  be the correct usage of the wrapper script. The generated text is written
-  to the console. The generated text indicates, what has still to be done
-  in the preliminary template group file.
+. Type: ".\renderMySimpleTable.ps1 stdout example\mySimpleTable.xlsx",
+  which would be the correct usage of the wrapper script. The generated
+  text is written to the console. The generated text indicates, what has
+  still to be done in the preliminary template group file.
 . Open `renderMySimpleTable.stg` in a text editor.
 . Replace
 +
@@ -113,8 +113,8 @@ with, for example:
     <info.calc.noRows_sadd_1><\\>
     <row.ID>) <row.Title>, written by <row.Author>, <row.Number_of_Pages> pages<\n>
 
-. Back in PowerShell, type again: ".\renderMySimpleTable.ps1 stdout mySimpleTable.xlsx". The
-  output should be much more to the point
+. Back in PowerShell, type again: ".\renderMySimpleTable.ps1 stdout
+  example\mySimpleTable.xlsx". The output should be much more to the point
 . Return to the text editor and extend
 +
     This is sheet <sheet.name_> of workbook <sheet.parentBook.name_> (<sheet.excelFile>):
@@ -132,9 +132,10 @@ into, for example:
 === Generate your output file
 
 . When you have elaborated your template to the extend needed, type this
-  command in the PowerShell window to generate your output file, e.g. `myOutput.txt`:
+  command in the PowerShell window to generate your output file, e.g.
+  `myOutput.txt`:
 +
-    .\renderMySimpleTable.ps1 myOutput.txt mySimpleTable.xlsx
+    .\renderMySimpleTable.ps1 myOutput.txt example\mySimpleTable.xlsx
 
 . Open `myOutput.txt` in a text editor and check the result! From now on,
   the expected work flow is that you maintain your Excel table and re-run

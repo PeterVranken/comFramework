@@ -48,7 +48,7 @@ echo   -v: Verbosity level. Use --help to get more information
 goto :eof
 
 REM
-REM Copyright (c) 2016-2019, Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+REM Copyright (c) 2016-2024, Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 REM
 
 :LStart
@@ -82,6 +82,9 @@ REM Print usage and quit
 goto LUsage
 
 :LHelpExcelExporter
+
+REM Open the Wiki page with the introduction to excelExporter
+start "Manual ST4" /MIN %~dp0excelExporter@Internet.html
 
 REM Open the manual of StringTemplate V4
 start "Manual ST4" /MIN %~dp0ST4-270115-0836-52.pdf

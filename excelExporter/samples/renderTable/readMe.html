@@ -497,21 +497,22 @@ on a Windows machine.</p>
 <p>The first run generates a default StringTemplate V4 template file, which
 serves as a starting point for your desired templates. Moreover, this
 run of the script generates a simple Windows wrapper script with an
-appropriate command line for <em>excelExporter</em></p>
+appropriate command line for <em>excelExporter</em>.</p>
 </li>
 <li>
 <p>Subsequent runs are done indirectly via the wrapper script generated in
 the first step. These runs require the specification of wanted output
 file and Excel workbook. They will render the workbook according to the
-template file generated in the first step (and maybe meanwhile modified)</p>
+template file generated in the first step (and maybe meanwhile modified).</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The generated StringTemplate V4 template group file is organized such that the
-framing text blocks and the template for the basic pattern for a single
-data item (i.e., Excel row) can be easily identified and customized to your
-particular needs. It contains TODO tags, how to elaborate if for your needs.</p>
+<p>The generated StringTemplate V4 template group file is organized such that
+the framing text blocks and the template for the basic pattern for a
+single data item (i.e., Excel row) can be easily identified and customized
+to your particular needs. It contains TODO tags, how to elaborate it for
+your needs.</p>
 </div>
 <div class="paragraph">
 <p>Before you start your work, you should type:</p>
@@ -530,16 +531,16 @@ normally require to develop an <em>excelExporter</em> application:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Explanation of concepts of <em>excelExporter</em></p>
+<p>Explanation of concepts of <em>excelExporter</em>.</p>
 </li>
 <li>
-<p>The manual of StringTemplate V4</p>
+<p>The manual of StringTemplate V4.</p>
 </li>
 <li>
-<p>The Javadoc documentation of the internal data model of <em>excelExporter</em></p>
+<p>The Javadoc documentation of the internal data model of <em>excelExporter</em>.</p>
 </li>
 <li>
-<p>It prints the command line documentation ("usage") of <em>excelExporter</em></p>
+<p>It prints the command line documentation ("usage") of <em>excelExporter</em>.</p>
 </li>
 </ul>
 </div>
@@ -564,12 +565,12 @@ as described above.</p>
 <ol class="arabic">
 <li>
 <p>Copy the folder <code>renderTable</code> to an installation location of your
-choice. The chosen path must not contain any blanks</p>
+choice. The chosen path must not contain any blanks.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The sub-folder <code>example</code> is part of this tutorial only and is not
-required in the installation. You may delete it from your copy</p>
+required in the installation. You may delete it from your copy.</p>
 </li>
 </ul>
 </div>
@@ -577,7 +578,7 @@ required in the installation. You may delete it from your copy</p>
 <li>
 <p>Add the installation directory to environment variable PATH. In a newly
 opened shell window, type: "where.exe renderTable.cmd" The response
-should point to your installation directory</p>
+should point to your installation directory.</p>
 </li>
 </ol>
 </div>
@@ -589,16 +590,16 @@ should point to your installation directory</p>
 <li>
 <p>Copy folder <code>example</code> to a location of your choice. This is your working
 environment, not an installation directory. The chosen path must not
-contain any blanks</p>
+contain any blanks.</p>
 </li>
 <li>
-<p>In a newly opened PowerShell window, <code>cd</code> to your copy of folder <code>example</code></p>
+<p>In a newly opened PowerShell window, <code>cd</code> to your copy of folder <code>example</code>.</p>
 </li>
 <li>
-<p>Type: "renderTable -h" and carefully read the response</p>
+<p>Type: "renderTable -h" and carefully read the response.</p>
 </li>
 <li>
-<p>Type: "renderTable --help" and inspect the opening documents</p>
+<p>Type: "renderTable --help" and inspect the opening documents.</p>
 </li>
 <li>
 <p>Type: "renderTable renderMySimpleTable.stg": Two new files appear in
@@ -627,13 +628,13 @@ usage of the new wrapper script</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Type: ".\renderMySimpleTable.ps1 stdout mySimpleTable.xlsx", which would
-be the correct usage of the wrapper script. The generated text is written
-to the console. The generated text indicates, what has still to be done
-in the preliminary template group file</p>
+<p>Type: ".\renderMySimpleTable.ps1 stdout example\mySimpleTable.xlsx",
+which would be the correct usage of the wrapper script. The generated
+text is written to the console. The generated text indicates, what has
+still to be done in the preliminary template group file.</p>
 </li>
 <li>
-<p>Open <code>renderMySimpleTable.stg</code> in a text editor</p>
+<p>Open <code>renderMySimpleTable.stg</code> in a text editor.</p>
 </li>
 <li>
 <p>Replace</p>
@@ -654,8 +655,8 @@ StringTemplate template group file &lt;info.templateFile&gt; to design the appea
 </div>
 </li>
 <li>
-<p>Back in PowerShell, type again: ".\renderMySimpleTable.ps1 stdout mySimpleTable.xlsx". The
-output should be much more to the point</p>
+<p>Back in PowerShell, type again: ".\renderMySimpleTable.ps1 stdout
+example\mySimpleTable.xlsx". The output should be much more to the point</p>
 </li>
 <li>
 <p>Return to the text editor and extend</p>
@@ -677,7 +678,7 @@ We rendered &lt;info.calc.noRows&gt; data items.</pre>
 </div>
 </li>
 <li>
-<p>Repeat the previous PowerShell command and double-check the new output</p>
+<p>Repeat the previous PowerShell command and double-check the new output.</p>
 </li>
 </ol>
 </div>
@@ -688,17 +689,18 @@ We rendered &lt;info.calc.noRows&gt; data items.</pre>
 <ol class="arabic">
 <li>
 <p>When you have elaborated your template to the extend needed, type this
-command in the PowerShell window to generate your output file, e.g. <code>myOutput.txt</code>:</p>
+command in the PowerShell window to generate your output file, e.g.
+<code>myOutput.txt</code>:</p>
 <div class="literalblock">
 <div class="content">
-<pre>.\renderMySimpleTable.ps1 myOutput.txt mySimpleTable.xlsx</pre>
+<pre>.\renderMySimpleTable.ps1 myOutput.txt example\mySimpleTable.xlsx</pre>
 </div>
 </div>
 </li>
 <li>
 <p>Open <code>myOutput.txt</code> in a text editor and check the result! From now on,
 the expected work flow is that you maintain your Excel table and re-run
-the wrapper script to update the generated text file accordingly</p>
+the wrapper script to update the generated text file accordingly.</p>
 </li>
 </ol>
 </div>
@@ -708,7 +710,7 @@ the wrapper script to update the generated text file accordingly</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-29 22:45:36 +0200
+Last updated 2024-12-11 17:24:38 +0100
 </div>
 </div>
 </body>
