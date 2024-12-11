@@ -46,7 +46,7 @@ $env:SCRIPT_ROOT = [System.IO.Path]::GetFullPath("$PSScriptRoot")
 $sh = (Get-Process -Id $PID).Path
 
 # Start same executable with appropriate session configuration.
-.$sh -WindowStyle Normal -Interactive -NoExit -Command {
+."$sh" -WindowStyle Normal -Interactive -NoExit -Command {
     # Use "dot sourcing" to Run the shared helper script, which prepares all (environment)
     # variables, such that the modifications persist in this script.
     . setEnv.ps1
@@ -60,7 +60,7 @@ $sh = (Get-Process -Id $PID).Path
                 + ".;" `
                 + "$env:PATH"
     #write-host "PATH: $env:PATH"
-    pushd $PSScriptRoot
+    pushd "$PSScriptRoot"
     dir *.ps1
     write-host ("To get first help, type:`n" `
                 + "  buildCodeGenerator -p`n" `
