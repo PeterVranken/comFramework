@@ -212,4 +212,6 @@ pages:
 - [The use of attributes](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database "How to access attributes in the network database?")
 - [A common pattern how to combine handwritten code with auto-generated code in a beneficial way](https://github.com/PeterVranken/comFramework/wiki/How-to-access-Attributes-in-the-Network-Database#typical-code-architecture "Typical code architecture")
 - [Sugar on top of inheritance or how to change the copyright notice](https://github.com/PeterVranken/comFramework/wiki/Sugar-on-Top-of-Inheritance-or-how-to-change-the-Copyright-Notice "Terence Parr: 'Sugar on top of inheritance'")
-- [Concept of excelExporter](https://github.com/PeterVranken/comFramework/wiki/Home/ "excelExporter's Wiki Home Page")
+- [Concept of excelExporter](https://github.com/PeterVranken/comFramework/wiki/excelExporter,-Rendering-Excel-Spreadsheets-as-Text "excelExporter's Wiki Home Page")
+- [excelExporter's data model](https://github.com/PeterVranken/comFramework/wiki/The-excelExporter-Data-Model "Understanding excelExporter's data model")
+- [excelExporter, grouping and sorting](https://github.com/PeterVranken/comFramework/wiki/excelExporter,-Grouping-and-Sorting "How to interrelate data objects, how to sort columns")

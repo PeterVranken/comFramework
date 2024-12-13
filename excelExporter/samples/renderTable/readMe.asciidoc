@@ -103,7 +103,7 @@ as described above.
   text is written to the console. The generated text indicates, what has
   still to be done in the preliminary template group file.
 . Open `renderMySimpleTable.stg` in a text editor.
-. Replace
+. Replace:
 +
     This is how row <row.iRow> looks like. TODO: Edit template renderRow(row) in <\\>
     StringTemplate template group file <info.templateFile> to design the appearance of the row<\n>
@@ -114,8 +114,8 @@ with, for example:
     <row.ID>) <row.Title>, written by <row.Author>, <row.Number_of_Pages> pages<\n>
 
 . Back in PowerShell, type again: ".\renderMySimpleTable.ps1 stdout
-  example\mySimpleTable.xlsx". The output should be much more to the point
-. Return to the text editor and extend
+  example\mySimpleTable.xlsx". The output should be much more to the point.
+. Return to the text editor and extend:
 +
     This is sheet <sheet.name_> of workbook <sheet.parentBook.name_> (<sheet.excelFile>):
     <sheet.rowAry:renderRow()><\\>
