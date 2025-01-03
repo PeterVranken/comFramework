@@ -24,7 +24,7 @@ need to ensure that the environment variable EXCELEXPORTER_HOME is
 properly set. Please refer to the installation notes of excelExporter for
 details.
 
-excelExporter generates the Java source code output\nameGenerator.java.
+excelExporter generates the Java source code output\NameGenerator.java.
 The Java source code can be compiled with the script output\javac.cmd and
 the compiled code can be launched with the other script
 output\nameGenerator.cmd. (These two scripts are fixed part of the sample

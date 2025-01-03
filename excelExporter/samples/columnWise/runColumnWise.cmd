@@ -47,7 +47,7 @@ set PATH=%PATH%;%EXCELEXPORTER_HOME%\dist
 call excelExporter.cmd ^
   --cluster-name "columnSets" ^
   --input-file-name "columnWise.xlsm" ^
-  --output-file-name output/nameGenerator.java ^
+  --output-file-name output/NameGenerator.java ^
     --template-file-name names.stg ^
     --template-name names ^
     --template-wrap-column 72 ^

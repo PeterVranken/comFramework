@@ -5,12 +5,12 @@
 //
 // The file demonstrates how to iterate along columns.
 //   The template code of this sample is distributed over two files: This file contains the
-// iterations to collect the data items. The other template file nameGenerator.java.stg is
+// iterations to collect the data items. The other template file NameGenerator.java.stg is
 // designed to be as close to the aimed Java source code as possible in order to not
 // obscure what the aimed output is. This simplifies the maintenance of the generated Java
 // source code.
 //
-// Copyright (C) 2016 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+// Copyright (C) 2016-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 //
 // This program is free software: you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License as published by the
@@ -26,7 +26,7 @@
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 delimiters "<", ">"
-import "nameGenerator.java.stg"
+import "NameGenerator.java.stg"
 
 precos() ::= <<
 <if(!cluster.theOnlyWorksheet.exists)><\\>
