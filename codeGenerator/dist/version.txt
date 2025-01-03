@@ -1,5 +1,5 @@
-comFramework codeGenerator 1.13.0
-Copyright (C) 2015-2024, Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+comFramework codeGenerator 1.13.1
+Copyright (C) 2015-2025, Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 https://github.com/PeterVranken/comFramework
 
 This program is free software: you can redistribute it and/or modify it

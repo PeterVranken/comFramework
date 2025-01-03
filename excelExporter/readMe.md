@@ -189,6 +189,10 @@ or locally in your installation as file
 
 ## What's new
 
+### Release 1.3.1
+
+Integration of the latest release of StringTemplate V4, which is 4.3.4.
+
 ### Release 1.3
 
 This version increment was made to make a clean break when the project

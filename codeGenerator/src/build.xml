@@ -1,6 +1,6 @@
 <!-- Build comFramework's code generator
 
-     Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+     Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 
      This program is free software: you can redistribute it and/or modify it
      under the terms of the GNU Lesser General Public License as published by the
@@ -47,11 +47,12 @@ the code generator, execute the tests or create a jar library.
          be double-checked for each new release of ANTLR. In order to benefit from the
          maintenance of ST, we need to place that jar in front of ANTLR in case ST is more
          recent. As of writing, June 2022, ANTLR is up-to-date with respect to ST, ANTLR
-         4.10.1 contains ST 4.3.3. -->
+         4.10.1 contains ST 4.3.3. ANTLR 4.12.0 contains ST 4.3.4, ANTLR 4.13.2 contains
+         ST 4.3.4. -->
 <!-- antlr-4.10.1-complete.jar contains ST 4.3.3
     <pathelement location="dist/ST-4.3.3.jar"/>
 -->
-    <pathelement location="dist/antlr-4.12.0-complete.jar"/>
+    <pathelement location="dist/antlr-4.13.2-complete.jar"/>
     <pathelement location="dist/log4j-1.2.11.jar"/>
 <!--
     <pathelement location="dist/log4j-api-2.1.jar"/>
@@ -101,7 +102,7 @@ the code generator, execute the tests or create a jar library.
     <!-- See http://ant.apache.org/manual/using.html#arg -->
     <exec executable="cmd.exe" dir=".">
       <arg value="/c"/>
-      <arg value="${doc}/javadoc/index.html"/>
+      <arg value="${doc}\javadoc\index.html"/>
     </exec>
   </target>
 
@@ -135,8 +136,8 @@ the code generator, execute the tests or create a jar library.
        <arg value="-package"/>
        <arg value="codeGenerator.dbcParser"/>
        <arg value="-o"/>
-       <arg value="src/codeGenerator/dbcParser"/>
-       <arg value="src/codeGenerator/dbcParser/Dbc.g4"/>
+       <arg value="codeGenerator/dbcParser"/>
+       <arg value="codeGenerator/dbcParser/Dbc.g4"/>
        <classpath refid="classpath"/>
     </java>
 <!-- With Java 18 and Ant 1.10.13 or less, the ANT task to start a Java class fails with
@@ -146,7 +147,7 @@ the code generator, execute the tests or create a jar library.
      ANTLR code generator that way. -->
 <!--
     <exec executable="java.exe" dir=".">
-      <arg value="-cp"/> <arg value="dist/antlr-4.12.0-complete.jar"/>
+      <arg value="-cp"/> <arg value="dist/antlr-4.13.2-complete.jar"/>
       <arg value="-ea"/>
       <arg value="org.antlr.v4.Tool"/>
       <arg value="-visitor"/>

@@ -43,10 +43,10 @@
 % ambiguities. The Simulink.Bus objects, which specify C data types, have a name ending
 % with _t.
 %
-% This file has been generated with comFramework - codeGenerator version 1.13.0,
+% This file has been generated with comFramework - codeGenerator version 1.13.1,
 % see http://sourceforge.net/projects/comframe/
 %
-% Copyright (C) 2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+% Copyright (C) 2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 %
 % This program is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the

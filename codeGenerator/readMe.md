@@ -152,6 +152,11 @@ or locally in your installation as file
 
 ## What's new
 
+### Release 1.13.1
+
+Integration of the latest releases of StringTemplate V4 and ANTLR, which
+are 4.3.4 and 4.13.2, respectively.
+
 ### Release 1.13.0
 
 This version increment was made to make a clean break when the project

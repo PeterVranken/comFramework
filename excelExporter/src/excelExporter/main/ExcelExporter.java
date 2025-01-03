@@ -2,7 +2,7 @@
  * @file ExcelExporter.java
  * Main entry point into the Excel exporter of the COM framework.
  *
- * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the
@@ -56,7 +56,7 @@ public class ExcelExporter
     public static final String _applicationName = "excelExporter";
 
     /** Version designation as four numeric parts. */
-    private static int[] _versionAry = {1, 3, 0, GitRevision.getProjectRevision()};
+    private static int[] _versionAry = {1, 3, 1, GitRevision.getProjectRevision()};
 
     /** The first three parts of the version of the tool, which relate to functional
         changes of the application.
@@ -704,7 +704,7 @@ public class ExcelExporter
            than the compiler then the printed versions may not match the actually used,
            actually running libraries. */
         final String greeting = _applicationName + " " + _versionFull
-                                + " Copyright (C) 2015-2024, Peter Vranken"
+                                + " Copyright (C) 2015-2025, Peter Vranken"
                                 + " (mailto:Peter_Vranken@Yahoo.de)"
                                 + "\n"
                                 + "including: StringTemplate "

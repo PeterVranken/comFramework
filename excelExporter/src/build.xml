@@ -53,8 +53,7 @@
       <include name="*.jar"/>
     </fileset>
  -->
-    <pathelement location="dist/ST-4.3.3.jar"/>
-    <pathelement location="dist/antlr-4.10.1-complete.jar"/>
+    <pathelement location="dist/antlr-4.13.2-complete.jar"/>
     <pathelement location="dist/log4j-api-2.4.jar"/>
     <pathelement location="dist/log4j-core-2.4.jar"/>
     <pathelement location="dist/poi-3.13-20150929.jar"/>
