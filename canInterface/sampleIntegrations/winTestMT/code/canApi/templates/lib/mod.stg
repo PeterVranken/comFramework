@@ -60,7 +60,7 @@ modC(desc) ::= <<
  * <desc>
  *
  * This file has been created with <info.application> version <info.version>,
- * see http://sourceforge.net/projects/comframe/
+ * see https://github.com/PeterVranken/comFramework
  *
 <@copyright>
  * Copyright (C) 2015-<info.year> Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
@@ -137,7 +137,7 @@ modH(desc) ::= <<
  * <desc>
  *
  * This file has been created with <info.application> version <info.version>,
- * see http://sourceforge.net/projects/comframe/
+ * see https://github.com/PeterVranken/comFramework
  *
 <@copyright>
  * Copyright (C) 2015-<info.year> Peter Vranken (mailto:Peter_Vranken@Yahoo.de)

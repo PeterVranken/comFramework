@@ -4,10 +4,10 @@
  * @file cbk_callbacks.h
  * Declaration of callbacks for the CAN interface engine for cluster arduinoSampleIntegrationEC.
  *
- * This file has been created with comFramework - codeGenerator version 1.13.0,
- * see http://sourceforge.net/projects/comframe/
+ * This file has been created with comFramework - codeGenerator version 1.13.1,
+ * see https://github.com/PeterVranken/comFramework
  *
- * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the

@@ -77,7 +77,7 @@ simulinkBusObjects(cluster,info) ::= <<
 % with _t.
 %
 % This file has been generated with <info.application> version <info.version>,
-% see http://sourceforge.net/projects/comframe/
+% see https://github.com/PeterVranken/comFramework
 %
 % Copyright (C) 2016-<info.year> Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 %

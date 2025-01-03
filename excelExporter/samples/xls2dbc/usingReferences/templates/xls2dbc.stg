@@ -82,7 +82,7 @@ BA_DEF_ BO_ "sendPeriod" INT 5 10000;
 BA_DEF_ BO_ "crcStartValue" INT 1 255;
 BA_DEF_ BO_ "eventMinDistance" INT 5 10000;
 BA_DEF_ SG_ "initialSignalValue" FLOAT -1e38 1e38;
-BA_DEF_DEF_ "Author" "http://sourceforge.net/projects/comframe/";
+BA_DEF_DEF_ "Author" "https://github.com/PeterVranken/comFramework";
 BA_DEF_DEF_ "frameSendMode" "regular";
 BA_DEF_DEF_ "sendPeriod" 10;
 BA_DEF_DEF_ "crcStartValue" 1;

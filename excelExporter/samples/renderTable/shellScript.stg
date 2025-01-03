@@ -71,7 +71,7 @@ to the folder is needed that contains folder 'dist'."
     write-host "  You can either persistently set environment variable EXCELEXPORTER_HOME `
 or you can write the path into this script. Look for TODO tags."
     write-host "  If you didn't install excelExporter yet then have a look here:"
-    write-host "https://sourceforge.net/p/excelexporter/wiki/Home/"
+    write-host "https://github.com/PeterVranken/comFramework/wiki/excelExporter,-Rendering-Excel-Spreadsheets-as-Text"
 
     # TODO Remove the next line if you decide to write the path into this script.
     exit

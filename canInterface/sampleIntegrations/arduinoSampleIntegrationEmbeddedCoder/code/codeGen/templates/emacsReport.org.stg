@@ -25,7 +25,7 @@ import "lib/typeMap.stg"
 
 emacsOrgReport(cluster, info) ::= <<
 # +title: Network Code Generation Report
-# +author: <info.application> <info.version>, see http://sourceforge.net/projects/comframe/
+# +author: <info.application> <info.version>, see https://github.com/PeterVranken/comFramework
 # +date: <info.time>
 # +language: en
 # +startup: showall
