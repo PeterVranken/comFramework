@@ -26,7 +26,7 @@ import "lib/typeMap.stg"
 
 asciidocReport(cluster, info) ::= <<
 = Code Generation Report for CAN Network <cluster.name>
-:Author:    <info.application> version <info.version> (http://sourceforge.net/projects/comframe/)
+:Author:    <info.application> version <info.version> (https://github.com/PeterVranken/comFramework)
 :toc:               left
 :toclevels:         4
 :xrefstyle:         short

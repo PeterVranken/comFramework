@@ -33,7 +33,7 @@ ecInterface(cluster, info) ::= <<
 % This is an interface specification for the Mathwork's Embedded Coder C code generator.
 %
 % This file has been created with <info.application> version <info.version>,
-% see http://sourceforge.net/projects/comframe/
+% see https://github.com/PeterVranken/comFramework
 %
 % The interface is generated from these network database files:
 <listOfDbcFiles(cluster)><\\>

@@ -58,7 +58,7 @@ $endif$
 swcCanInterface(cluster, info) ::= <<
 $checkPrecos("both")$$\\$
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created with $info.application$ version $info.version$, see http://sourceforge.net/projects/comframe/ -->
+<!-- Created with $info.application$ version $info.version$, see https://github.com/PeterVranken/comFramework -->
 <AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-1-3.xsd">
   <AR-PACKAGES>
     <AR-PACKAGE>

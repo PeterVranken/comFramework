@@ -5,7 +5,7 @@
  * Some useful statistics about the CAN frames of cluster ecSample.
  *
  * This file has been created with comFramework - codeGenerator version 1.13.1,
- * see http://sourceforge.net/projects/comframe/
+ * see https://github.com/PeterVranken/comFramework
  *
  * Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
