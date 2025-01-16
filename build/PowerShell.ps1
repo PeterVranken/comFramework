@@ -6,7 +6,7 @@
 # Please note: On Windows machines, the use of PowerShell is initially hindered by two
 # stupid settings, but normal user rights permit to fully enable its use.
 #
-# First, the use of PowerShell is by default restricted to interactive use but script
+# First, the use of PowerShell is by default restricted to interactive use and script
 # execution is forbidden. To overcome this, open a PowerShell window interactively and
 # type:
 #
@@ -16,7 +16,7 @@
 # using our PowerShell scripts.
 #
 # Second, the default operation on mouse-click is opening the script in a text editor
-# instead of running the script in PowerShell. You should change the file name assciation,
+# instead of running the script in PowerShell. You should change the file name association,
 # e.g., by typing "Default apps" in the start menu and looking for the settings of file
 # type ".ps1". Associate either pwsh.exe or PowerShell.exe with this file type.
 #
@@ -46,10 +46,10 @@ $env:SCRIPT_ROOT = [System.IO.Path]::GetFullPath("$PSScriptRoot")
 $sh = (Get-Process -Id $PID).Path
 
 # Start same executable with appropriate session configuration.
-."$sh" -WindowStyle Normal -Interactive -NoExit -Command {
+."$sh" -WindowStyle Normal -NoExit -Command {
     # Use "dot sourcing" to Run the shared helper script, which prepares all (environment)
     # variables, such that the modifications persist in this script.
-    . setEnv.ps1
+    . ([System.IO.Path]::GetFullPath("$env:SCRIPT_ROOT\setEnv.ps1"))
 
     $env:PATH = "$env:JAVA_HOME\bin;" `
                 + "$env:ANT_HOME\bin;" `
