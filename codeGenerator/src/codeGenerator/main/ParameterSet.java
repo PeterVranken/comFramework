@@ -2,7 +2,7 @@
  * @file ParameterSet.java
  * The application parameter set.
  *
- * Copyright (C) 2015-2022 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the
@@ -76,9 +76,9 @@ public class ParameterSet
             matches entirely against this regular expression is considered the requested
             special signal. (An error is raised if the number of matching signals in any
             PDU is other than 0 or 1.) The reason for applying a regular expression is the
-            inhomogeneous naming found in real existing network databases. If e.g. the
+            inhomogeneous naming found in real existing network databases. If e.g., the
             checksum is always stored in a signal "CRC" then the regular could degenerate
-            to this name. In less homogeneous cases it might e.g. be useful to specify
+            to this name. In less homogeneous cases it might e.g., be useful to specify
             ".*(crc|checksum).*" */
         public String reSpecialSignal = null;
 
@@ -104,7 +104,7 @@ public class ParameterSet
     public static class BusDescription
     {
         /** The (short) name of the bus. Used inside the templates to disambiguate symbols,
-            i.e. permit having same frame, PDU and signal names in different buses. */
+            i.e., permit having same frame, PDU and signal names in different buses. */
         public String name = null;
 
         /** The name of the network database file specifying the nodes, frames and signals
@@ -658,7 +658,7 @@ public class ParameterSet
      * message.
      *   @throws CmdLineParser.InvalidArgException Thrown on any kind of error.
      *   @param argName
-     * The name of the argument (i.e. the command line switch), used for reporting only.
+     * The name of the argument (i.e., the command line switch), used for reporting only.
      *   @param argValue
      * The string value of the command line argument, which is decoded to a range of
      * integers.
@@ -724,7 +724,7 @@ public class ParameterSet
      * arguments. (It needs to read it from the stream as look-ahead for parsing of
      * optional context elements.)
      *   @param optionMap
-     * In case of successful parsing the user option (i.e. user specified template
+     * In case of successful parsing the user option (i.e., user specified template
      * attribute) is added to this map. The option/attribute name is the key, the value is
      * the value in the map, too. If the map already contains an entry then this entry will
      * silently be replaced - this is how default values given in the global context are
@@ -801,7 +801,7 @@ public class ParameterSet
         {
             /* By default a user option is a Boolean true. The use case are code generation
                controlling flags, which can be added jaut like that on the command line,
-               e.g. -op generateDebugCode on the command line could be a way to make
+               e.g., -op generateDebugCode on the command line could be a way to make
                templates conditionally generate additional code for debugging. */
             value = Boolean.valueOf(true);
         }

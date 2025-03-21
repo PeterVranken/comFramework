@@ -205,7 +205,7 @@ loadScripts(document, 'script');</script>
             arguments of the operation.<p>
               Example. The argument delimiter is changed into the hyphen:<p>
               <code>&lt;info.str.setArgumentDelimiter("-")&gt;</code><p>
-              <code>isCRC = &lt;info.str.cmp([signal.name,"- CRC"])&gt;;</code></div>
+              <code>isCRC = &lt;info.str.cmp.([signal.name,"- CRC"])&gt;;</code></div>
 </div>
 </section>
 </li>
@@ -223,7 +223,7 @@ loadScripts(document, 'script');</script>
             either "true" or "false" - and it can be used as argument of conditional
             expressions. See example:<p>
               <code>
-                &lt;if(info.str.cmp({&lt;signal.name&gt; == CRC}))&gt;
+                &lt;if(info.str.cmp.({&lt;signal.name&gt; == CRC}))&gt;
                   Signal name is "CRC"
                 &lt;else&gt;
                   Signal is not the checksum!
@@ -242,7 +242,7 @@ loadScripts(document, 'script');</script>
               Please refer to other attribute cmp, which behaves exactly identical except for
             the different comparison; cmpI is case insensitive.<p>
               <code>
-                &lt;if(info.str.cmpI({&lt;signal.name&gt; == crc}))&gt;
+                &lt;if(info.str.cmpI.({&lt;signal.name&gt; == crc}))&gt;
                   Signal name is "CRC", "crc" or "Crc", etc.
                 &lt;else&gt;
                   Signal is not the checksum!
@@ -272,7 +272,7 @@ loadScripts(document, 'script');</script>
             StringTemplate attribute, which can be used as argument of a conditional
             template expression:<p>
               <code>
-                &lt;if(info.str.cmpRegExp({&lt;signal.name&gt; == ^.*CRC.*$}))&gt;
+                &lt;if(info.str.cmpRegExp.({&lt;signal.name&gt; == ^.*CRC.*$}))&gt;
                   Signal name contains "CRC".
                 &lt;else&gt;
                   Signal is not the checksum!
@@ -292,7 +292,7 @@ loadScripts(document, 'script');</script>
               Please refer to other attribute cmpRegExp, which behaves exactly identical
             except for the different comparison; cmpRegExpI is case insensitive:<p>
               <code>
-                &lt;if(info.str.cmpRegExpI({&lt;signal.name&gt; == ^.*CRC.*$}))&gt;
+                &lt;if(info.str.cmpRegExpI.({&lt;signal.name&gt; == ^.*CRC.*$}))&gt;
                   Signal name contains "CRC", "crc" or "Crc", etc.
                 &lt;else&gt;
                   Signal is not the checksum!

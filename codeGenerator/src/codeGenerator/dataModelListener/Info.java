@@ -3,7 +3,7 @@
  * This file implements a data container for general information needed during code
  * generation: Date and time, the names of involved files, etc.
  *
- * Copyright (C) 2015-2023 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the
@@ -362,7 +362,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
             arguments of the operation.<p>
               Example. The argument delimiter is changed into the hyphen:<p>
               {@code <info.str.setArgumentDelimiter("-")>}<p>
-              {@code isCRC = <info.str.cmp([signal.name,"- CRC"])>;} */
+              {@code isCRC = <info.str.cmp.([signal.name,"- CRC"])>;} */
         public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean> 
                                                                         setArgumentDelimiter;
 
@@ -375,7 +375,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
             either "true" or "false" - and it can be used as argument of conditional
             expressions. See example:<p>
               {@code 
-                <if(info.str.cmp({<signal.name> == CRC}))>
+                <if(info.str.cmp.({<signal.name> == CRC}))>
                   Signal name is "CRC"
                 <else>
                   Signal is not the checksum!
@@ -388,7 +388,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
               Please refer to other attribute cmp, which behaves exactly identical except for
             the different comparison; cmpI is case insensitive.<p>
               {@code 
-                <if(info.str.cmpI({<signal.name> == crc}))>
+                <if(info.str.cmpI.({<signal.name> == crc}))>
                   Signal name is "CRC", "crc" or "Crc", etc.
                 <else>
                   Signal is not the checksum!
@@ -412,7 +412,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
             StringTemplate attribute, which can be used as argument of a conditional
             template expression:<p>
               {@code 
-                <if(info.str.cmpRegExp({<signal.name> == ^.*CRC.*$}))>
+                <if(info.str.cmpRegExp.({<signal.name> == ^.*CRC.*$}))>
                   Signal name contains "CRC".
                 <else>
                   Signal is not the checksum!
@@ -427,7 +427,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
               Please refer to other attribute cmpRegExp, which behaves exactly identical
             except for the different comparison; cmpRegExpI is case insensitive:<p>
               {@code 
-                <if(info.str.cmpRegExpI({<signal.name> == ^.*CRC.*$}))>
+                <if(info.str.cmpRegExpI.({<signal.name> == ^.*CRC.*$}))>
                   Signal name contains "CRC", "crc" or "Crc", etc.
                 <else>
                   Signal is not the checksum!
