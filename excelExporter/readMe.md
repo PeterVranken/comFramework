@@ -189,6 +189,12 @@ or locally in your installation as file
 
 ## What's new
 
+### Release 1.4
+
+Update of data model: The support of string comparison operations has
+been extended. `<info.str>` now supports regular expression based search
+and replacement.
+
 ### Release 1.3.1
 
 Integration of the latest release of StringTemplate V4, which is 4.3.4.

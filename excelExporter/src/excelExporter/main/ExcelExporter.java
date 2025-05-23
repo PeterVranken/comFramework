@@ -56,7 +56,7 @@ public class ExcelExporter
     public static final String _applicationName = "excelExporter";
 
     /** Version designation as four numeric parts. */
-    private static int[] _versionAry = {1, 3, 1, GitRevision.getProjectRevision()};
+    private static int[] _versionAry = {1, 4, 0, GitRevision.getProjectRevision()};
 
     /** The first three parts of the version of the tool, which relate to functional
         changes of the application.
@@ -79,7 +79,7 @@ public class ExcelExporter
         model was changed the last time.
           @remark Any change made here needs to be done identically in the data model, file
         Info.java, field Info.versionDataModel. */
-    public static final int _versionDataModel = 1003;
+    public static final int _versionDataModel = 1004;
 
     /** The global logger object for all progress and error reporting. It is initialized to
         null in order to give time to the other class {@link Log4j2Configurator} to first

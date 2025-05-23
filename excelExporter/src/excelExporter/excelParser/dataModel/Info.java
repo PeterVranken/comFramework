@@ -37,10 +37,7 @@ import excelExporter.excelParser.ErrorCounter;
 /**
  * The data structure holding general information for code generation.<p>
  *   The basic design principle is the use of public members because such members can be
- * directly accessed from the output templates. Boolean decisions are either expressed as
- * explicit public Boolean members or by references to nested member objects, which are
- * null if an optional member is not used or applicable: StringTemplate can query public
- * Boolean members or check for null references.
+ * directly accessed from the output templates.
  */
 public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResult */ Object>
 {
@@ -86,7 +83,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         version designation of the tool when the data model was changed the last time.<p>
           Please refer to <b>isVersionDataModel</b> for testing the data model version from
         a template. */
-    public static int versionDataModel = 1003;
+    public static int versionDataModel = 1004;
     
     /** The version designation <b>versionDataModel</b> for the data model, which is
         essential for relating templates to permitted, compatible tool revisions, is
@@ -355,9 +352,9 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
             either a double = or a single # can be used to split the input text into
             arguments of the operation.<p>
               Example. The argument delimiter is changed into the hyphen:<p>
-              {@code <info.str.setArgumentDelimiter("-")>}<p>
+              {@code <info.str.setArgumentDelimiter.("-")>}<p>
               {@code isCRC = <info.str.cmp([signal.name,"- CRC"])>;} */
-        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean> 
+        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object> 
                                                                         setArgumentDelimiter;
 
         /** This pseudo field of the StringTemplate V4 data model provides ordinary
@@ -369,26 +366,26 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
             either "true" or "false" - and it can be used as argument of conditional
             expressions. See example:<p>
               {@code 
-                <if(info.str.cmp({<signal.name> == CRC}))>
+                <if(info.str.cmp.({<signal.name> == CRC}))>
                   Signal name is "CRC"
                 <else>
                   Signal is not the checksum!
                 <endif>
               } */
-        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean> cmp;
+        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object> cmp;
 
         /** This pseudo field of the StringTemplate V4 data model provides ordinary,
             case insensitive string comparison to the template expansion process.<p>
               Please refer to other attribute cmp, which behaves exactly identical except for
             the different comparison; cmpI is case insensitive.<p>
               {@code 
-                <if(info.str.cmpI({<signal.name> == crc}))>
+                <if(info.str.cmpI.({<signal.name> == crc}))>
                   Signal name is "CRC", "crc" or "Crc", etc.
                 <else>
                   Signal is not the checksum!
                 <endif>
               } */
-        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean> cmpI;
+        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object> cmpI;
 
         /** This pseudo field of the StringTemplate V4 data model provides regular
             expression based string comparison to the template expansion process.<p>
@@ -406,13 +403,13 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
             StringTemplate attribute, which can be used as argument of a conditional
             template expression:<p>
               {@code 
-                <if(info.str.cmpRegExp({<signal.name> == ^.*CRC.*$}))>
+                <if(info.str.cmpRegExp.({<signal.name> == ^.*CRC.*$}))>
                   Signal name contains "CRC".
                 <else>
                   Signal is not the checksum!
                 <endif>
               } */
-        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean>
+        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
                                                                                     cmpRegExp;
 
         /** This pseudo field of the StringTemplate V4 data model provides regular
@@ -421,14 +418,73 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
               Please refer to other attribute cmpRegExp, which behaves exactly identical
             except for the different comparison; cmpRegExpI is case insensitive:<p>
               {@code 
-                <if(info.str.cmpRegExpI({<signal.name> == ^.*CRC.*$}))>
+                <if(info.str.cmpRegExpI.({<signal.name> == ^.*CRC.*$}))>
                   Signal name contains "CRC", "crc" or "Crc", etc.
                 <else>
                   Signal is not the checksum!
                 <endif>
               } */
-        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean> 
+        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object> 
                                                                                     cmpRegExpI;
+
+        /** This pseudo field of the StringTemplate V4 data model provides regular
+            expression based string replacement to the template expansion process.<p>
+              The operation takes an argument string, which is split into three arguments:
+            Input string, regular expression and replacement string.<p>
+              The input string is matched against the regular expression. All matches are
+            the substituted by the replacement string. The normal Java regular expression
+            replacement is applied, i.e., the replacement string may use $<n> to refer to
+            the n-th capture group in the regular expression.<p>
+              This pseudo-field expands to the resulting string.<p>
+              {@code 
+                <if(info.str.cmpRegExpI.({<signal.name> == ^(.*)CRC$}))>
+                  Raw signal name of checksum signal is <\\>
+                  <info.str.replRegExp.({<signal.name>#(.*?)_?CRC#$1})>;
+                <else>
+                  Signal is not the checksum!
+                <endif>
+              }
+              CAUTION: Argument splitting is handled a bit different to the string
+            comparison functions and different to what is documented for
+            setArgumentDelimiter about retrieving arguments. No white space is removed
+            after splitting the arguments. This has been decided in order to enable easy
+            processing of blanks:<p>
+              {@code 
+                // A URL must not contain blanks!
+                const char *url = <info.str.replRegExp.({<someURL()># #%20})>;
+              } */
+        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
+                                                                                    replRegExp;
+        /** This pseudo field of the StringTemplate V4 data model provides case insensitive
+            regular expression based string replacement to the template expansion
+            process.<p>
+              The operation takes an argument string, which is split into three arguments:
+            Input string, regular expression and replacement string.<p>
+              The input string is matched case insensitively against the regular
+            expression. All matches are the substituted by the replacement string. The
+            normal Java regular expression replacement is applied, i.e., the replacement
+            string may use $<n> to refer to the n-th capture group in the regular
+            expression.<p>
+              This pseudo-field expands to the resulting string.<p>
+              {@code 
+                <if(info.str.cmpRegExpI.({<signal.name> == ^(.*)Crc$}))>
+                  Raw signal name of checksum signal is <\\>
+                  <info.str.replRegExpI.({<signal.name>#_?CRC#})>;
+                <else>
+                  Signal is not the checksum!
+                <endif>
+              }
+              CAUTION: Argument splitting is handled a bit different to the string
+            comparison functions and different to what is documented for
+            setArgumentDelimiter about retrieving arguments. No white space is removed
+            after splitting the arguments. This has been decided in order to enable easy
+            processing of blanks:<p>
+              {@code 
+                // A URL must not contain blanks!
+                const char *url = <info.str.replRegExpI.({<someURL()># #%20})>;
+              } */
+        public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
+                                                                                   replRegExpI;
 
         /**
          * Create the StringSupport object.
@@ -442,36 +498,50 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
                operation mode, e.g., normal vs. regular expression. */
             String logContext = "<Info.str.setArgumentDelimiter>: ";
             setArgumentDelimiter =
-                new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean>
+                new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
                                   ( /* context */ StrCmdListener.operationModeSetDelimiter
                                   , new StrCmdListener(errCnt, logContext)
                                   , errCnt
                                   , logContext
                                   );
             logContext = "<Info.str.cmp>: ";
-            cmp = new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean>
+            cmp = new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
                                   ( /* context */ StrCmdListener.operationModeSimple
                                   , new StrCmdListener(errCnt, logContext)
                                   , errCnt
                                   , logContext
                                   );
             logContext = "<Info.str.cmpI>: ";
-            cmpI = new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean>
+            cmpI = new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
                                   ( /* context */ StrCmdListener.operationModeSimpleIgnCase
                                   , new StrCmdListener(errCnt, logContext)
                                   , errCnt
                                   , logContext
                                   );
             logContext = "<Info.str.cmpRegExp>: ";
-            cmpRegExp = new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean>
+            cmpRegExp = new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
                                   ( /* context */ StrCmdListener.operationModeRegExp
                                   , new StrCmdListener(errCnt, logContext)
                                   , errCnt
                                   , logContext
                                   );
             logContext = "<Info.str.cmpRegExpI>: ";
-            cmpRegExpI = new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Boolean>
+            cmpRegExpI = new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
                                   ( /* context */ StrCmdListener.operationModeRegExpIgnCase
+                                  , new StrCmdListener(errCnt, logContext)
+                                  , errCnt
+                                  , logContext
+                                  );
+            logContext = "<Info.str.replRegExp>: ";
+            replRegExp = new ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
+                                  ( /* context */ StrCmdListener.operationModeRegExpRepl
+                                  , new StrCmdListener(errCnt, logContext)
+                                  , errCnt
+                                  , logContext
+                                  );
+            logContext = "<Info.str.replRegExpI>: ";
+            replRegExpI = new ST4CmdInterpreter</*TContext*/ Integer, /*TCmdResult*/ Object>
+                                  ( /* context */ StrCmdListener.operationModeRegExpReplIgnCase
                                   , new StrCmdListener(errCnt, logContext)
                                   , errCnt
                                   , logContext

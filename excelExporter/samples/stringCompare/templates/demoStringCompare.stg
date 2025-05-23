@@ -22,9 +22,6 @@
 
 delimiters "<", ">"
 
-import "lib/isTrue.stg"
-import "lib/iterationsEx.stg"
-
 // Somewhere in our ST4 template group files, we will have template expressions that return
 // some text we want to check by string operations ...
 someText() ::= "TextTextText and even more text"
@@ -79,37 +76,29 @@ Text matches expectation!
 Text doesn't match expectation!
 <endif>
 
-Now we use the regular expression \<reFltrSig()>, <reFltrSig()>, to find all signals of
-particular meaning:
-<iterateSignalsOfCluster(cluster=cluster,mux="all",dir="all",T="fltrSignal")>
+Let's capitalize the e's in <someText()>: <\\>
+<info.str.replRegExp.({<someText()> #e(.)#E$1})>
 
-Similarly, here is the list of inbound signals dealing with either GPS or vehicle speed:
-<iterateSignalsOfClusterEx(cluster,"processSignalGPSOrSpeed")>
+Let's capitalize the e's in <someText()>: <\\>
+<info.str.replRegExpI.({<someText()> #E(.)#E$1})>
 
->>
+Some examples from the Javadoc documentation of the string support provided by the Info
+object:
 
-// Template telling what to do with all matching signals
-fltrSignal(signal, kind) ::= <<
-<if(info.str.cmpRegExpI.([signal.name,"==",reFltrSig()]))><\\>
-<info.calc.idxSig>) <frame.name>, <frame.id>: <signal.name> (<kind>)
+Raw signal name of checksum signal msg_CRC is <\\>
+<info.str.replRegExp.({msg_CRC#(.*?)_?CRC#$1})>;
+
+Raw signal name of checksum signal msgCRC is <\\>
+<info.str.replRegExp.({msg_CRC#(.*?)_?CRC#$1})>;
+
+/* A URL must not contain blanks! */
+const char *url = <info.str.replRegExp.({https://copilot.microsoft.com/chats/S7Up ZmXt8d zXBnkUJLMSW# #%20})>;
+
+<if(info.str.cmpRegExpI.({signalAbc_CrC == ^(.*)Crc$}))>
+Raw signal name of checksum signal is <\\>
+<info.str.replRegExpI.({signalAbc_CrC#_?CRC#})>;
+<else>
+Signal is not the checksum!
 <endif>
->>
 
-// Template telling what to do with all inbound GPS or speed signals. See, how the complex
-// filter condition is delegated to another template.
-processSignalGPSOrSpeed(signal, kind) ::= <<
-<if(isTrue.(fltrSignalGPSOrSpeed(signal)))><\\>
-<info.calc.idxSigGPS>) <frame.name>, <frame.id>: <signal.name> (<kind>)
-<endif>
->>
-
-// Aplying isTrue.(), we can put complex, lengthy match conditions in a dedicated
-// sub-template. Here, as an example, we have a search for all signals, which deal with
-// either GPS or vehicle speed.
-fltrSignalGPSOrSpeed(signal) ::= <<
-<if(signal.isReceived
-    && (info.str.cmpRegExpI.([signal.name,"==.*GPS.*"])
-        ||  info.str.cmpRegExpI.([signal.name,"==.*speed.*"])
-       )
-   )>true<else>false<endif>
 >>

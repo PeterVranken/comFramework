@@ -1,0 +1,40 @@
+
+cmp, abc == abc: true, true, true, true
+cmp, abc == Abc: false, false, false, false
+
+cmpI, abc == abc: true, true, true, true
+cmpI, abc == Abc: true, true, true, true
+
+Set Delimiter to whitespace, \s+
+
+cmp: abc == abc: true, true, true, true
+cmpI: abc == ABC: true, true, true, true
+
+Set Delimiter back to default, ==|#: 
+
+
+Text matches expectation!
+
+Text matches expectation!
+
+str.cmpRegExp is case sensitive!
+
+Text matches expectation!
+
+Text matches expectation!
+Let's capitalize the e's in TextTextText and even more text: TExtTExtTExt and EvEn morE tExt 
+
+Let's capitalize the e's in TextTextText and even more text: TExtTExtTExt and EvEn morE tExt 
+
+Some examples from the Javadoc documentation of the string support provided by the Info
+object:
+
+Raw signal name of checksum signal msg_CRC is msg;
+
+Raw signal name of checksum signal msgCRC is msg;
+
+/* A URL must not contain blanks! */
+const char *url = https://copilot.microsoft.com/chats/S7Up%20ZmXt8d%20zXBnkUJLMSW;
+
+
+Raw signal name of checksum signal is signalAbc;

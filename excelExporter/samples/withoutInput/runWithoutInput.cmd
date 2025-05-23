@@ -20,7 +20,7 @@ echo of excelExporter to get more details.
 goto :eof
 
 REM
-REM Copyright (c) 2016-2024, Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+REM Copyright (c) 2016-2025, Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 REM
 
 :LStart
@@ -41,6 +41,7 @@ set CLASSPATH=templates
 REM Find the launcher script.
 set PATH=%PATH%;%EXCELEXPORTER_HOME%\dist
 
+REM Lauch the Java application excelExporter.
 excelExporter ^
   --log-file withoutInput.log ^
   --log-level warn ^
