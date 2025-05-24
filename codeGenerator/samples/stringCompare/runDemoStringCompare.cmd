@@ -4,6 +4,7 @@ set CLASSPATH=templates;..\raceTechnology\templates
 set COMFRAMEWORK_CODEGENERATOR_HOME=..\..
 set PATH=%PATH%;%COMFRAMEWORK_CODEGENERATOR_HOME%\dist
 call codeGenerator ^
+  --log-file stringCompare.log ^
   --cluster-name demoStringCompare ^
   --node-name ECU ^
   --bus-name RT_simplified ^

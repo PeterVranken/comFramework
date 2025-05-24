@@ -79,6 +79,38 @@ Text matches expectation!
 Text doesn't match expectation!
 <endif>
 
+Let's capitalize the e's in <someText()>: <\\>
+<info.str.replRegExp.({<someText()> #e(.)#E$1})>
+
+Let's capitalize the e's in <someText()>: <\\>
+<info.str.replRegExpI.({<someText()> #E(.)#E$1})>
+
+Capture groups, input="<someText()>", regExp="^((Text)*)(x?)(.*)$": <\\>
+<info.str.replRegExpI.({<someText()>#^((Text)*)(x?)(.*)$#1:>$1\<, 2:>$2\<, 3:>$3\<, 4:>$4\<})>
+
+Empty result yields null, not the empty string: <\\>
+><info.str.replRegExpI.({<someText()>#^((Text)*)(x?)(.*)$#$3})>\<
+<if(info.str.replRegExpI.({<someText()>#^((Text)*)(x?)(.*)$#$3}))>Error: It's the empty string<else>It's indeed null<endif>
+
+Some examples from the Javadoc documentation of the string support provided by the Info
+object:
+
+Raw signal name of checksum signal msg_CRC is <\\>
+<info.str.replRegExp.({msg_CRC#(.*?)_?CRC#$1})>;
+
+Raw signal name of checksum signal msgCRC is <\\>
+<info.str.replRegExp.({msg_CRC#(.*?)_?CRC#$1})>;
+
+/* A URL must not contain blanks! */
+const char *url = <info.str.replRegExp.({https://copilot.microsoft.com/chats/S7Up ZmXt8d zXBnkUJLMSW# #%20})>;
+
+<if(info.str.cmpRegExpI.({signalAbc_CrC == ^(.*)Crc$}))>
+Raw signal name of checksum signal is <\\>
+<info.str.replRegExpI.({signalAbc_CrC#_?CRC#})>;
+<else>
+Signal is not the checksum!
+<endif>
+
 Now we use the regular expression \<reFltrSig()>, <reFltrSig()>, to find all signals of
 particular meaning:
 <iterateSignalsOfCluster(cluster=cluster,mux="all",dir="all",T="fltrSignal")>

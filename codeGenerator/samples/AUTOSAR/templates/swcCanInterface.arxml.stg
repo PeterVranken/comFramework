@@ -11,7 +11,7 @@
 // normal use case would be an integration, where these ports are mapped to the related
 // signals of the COM component in the system.
 //
-// Copyright (C) 2015-2020 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+// Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 //
 // This program is free software: you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License as published by the
@@ -41,10 +41,10 @@ import "AUTOSAR_PlatformTypes.arxml.stg"
 // some error message will be written into the generated output, which will surely be
 // reported (as syntax or file format error) by any application reading the file.
 checkPrecos(dir) ::= <<
-$if(!info.isVersionDataModel.v1013)$
+$if(!info.isVersionDataModel.v1014)$
 $! The template should fit to the data model supported by the code generator !$
-ARXML error: This code is generated from a template designed for data model revision 1013 but run with data model revision $info.versionDataModel$
-$info.error.({This code is generated from a template designed for data model revision 1013 but run with data model revision $info.versionDataModel$})$
+ARXML error: This code is generated from a template designed for data model revision 1014 but run with data model revision $info.versionDataModel$
+$info.error.({This code is generated from a template designed for data model revision 1014 but run with data model revision $info.versionDataModel$})$
 $endif$
 $if(!info.output.mnm)$
 $! By convention a module and thus a SW-C should have a three character mnemonic as

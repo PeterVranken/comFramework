@@ -10,7 +10,7 @@
  * code, which doesn't belong into an auto-generated module. It's however straightforward
  * to implement the function that operates on the generated data tables.
  *
- * This file has been created with comFramework - codeGenerator version 1.13.1,
+ * This file has been created with comFramework - codeGenerator version 1.14.0,
  * see https://github.com/PeterVranken/comFramework
  *
  * Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)

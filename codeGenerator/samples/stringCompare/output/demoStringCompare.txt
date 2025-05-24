@@ -22,6 +22,27 @@ str.cmpRegExp is case sensitive!
 Text matches expectation!
 
 Text matches expectation!
+Let's capitalize the e's in TextTextText and even more text: TExtTExtTExt and EvEn morE tExt 
+
+Let's capitalize the e's in TextTextText and even more text: TExtTExtTExt and EvEn morE tExt 
+
+Capture groups, input="TextTextText and even more text", regExp="^((Text)*)(x?)(.*)$": 1:>TextTextText<, 2:>Text<, 3:><, 4:> and even more text<
+
+Empty result yields null, not the empty string: ><
+It's indeed null
+
+Some examples from the Javadoc documentation of the string support provided by the Info
+object:
+
+Raw signal name of checksum signal msg_CRC is msg;
+
+Raw signal name of checksum signal msgCRC is msg;
+
+/* A URL must not contain blanks! */
+const char *url = https://copilot.microsoft.com/chats/S7Up%20ZmXt8d%20zXBnkUJLMSW;
+
+
+Raw signal name of checksum signal is signalAbc;
 Now we use the regular expression <reFltrSig()>, .*validity.*, to find all signals of
 particular meaning:
 0) rt_SB_INS_Vel_Body_Axes_mux, 215: Validity_INS_Vel_Forwards (normal)

@@ -34,7 +34,7 @@ the code generator, execute the tests or create a jar library.
   <property environment="env"/>
 
   <!-- Set global properties for this build. -->
-  <property name="version" value="1.13"/>
+  <property name="version" value="1.14"/>
   <property name="javaReleaseForJars" value="8"/>
   <property name="srcDM" location="src/codeGenerator/DataModelListener"/>
   <property name="doc" location="doc"/>
@@ -108,7 +108,7 @@ the code generator, execute the tests or create a jar library.
 
   <!-- Generate javadocs for the data model only -->
   <target name="docDataModel"
-          depends="init"
+          depends="init,jar"
           description="Generate Javadoc documentation for the data model only"
   >
     <javadoc sourcefiles="${srcDM}/package-info.java,${srcDM}/Info.java,${srcDM}/FileExt.java,${srcDM}/Cluster.java,${srcDM}/FrameRef.java,${srcDM}/Bus.java,${srcDM}/Node.java,${srcDM}/Frame.java,${srcDM}/Pdu.java,${srcDM}/Signal.java,${srcDM}/NetObject.java,${srcDM}/AttributeDef.java,${srcDM}/Attribute.java"
@@ -260,7 +260,7 @@ the code generator, execute the tests or create a jar library.
     <exec executable="cmd.exe" dir="samples/stringCompare">
       <arg value="/c"/>
       <!-- line is the blank separated command line. -->
-      <arg line="runDemoStringCompare.cmd -v WARN"/>
+      <arg line="runDemoStringCompare.cmd -v ERROR"/>
     </exec>
     <echo message="Running sample EmbeddedCoderAPIWithBusStruct"/>
     <exec executable="cmd.exe" dir="samples/EmbeddedCoderAPIWithBusStruct">

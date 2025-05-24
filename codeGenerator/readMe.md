@@ -152,6 +152,12 @@ or locally in your installation as file
 
 ## What's new
 
+### Release 1.4
+
+Update of data model: The support of string comparison operations has
+been extended. `<info.str>` now supports regular expression based search
+and replacement.
+
 ### Release 1.13.1
 
 Integration of the latest releases of StringTemplate V4 and ANTLR, which
