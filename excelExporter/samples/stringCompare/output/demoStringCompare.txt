@@ -26,6 +26,11 @@ Let's capitalize the e's in TextTextText and even more text: TExtTExtTExt and Ev
 
 Let's capitalize the e's in TextTextText and even more text: TExtTExtTExt and EvEn morE tExt 
 
+Capture groups, input="TextTextText and even more text", regExp="^((Text)*)(x?)(.*)$": 1:>TextTextText<, 2:>Text<, 3:><, 4:> and even more text<
+
+Empty result yields null, not the empty string: ><
+It's indeed null
+
 Some examples from the Javadoc documentation of the string support provided by the Info
 object:
 
@@ -38,7 +43,3 @@ const char *url = https://copilot.microsoft.com/chats/S7Up%20ZmXt8d%20zXBnkUJLMS
 
 
 Raw signal name of checksum signal is signalAbc;
-Capture groups, input="TextTextText and even more text", regExp="^((Text)*)(x?)(.*)$": 1:>TextTextText<, 2:>Text<, 3:><, 4:> and even more text<
-
-Empty result yields null, not the empty string: ><
-It's indeed null

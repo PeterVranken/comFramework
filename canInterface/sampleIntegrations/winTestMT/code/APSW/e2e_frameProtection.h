@@ -6,7 +6,7 @@
  * This module contains the set of functions pairs for the end-to-end protection of the CAN
  * frames. A CRC computing and a CRC validating function is generated for each CAN frame.
  *
- * This file has been created with comFramework - codeGenerator version 1.13.1,
+ * This file has been created with comFramework - codeGenerator version 1.14.0,
  * see https://github.com/PeterVranken/comFramework
  *
  * Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)

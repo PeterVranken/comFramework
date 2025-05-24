@@ -4,7 +4,7 @@
  * @file cst_canStatistics.h
  * Some useful statistics about the CAN frames of cluster winSampleIntegration.
  *
- * This file has been created with comFramework - codeGenerator version 1.13.1,
+ * This file has been created with comFramework - codeGenerator version 1.14.0,
  * see https://github.com/PeterVranken/comFramework
  *
  * Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)

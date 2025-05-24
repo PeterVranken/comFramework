@@ -82,6 +82,13 @@ Let's capitalize the e's in <someText()>: <\\>
 Let's capitalize the e's in <someText()>: <\\>
 <info.str.replRegExpI.({<someText()> #E(.)#E$1})>
 
+Capture groups, input="<someText()>", regExp="^((Text)*)(x?)(.*)$": <\\>
+<info.str.replRegExpI.({<someText()>#^((Text)*)(x?)(.*)$#1:>$1\<, 2:>$2\<, 3:>$3\<, 4:>$4\<})>
+
+Empty result yields null, not the empty string: <\\>
+><info.str.replRegExpI.({<someText()>#^((Text)*)(x?)(.*)$#$3})>\<
+<if(info.str.replRegExpI.({<someText()>#^((Text)*)(x?)(.*)$#$3}))>Error: It's the empty string<else>It's indeed null<endif>
+
 Some examples from the Javadoc documentation of the string support provided by the Info
 object:
 
@@ -101,11 +108,5 @@ Raw signal name of checksum signal is <\\>
 Signal is not the checksum!
 <endif>
 
-Capture groups, input="<someText()>", regExp="^((Text)*)(x?)(.*)$": <\\>
-<info.str.replRegExpI.({<someText()>#^((Text)*)(x?)(.*)$#1:>$1\<, 2:>$2\<, 3:>$3\<, 4:>$4\<})>
-
-Empty result yields null, not the empty string: <\\>
-><info.str.replRegExpI.({<someText()>#^((Text)*)(x?)(.*)$#$3})>\<
-<if(info.str.replRegExpI.({<someText()>#^((Text)*)(x?)(.*)$#$3}))>Error: It's the empty string<else>It's indeed null<endif>
 
 >>
