@@ -70,7 +70,7 @@
         <include name="version.txt"/>
         <include name="excelExporter-*.jar"/>
         <include name="ST-4.3.1.jar"/>
-        <include name="antlr-4.10.1-complete.jar"/>
+        <include name="antlr-4.*-complete.jar"/>
         <include name="log4j-*2.4.jar"/>
         <include name="poi-*-20150929.jar"/>
         <include name="xmlbeans-2.6.0.jar"/>
