@@ -109,7 +109,7 @@
 
   <!-- Generate javadocs for the data model only -->
   <target name="docDataModel"
-          depends="init"
+          depends="init,jar"
           description="Generate Javadoc documentation for the data model only"
   >
     <javadoc sourcefiles="${srcDM}/package-info.java,${srcDM}/Info.java,${srcDM}/FileExt.java,${srcDM}/Cluster.java,${srcDM}/CellObject.java,${srcDM}/ExcelWorkbook.java,${srcDM}/ExcelWorksheet.java,${srcDM}/RowObject.java,${srcDM}/RowObjectContainer.java,${srcDM}/ObjectList.java,${srcDM}/Identifier.java,${srcDM}/ObjectMap.java,src/excelExporter/excelParser/SortOrder.java"

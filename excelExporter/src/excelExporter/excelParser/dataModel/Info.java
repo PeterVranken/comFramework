@@ -3,7 +3,7 @@
  * This file implements a data container for general information needed during code
  * generation: Date and time, the names of involved files, etc.
  *
- * Copyright (C) 2015-2024 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+ * Copyright (C) 2015-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by the
@@ -89,8 +89,8 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         essential for relating templates to permitted, compatible tool revisions, is
         testable through this data element. It is a map with a single key, value pair. The
         value is Boolean true, the key is the String "v"+versionDataModel, e.g., v2012 for
-        data model revision 2.12.<p> 
-          A template can use an expressing like 
+        data model revision 2.12.<p>
+          A template can use an expressing like
         <pre>
           &lt;if(!isVersionDataModel.v2012)&gt;#error Wrong tool revision, need data model 2.12&lt;endif&gt;
         </pre>
@@ -319,7 +319,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         continues. It can be used to report some status information:<p>
           {@code <info.info.(["There are ", length(bus.frameAry), " frames defined"])>} */
     public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object> info;
-    
+
     /** This is a pseudo field of the StringTemplate V4 data model. If it is used from a
         template then it expands to nothing. It operates only by side-effect on its
         argument: The argument is treated as informative output during code generation.
@@ -327,7 +327,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         continues. It can be used to report verbose progress information:<p>
           {@code <bus.frameAry:{f|<info.debug.({Process frame <f.name>})>}>} */
     public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object> debug;
-    
+
 
     /** This class bundles the command interpreters, which implement the string operations.
         The class has been shaped only to structure the template expressions for string
@@ -353,7 +353,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
             arguments of the operation.<p>
               Example. The argument delimiter is changed into the hyphen:<p>
               {@code <info.str.setArgumentDelimiter.("-")>}<p>
-              {@code isCRC = <info.str.cmp([signal.name,"- CRC"])>;} */
+              {@code isCRC = <info.str.cmp.([signal.name,"- CRC"])>;} */
         public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object> 
                                                                         setArgumentDelimiter;
 
@@ -432,10 +432,14 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
               The operation takes an argument string, which is split into three arguments:
             Input string, regular expression and replacement string.<p>
               The input string is matched against the regular expression. All matches are
-            the substituted by the replacement string. The normal Java regular expression
-            replacement is applied, i.e., the replacement string may use $<n> to refer to
+            then substituted by the replacement string. The normal Java regular expression
+            replacement is applied, i.e., the replacement string may use $&lt;n&gt; to refer to
             the n-th capture group in the regular expression.<p>
-              This pseudo-field expands to the resulting string.<p>
+              This pseudo-field expands to the resulting string. If the resulting string
+            would be empty, then null is returned; this enables if-clauses, which can check
+            if, e.g., a capture group captures something or if it remains empty. (The
+            resulting template expansion text is not affected; it's the same for null and
+            the empty string.)<p>
               {@code 
                 <if(info.str.cmpRegExpI.({<signal.name> == ^(.*)CRC$}))>
                   Raw signal name of checksum signal is <\\>
@@ -443,15 +447,15 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
                 <else>
                   Signal is not the checksum!
                 <endif>
-              }
+              }<p>
               CAUTION: Argument splitting is handled a bit different to the string
             comparison functions and different to what is documented for
             setArgumentDelimiter about retrieving arguments. No white space is removed
             after splitting the arguments. This has been decided in order to enable easy
             processing of blanks:<p>
               {@code 
-                // A URL must not contain blanks!
                 const char *url = <info.str.replRegExp.({<someURL()># #%20})>;
+                // A URL must not contain blanks!
               } */
         public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
                                                                                     replRegExp;
@@ -461,27 +465,31 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
               The operation takes an argument string, which is split into three arguments:
             Input string, regular expression and replacement string.<p>
               The input string is matched case insensitively against the regular
-            expression. All matches are the substituted by the replacement string. The
+            expression. All matches are then substituted by the replacement string. The
             normal Java regular expression replacement is applied, i.e., the replacement
-            string may use $<n> to refer to the n-th capture group in the regular
+            string may use $&lt;n&gt; to refer to the n-th capture group in the regular
             expression.<p>
-              This pseudo-field expands to the resulting string.<p>
-              {@code 
-                <if(info.str.cmpRegExpI.({<signal.name> == ^(.*)Crc$}))>
-                  Raw signal name of checksum signal is <\\>
-                  <info.str.replRegExpI.({<signal.name>#_?CRC#})>;
-                <else>
+              This pseudo-field expands to the resulting string. If the resulting string
+            would be empty, then null is returned; this enables if-clauses, which can check
+            if, e.g., a capture group captures something or if it remains empty. (The
+            resulting template expansion text is not affected; it's the same for null and
+            the empty string.)
+            <pre>
+                {@literal <if(info.str.cmpRegExpI.({<signal.name> == ^(.*)Crc$}))>}
+                  Raw signal name of checksum signal is {@literal <\\>}
+                  {@literal <info.str.replRegExpI.({<signal.name>#_?CRC#})>;}
+                {@literal <else>}
                   Signal is not the checksum!
-                <endif>
-              }
+                {@literal <endif>}
+            </pre>
               CAUTION: Argument splitting is handled a bit different to the string
             comparison functions and different to what is documented for
             setArgumentDelimiter about retrieving arguments. No white space is removed
             after splitting the arguments. This has been decided in order to enable easy
             processing of blanks:<p>
               {@code 
-                // A URL must not contain blanks!
                 const char *url = <info.str.replRegExpI.({<someURL()># #%20})>;
+                // A URL must not contain blanks!
               } */
         public final ST4CmdInterpreter</* TContext */ Integer, /* TCmdResult */ Object>
                                                                                    replRegExpI;
@@ -555,7 +563,7 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         the available string operations. */
     public StringSupport str;
 
-    /** 
+    /**
      * Create the Info object.
      *   @param errCnt Template emitted and caused errors are counted in this object.
      */
@@ -594,9 +602,9 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         str = new StringSupport(errCnt);
 
     } /* End of Info */
-   
-   
-   
+
+
+
     /**
      * Get the string representation of the Info object; it's composed from some of some of
      * its general fields.
@@ -607,8 +615,8 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         return application + ", version " + version + ", " + time;
 
     } /* End of Info.toString */
-    
-    
+
+
     /**
      * Set the information about this application.
      *   @param appName The application name.
@@ -627,15 +635,15 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         versionBuild = versionAry[3];
         version = "" + versionAry[0] + "." + versionAry[1] + "." + versionAry[2];
         versionDataModel = verDataModel;
-        
+
         /* A map is applied to make the version test available as a <if()>  condition in
            the template. */
         isVersionDataModel = new HashMap<>(1);
         isVersionDataModel.put("v"+versionDataModel, Boolean.valueOf(true));
 
     } /* End of setApplicationInfo */
-    
-    
+
+
     /**
      * Fill the object with information about the template in use.
      *   @param tFileName The name of the template file.
@@ -648,23 +656,23 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
                                , String tName
                                , String tArgCluster
                                , String tArgInfo
-                               , int tWrapCol 
+                               , int tWrapCol
                                )
     {
         templateFile = new FileExt(tFileName);
         templateName = tName;
         templateArgNameCluster = tArgCluster;
         templateArgNameInfo = tArgInfo;
-        
+
         if(tWrapCol > 0)
             templateWrapCol = Integer.valueOf(tWrapCol);
         else
             templateWrapCol = null;
 
     } /* End of setTemplateInfo */
-    
-    
-    
+
+
+
     /**
      * Fill the information concerning the generated output file.
      *   @param fileName The name of the generated output file.
@@ -674,9 +682,9 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         output = new FileExt(fileName);
 
     } /* End of setOutputFileInfo */
-    
-        
-    /** 
+
+
+    /**
      * Copy a map with user attributes by reference into the Info object.
      *   @param map
      * The map with pairs of attribute names (key) and attribute values.
@@ -684,10 +692,10 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
     public void setUserOptions(LinkedHashMap<String,Object> map)
     {
         optionMap = map;
-        
+
     } /* End of setUserOptions */
-    
-    
+
+
     /**
      * This method implements the command listener, which is used to emit a message to the
      * application log under control of the currently expanded StringTemplate V4 template.
@@ -728,12 +736,12 @@ public class Info implements IST4CmdListener</* TContext */ Integer, /* TCmdResu
         {
             errCnt_.error();
             assert false: "Invalid log4j severity level used";
-        }    
+        }
 
         /* Writing to the application log should never produce any output in the template
            expansion. */
         return null;
 
     } /* End of IST4CmdListener.interpret */
-    
+
 } /* End class Info */

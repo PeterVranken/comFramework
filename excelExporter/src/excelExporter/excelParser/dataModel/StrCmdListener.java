@@ -190,7 +190,9 @@ public class StrCmdListener implements IST4CmdListener< /* TContext */ Integer
      * the match.
      *   @return
      * Get the input string, after all matches of the regular expression have been replaced
-     * by the replacement string. The unmodified input string is returned in acse of errors.
+     * by the replacement string. If the result is the empty string then null is returned
+     * instead. (Null yields same text but is mor meaningful in template expansion.)<p>
+     *   The unmodified input string is returned in case of errors.
      *   @param string
      * The string, which is searched for matches of the regular expression.
      *   @param replacement
@@ -229,7 +231,7 @@ public class StrCmdListener implements IST4CmdListener< /* TContext */ Integer
             }
         }
 
-        return result;
+        return !result.isEmpty()? result: null;
 
     } /* End of cmpRegExp */
 
