@@ -127,7 +127,7 @@ public class ExcelWorksheet extends RowObjectContainer
         ExcelWorksheet is a RowObjectContainer but the super class doesn't have this flag.
         When queried from a StringTemplate V4 template the flag will evaluate to {@code
         true} if and only if the queried container is the root container or with other
-        words the complete Worksheet object. The disticntion between a true Worksheet and
+        words the complete Worksheet object. The distinction between a true Worksheet and
         sub-groups of row objects can be useful when writing generic templates. Example:<p>
           {@code <if(container.isRoot)>This is a worksheet object<else>This is a sub-group
         of the worksheet<endif>} */
