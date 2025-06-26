@@ -6,7 +6,7 @@
 // of excelExporter. Just see how literal text is intermingled with the StringTemplate V4
 // template variables to get the desired text output.
 //
-// Copyright (C) 2016 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
+// Copyright (C) 2016-2025 Peter Vranken (mailto:Peter_Vranken@Yahoo.de)
 //
 // This program is free software: you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License as published by the
@@ -36,5 +36,5 @@ on Feb 9, 2016.)
 >>
 
 renderRow(row) ::= <<
-The capital of <row.Country> is <row.Capital>.<\n>
+The capital of <row.Country> (<if(row.EU.bool)>EU<else>None EU<endif>) is <row.Capital>.<\n>
 >>

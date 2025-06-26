@@ -1,56 +1,56 @@
 The European Capitals
 
-The capital of Albania is Tirana.
-The capital of Andorra is Andorra la Vella.
-The capital of Armenia is Yerevan.
-The capital of Austria is Vienna.
-The capital of Azerbaijan is Baku.
-The capital of Belarus is Minsk.
-The capital of Belgium is Brussels.
-The capital of Bosnia and Herzegovina is Sarajevo.
-The capital of Bulgaria is Sofia.
-The capital of Croatia is Zagreb.
-The capital of Cyprus is Nicosia.
-The capital of Czech Republic is Prague.
-The capital of Denmark is Copenhagen.
-The capital of Estonia is Tallinn.
-The capital of Finland is Helsinki.
-The capital of France is Paris.
-The capital of Georgia is Tbilisi.
-The capital of Germany is Berlin.
-The capital of Greece is Athens.
-The capital of Hungary is Budapest.
-The capital of Iceland is Reykjavik.
-The capital of Ireland is Dublin.
-The capital of Italy is Rome.
-The capital of Kazakhstan is Astana.
-The capital of Kosovo is Pristina.
-The capital of Latvia is Riga.
-The capital of Liechtenstein is Vaduz.
-The capital of Lithuania is Vilnius.
-The capital of Luxembourg is Luxembourg.
-The capital of Macedonia is Skopje.
-The capital of Malta is Valletta.
-The capital of Moldova is Chisinau.
-The capital of Monaco is Monaco.
-The capital of Montenegro is Podgorica.
-The capital of Netherlands is Amsterdam.
-The capital of Norway is Oslo.
-The capital of Poland is Warsaw.
-The capital of Portugal is Lisbon.
-The capital of Romania is Bucharest.
-The capital of Russia is Moscow.
-The capital of San Marino is San Marino.
-The capital of Serbia is Belgrade.
-The capital of Slovakia is Bratislava.
-The capital of Slovenia is Ljubljana.
-The capital of Spain is Madrid.
-The capital of Sweden is Stockholm.
-The capital of Switzerland is Bern.
-The capital of Turkey is Ankara.
-The capital of Ukraine is Kyiv.
-The capital of United Kingdom is London.
-The capital of Vatican City (Holy See) is Vatican City.
+The capital of Albania (None EU) is Tirana.
+The capital of Andorra (EU) is Andorra la Vella.
+The capital of Armenia (None EU) is Yerevan.
+The capital of Austria (EU) is Vienna.
+The capital of Azerbaijan (None EU) is Baku.
+The capital of Belarus (None EU) is Minsk.
+The capital of Belgium (EU) is Brussels.
+The capital of Bosnia and Herzegovina (None EU) is Sarajevo.
+The capital of Bulgaria (EU) is Sofia.
+The capital of Croatia (None EU) is Zagreb.
+The capital of Cyprus (EU) is Nicosia.
+The capital of Czech Republic (EU) is Prague.
+The capital of Denmark (EU) is Copenhagen.
+The capital of Estonia (None EU) is Tallinn.
+The capital of Finland (EU) is Helsinki.
+The capital of France (EU) is Paris.
+The capital of Georgia (None EU) is Tbilisi.
+The capital of Germany (EU) is Berlin.
+The capital of Greece (EU) is Athens.
+The capital of Hungary (EU) is Budapest.
+The capital of Iceland (EU) is Reykjavik.
+The capital of Ireland (EU) is Dublin.
+The capital of Italy (EU) is Rome.
+The capital of Kazakhstan (None EU) is Astana.
+The capital of Kosovo (None EU) is Pristina.
+The capital of Latvia (None EU) is Riga.
+The capital of Liechtenstein (EU) is Vaduz.
+The capital of Lithuania (None EU) is Vilnius.
+The capital of Luxembourg (EU) is Luxembourg.
+The capital of Macedonia (None EU) is Skopje.
+The capital of Malta (None EU) is Valletta.
+The capital of Moldova (None EU) is Chisinau.
+The capital of Monaco (EU) is Monaco.
+The capital of Montenegro (None EU) is Podgorica.
+The capital of Netherlands (EU) is Amsterdam.
+The capital of Norway (EU) is Oslo.
+The capital of Poland (EU) is Warsaw.
+The capital of Portugal (EU) is Lisbon.
+The capital of Romania (EU) is Bucharest.
+The capital of Russia (None EU) is Moscow.
+The capital of San Marino (EU) is San Marino.
+The capital of Serbia (None EU) is Belgrade.
+The capital of Slovakia (EU) is Bratislava.
+The capital of Slovenia (EU) is Ljubljana.
+The capital of Spain (EU) is Madrid.
+The capital of Sweden (EU) is Stockholm.
+The capital of Switzerland (None EU) is Bern.
+The capital of Turkey (None EU) is Ankara.
+The capital of Ukraine (None EU) is Kyiv.
+The capital of United Kingdom (None EU) is London.
+The capital of Vatican City (Holy See) (EU) is Vatican City.
 
 (The rendered information has been taken from
 https://www.countries-ofthe-world.com/capitals-of-europe.html
