@@ -81,7 +81,7 @@ or you can write the path into this script. Look for TODO tags."
 
 
 
-# Lauch the Java application excelExporter.
+# Launch the Java application excelExporter.
 $output = $args[0]
 $spreadsheet = $args[1]
 ."$env:EXCELEXPORTER_HOME\dist\excelExporter.cmd" `
